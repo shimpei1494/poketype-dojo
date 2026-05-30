@@ -44,8 +44,6 @@ function TypeCheckerPage() {
   const navigate = Route.useNavigate();
   const [activeSlot, setActiveSlot] = useState<DefendingSlot>("def1");
   const hasAutoScrolledRef = useRef(false);
-  const pendingAutoScrollRef = useRef(false);
-  const preservedScrollYRef = useRef<number | null>(null);
   const workAreaRef = useRef<HTMLDivElement>(null);
 
   const sanitizedSearch = useMemo(() => sanitizeSearch(search), [search]);
@@ -78,41 +76,22 @@ function TypeCheckerPage() {
       : null;
 
   const updateSearch = useCallback(
-    (nextSearch: CheckerSearch) => {
-      if (hasAutoScrolledRef.current && !pendingAutoScrollRef.current) {
-        preservedScrollYRef.current = window.scrollY;
-      }
-
-      void navigate({ resetScroll: false, search: sanitizeSearch(nextSearch) });
+    (nextSearch: CheckerSearch, afterNavigate?: () => void) => {
+      void navigate({ resetScroll: false, search: sanitizeSearch(nextSearch) }).then(() => {
+        afterNavigate?.();
+      });
     },
     [navigate],
   );
 
-  useEffect(() => {
-    const timeoutId = window.setTimeout(() => {
-      if (pendingAutoScrollRef.current) {
-        pendingAutoScrollRef.current = false;
-        scrollToWorkArea();
-
-        return;
-      }
-
-      if (preservedScrollYRef.current !== null) {
-        window.scrollTo({ top: preservedScrollYRef.current });
-        preservedScrollYRef.current = null;
-      }
-    }, 80);
-
-    return () => window.clearTimeout(timeoutId);
-  }, [sanitizedSearch]);
-
   function requestAutoScrollOnce() {
     if (hasAutoScrolledRef.current) {
-      return;
+      return false;
     }
 
     hasAutoScrolledRef.current = true;
-    pendingAutoScrollRef.current = true;
+
+    return true;
   }
 
   function scrollToWorkArea() {
@@ -128,16 +107,24 @@ function TypeCheckerPage() {
     });
   }
 
+  function scheduleScrollToWorkArea() {
+    window.setTimeout(scrollToWorkArea, 80);
+  }
+
   function selectMove(type: PokemonType) {
-    requestAutoScrollOnce();
-    updateSearch({
-      ...sanitizedSearch,
-      move: sanitizedSearch.move === type ? undefined : type,
-    });
+    const shouldAutoScroll = requestAutoScrollOnce();
+
+    updateSearch(
+      {
+        ...sanitizedSearch,
+        move: sanitizedSearch.move === type ? undefined : type,
+      },
+      shouldAutoScroll ? scheduleScrollToWorkArea : undefined,
+    );
   }
 
   function selectDefense(type: PokemonType) {
-    requestAutoScrollOnce();
+    const shouldAutoScroll = requestAutoScrollOnce();
     const currentType = sanitizedSearch[activeSlot];
     const otherSlot = activeSlot === "def1" ? "def2" : "def1";
     const nextType = currentType === type ? undefined : type;
@@ -147,7 +134,7 @@ function TypeCheckerPage() {
       [activeSlot]: nextType,
     });
 
-    updateSearch(nextSearch);
+    updateSearch(nextSearch, shouldAutoScroll ? scheduleScrollToWorkArea : undefined);
 
     if (activeSlot === "def1" && !currentType && nextType && !nextSearch.def2) {
       setActiveSlot("def2");
