@@ -11,7 +11,7 @@ const reactDoctorRules = {
 
 export default defineConfig({
   fmt: {
-    ignorePatterns: ["**/routeTree.gen.ts"],
+    ignorePatterns: ["**/routeTree.gen.ts", ".agents/**/*.md", ".codex/config.toml"],
     sortImports: {
       partitionByComment: true,
     },
