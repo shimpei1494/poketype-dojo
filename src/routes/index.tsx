@@ -35,8 +35,7 @@ function Home() {
           />
           <ModeCard
             description="第1世代151匹の現在タイプを当てるクイズ。データは準備済み。"
-            disabled
-            label="準備中"
+            label="挑戦する"
             title="ポケモンタイプ当て"
             to="/quiz/pokemon-type"
           />
