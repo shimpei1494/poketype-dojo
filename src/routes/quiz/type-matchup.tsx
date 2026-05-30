@@ -10,7 +10,7 @@ import {
   Title,
 } from "@mantine/core";
 import { createFileRoute } from "@tanstack/react-router";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import { HomeLink } from "../../components/HomeLink";
 import { MultiplierResult } from "../../components/MultiplierResult";
@@ -51,6 +51,7 @@ function TypeMatchupQuizPage() {
   const [selectedAnswer, setSelectedAnswer] = useState<FinalMultiplier | null>(null);
   const [answeredCount, setAnsweredCount] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
+  const feedbackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setQuestion(createQuestion(search.mode));
@@ -58,6 +59,14 @@ function TypeMatchupQuizPage() {
   }, [search.mode]);
 
   const hasAnswered = selectedAnswer !== null;
+
+  useEffect(() => {
+    if (!hasAnswered) {
+      return;
+    }
+
+    feedbackRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [hasAnswered]);
 
   const changeMode = useCallback(
     (mode: string) => {
@@ -154,7 +163,7 @@ function TypeMatchupQuizPage() {
         </Card>
 
         {hasAnswered ? (
-          <Stack gap="md">
+          <Stack gap="md" ref={feedbackRef}>
             <AnswerFeedback
               correctAnswer={question.result.finalMultiplier}
               selectedAnswer={selectedAnswer}

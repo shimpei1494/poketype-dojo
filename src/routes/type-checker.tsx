@@ -12,8 +12,8 @@ import { notifications } from "@mantine/notifications";
 import { createFileRoute } from "@tanstack/react-router";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
+import { CompactResultSummary } from "../components/CompactResultSummary";
 import { HomeLink } from "../components/HomeLink";
-import { MultiplierResult } from "../components/MultiplierResult";
 import { TypeBadge } from "../components/TypeBadge";
 import { TypeGrid } from "../components/TypeGrid";
 import { pokemonTypes, type PokemonType } from "../data/pokemon-types";
@@ -145,6 +145,11 @@ function TypeCheckerPage() {
           </Stack>
         </Card>
 
+        <CompactResultSummary
+          placeholder={getPlaceholderMessage(sanitizedSearch.move, defenseTypes)}
+          result={result}
+        />
+
         <Card className="glass-panel" p="lg">
           <Stack gap="md">
             <Group align="center" justify="space-between">
@@ -183,14 +188,6 @@ function TypeCheckerPage() {
             />
           </Stack>
         </Card>
-
-        {result ? (
-          <MultiplierResult result={result} />
-        ) : (
-          <Card className="glass-panel" p="lg">
-            <Text fw={700}>{getPlaceholderMessage(sanitizedSearch.move, defenseTypes)}</Text>
-          </Card>
-        )}
       </Stack>
     </Container>
   );
