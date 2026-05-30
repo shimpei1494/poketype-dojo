@@ -9,38 +9,65 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TypeCheckerRouteImport } from './routes/type-checker'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as QuizTypeMatchupRouteImport } from './routes/quiz/type-matchup'
 
+const TypeCheckerRoute = TypeCheckerRouteImport.update({
+  id: '/type-checker',
+  path: '/type-checker',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const QuizTypeMatchupRoute = QuizTypeMatchupRouteImport.update({
+  id: '/quiz/type-matchup',
+  path: '/quiz/type-matchup',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/type-checker': typeof TypeCheckerRoute
+  '/quiz/type-matchup': typeof QuizTypeMatchupRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/type-checker': typeof TypeCheckerRoute
+  '/quiz/type-matchup': typeof QuizTypeMatchupRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/type-checker': typeof TypeCheckerRoute
+  '/quiz/type-matchup': typeof QuizTypeMatchupRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/type-checker' | '/quiz/type-matchup'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/type-checker' | '/quiz/type-matchup'
+  id: '__root__' | '/' | '/type-checker' | '/quiz/type-matchup'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  TypeCheckerRoute: typeof TypeCheckerRoute
+  QuizTypeMatchupRoute: typeof QuizTypeMatchupRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/type-checker': {
+      id: '/type-checker'
+      path: '/type-checker'
+      fullPath: '/type-checker'
+      preLoaderRoute: typeof TypeCheckerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +75,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/quiz/type-matchup': {
+      id: '/quiz/type-matchup'
+      path: '/quiz/type-matchup'
+      fullPath: '/quiz/type-matchup'
+      preLoaderRoute: typeof QuizTypeMatchupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  TypeCheckerRoute: TypeCheckerRoute,
+  QuizTypeMatchupRoute: QuizTypeMatchupRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
