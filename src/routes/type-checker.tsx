@@ -10,7 +10,7 @@ import {
 } from "@mantine/core";
 import { notifications } from "@mantine/notifications";
 import { createFileRoute } from "@tanstack/react-router";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { CompactResultSummary } from "../components/CompactResultSummary";
 import { HomeLink } from "../components/HomeLink";
@@ -43,6 +43,10 @@ function TypeCheckerPage() {
   const search = Route.useSearch();
   const navigate = Route.useNavigate();
   const [activeSlot, setActiveSlot] = useState<DefendingSlot>("def1");
+  const hasAutoScrolledRef = useRef(false);
+  const pendingAutoScrollRef = useRef(false);
+  const preservedScrollYRef = useRef<number | null>(null);
+  const workAreaRef = useRef<HTMLDivElement>(null);
 
   const sanitizedSearch = useMemo(() => sanitizeSearch(search), [search]);
   const hasSearchMismatch = !isSameSearch(search, sanitizedSearch);
@@ -75,12 +79,57 @@ function TypeCheckerPage() {
 
   const updateSearch = useCallback(
     (nextSearch: CheckerSearch) => {
-      void navigate({ search: sanitizeSearch(nextSearch) });
+      if (hasAutoScrolledRef.current && !pendingAutoScrollRef.current) {
+        preservedScrollYRef.current = window.scrollY;
+      }
+
+      void navigate({ resetScroll: false, search: sanitizeSearch(nextSearch) });
     },
     [navigate],
   );
 
+  useEffect(() => {
+    const timeoutId = window.setTimeout(() => {
+      if (pendingAutoScrollRef.current) {
+        pendingAutoScrollRef.current = false;
+        scrollToWorkArea();
+
+        return;
+      }
+
+      if (preservedScrollYRef.current !== null) {
+        window.scrollTo({ top: preservedScrollYRef.current });
+        preservedScrollYRef.current = null;
+      }
+    }, 80);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [sanitizedSearch]);
+
+  function requestAutoScrollOnce() {
+    if (hasAutoScrolledRef.current) {
+      return;
+    }
+
+    hasAutoScrolledRef.current = true;
+    pendingAutoScrollRef.current = true;
+  }
+
+  function scrollToWorkArea() {
+    const workArea = workAreaRef.current;
+
+    if (!workArea) {
+      return;
+    }
+
+    window.scrollTo({
+      behavior: "smooth",
+      top: workArea.getBoundingClientRect().top + window.scrollY - 16,
+    });
+  }
+
   function selectMove(type: PokemonType) {
+    requestAutoScrollOnce();
     updateSearch({
       ...sanitizedSearch,
       move: sanitizedSearch.move === type ? undefined : type,
@@ -88,6 +137,7 @@ function TypeCheckerPage() {
   }
 
   function selectDefense(type: PokemonType) {
+    requestAutoScrollOnce();
     const currentType = sanitizedSearch[activeSlot];
     const otherSlot = activeSlot === "def1" ? "def2" : "def1";
     const nextType = currentType === type ? undefined : type;
@@ -133,7 +183,7 @@ function TypeCheckerPage() {
           <Text c="dimmed">技のタイプと攻撃されるポケモンのタイプを選んでください。</Text>
         </Stack>
 
-        <Card className="glass-panel" p="lg">
+        <Card className="glass-panel work-area-start" p="lg" ref={workAreaRef}>
           <Stack gap="md">
             <Title order={2} size="h3">
               技のタイプ
