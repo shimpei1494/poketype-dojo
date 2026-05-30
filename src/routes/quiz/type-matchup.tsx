@@ -155,6 +155,10 @@ function TypeMatchupQuizPage() {
 
         {hasAnswered ? (
           <Stack gap="md">
+            <AnswerFeedback
+              correctAnswer={question.result.finalMultiplier}
+              selectedAnswer={selectedAnswer}
+            />
             <MultiplierResult result={question.result} />
             <Button onClick={nextQuestion} size="md">
               次の問題
@@ -163,6 +167,36 @@ function TypeMatchupQuizPage() {
         ) : null}
       </Stack>
     </Container>
+  );
+}
+
+function AnswerFeedback({
+  correctAnswer,
+  selectedAnswer,
+}: {
+  correctAnswer: FinalMultiplier;
+  selectedAnswer: FinalMultiplier;
+}) {
+  const isCorrect = selectedAnswer === correctAnswer;
+  const selectedLabel = effectivenessLabels.find((label) => label.multiplier === selectedAnswer);
+  const correctLabel = effectivenessLabels.find((label) => label.multiplier === correctAnswer);
+
+  return (
+    <Card className="glass-panel" p="lg">
+      <Stack gap="sm">
+        <Text c={isCorrect ? "mintSuccess.8" : "coralError.7"} fw={800} size="xl">
+          {isCorrect ? "正解！" : "不正解！"}
+        </Text>
+        <Text fw={700}>
+          あなたの回答: {selectedLabel?.text}（{selectedLabel?.message}）
+        </Text>
+        {!isCorrect ? (
+          <Text fw={700}>
+            正解: {correctLabel?.text}（{correctLabel?.message}）
+          </Text>
+        ) : null}
+      </Stack>
+    </Card>
   );
 }
 
