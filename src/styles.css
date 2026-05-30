@@ -31,3 +31,13 @@ body {
   box-shadow: 0 10px 24px rgba(160, 94, 132, 0.12);
   color: #b53571;
 }
+
+.result-summary {
+  position: sticky;
+  top: 12px;
+  z-index: 2;
+}
+
+.work-area-start {
+  scroll-margin-top: 16px;
+}

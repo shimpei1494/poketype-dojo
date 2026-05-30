@@ -10,10 +10,10 @@ import {
 } from "@mantine/core";
 import { notifications } from "@mantine/notifications";
 import { createFileRoute } from "@tanstack/react-router";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
+import { CompactResultSummary } from "../components/CompactResultSummary";
 import { HomeLink } from "../components/HomeLink";
-import { MultiplierResult } from "../components/MultiplierResult";
 import { TypeBadge } from "../components/TypeBadge";
 import { TypeGrid } from "../components/TypeGrid";
 import { pokemonTypes, type PokemonType } from "../data/pokemon-types";
@@ -43,6 +43,8 @@ function TypeCheckerPage() {
   const search = Route.useSearch();
   const navigate = Route.useNavigate();
   const [activeSlot, setActiveSlot] = useState<DefendingSlot>("def1");
+  const hasAutoScrolledRef = useRef(false);
+  const workAreaRef = useRef<HTMLDivElement>(null);
 
   const sanitizedSearch = useMemo(() => sanitizeSearch(search), [search]);
   const hasSearchMismatch = !isSameSearch(search, sanitizedSearch);
@@ -74,20 +76,55 @@ function TypeCheckerPage() {
       : null;
 
   const updateSearch = useCallback(
-    (nextSearch: CheckerSearch) => {
-      void navigate({ search: sanitizeSearch(nextSearch) });
+    (nextSearch: CheckerSearch, afterNavigate?: () => void) => {
+      void navigate({ resetScroll: false, search: sanitizeSearch(nextSearch) }).then(() => {
+        afterNavigate?.();
+      });
     },
     [navigate],
   );
 
-  function selectMove(type: PokemonType) {
-    updateSearch({
-      ...sanitizedSearch,
-      move: sanitizedSearch.move === type ? undefined : type,
+  function requestAutoScrollOnce() {
+    if (hasAutoScrolledRef.current) {
+      return false;
+    }
+
+    hasAutoScrolledRef.current = true;
+
+    return true;
+  }
+
+  function scrollToWorkArea() {
+    const workArea = workAreaRef.current;
+
+    if (!workArea) {
+      return;
+    }
+
+    window.scrollTo({
+      behavior: "smooth",
+      top: workArea.getBoundingClientRect().top + window.scrollY - 16,
     });
   }
 
+  function scheduleScrollToWorkArea() {
+    window.setTimeout(scrollToWorkArea, 80);
+  }
+
+  function selectMove(type: PokemonType) {
+    const shouldAutoScroll = requestAutoScrollOnce();
+
+    updateSearch(
+      {
+        ...sanitizedSearch,
+        move: sanitizedSearch.move === type ? undefined : type,
+      },
+      shouldAutoScroll ? scheduleScrollToWorkArea : undefined,
+    );
+  }
+
   function selectDefense(type: PokemonType) {
+    const shouldAutoScroll = requestAutoScrollOnce();
     const currentType = sanitizedSearch[activeSlot];
     const otherSlot = activeSlot === "def1" ? "def2" : "def1";
     const nextType = currentType === type ? undefined : type;
@@ -97,7 +134,7 @@ function TypeCheckerPage() {
       [activeSlot]: nextType,
     });
 
-    updateSearch(nextSearch);
+    updateSearch(nextSearch, shouldAutoScroll ? scheduleScrollToWorkArea : undefined);
 
     if (activeSlot === "def1" && !currentType && nextType && !nextSearch.def2) {
       setActiveSlot("def2");
@@ -133,7 +170,7 @@ function TypeCheckerPage() {
           <Text c="dimmed">技のタイプと攻撃されるポケモンのタイプを選んでください。</Text>
         </Stack>
 
-        <Card className="glass-panel" p="lg">
+        <Card className="glass-panel work-area-start" p="lg" ref={workAreaRef}>
           <Stack gap="md">
             <Title order={2} size="h3">
               技のタイプ
@@ -144,6 +181,11 @@ function TypeCheckerPage() {
             />
           </Stack>
         </Card>
+
+        <CompactResultSummary
+          placeholder={getPlaceholderMessage(sanitizedSearch.move, defenseTypes)}
+          result={result}
+        />
 
         <Card className="glass-panel" p="lg">
           <Stack gap="md">
@@ -183,14 +225,6 @@ function TypeCheckerPage() {
             />
           </Stack>
         </Card>
-
-        {result ? (
-          <MultiplierResult result={result} />
-        ) : (
-          <Card className="glass-panel" p="lg">
-            <Text fw={700}>{getPlaceholderMessage(sanitizedSearch.move, defenseTypes)}</Text>
-          </Card>
-        )}
       </Stack>
     </Container>
   );
