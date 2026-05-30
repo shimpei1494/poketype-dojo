@@ -1,10 +1,14 @@
 /// <reference types="vite-plus/client" />
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
+import { Notifications } from "@mantine/notifications";
 import { HeadContent, Outlet, Scripts, createRootRoute } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 
+import { appTheme } from "../theme";
+
 import appCss from "../styles.css?url";
 import mantineCss from "@mantine/core/styles.css?url";
+import notificationsCss from "@mantine/notifications/styles.css?url";
 
 export const Route = createRootRoute({
   component: RootComponent,
@@ -12,6 +16,7 @@ export const Route = createRootRoute({
   head: () => ({
     links: [
       { href: mantineCss, rel: "stylesheet" },
+      { href: notificationsCss, rel: "stylesheet" },
       { href: appCss, rel: "stylesheet" },
     ],
     meta: [
@@ -29,10 +34,11 @@ function RootComponent() {
     <html lang="ja">
       <head>
         <HeadContent />
-        <ColorSchemeScript />
+        <ColorSchemeScript forceColorScheme="light" />
       </head>
       <body>
-        <MantineProvider>
+        <MantineProvider defaultColorScheme="light" forceColorScheme="light" theme={appTheme}>
+          <Notifications position="top-right" />
           <Outlet />
         </MantineProvider>
         <TanStackRouterDevtools position="bottom-right" />
