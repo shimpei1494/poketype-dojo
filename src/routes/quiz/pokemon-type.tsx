@@ -6,6 +6,7 @@ import {
   HoverCard,
   Image,
   ScrollArea,
+  Skeleton,
   Stack,
   Text,
   Title,
@@ -60,16 +61,21 @@ const getInitialPokemonTypeQuestion = createServerFn({ method: "GET" })
 
 export const Route = createFileRoute("/quiz/pokemon-type")({
   component: PokemonTypeQuizPage,
+  pendingComponent: PokemonTypeQuizPendingPage,
   validateSearch: (search: Record<string, unknown>): QuizSearch => {
     return { generation: parsePokemonGenerationFilter(search.generation) };
   },
   loaderDeps: ({ search }) => ({
     generation: search.generation,
   }),
-  loader: async ({ deps }) => ({
-    initialQuestion: await getInitialPokemonTypeQuestion({ data: deps.generation }),
-  }),
-  staleTime: Infinity,
+  loader: {
+    handler: async ({ deps }) => ({
+      initialQuestion: await getInitialPokemonTypeQuestion({ data: deps.generation }),
+    }),
+    staleReloadMode: "blocking",
+  },
+  pendingMinMs: 160,
+  pendingMs: 160,
 });
 
 function PokemonTypeQuizPage() {
@@ -84,6 +90,45 @@ function PokemonTypeQuizPage() {
       navigate={navigate}
       search={search}
     />
+  );
+}
+
+function PokemonTypeQuizPendingPage() {
+  return (
+    <Container className="page-shell" size="lg">
+      <Stack gap="lg">
+        <Stack gap={4}>
+          <HomeLink />
+          <Text c="candyPink.7" fw={700} size="sm">
+            Pokemon Type Quiz
+          </Text>
+          <Title order={1}>ポケモンタイプ当て</Title>
+          <Text c="dimmed">ポケモンの姿からタイプを当てていきましょう。</Text>
+        </Stack>
+
+        <Card className="glass-panel" p="lg">
+          <Stack gap="md">
+            <Group justify="space-between">
+              <Text fw={700}>出題範囲</Text>
+              <Skeleton height={18} radius="xl" width={76} />
+            </Group>
+            <Skeleton height={36} radius="md" />
+            <Skeleton height={58} radius="md" />
+          </Stack>
+        </Card>
+
+        <Card className="glass-panel pokemon-question-card" p="lg">
+          <Stack align="center" gap="md">
+            <Skeleton height={18} radius="xl" width={72} />
+            <Skeleton className="pokemon-quiz-image" radius="999px" />
+            <Stack align="center" gap={8}>
+              <Skeleton height={32} radius="xl" width={180} />
+              <Skeleton height={18} radius="xl" width={156} />
+            </Stack>
+          </Stack>
+        </Card>
+      </Stack>
+    </Container>
   );
 }
 

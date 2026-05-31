@@ -5,6 +5,7 @@ import {
   Group,
   SegmentedControl,
   SimpleGrid,
+  Skeleton,
   Stack,
   Text,
   Title,
@@ -52,6 +53,7 @@ const getInitialTypeMatchupQuestion = createServerFn({ method: "GET" })
 
 export const Route = createFileRoute("/quiz/type-matchup")({
   component: TypeMatchupQuizPage,
+  pendingComponent: TypeMatchupQuizPendingPage,
   validateSearch: (search: Record<string, unknown>): QuizSearch => ({
     mode:
       typeof search.mode === "string" && quizModes.has(search.mode as QuizMode)
@@ -61,10 +63,14 @@ export const Route = createFileRoute("/quiz/type-matchup")({
   loaderDeps: ({ search }) => ({
     mode: search.mode,
   }),
-  loader: async ({ deps }) => ({
-    initialQuestion: await getInitialTypeMatchupQuestion({ data: deps.mode }),
-  }),
-  staleTime: Infinity,
+  loader: {
+    handler: async ({ deps }) => ({
+      initialQuestion: await getInitialTypeMatchupQuestion({ data: deps.mode }),
+    }),
+    staleReloadMode: "blocking",
+  },
+  pendingMinMs: 160,
+  pendingMs: 160,
 });
 
 function TypeMatchupQuizPage() {
@@ -79,6 +85,53 @@ function TypeMatchupQuizPage() {
       navigate={navigate}
       search={search}
     />
+  );
+}
+
+function TypeMatchupQuizPendingPage() {
+  return (
+    <Container className="page-shell" size="lg">
+      <Stack gap="lg">
+        <Stack gap={4}>
+          <HomeLink />
+          <Text c="candyPink.7" fw={700} size="sm">
+            Type Matchup Quiz
+          </Text>
+          <Title order={1}>タイプ相性クイズ</Title>
+          <Text c="dimmed">倍率と効果文を選んで、タイプ相性を練習しましょう。</Text>
+        </Stack>
+
+        <Card className="glass-panel" p="lg">
+          <Stack gap="md">
+            <Group justify="space-between">
+              <Text fw={700}>出題範囲</Text>
+              <Skeleton height={18} radius="xl" width={76} />
+            </Group>
+            <Skeleton height={36} radius="md" />
+          </Stack>
+        </Card>
+
+        <Card className="glass-panel" p="lg">
+          <Stack gap="md">
+            <Skeleton height={28} radius="xl" width="42%" />
+            <Group>
+              <Skeleton height={40} radius="md" width={92} />
+              <Text fw={700}>→</Text>
+              <Skeleton height={40} radius="md" width={92} />
+              <Skeleton height={40} radius="md" width={92} />
+            </Group>
+            <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="sm">
+              <Skeleton height={42} radius="md" />
+              <Skeleton height={42} radius="md" />
+              <Skeleton height={42} radius="md" />
+              <Skeleton height={42} radius="md" />
+              <Skeleton height={42} radius="md" />
+              <Skeleton height={42} radius="md" />
+            </SimpleGrid>
+          </Stack>
+        </Card>
+      </Stack>
+    </Container>
   );
 }
 
