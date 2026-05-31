@@ -1,22 +1,96 @@
 import { describe, expect, it } from "vite-plus/test";
 
-import { pokemonQuizRecords } from "./pokemon-quiz-records";
+import { availablePokemonGenerations, pokemonQuizRecords } from "./pokemon";
 import { pokemonTypes } from "./pokemon-types";
 
 const pokemonTypeSet = new Set(pokemonTypes);
 
 describe("pokemonQuizRecords", () => {
-  it("第1世代151匹の通常個体データを持つ", () => {
-    expect(pokemonQuizRecords).toHaveLength(151);
+  it("第1世代から第9世代まで1025匹の通常個体データを持つ", () => {
+    expect(pokemonQuizRecords).toHaveLength(1025);
     expect(pokemonQuizRecords[0]?.id).toBe(1);
-    expect(pokemonQuizRecords.at(-1)?.id).toBe(151);
+    expect(pokemonQuizRecords.at(-1)?.id).toBe(1025);
   });
 
-  it("全国図鑑番号が重複せず1から151まで連続している", () => {
+  it("第2世代100匹の通常個体データを持つ", () => {
+    const generation2Records = pokemonQuizRecords.filter((record) => record.generation === 2);
+
+    expect(generation2Records).toHaveLength(100);
+    expect(generation2Records[0]?.id).toBe(152);
+    expect(generation2Records.at(-1)?.id).toBe(251);
+  });
+
+  it("第3世代135匹の通常個体データを持つ", () => {
+    const generation3Records = pokemonQuizRecords.filter((record) => record.generation === 3);
+
+    expect(generation3Records).toHaveLength(135);
+    expect(generation3Records[0]?.id).toBe(252);
+    expect(generation3Records.at(-1)?.id).toBe(386);
+  });
+
+  it("第4世代107匹の通常個体データを持つ", () => {
+    const generation4Records = pokemonQuizRecords.filter((record) => record.generation === 4);
+
+    expect(generation4Records).toHaveLength(107);
+    expect(generation4Records[0]?.id).toBe(387);
+    expect(generation4Records.at(-1)?.id).toBe(493);
+  });
+
+  it("第5世代156匹の通常個体データを持つ", () => {
+    const generation5Records = pokemonQuizRecords.filter((record) => record.generation === 5);
+
+    expect(generation5Records).toHaveLength(156);
+    expect(generation5Records[0]?.id).toBe(494);
+    expect(generation5Records.at(-1)?.id).toBe(649);
+  });
+
+  it("第6世代72匹の通常個体データを持つ", () => {
+    const generation6Records = pokemonQuizRecords.filter((record) => record.generation === 6);
+
+    expect(generation6Records).toHaveLength(72);
+    expect(generation6Records[0]?.id).toBe(650);
+    expect(generation6Records.at(-1)?.id).toBe(721);
+  });
+
+  it("第7世代88匹の通常個体データを持つ", () => {
+    const generation7Records = pokemonQuizRecords.filter((record) => record.generation === 7);
+
+    expect(generation7Records).toHaveLength(88);
+    expect(generation7Records[0]?.id).toBe(722);
+    expect(generation7Records.at(-1)?.id).toBe(809);
+  });
+
+  it("第8世代96匹の通常個体データを持つ", () => {
+    const generation8Records = pokemonQuizRecords.filter((record) => record.generation === 8);
+
+    expect(generation8Records).toHaveLength(96);
+    expect(generation8Records[0]?.id).toBe(810);
+    expect(generation8Records.at(-1)?.id).toBe(905);
+  });
+
+  it("第9世代120匹の通常個体データを持つ", () => {
+    const generation9Records = pokemonQuizRecords.filter((record) => record.generation === 9);
+
+    expect(generation9Records).toHaveLength(120);
+    expect(generation9Records[0]?.id).toBe(906);
+    expect(generation9Records.at(-1)?.id).toBe(1025);
+  });
+
+  it("全国図鑑番号に重複がない", () => {
+    const ids = pokemonQuizRecords.map((record) => record.id);
+    const duplicatedIds = ids.filter((id, index) => ids.indexOf(id) !== index);
+
+    expect(duplicatedIds).toEqual([]);
+  });
+
+  it("全国図鑑番号が1から1025まで連続している", () => {
     const ids = pokemonQuizRecords.map((record) => record.id);
 
-    expect(new Set(ids)).toHaveLength(151);
-    expect(ids).toEqual(Array.from({ length: 151 }, (_, index) => index + 1));
+    expect(ids).toEqual(Array.from({ length: 1025 }, (_, index) => index + 1));
+  });
+
+  it("選択可能な世代に第1世代から第9世代を含む", () => {
+    expect(availablePokemonGenerations).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
   });
 
   it("すべてのタイプがPokemonTypeに含まれる", () => {
@@ -31,25 +105,323 @@ describe("pokemonQuizRecords", () => {
   });
 
   it("現在タイプへ変わった代表的な第1世代ポケモンを含む", () => {
+    // ピッピ
     expect(pokemonQuizRecords.find((record) => record.id === 35)).toMatchObject({
       name: "clefairy",
       type1: "fairy",
       type2: null,
     });
+    // プリン
     expect(pokemonQuizRecords.find((record) => record.id === 39)).toMatchObject({
       name: "jigglypuff",
       type1: "normal",
       type2: "fairy",
     });
+    // コイル
     expect(pokemonQuizRecords.find((record) => record.id === 81)).toMatchObject({
       name: "magnemite",
       type1: "electric",
       type2: "steel",
     });
+    // バリヤード
     expect(pokemonQuizRecords.find((record) => record.id === 122)).toMatchObject({
       name: "mr-mime",
       type1: "psychic",
       type2: "fairy",
+    });
+  });
+
+  it("現在タイプへ変わった代表的な第2世代ポケモンを含む", () => {
+    // ピィ
+    expect(pokemonQuizRecords.find((record) => record.id === 173)).toMatchObject({
+      name: "cleffa",
+      type1: "fairy",
+      type2: null,
+    });
+    // ププリン
+    expect(pokemonQuizRecords.find((record) => record.id === 174)).toMatchObject({
+      name: "igglybuff",
+      type1: "normal",
+      type2: "fairy",
+    });
+    // トゲピー
+    expect(pokemonQuizRecords.find((record) => record.id === 175)).toMatchObject({
+      name: "togepi",
+      type1: "fairy",
+      type2: null,
+    });
+    // ブルー
+    expect(pokemonQuizRecords.find((record) => record.id === 209)).toMatchObject({
+      name: "snubbull",
+      type1: "fairy",
+      type2: null,
+    });
+  });
+
+  it("現在タイプへ変わった代表的な第3世代ポケモンを含む", () => {
+    // ラルトス
+    expect(pokemonQuizRecords.find((record) => record.id === 280)).toMatchObject({
+      name: "ralts",
+      type1: "psychic",
+      type2: "fairy",
+    });
+    // ルリリ
+    expect(pokemonQuizRecords.find((record) => record.id === 298)).toMatchObject({
+      name: "azurill",
+      type1: "normal",
+      type2: "fairy",
+    });
+    // クチート
+    expect(pokemonQuizRecords.find((record) => record.id === 303)).toMatchObject({
+      name: "mawile",
+      type1: "steel",
+      type2: "fairy",
+    });
+  });
+
+  it("現在タイプへ変わった代表的な第4世代ポケモンを含む", () => {
+    // マネネ
+    expect(pokemonQuizRecords.find((record) => record.id === 439)).toMatchObject({
+      name: "mime-jr",
+      type1: "psychic",
+      type2: "fairy",
+    });
+    // トゲキッス
+    expect(pokemonQuizRecords.find((record) => record.id === 468)).toMatchObject({
+      name: "togekiss",
+      type1: "fairy",
+      type2: "flying",
+    });
+    // エルレイド
+    expect(pokemonQuizRecords.find((record) => record.id === 475)).toMatchObject({
+      name: "gallade",
+      type1: "psychic",
+      type2: "fighting",
+    });
+  });
+
+  it("第4世代のフォームを持つ代表ポケモンは標準フォームのタイプで扱う", () => {
+    // ミノマダム
+    expect(pokemonQuizRecords.find((record) => record.id === 413)).toMatchObject({
+      name: "wormadam",
+      type1: "bug",
+      type2: "grass",
+    });
+    // ロトム
+    expect(pokemonQuizRecords.find((record) => record.id === 479)).toMatchObject({
+      name: "rotom",
+      type1: "electric",
+      type2: "ghost",
+    });
+    // シェイミ
+    expect(pokemonQuizRecords.find((record) => record.id === 492)).toMatchObject({
+      name: "shaymin",
+      type1: "grass",
+      type2: null,
+    });
+  });
+
+  it("現在タイプへ変わった代表的な第5世代ポケモンを含む", () => {
+    // モンメン
+    expect(pokemonQuizRecords.find((record) => record.id === 546)).toMatchObject({
+      name: "cottonee",
+      type1: "grass",
+      type2: "fairy",
+    });
+    // エルフーン
+    expect(pokemonQuizRecords.find((record) => record.id === 547)).toMatchObject({
+      name: "whimsicott",
+      type1: "grass",
+      type2: "fairy",
+    });
+  });
+
+  it("第5世代のフォームを持つ代表ポケモンは標準フォームのタイプで扱う", () => {
+    // ヒヒダルマ
+    expect(pokemonQuizRecords.find((record) => record.id === 555)).toMatchObject({
+      name: "darmanitan",
+      type1: "fire",
+      type2: null,
+    });
+    // トルネロス
+    expect(pokemonQuizRecords.find((record) => record.id === 641)).toMatchObject({
+      name: "tornadus",
+      type1: "flying",
+      type2: null,
+    });
+    // メロエッタ
+    expect(pokemonQuizRecords.find((record) => record.id === 648)).toMatchObject({
+      name: "meloetta",
+      type1: "normal",
+      type2: "psychic",
+    });
+  });
+
+  it("第6世代の代表的なフェアリータイプを含む", () => {
+    // フラベベ
+    expect(pokemonQuizRecords.find((record) => record.id === 669)).toMatchObject({
+      name: "flabebe",
+      type1: "fairy",
+      type2: null,
+    });
+    // ニンフィア
+    expect(pokemonQuizRecords.find((record) => record.id === 700)).toMatchObject({
+      name: "sylveon",
+      type1: "fairy",
+      type2: null,
+    });
+    // デデンネ
+    expect(pokemonQuizRecords.find((record) => record.id === 702)).toMatchObject({
+      name: "dedenne",
+      type1: "electric",
+      type2: "fairy",
+    });
+  });
+
+  it("第6世代のフォームを持つ代表ポケモンは標準フォームのタイプで扱う", () => {
+    // バケッチャ
+    expect(pokemonQuizRecords.find((record) => record.id === 710)).toMatchObject({
+      name: "pumpkaboo",
+      type1: "ghost",
+      type2: "grass",
+    });
+    // ジガルデ
+    expect(pokemonQuizRecords.find((record) => record.id === 718)).toMatchObject({
+      name: "zygarde",
+      type1: "dragon",
+      type2: "ground",
+    });
+    // フーパ
+    expect(pokemonQuizRecords.find((record) => record.id === 720)).toMatchObject({
+      name: "hoopa",
+      type1: "psychic",
+      type2: "ghost",
+    });
+  });
+
+  it("第7世代の代表的なフェアリータイプを含む", () => {
+    // アシレーヌ
+    expect(pokemonQuizRecords.find((record) => record.id === 730)).toMatchObject({
+      name: "primarina",
+      type1: "water",
+      type2: "fairy",
+    });
+    // カプ・コケコ
+    expect(pokemonQuizRecords.find((record) => record.id === 785)).toMatchObject({
+      name: "tapu-koko",
+      type1: "electric",
+      type2: "fairy",
+    });
+    // マギアナ
+    expect(pokemonQuizRecords.find((record) => record.id === 801)).toMatchObject({
+      name: "magearna",
+      type1: "steel",
+      type2: "fairy",
+    });
+  });
+
+  it("第7世代のフォームを持つ代表ポケモンは標準フォームのタイプで扱う", () => {
+    // オドリドリ
+    expect(pokemonQuizRecords.find((record) => record.id === 741)).toMatchObject({
+      name: "oricorio",
+      type1: "fire",
+      type2: "flying",
+    });
+    // シルヴァディ
+    expect(pokemonQuizRecords.find((record) => record.id === 773)).toMatchObject({
+      name: "silvally",
+      type1: "normal",
+      type2: null,
+    });
+    // ネクロズマ
+    expect(pokemonQuizRecords.find((record) => record.id === 800)).toMatchObject({
+      name: "necrozma",
+      type1: "psychic",
+      type2: null,
+    });
+  });
+
+  it("第8世代の代表的なフェアリータイプを含む", () => {
+    // ブリムオン
+    expect(pokemonQuizRecords.find((record) => record.id === 858)).toMatchObject({
+      name: "hatterene",
+      type1: "psychic",
+      type2: "fairy",
+    });
+    // ザシアン
+    expect(pokemonQuizRecords.find((record) => record.id === 888)).toMatchObject({
+      name: "zacian",
+      type1: "fairy",
+      type2: null,
+    });
+    // ラブトロス
+    expect(pokemonQuizRecords.find((record) => record.id === 905)).toMatchObject({
+      name: "enamorus",
+      type1: "fairy",
+      type2: "flying",
+    });
+  });
+
+  it("第8世代のフォームを持つ代表ポケモンは標準フォームのタイプで扱う", () => {
+    // ストリンダー
+    expect(pokemonQuizRecords.find((record) => record.id === 849)).toMatchObject({
+      name: "toxtricity",
+      type1: "electric",
+      type2: "poison",
+    });
+    // ザマゼンタ
+    expect(pokemonQuizRecords.find((record) => record.id === 889)).toMatchObject({
+      name: "zamazenta",
+      type1: "fighting",
+      type2: null,
+    });
+    // バドレックス
+    expect(pokemonQuizRecords.find((record) => record.id === 898)).toMatchObject({
+      name: "calyrex",
+      type1: "psychic",
+      type2: "grass",
+    });
+  });
+
+  it("第9世代の代表的なフェアリータイプを含む", () => {
+    // デカヌチャン
+    expect(pokemonQuizRecords.find((record) => record.id === 959)).toMatchObject({
+      name: "tinkaton",
+      type1: "fairy",
+      type2: "steel",
+    });
+    // サケブシッポ
+    expect(pokemonQuizRecords.find((record) => record.id === 985)).toMatchObject({
+      name: "scream-tail",
+      type1: "fairy",
+      type2: "psychic",
+    });
+    // テツノブジン
+    expect(pokemonQuizRecords.find((record) => record.id === 1006)).toMatchObject({
+      name: "iron-valiant",
+      type1: "fairy",
+      type2: "fighting",
+    });
+  });
+
+  it("第9世代のフォームを持つ代表ポケモンは標準フォームのタイプで扱う", () => {
+    // イルカマン
+    expect(pokemonQuizRecords.find((record) => record.id === 964)).toMatchObject({
+      name: "palafin",
+      type1: "water",
+      type2: null,
+    });
+    // オーガポン
+    expect(pokemonQuizRecords.find((record) => record.id === 1017)).toMatchObject({
+      name: "ogerpon",
+      type1: "grass",
+      type2: null,
+    });
+    // テラパゴス
+    expect(pokemonQuizRecords.find((record) => record.id === 1024)).toMatchObject({
+      name: "terapagos",
+      type1: "normal",
+      type2: null,
     });
   });
 });

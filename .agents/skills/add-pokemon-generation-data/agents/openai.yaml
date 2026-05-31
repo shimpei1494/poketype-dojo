@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Pokémon Generation Data"
+  short_description: "Add static Pokémon generation quiz data."
+  default_prompt: "Use $add-pokemon-generation-data to add the next generation of static Pokémon quiz data."
