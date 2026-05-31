@@ -26,6 +26,7 @@ import {
   type PokemonQuizRecord,
 } from "../../data/pokemon";
 import { pokemonTypes, type PokemonType } from "../../data/pokemon-types";
+import { selectRandomPokemonQuestion } from "../../utils/pokemon-question-selection";
 
 type GenerationFilter = "all" | AvailablePokemonGeneration;
 
@@ -393,13 +394,8 @@ function createQuestion(
   questionPool: readonly PokemonQuizRecord[],
   previousPokemonId?: number,
 ): Question {
-  const candidates =
-    previousPokemonId === undefined
-      ? questionPool
-      : questionPool.filter((record) => record.id !== previousPokemonId);
-
   return {
-    pokemon: pickRandom(candidates),
+    pokemon: selectRandomPokemonQuestion({ previousPokemonId, questionPool }),
   };
 }
 
@@ -428,8 +424,4 @@ function areSameTypes(firstTypes: readonly PokemonType[], secondTypes: readonly 
 
 function pokemonTypesExcept(types: readonly PokemonType[]) {
   return pokemonTypes.filter((type) => !types.includes(type));
-}
-
-function pickRandom<T>(items: readonly T[]): T {
-  return items[Math.floor(Math.random() * items.length)] as T;
 }
