@@ -6,10 +6,10 @@ import { pokemonTypes } from "./pokemon-types";
 const pokemonTypeSet = new Set(pokemonTypes);
 
 describe("pokemonQuizRecords", () => {
-  it("第1世代から第7世代まで809匹の通常個体データを持つ", () => {
-    expect(pokemonQuizRecords).toHaveLength(809);
+  it("第1世代から第8世代まで905匹の通常個体データを持つ", () => {
+    expect(pokemonQuizRecords).toHaveLength(905);
     expect(pokemonQuizRecords[0]?.id).toBe(1);
-    expect(pokemonQuizRecords.at(-1)?.id).toBe(809);
+    expect(pokemonQuizRecords.at(-1)?.id).toBe(905);
   });
 
   it("第2世代100匹の通常個体データを持つ", () => {
@@ -60,6 +60,14 @@ describe("pokemonQuizRecords", () => {
     expect(generation7Records.at(-1)?.id).toBe(809);
   });
 
+  it("第8世代96匹の通常個体データを持つ", () => {
+    const generation8Records = pokemonQuizRecords.filter((record) => record.generation === 8);
+
+    expect(generation8Records).toHaveLength(96);
+    expect(generation8Records[0]?.id).toBe(810);
+    expect(generation8Records.at(-1)?.id).toBe(905);
+  });
+
   it("全国図鑑番号に重複がない", () => {
     const ids = pokemonQuizRecords.map((record) => record.id);
     const duplicatedIds = ids.filter((id, index) => ids.indexOf(id) !== index);
@@ -67,14 +75,14 @@ describe("pokemonQuizRecords", () => {
     expect(duplicatedIds).toEqual([]);
   });
 
-  it("全国図鑑番号が1から809まで連続している", () => {
+  it("全国図鑑番号が1から905まで連続している", () => {
     const ids = pokemonQuizRecords.map((record) => record.id);
 
-    expect(ids).toEqual(Array.from({ length: 809 }, (_, index) => index + 1));
+    expect(ids).toEqual(Array.from({ length: 905 }, (_, index) => index + 1));
   });
 
-  it("選択可能な世代に第1世代から第7世代を含む", () => {
-    expect(availablePokemonGenerations).toEqual([1, 2, 3, 4, 5, 6, 7]);
+  it("選択可能な世代に第1世代から第8世代を含む", () => {
+    expect(availablePokemonGenerations).toEqual([1, 2, 3, 4, 5, 6, 7, 8]);
   });
 
   it("すべてのタイプがPokemonTypeに含まれる", () => {
@@ -322,6 +330,48 @@ describe("pokemonQuizRecords", () => {
       name: "necrozma",
       type1: "psychic",
       type2: null,
+    });
+  });
+
+  it("第8世代の代表的なフェアリータイプを含む", () => {
+    // ブリムオン
+    expect(pokemonQuizRecords.find((record) => record.id === 858)).toMatchObject({
+      name: "hatterene",
+      type1: "psychic",
+      type2: "fairy",
+    });
+    // ザシアン
+    expect(pokemonQuizRecords.find((record) => record.id === 888)).toMatchObject({
+      name: "zacian",
+      type1: "fairy",
+      type2: null,
+    });
+    // ラブトロス
+    expect(pokemonQuizRecords.find((record) => record.id === 905)).toMatchObject({
+      name: "enamorus",
+      type1: "fairy",
+      type2: "flying",
+    });
+  });
+
+  it("第8世代のフォームを持つ代表ポケモンは標準フォームのタイプで扱う", () => {
+    // ストリンダー
+    expect(pokemonQuizRecords.find((record) => record.id === 849)).toMatchObject({
+      name: "toxtricity",
+      type1: "electric",
+      type2: "poison",
+    });
+    // ザマゼンタ
+    expect(pokemonQuizRecords.find((record) => record.id === 889)).toMatchObject({
+      name: "zamazenta",
+      type1: "fighting",
+      type2: null,
+    });
+    // バドレックス
+    expect(pokemonQuizRecords.find((record) => record.id === 898)).toMatchObject({
+      name: "calyrex",
+      type1: "psychic",
+      type2: "grass",
     });
   });
 });
