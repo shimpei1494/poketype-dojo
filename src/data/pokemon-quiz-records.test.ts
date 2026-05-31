@@ -6,10 +6,10 @@ import { pokemonTypes } from "./pokemon-types";
 const pokemonTypeSet = new Set(pokemonTypes);
 
 describe("pokemonQuizRecords", () => {
-  it("第1世代から第6世代まで721匹の通常個体データを持つ", () => {
-    expect(pokemonQuizRecords).toHaveLength(721);
+  it("第1世代から第7世代まで809匹の通常個体データを持つ", () => {
+    expect(pokemonQuizRecords).toHaveLength(809);
     expect(pokemonQuizRecords[0]?.id).toBe(1);
-    expect(pokemonQuizRecords.at(-1)?.id).toBe(721);
+    expect(pokemonQuizRecords.at(-1)?.id).toBe(809);
   });
 
   it("第2世代100匹の通常個体データを持つ", () => {
@@ -52,6 +52,14 @@ describe("pokemonQuizRecords", () => {
     expect(generation6Records.at(-1)?.id).toBe(721);
   });
 
+  it("第7世代88匹の通常個体データを持つ", () => {
+    const generation7Records = pokemonQuizRecords.filter((record) => record.generation === 7);
+
+    expect(generation7Records).toHaveLength(88);
+    expect(generation7Records[0]?.id).toBe(722);
+    expect(generation7Records.at(-1)?.id).toBe(809);
+  });
+
   it("全国図鑑番号に重複がない", () => {
     const ids = pokemonQuizRecords.map((record) => record.id);
     const duplicatedIds = ids.filter((id, index) => ids.indexOf(id) !== index);
@@ -59,14 +67,14 @@ describe("pokemonQuizRecords", () => {
     expect(duplicatedIds).toEqual([]);
   });
 
-  it("全国図鑑番号が1から721まで連続している", () => {
+  it("全国図鑑番号が1から809まで連続している", () => {
     const ids = pokemonQuizRecords.map((record) => record.id);
 
-    expect(ids).toEqual(Array.from({ length: 721 }, (_, index) => index + 1));
+    expect(ids).toEqual(Array.from({ length: 809 }, (_, index) => index + 1));
   });
 
-  it("選択可能な世代に第1世代から第6世代を含む", () => {
-    expect(availablePokemonGenerations).toEqual([1, 2, 3, 4, 5, 6]);
+  it("選択可能な世代に第1世代から第7世代を含む", () => {
+    expect(availablePokemonGenerations).toEqual([1, 2, 3, 4, 5, 6, 7]);
   });
 
   it("すべてのタイプがPokemonTypeに含まれる", () => {
@@ -272,6 +280,48 @@ describe("pokemonQuizRecords", () => {
       name: "hoopa",
       type1: "psychic",
       type2: "ghost",
+    });
+  });
+
+  it("第7世代の代表的なフェアリータイプを含む", () => {
+    // アシレーヌ
+    expect(pokemonQuizRecords.find((record) => record.id === 730)).toMatchObject({
+      name: "primarina",
+      type1: "water",
+      type2: "fairy",
+    });
+    // カプ・コケコ
+    expect(pokemonQuizRecords.find((record) => record.id === 785)).toMatchObject({
+      name: "tapu-koko",
+      type1: "electric",
+      type2: "fairy",
+    });
+    // マギアナ
+    expect(pokemonQuizRecords.find((record) => record.id === 801)).toMatchObject({
+      name: "magearna",
+      type1: "steel",
+      type2: "fairy",
+    });
+  });
+
+  it("第7世代のフォームを持つ代表ポケモンは標準フォームのタイプで扱う", () => {
+    // オドリドリ
+    expect(pokemonQuizRecords.find((record) => record.id === 741)).toMatchObject({
+      name: "oricorio",
+      type1: "fire",
+      type2: "flying",
+    });
+    // シルヴァディ
+    expect(pokemonQuizRecords.find((record) => record.id === 773)).toMatchObject({
+      name: "silvally",
+      type1: "normal",
+      type2: null,
+    });
+    // ネクロズマ
+    expect(pokemonQuizRecords.find((record) => record.id === 800)).toMatchObject({
+      name: "necrozma",
+      type1: "psychic",
+      type2: null,
     });
   });
 });
