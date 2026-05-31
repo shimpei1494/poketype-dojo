@@ -10,7 +10,8 @@ import {
   Title,
 } from "@mantine/core";
 import { createFileRoute } from "@tanstack/react-router";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { createServerFn } from "@tanstack/react-start";
+import { useCallback, useEffect, useReducer, useRef } from "react";
 
 import { HomeLink } from "../../components/HomeLink";
 import { MultiplierResult } from "../../components/MultiplierResult";
@@ -32,7 +33,22 @@ type Question = {
   result: FinalEffectiveness;
 };
 
+type QuizState = {
+  answeredCount: number;
+  correctCount: number;
+  question: Question;
+  selectedAnswer: FinalMultiplier | null;
+};
+
+type QuizAction =
+  | { multiplier: FinalMultiplier; type: "answer" }
+  | { mode: QuizMode; type: "nextQuestion" };
+
 const quizModes = new Set<QuizMode>(["mixed", "single", "dual"]);
+
+const getInitialTypeMatchupQuestion = createServerFn({ method: "GET" })
+  .inputValidator((mode: QuizMode) => mode)
+  .handler(async ({ data: mode }) => createQuestion(mode));
 
 export const Route = createFileRoute("/quiz/type-matchup")({
   component: TypeMatchupQuizPage,
@@ -42,23 +58,43 @@ export const Route = createFileRoute("/quiz/type-matchup")({
         ? (search.mode as QuizMode)
         : "mixed",
   }),
+  loaderDeps: ({ search }) => ({
+    mode: search.mode,
+  }),
+  loader: async ({ deps }) => ({
+    initialQuestion: await getInitialTypeMatchupQuestion({ data: deps.mode }),
+  }),
+  staleTime: Infinity,
 });
 
 function TypeMatchupQuizPage() {
   const search = Route.useSearch();
   const navigate = Route.useNavigate();
-  const [question, setQuestion] = useState(() => createQuestion(search.mode));
-  const [selectedAnswer, setSelectedAnswer] = useState<FinalMultiplier | null>(null);
-  const [answeredCount, setAnsweredCount] = useState(0);
-  const [correctCount, setCorrectCount] = useState(0);
+  const { initialQuestion } = Route.useLoaderData();
+
+  return (
+    <TypeMatchupQuizContent
+      initialQuestion={initialQuestion}
+      key={`${search.mode}-${initialQuestion.moveType}-${initialQuestion.defenseTypes.join("-")}`}
+      navigate={navigate}
+      search={search}
+    />
+  );
+}
+
+function TypeMatchupQuizContent({
+  initialQuestion,
+  navigate,
+  search,
+}: {
+  initialQuestion: Question;
+  navigate: ReturnType<typeof Route.useNavigate>;
+  search: QuizSearch;
+}) {
+  const [state, dispatch] = useReducer(quizReducer, initialQuestion, createInitialState);
   const feedbackRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    setQuestion(createQuestion(search.mode));
-    setSelectedAnswer(null);
-  }, [search.mode]);
-
-  const hasAnswered = selectedAnswer !== null;
+  const hasAnswered = state.selectedAnswer !== null;
 
   useEffect(() => {
     if (!hasAnswered) {
@@ -76,21 +112,11 @@ function TypeMatchupQuizPage() {
   );
 
   function answer(multiplier: FinalMultiplier) {
-    if (hasAnswered) {
-      return;
-    }
-
-    setSelectedAnswer(multiplier);
-    setAnsweredCount((count) => count + 1);
-
-    if (multiplier === question.result.finalMultiplier) {
-      setCorrectCount((count) => count + 1);
-    }
+    dispatch({ multiplier, type: "answer" });
   }
 
   function nextQuestion() {
-    setQuestion(createQuestion(search.mode));
-    setSelectedAnswer(null);
+    dispatch({ mode: search.mode, type: "nextQuestion" });
   }
 
   return (
@@ -110,7 +136,7 @@ function TypeMatchupQuizPage() {
             <Group justify="space-between">
               <Text fw={700}>出題範囲</Text>
               <Text c="dimmed" size="sm">
-                {correctCount} / {answeredCount} 正解
+                {state.correctCount} / {state.answeredCount} 正解
               </Text>
             </Group>
             <SegmentedControl
@@ -128,12 +154,12 @@ function TypeMatchupQuizPage() {
         <Card className="glass-panel" p="lg">
           <Stack gap="md">
             <Text fw={700} size="lg">
-              {getQuestionText(question)}
+              {getQuestionText(state.question)}
             </Text>
             <Group>
-              <TypeBadge selected type={question.moveType} />
+              <TypeBadge selected type={state.question.moveType} />
               <Text fw={700}>→</Text>
-              {question.defenseTypes.map((type) => (
+              {state.question.defenseTypes.map((type) => (
                 <TypeBadge key={type} selected type={type} />
               ))}
             </Group>
@@ -143,16 +169,16 @@ function TypeMatchupQuizPage() {
                 <Button
                   color={getAnswerColor({
                     answer: label.multiplier,
-                    correctAnswer: question.result.finalMultiplier,
-                    selectedAnswer,
+                    correctAnswer: state.question.result.finalMultiplier,
+                    selectedAnswer: state.selectedAnswer,
                   })}
                   disabled={hasAnswered}
                   key={label.multiplier}
                   onClick={() => answer(label.multiplier)}
                   variant={getAnswerVariant({
                     answer: label.multiplier,
-                    correctAnswer: question.result.finalMultiplier,
-                    selectedAnswer,
+                    correctAnswer: state.question.result.finalMultiplier,
+                    selectedAnswer: state.selectedAnswer,
                   })}
                 >
                   {label.text}（{label.message}）
@@ -162,13 +188,13 @@ function TypeMatchupQuizPage() {
           </Stack>
         </Card>
 
-        {hasAnswered ? (
+        {state.selectedAnswer !== null ? (
           <Stack gap="md" ref={feedbackRef}>
             <AnswerFeedback
-              correctAnswer={question.result.finalMultiplier}
-              selectedAnswer={selectedAnswer}
+              correctAnswer={state.question.result.finalMultiplier}
+              selectedAnswer={state.selectedAnswer}
             />
-            <MultiplierResult result={question.result} />
+            <MultiplierResult result={state.question.result} />
             <Button onClick={nextQuestion} size="md">
               次の問題
             </Button>
@@ -177,6 +203,40 @@ function TypeMatchupQuizPage() {
       </Stack>
     </Container>
   );
+}
+
+function createInitialState(initialQuestion: Question): QuizState {
+  return {
+    answeredCount: 0,
+    correctCount: 0,
+    question: initialQuestion,
+    selectedAnswer: null,
+  };
+}
+
+function quizReducer(state: QuizState, action: QuizAction): QuizState {
+  switch (action.type) {
+    case "answer": {
+      if (state.selectedAnswer !== null) {
+        return state;
+      }
+
+      const isCorrect = action.multiplier === state.question.result.finalMultiplier;
+
+      return {
+        ...state,
+        answeredCount: state.answeredCount + 1,
+        correctCount: isCorrect ? state.correctCount + 1 : state.correctCount,
+        selectedAnswer: action.multiplier,
+      };
+    }
+    case "nextQuestion":
+      return {
+        ...state,
+        question: createQuestion(action.mode),
+        selectedAnswer: null,
+      };
+  }
 }
 
 function AnswerFeedback({

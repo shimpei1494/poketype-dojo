@@ -11,6 +11,7 @@ import {
 } from "@mantine/core";
 import { notifications } from "@mantine/notifications";
 import { createFileRoute } from "@tanstack/react-router";
+import { createServerFn } from "@tanstack/react-start";
 import { useCallback, useEffect, useMemo, useReducer, useRef } from "react";
 
 import { HomeLink } from "../../components/HomeLink";
@@ -45,12 +46,19 @@ type QuizState = {
   selectedTypes: PokemonType[];
 };
 
+type InitialQuizData = {
+  initialQuestion: Question;
+};
+
 type QuizAction =
   | { type: "answer" }
   | { type: "clearSelectedTypes" }
   | { questionPool: readonly PokemonQuizRecord[]; type: "nextQuestion" }
-  | { questionPool: readonly PokemonQuizRecord[]; type: "reset" }
   | { pokemonType: PokemonType; type: "toggleType" };
+
+const getInitialPokemonTypeQuestion = createServerFn({ method: "GET" })
+  .inputValidator((generation: GenerationFilter) => generation)
+  .handler(async ({ data: generation }) => createQuestion(getQuestionPool(generation)));
 
 export const Route = createFileRoute("/quiz/pokemon-type")({
   component: PokemonTypeQuizPage,
@@ -78,13 +86,41 @@ export const Route = createFileRoute("/quiz/pokemon-type")({
 
     return { generation: "all", invalidGeneration: String(generation) };
   },
+  loaderDeps: ({ search }) => ({
+    generation: search.generation,
+  }),
+  loader: async ({ deps }) => ({
+    initialQuestion: await getInitialPokemonTypeQuestion({ data: deps.generation }),
+  }),
+  staleTime: Infinity,
 });
 
 function PokemonTypeQuizPage() {
   const search = Route.useSearch();
   const navigate = Route.useNavigate();
+  const initialQuizData = Route.useLoaderData();
+
+  return (
+    <PokemonTypeQuizContent
+      initialQuizData={initialQuizData}
+      key={`${search.generation}-${initialQuizData.initialQuestion.pokemon.id}`}
+      navigate={navigate}
+      search={search}
+    />
+  );
+}
+
+function PokemonTypeQuizContent({
+  initialQuizData,
+  navigate,
+  search,
+}: {
+  initialQuizData: InitialQuizData;
+  navigate: ReturnType<typeof Route.useNavigate>;
+  search: QuizSearch;
+}) {
   const questionPool = useMemo(() => getQuestionPool(search.generation), [search.generation]);
-  const [state, dispatch] = useReducer(quizReducer, questionPool, createInitialState);
+  const [state, dispatch] = useReducer(quizReducer, initialQuizData, createInitialState);
   const feedbackRef = useRef<HTMLDivElement>(null);
 
   const correctTypes = getPokemonTypes(state.question.pokemon);
@@ -99,10 +135,6 @@ function PokemonTypeQuizPage() {
 
     feedbackRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }, [state.hasAnswered]);
-
-  useEffect(() => {
-    dispatch({ questionPool, type: "reset" });
-  }, [questionPool]);
 
   useEffect(() => {
     if (search.invalidGeneration === undefined) {
@@ -163,79 +195,81 @@ function PokemonTypeQuizPage() {
           </Stack>
         </Card>
 
-        <Card className="glass-panel pokemon-question-card" p="lg">
-          <Stack align="center" gap="md">
-            <Text c="dimmed" fw={700} size="sm">
-              No.{state.question.pokemon.id.toString().padStart(3, "0")}
-            </Text>
-            <Image
-              alt={state.question.pokemon.jaName}
-              className="pokemon-quiz-image"
-              fit="contain"
-              src={getPokemonImageUrl(state.question.pokemon)}
-            />
-            <Stack align="center" gap={2}>
-              <Title order={2}>{state.question.pokemon.jaName}</Title>
-              <Text c="dimmed" size="sm">
-                このポケモンのタイプは？
+        <>
+          <Card className="glass-panel pokemon-question-card" p="lg">
+            <Stack align="center" gap="md">
+              <Text c="dimmed" fw={700} size="sm">
+                No.{state.question.pokemon.id.toString().padStart(3, "0")}
               </Text>
-            </Stack>
-          </Stack>
-        </Card>
-
-        <Card className="glass-panel" p="lg">
-          <Stack gap="md">
-            <Group justify="space-between">
-              <Stack gap={2}>
-                <Text fw={800} size="lg">
-                  タイプを選ぶ
-                </Text>
+              <Image
+                alt={state.question.pokemon.jaName}
+                className="pokemon-quiz-image"
+                fit="contain"
+                src={getPokemonImageUrl(state.question.pokemon)}
+              />
+              <Stack align="center" gap={2}>
+                <Title order={2}>{state.question.pokemon.jaName}</Title>
                 <Text c="dimmed" size="sm">
-                  タイプを1つか2つ選んで回答してください。
+                  このポケモンのタイプは？
                 </Text>
               </Stack>
-              {state.selectedTypes.length > 0 ? (
-                <Button
-                  color="crystalBlue"
-                  disabled={state.hasAnswered}
-                  onClick={() => dispatch({ type: "clearSelectedTypes" })}
-                  size="xs"
-                  variant="light"
-                >
-                  すべて外す
-                </Button>
-              ) : null}
-            </Group>
+            </Stack>
+          </Card>
 
-            {state.selectedTypes.length > 0 ? (
-              <Group gap="xs">
-                {state.selectedTypes.map((type) => (
-                  <TypeBadge key={type} selected type={type} />
-                ))}
+          <Card className="glass-panel" p="lg">
+            <Stack gap="md">
+              <Group justify="space-between">
+                <Stack gap={2}>
+                  <Text fw={800} size="lg">
+                    タイプを選ぶ
+                  </Text>
+                  <Text c="dimmed" size="sm">
+                    タイプを1つか2つ選んで回答してください。
+                  </Text>
+                </Stack>
+                {state.selectedTypes.length > 0 ? (
+                  <Button
+                    color="crystalBlue"
+                    disabled={state.hasAnswered}
+                    onClick={() => dispatch({ type: "clearSelectedTypes" })}
+                    size="xs"
+                    variant="light"
+                  >
+                    すべて外す
+                  </Button>
+                ) : null}
               </Group>
-            ) : (
-              <Text c="dimmed" fw={700} size="sm">
-                未選択
-              </Text>
-            )}
 
-            <TypeGrid
-              disabledTypes={
-                state.hasAnswered ? pokemonTypesExcept(state.selectedTypes) : disabledTypes
-              }
-              onSelect={(pokemonType) => dispatch({ pokemonType, type: "toggleType" })}
-              selectedTypes={state.selectedTypes}
-            />
+              {state.selectedTypes.length > 0 ? (
+                <Group gap="xs">
+                  {state.selectedTypes.map((type) => (
+                    <TypeBadge key={type} selected type={type} />
+                  ))}
+                </Group>
+              ) : (
+                <Text c="dimmed" fw={700} size="sm">
+                  未選択
+                </Text>
+              )}
 
-            <Button
-              disabled={state.selectedTypes.length === 0 || state.hasAnswered}
-              onClick={() => dispatch({ type: "answer" })}
-              size="md"
-            >
-              回答する
-            </Button>
-          </Stack>
-        </Card>
+              <TypeGrid
+                disabledTypes={
+                  state.hasAnswered ? pokemonTypesExcept(state.selectedTypes) : disabledTypes
+                }
+                onSelect={(pokemonType) => dispatch({ pokemonType, type: "toggleType" })}
+                selectedTypes={state.selectedTypes}
+              />
+
+              <Button
+                disabled={state.selectedTypes.length === 0 || state.hasAnswered}
+                onClick={() => dispatch({ type: "answer" })}
+                size="md"
+              >
+                回答する
+              </Button>
+            </Stack>
+          </Card>
+        </>
 
         {state.hasAnswered ? (
           <Stack gap="md" ref={feedbackRef}>
@@ -254,12 +288,12 @@ function PokemonTypeQuizPage() {
   );
 }
 
-function createInitialState(questionPool: readonly PokemonQuizRecord[]): QuizState {
+function createInitialState(initialQuizData: InitialQuizData): QuizState {
   return {
     answeredCount: 0,
     correctCount: 0,
     hasAnswered: false,
-    question: createQuestion(questionPool),
+    question: initialQuizData.initialQuestion,
     selectedTypes: [],
   };
 }
@@ -294,8 +328,6 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
         question: createQuestion(action.questionPool, state.question.pokemon.id),
         selectedTypes: [],
       };
-    case "reset":
-      return createInitialState(action.questionPool);
     case "toggleType": {
       if (state.hasAnswered) {
         return state;
