@@ -169,7 +169,7 @@ function PokemonTypeQuizContent({
             Pokemon Type Quiz
           </Text>
           <Title order={1}>ポケモンタイプ当て</Title>
-          <Text c="dimmed">第1世代151匹のタイプを、1匹ずつ当てていきましょう。</Text>
+          <Text c="dimmed">ポケモンの姿からタイプを当てていきましょう。</Text>
         </Stack>
 
         <Card className="glass-panel" p="lg">
