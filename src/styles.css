@@ -42,6 +42,39 @@ body {
   scroll-margin-top: 16px;
 }
 
+.generation-filter-scroll {
+  margin-inline: -4px;
+  padding-inline: 4px;
+  position: relative;
+}
+
+.generation-filter-scroll::before,
+.generation-filter-scroll::after {
+  content: "";
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 28px;
+  z-index: 1;
+}
+
+.generation-filter-scroll::before {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.82), transparent);
+  left: 0;
+}
+
+.generation-filter-scroll::after {
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0.82), transparent);
+  right: 0;
+}
+
+.generation-filter-option {
+  flex: 0 0 auto;
+  font-weight: 800;
+  min-width: max-content;
+}
+
 .pokemon-question-card {
   overflow: hidden;
   position: relative;

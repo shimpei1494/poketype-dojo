@@ -4,7 +4,7 @@ import {
   Container,
   Group,
   Image,
-  SegmentedControl,
+  ScrollArea,
   Stack,
   Text,
   Title,
@@ -123,11 +123,29 @@ function PokemonTypeQuizContent({
   const questionPool = useMemo(() => getQuestionPool(search.generation), [search.generation]);
   const [state, dispatch] = useReducer(quizReducer, initialQuizData, createInitialState);
   const feedbackRef = useRef<HTMLDivElement>(null);
+  const selectedGenerationRef = useRef<HTMLButtonElement>(null);
 
   const correctTypes = getPokemonTypes(state.question.pokemon);
   const isCorrect = state.hasAnswered && areSameTypes(state.selectedTypes, correctTypes);
   const disabledTypes =
     state.selectedTypes.length >= 2 ? pokemonTypesExcept(state.selectedTypes) : undefined;
+  const generationOptions = useMemo(
+    () => [
+      { label: "全世代", value: "all" },
+      ...availablePokemonGenerations.map((generation) => ({
+        label: getPokemonGenerationLabel(generation),
+        value: `${generation}`,
+      })),
+    ],
+    [],
+  );
+
+  useEffect(() => {
+    selectedGenerationRef.current?.scrollIntoView({
+      block: "nearest",
+      inline: "center",
+    });
+  }, [search.generation]);
 
   useEffect(() => {
     if (!state.hasAnswered) {
@@ -182,17 +200,34 @@ function PokemonTypeQuizContent({
                 {state.correctCount} / {state.answeredCount} 正解
               </Text>
             </Group>
-            <SegmentedControl
-              data={[
-                { label: "全世代", value: "all" },
-                ...availablePokemonGenerations.map((generation) => ({
-                  label: getPokemonGenerationLabel(generation),
-                  value: `${generation}`,
-                })),
-              ]}
-              onChange={changeGeneration}
-              value={`${search.generation}`}
-            />
+            <ScrollArea
+              className="generation-filter-scroll"
+              offsetScrollbars="x"
+              scrollbarSize={6}
+              scrollbars="x"
+              type="hover"
+            >
+              <Group gap="xs" wrap="nowrap">
+                {generationOptions.map((option) => {
+                  const selected = option.value === `${search.generation}`;
+
+                  return (
+                    <Button
+                      aria-pressed={selected}
+                      className="generation-filter-option"
+                      color={selected ? "candyPink" : "crystalBlue"}
+                      key={option.value}
+                      onClick={() => changeGeneration(option.value)}
+                      ref={selected ? selectedGenerationRef : undefined}
+                      size="sm"
+                      variant={selected ? "filled" : "light"}
+                    >
+                      {option.label}
+                    </Button>
+                  );
+                })}
+              </Group>
+            </ScrollArea>
           </Stack>
         </Card>
 
