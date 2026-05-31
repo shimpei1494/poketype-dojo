@@ -9,7 +9,6 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import { notifications } from "@mantine/notifications";
 import { createFileRoute } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/react-start";
 import { useCallback, useEffect, useMemo, useReducer, useRef } from "react";
@@ -32,7 +31,6 @@ type GenerationFilter = "all" | AvailablePokemonGeneration;
 
 type QuizSearch = {
   generation: GenerationFilter;
-  invalidGeneration?: string;
 };
 
 type Question = {
@@ -64,10 +62,6 @@ const getInitialPokemonTypeQuestion = createServerFn({ method: "GET" })
 export const Route = createFileRoute("/quiz/pokemon-type")({
   component: PokemonTypeQuizPage,
   validateSearch: (search: Record<string, unknown>): QuizSearch => {
-    if (typeof search.invalidGeneration === "string") {
-      return { generation: "all", invalidGeneration: search.invalidGeneration };
-    }
-
     const generation = search.generation;
 
     if (generation === "all" || generation === undefined) {
@@ -85,7 +79,7 @@ export const Route = createFileRoute("/quiz/pokemon-type")({
       return { generation: parsedGeneration };
     }
 
-    return { generation: "all", invalidGeneration: String(generation) };
+    return { generation: "all" };
   },
   loaderDeps: ({ search }) => ({
     generation: search.generation,
@@ -123,7 +117,6 @@ function PokemonTypeQuizContent({
   const questionPool = useMemo(() => getQuestionPool(search.generation), [search.generation]);
   const [state, dispatch] = useReducer(quizReducer, initialQuizData, createInitialState);
   const feedbackRef = useRef<HTMLDivElement>(null);
-  const selectedGenerationRef = useRef<HTMLButtonElement>(null);
 
   const correctTypes = getPokemonTypes(state.question.pokemon);
   const isCorrect = state.hasAnswered && areSameTypes(state.selectedTypes, correctTypes);
@@ -140,12 +133,12 @@ function PokemonTypeQuizContent({
     [],
   );
 
-  useEffect(() => {
-    selectedGenerationRef.current?.scrollIntoView({
+  const scrollSelectedGenerationIntoView = useCallback((element: HTMLButtonElement | null) => {
+    element?.scrollIntoView({
       block: "nearest",
       inline: "center",
     });
-  }, [search.generation]);
+  }, []);
 
   useEffect(() => {
     if (!state.hasAnswered) {
@@ -154,19 +147,6 @@ function PokemonTypeQuizContent({
 
     feedbackRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }, [state.hasAnswered]);
-
-  useEffect(() => {
-    if (search.invalidGeneration === undefined) {
-      return;
-    }
-
-    notifications.show({
-      color: "coralError",
-      message: `generation=${search.invalidGeneration} は使えません。全世代に戻しました。`,
-      title: "出題範囲を確認してください",
-    });
-    void navigate({ replace: true, search: { generation: "all" } });
-  }, [navigate, search.invalidGeneration]);
 
   const changeGeneration = useCallback(
     (generation: string) => {
@@ -218,7 +198,7 @@ function PokemonTypeQuizContent({
                       color={selected ? "candyPink" : "crystalBlue"}
                       key={option.value}
                       onClick={() => changeGeneration(option.value)}
-                      ref={selected ? selectedGenerationRef : undefined}
+                      ref={selected ? scrollSelectedGenerationIntoView : undefined}
                       size="sm"
                       variant={selected ? "filled" : "light"}
                     >
