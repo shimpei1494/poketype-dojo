@@ -6,10 +6,10 @@ import { pokemonTypes } from "./pokemon-types";
 const pokemonTypeSet = new Set(pokemonTypes);
 
 describe("pokemonQuizRecords", () => {
-  it("第1世代から第5世代まで649匹の通常個体データを持つ", () => {
-    expect(pokemonQuizRecords).toHaveLength(649);
+  it("第1世代から第6世代まで721匹の通常個体データを持つ", () => {
+    expect(pokemonQuizRecords).toHaveLength(721);
     expect(pokemonQuizRecords[0]?.id).toBe(1);
-    expect(pokemonQuizRecords.at(-1)?.id).toBe(649);
+    expect(pokemonQuizRecords.at(-1)?.id).toBe(721);
   });
 
   it("第2世代100匹の通常個体データを持つ", () => {
@@ -44,6 +44,14 @@ describe("pokemonQuizRecords", () => {
     expect(generation5Records.at(-1)?.id).toBe(649);
   });
 
+  it("第6世代72匹の通常個体データを持つ", () => {
+    const generation6Records = pokemonQuizRecords.filter((record) => record.generation === 6);
+
+    expect(generation6Records).toHaveLength(72);
+    expect(generation6Records[0]?.id).toBe(650);
+    expect(generation6Records.at(-1)?.id).toBe(721);
+  });
+
   it("全国図鑑番号に重複がない", () => {
     const ids = pokemonQuizRecords.map((record) => record.id);
     const duplicatedIds = ids.filter((id, index) => ids.indexOf(id) !== index);
@@ -51,14 +59,14 @@ describe("pokemonQuizRecords", () => {
     expect(duplicatedIds).toEqual([]);
   });
 
-  it("全国図鑑番号が1から649まで連続している", () => {
+  it("全国図鑑番号が1から721まで連続している", () => {
     const ids = pokemonQuizRecords.map((record) => record.id);
 
-    expect(ids).toEqual(Array.from({ length: 649 }, (_, index) => index + 1));
+    expect(ids).toEqual(Array.from({ length: 721 }, (_, index) => index + 1));
   });
 
-  it("選択可能な世代に第1世代から第5世代を含む", () => {
-    expect(availablePokemonGenerations).toEqual([1, 2, 3, 4, 5]);
+  it("選択可能な世代に第1世代から第6世代を含む", () => {
+    expect(availablePokemonGenerations).toEqual([1, 2, 3, 4, 5, 6]);
   });
 
   it("すべてのタイプがPokemonTypeに含まれる", () => {
@@ -222,6 +230,48 @@ describe("pokemonQuizRecords", () => {
       name: "meloetta",
       type1: "normal",
       type2: "psychic",
+    });
+  });
+
+  it("第6世代の代表的なフェアリータイプを含む", () => {
+    // フラベベ
+    expect(pokemonQuizRecords.find((record) => record.id === 669)).toMatchObject({
+      name: "flabebe",
+      type1: "fairy",
+      type2: null,
+    });
+    // ニンフィア
+    expect(pokemonQuizRecords.find((record) => record.id === 700)).toMatchObject({
+      name: "sylveon",
+      type1: "fairy",
+      type2: null,
+    });
+    // デデンネ
+    expect(pokemonQuizRecords.find((record) => record.id === 702)).toMatchObject({
+      name: "dedenne",
+      type1: "electric",
+      type2: "fairy",
+    });
+  });
+
+  it("第6世代のフォームを持つ代表ポケモンは標準フォームのタイプで扱う", () => {
+    // バケッチャ
+    expect(pokemonQuizRecords.find((record) => record.id === 710)).toMatchObject({
+      name: "pumpkaboo",
+      type1: "ghost",
+      type2: "grass",
+    });
+    // ジガルデ
+    expect(pokemonQuizRecords.find((record) => record.id === 718)).toMatchObject({
+      name: "zygarde",
+      type1: "dragon",
+      type2: "ground",
+    });
+    // フーパ
+    expect(pokemonQuizRecords.find((record) => record.id === 720)).toMatchObject({
+      name: "hoopa",
+      type1: "psychic",
+      type2: "ghost",
     });
   });
 });
