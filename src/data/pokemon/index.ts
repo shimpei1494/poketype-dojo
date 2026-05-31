@@ -2,6 +2,7 @@ import { generation1Pokemon } from "./generation-1";
 import { generation2Pokemon } from "./generation-2";
 import { generation3Pokemon } from "./generation-3";
 import { generation4Pokemon } from "./generation-4";
+import { generation5Pokemon } from "./generation-5";
 
 export type { PokemonGeneration, PokemonQuizRecord } from "./types";
 
@@ -10,9 +11,10 @@ export const pokemonQuizRecords = [
   ...generation2Pokemon,
   ...generation3Pokemon,
   ...generation4Pokemon,
+  ...generation5Pokemon,
 ];
 
-export const availablePokemonGenerations = [1, 2, 3, 4] as const;
+export const availablePokemonGenerations = [1, 2, 3, 4, 5] as const;
 
 export type AvailablePokemonGeneration = (typeof availablePokemonGenerations)[number];
 
