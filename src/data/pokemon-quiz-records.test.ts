@@ -6,10 +6,10 @@ import { pokemonTypes } from "./pokemon-types";
 const pokemonTypeSet = new Set(pokemonTypes);
 
 describe("pokemonQuizRecords", () => {
-  it("第1世代から第3世代まで386匹の通常個体データを持つ", () => {
-    expect(pokemonQuizRecords).toHaveLength(386);
+  it("第1世代から第4世代まで493匹の通常個体データを持つ", () => {
+    expect(pokemonQuizRecords).toHaveLength(493);
     expect(pokemonQuizRecords[0]?.id).toBe(1);
-    expect(pokemonQuizRecords.at(-1)?.id).toBe(386);
+    expect(pokemonQuizRecords.at(-1)?.id).toBe(493);
   });
 
   it("第2世代100匹の通常個体データを持つ", () => {
@@ -28,6 +28,14 @@ describe("pokemonQuizRecords", () => {
     expect(generation3Records.at(-1)?.id).toBe(386);
   });
 
+  it("第4世代107匹の通常個体データを持つ", () => {
+    const generation4Records = pokemonQuizRecords.filter((record) => record.generation === 4);
+
+    expect(generation4Records).toHaveLength(107);
+    expect(generation4Records[0]?.id).toBe(387);
+    expect(generation4Records.at(-1)?.id).toBe(493);
+  });
+
   it("全国図鑑番号に重複がない", () => {
     const ids = pokemonQuizRecords.map((record) => record.id);
     const duplicatedIds = ids.filter((id, index) => ids.indexOf(id) !== index);
@@ -35,14 +43,14 @@ describe("pokemonQuizRecords", () => {
     expect(duplicatedIds).toEqual([]);
   });
 
-  it("全国図鑑番号が1から386まで連続している", () => {
+  it("全国図鑑番号が1から493まで連続している", () => {
     const ids = pokemonQuizRecords.map((record) => record.id);
 
-    expect(ids).toEqual(Array.from({ length: 386 }, (_, index) => index + 1));
+    expect(ids).toEqual(Array.from({ length: 493 }, (_, index) => index + 1));
   });
 
-  it("選択可能な世代に第1世代から第3世代を含む", () => {
-    expect(availablePokemonGenerations).toEqual([1, 2, 3]);
+  it("選択可能な世代に第1世代から第4世代を含む", () => {
+    expect(availablePokemonGenerations).toEqual([1, 2, 3, 4]);
   });
 
   it("すべてのタイプがPokemonTypeに含まれる", () => {
@@ -128,6 +136,48 @@ describe("pokemonQuizRecords", () => {
       name: "mawile",
       type1: "steel",
       type2: "fairy",
+    });
+  });
+
+  it("現在タイプへ変わった代表的な第4世代ポケモンを含む", () => {
+    // マネネ
+    expect(pokemonQuizRecords.find((record) => record.id === 439)).toMatchObject({
+      name: "mime-jr",
+      type1: "psychic",
+      type2: "fairy",
+    });
+    // トゲキッス
+    expect(pokemonQuizRecords.find((record) => record.id === 468)).toMatchObject({
+      name: "togekiss",
+      type1: "fairy",
+      type2: "flying",
+    });
+    // エルレイド
+    expect(pokemonQuizRecords.find((record) => record.id === 475)).toMatchObject({
+      name: "gallade",
+      type1: "psychic",
+      type2: "fighting",
+    });
+  });
+
+  it("第4世代のフォームを持つ代表ポケモンは標準フォームのタイプで扱う", () => {
+    // ミノマダム
+    expect(pokemonQuizRecords.find((record) => record.id === 413)).toMatchObject({
+      name: "wormadam",
+      type1: "bug",
+      type2: "grass",
+    });
+    // ロトム
+    expect(pokemonQuizRecords.find((record) => record.id === 479)).toMatchObject({
+      name: "rotom",
+      type1: "electric",
+      type2: "ghost",
+    });
+    // シェイミ
+    expect(pokemonQuizRecords.find((record) => record.id === 492)).toMatchObject({
+      name: "shaymin",
+      type1: "grass",
+      type2: null,
     });
   });
 });
