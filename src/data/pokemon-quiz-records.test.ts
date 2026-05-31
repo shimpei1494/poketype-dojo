@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vite-plus/test";
 
-import { pokemonQuizRecords } from "./pokemon-quiz-records";
+import { pokemonQuizRecords } from "./pokemon";
 import { pokemonTypes } from "./pokemon-types";
 
 const pokemonTypeSet = new Set(pokemonTypes);
@@ -31,21 +31,25 @@ describe("pokemonQuizRecords", () => {
   });
 
   it("現在タイプへ変わった代表的な第1世代ポケモンを含む", () => {
+    // ピッピ
     expect(pokemonQuizRecords.find((record) => record.id === 35)).toMatchObject({
       name: "clefairy",
       type1: "fairy",
       type2: null,
     });
+    // プリン
     expect(pokemonQuizRecords.find((record) => record.id === 39)).toMatchObject({
       name: "jigglypuff",
       type1: "normal",
       type2: "fairy",
     });
+    // コイル
     expect(pokemonQuizRecords.find((record) => record.id === 81)).toMatchObject({
       name: "magnemite",
       type1: "electric",
       type2: "steel",
     });
+    // バリヤード
     expect(pokemonQuizRecords.find((record) => record.id === 122)).toMatchObject({
       name: "mr-mime",
       type1: "psychic",

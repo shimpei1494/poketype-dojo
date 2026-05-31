@@ -1,12 +1,37 @@
-import { Button, Card, Container, Group, Image, Stack, Text, Title } from "@mantine/core";
+import {
+  Button,
+  Card,
+  Container,
+  Group,
+  Image,
+  SegmentedControl,
+  Stack,
+  Text,
+  Title,
+} from "@mantine/core";
+import { notifications } from "@mantine/notifications";
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useReducer, useRef } from "react";
+import { useCallback, useEffect, useMemo, useReducer, useRef } from "react";
 
 import { HomeLink } from "../../components/HomeLink";
 import { TypeBadge } from "../../components/TypeBadge";
 import { TypeGrid } from "../../components/TypeGrid";
-import { pokemonQuizRecords, type PokemonQuizRecord } from "../../data/pokemon-quiz-records";
+import {
+  availablePokemonGenerations,
+  getPokemonGenerationLabel,
+  getPokemonImageUrl,
+  pokemonQuizRecords,
+  type AvailablePokemonGeneration,
+  type PokemonQuizRecord,
+} from "../../data/pokemon";
 import { pokemonTypes, type PokemonType } from "../../data/pokemon-types";
+
+type GenerationFilter = "all" | AvailablePokemonGeneration;
+
+type QuizSearch = {
+  generation: GenerationFilter;
+  invalidGeneration?: string;
+};
 
 type Question = {
   pokemon: PokemonQuizRecord;
@@ -23,15 +48,43 @@ type QuizState = {
 type QuizAction =
   | { type: "answer" }
   | { type: "clearSelectedTypes" }
-  | { type: "nextQuestion" }
+  | { questionPool: readonly PokemonQuizRecord[]; type: "nextQuestion" }
+  | { questionPool: readonly PokemonQuizRecord[]; type: "reset" }
   | { pokemonType: PokemonType; type: "toggleType" };
 
 export const Route = createFileRoute("/quiz/pokemon-type")({
   component: PokemonTypeQuizPage,
+  validateSearch: (search: Record<string, unknown>): QuizSearch => {
+    if (typeof search.invalidGeneration === "string") {
+      return { generation: "all", invalidGeneration: search.invalidGeneration };
+    }
+
+    const generation = search.generation;
+
+    if (generation === "all" || generation === undefined) {
+      return { generation: "all" };
+    }
+
+    const parsedGeneration =
+      typeof generation === "number"
+        ? generation
+        : typeof generation === "string"
+          ? Number(generation)
+          : Number.NaN;
+
+    if (isAvailableGenerationFilter(parsedGeneration)) {
+      return { generation: parsedGeneration };
+    }
+
+    return { generation: "all", invalidGeneration: String(generation) };
+  },
 });
 
 function PokemonTypeQuizPage() {
-  const [state, dispatch] = useReducer(quizReducer, undefined, createInitialState);
+  const search = Route.useSearch();
+  const navigate = Route.useNavigate();
+  const questionPool = useMemo(() => getQuestionPool(search.generation), [search.generation]);
+  const [state, dispatch] = useReducer(quizReducer, questionPool, createInitialState);
   const feedbackRef = useRef<HTMLDivElement>(null);
 
   const correctTypes = getPokemonTypes(state.question.pokemon);
@@ -47,6 +100,35 @@ function PokemonTypeQuizPage() {
     feedbackRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }, [state.hasAnswered]);
 
+  useEffect(() => {
+    dispatch({ questionPool, type: "reset" });
+  }, [questionPool]);
+
+  useEffect(() => {
+    if (search.invalidGeneration === undefined) {
+      return;
+    }
+
+    notifications.show({
+      color: "coralError",
+      message: `generation=${search.invalidGeneration} は使えません。全世代に戻しました。`,
+      title: "出題範囲を確認してください",
+    });
+    void navigate({ replace: true, search: { generation: "all" } });
+  }, [navigate, search.invalidGeneration]);
+
+  const changeGeneration = useCallback(
+    (generation: string) => {
+      void navigate({
+        search: {
+          generation:
+            generation === "all" ? "all" : (Number(generation) as AvailablePokemonGeneration),
+        },
+      });
+    },
+    [navigate],
+  );
+
   return (
     <Container className="page-shell" size="lg">
       <Stack gap="lg">
@@ -60,12 +142,25 @@ function PokemonTypeQuizPage() {
         </Stack>
 
         <Card className="glass-panel" p="lg">
-          <Group justify="space-between">
-            <Text fw={700}>現在のスコア</Text>
-            <Text c="dimmed" size="sm">
-              {state.correctCount} / {state.answeredCount} 正解
-            </Text>
-          </Group>
+          <Stack gap="md">
+            <Group justify="space-between">
+              <Text fw={700}>出題範囲</Text>
+              <Text c="dimmed" size="sm">
+                {state.correctCount} / {state.answeredCount} 正解
+              </Text>
+            </Group>
+            <SegmentedControl
+              data={[
+                { label: "全世代", value: "all" },
+                ...availablePokemonGenerations.map((generation) => ({
+                  label: getPokemonGenerationLabel(generation),
+                  value: `${generation}`,
+                })),
+              ]}
+              onChange={changeGeneration}
+              value={`${search.generation}`}
+            />
+          </Stack>
         </Card>
 
         <Card className="glass-panel pokemon-question-card" p="lg">
@@ -77,7 +172,7 @@ function PokemonTypeQuizPage() {
               alt={state.question.pokemon.jaName}
               className="pokemon-quiz-image"
               fit="contain"
-              src={state.question.pokemon.spriteUrl}
+              src={getPokemonImageUrl(state.question.pokemon)}
             />
             <Stack align="center" gap={2}>
               <Title order={2}>{state.question.pokemon.jaName}</Title>
@@ -149,7 +244,7 @@ function PokemonTypeQuizPage() {
               isCorrect={isCorrect}
               selectedTypes={state.selectedTypes}
             />
-            <Button onClick={() => dispatch({ type: "nextQuestion" })} size="md">
+            <Button onClick={() => dispatch({ questionPool, type: "nextQuestion" })} size="md">
               次の問題
             </Button>
           </Stack>
@@ -159,12 +254,12 @@ function PokemonTypeQuizPage() {
   );
 }
 
-function createInitialState(): QuizState {
+function createInitialState(questionPool: readonly PokemonQuizRecord[]): QuizState {
   return {
     answeredCount: 0,
     correctCount: 0,
     hasAnswered: false,
-    question: createQuestion(),
+    question: createQuestion(questionPool),
     selectedTypes: [],
   };
 }
@@ -196,9 +291,11 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
       return {
         ...state,
         hasAnswered: false,
-        question: createQuestion(state.question.pokemon.id),
+        question: createQuestion(action.questionPool, state.question.pokemon.id),
         selectedTypes: [],
       };
+    case "reset":
+      return createInitialState(action.questionPool);
     case "toggleType": {
       if (state.hasAnswered) {
         return state;
@@ -260,15 +357,30 @@ function PokemonTypeFeedback({
   );
 }
 
-function createQuestion(previousPokemonId?: number): Question {
+function createQuestion(
+  questionPool: readonly PokemonQuizRecord[],
+  previousPokemonId?: number,
+): Question {
   const candidates =
     previousPokemonId === undefined
-      ? pokemonQuizRecords
-      : pokemonQuizRecords.filter((record) => record.id !== previousPokemonId);
+      ? questionPool
+      : questionPool.filter((record) => record.id !== previousPokemonId);
 
   return {
     pokemon: pickRandom(candidates),
   };
+}
+
+function getQuestionPool(generation: GenerationFilter) {
+  if (generation === "all") {
+    return pokemonQuizRecords;
+  }
+
+  return pokemonQuizRecords.filter((pokemon) => pokemon.generation === generation);
+}
+
+function isAvailableGenerationFilter(value: number): value is AvailablePokemonGeneration {
+  return availablePokemonGenerations.some((generation) => generation === value);
 }
 
 function getPokemonTypes(pokemon: PokemonQuizRecord): PokemonType[] {
