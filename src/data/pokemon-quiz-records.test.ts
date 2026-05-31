@@ -6,10 +6,10 @@ import { pokemonTypes } from "./pokemon-types";
 const pokemonTypeSet = new Set(pokemonTypes);
 
 describe("pokemonQuizRecords", () => {
-  it("第1世代から第2世代まで251匹の通常個体データを持つ", () => {
-    expect(pokemonQuizRecords).toHaveLength(251);
+  it("第1世代から第3世代まで386匹の通常個体データを持つ", () => {
+    expect(pokemonQuizRecords).toHaveLength(386);
     expect(pokemonQuizRecords[0]?.id).toBe(1);
-    expect(pokemonQuizRecords.at(-1)?.id).toBe(251);
+    expect(pokemonQuizRecords.at(-1)?.id).toBe(386);
   });
 
   it("第2世代100匹の通常個体データを持つ", () => {
@@ -20,6 +20,14 @@ describe("pokemonQuizRecords", () => {
     expect(generation2Records.at(-1)?.id).toBe(251);
   });
 
+  it("第3世代135匹の通常個体データを持つ", () => {
+    const generation3Records = pokemonQuizRecords.filter((record) => record.generation === 3);
+
+    expect(generation3Records).toHaveLength(135);
+    expect(generation3Records[0]?.id).toBe(252);
+    expect(generation3Records.at(-1)?.id).toBe(386);
+  });
+
   it("全国図鑑番号に重複がない", () => {
     const ids = pokemonQuizRecords.map((record) => record.id);
     const duplicatedIds = ids.filter((id, index) => ids.indexOf(id) !== index);
@@ -27,14 +35,14 @@ describe("pokemonQuizRecords", () => {
     expect(duplicatedIds).toEqual([]);
   });
 
-  it("全国図鑑番号が1から251まで連続している", () => {
+  it("全国図鑑番号が1から386まで連続している", () => {
     const ids = pokemonQuizRecords.map((record) => record.id);
 
-    expect(ids).toEqual(Array.from({ length: 251 }, (_, index) => index + 1));
+    expect(ids).toEqual(Array.from({ length: 386 }, (_, index) => index + 1));
   });
 
-  it("選択可能な世代に第1世代と第2世代を含む", () => {
-    expect(availablePokemonGenerations).toEqual([1, 2]);
+  it("選択可能な世代に第1世代から第3世代を含む", () => {
+    expect(availablePokemonGenerations).toEqual([1, 2, 3]);
   });
 
   it("すべてのタイプがPokemonTypeに含まれる", () => {
@@ -99,6 +107,27 @@ describe("pokemonQuizRecords", () => {
       name: "snubbull",
       type1: "fairy",
       type2: null,
+    });
+  });
+
+  it("現在タイプへ変わった代表的な第3世代ポケモンを含む", () => {
+    // ラルトス
+    expect(pokemonQuizRecords.find((record) => record.id === 280)).toMatchObject({
+      name: "ralts",
+      type1: "psychic",
+      type2: "fairy",
+    });
+    // ルリリ
+    expect(pokemonQuizRecords.find((record) => record.id === 298)).toMatchObject({
+      name: "azurill",
+      type1: "normal",
+      type2: "fairy",
+    });
+    // クチート
+    expect(pokemonQuizRecords.find((record) => record.id === 303)).toMatchObject({
+      name: "mawile",
+      type1: "steel",
+      type2: "fairy",
     });
   });
 });
