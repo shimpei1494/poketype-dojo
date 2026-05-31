@@ -1,6 +1,13 @@
 import { describe, expect, it } from "vite-plus/test";
 
-import { availablePokemonGenerations, pokemonQuizRecords } from "./pokemon";
+import {
+  availablePokemonGenerations,
+  getPokemonQuizRecordsByGenerationFilter,
+  parsePokemonGenerationFilter,
+  pokemonGenerationFilterInfo,
+  pokemonGenerationInfo,
+  pokemonQuizRecords,
+} from "./pokemon";
 import { pokemonTypes } from "./pokemon-types";
 
 const pokemonTypeSet = new Set(pokemonTypes);
@@ -91,6 +98,41 @@ describe("pokemonQuizRecords", () => {
 
   it("選択可能な世代に第1世代から第9世代を含む", () => {
     expect(availablePokemonGenerations).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  });
+
+  it("選択可能な世代ごとの補足情報を持つ", () => {
+    expect(pokemonGenerationInfo.map((info) => info.generation)).toEqual(
+      availablePokemonGenerations,
+    );
+    expect(pokemonGenerationInfo.at(-1)).toMatchObject({
+      generation: 9,
+      region: "パルデア",
+      representativeTitles: "スカーレット・バイオレット",
+    });
+  });
+
+  it("全世代を含む世代フィルタ情報を持つ", () => {
+    expect(pokemonGenerationFilterInfo.map((info) => info.value)).toEqual([
+      "all",
+      ...availablePokemonGenerations,
+    ]);
+    expect(pokemonGenerationFilterInfo[0]).toMatchObject({
+      description: "第1〜第9世代のポケモンから出題",
+      label: "全世代",
+      value: "all",
+    });
+  });
+
+  it("世代フィルタから対象ポケモンを取得できる", () => {
+    expect(getPokemonQuizRecordsByGenerationFilter("all")).toHaveLength(1025);
+    expect(getPokemonQuizRecordsByGenerationFilter(9)).toHaveLength(120);
+  });
+
+  it("URLなどから渡される世代フィルタ値を安全に解釈する", () => {
+    expect(parsePokemonGenerationFilter(undefined)).toBe("all");
+    expect(parsePokemonGenerationFilter("all")).toBe("all");
+    expect(parsePokemonGenerationFilter("9")).toBe(9);
+    expect(parsePokemonGenerationFilter("wind-wave")).toBe("all");
   });
 
   it("すべてのタイプがPokemonTypeに含まれる", () => {

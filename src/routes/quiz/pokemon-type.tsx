@@ -3,13 +3,14 @@ import {
   Card,
   Container,
   Group,
+  HoverCard,
   Image,
-  SegmentedControl,
+  ScrollArea,
+  Skeleton,
   Stack,
   Text,
   Title,
 } from "@mantine/core";
-import { notifications } from "@mantine/notifications";
 import { createFileRoute } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/react-start";
 import { useCallback, useEffect, useMemo, useReducer, useRef } from "react";
@@ -18,21 +19,18 @@ import { HomeLink } from "../../components/HomeLink";
 import { TypeBadge } from "../../components/TypeBadge";
 import { TypeGrid } from "../../components/TypeGrid";
 import {
-  availablePokemonGenerations,
-  getPokemonGenerationLabel,
   getPokemonImageUrl,
-  pokemonQuizRecords,
-  type AvailablePokemonGeneration,
+  getPokemonQuizRecordsByGenerationFilter,
+  parsePokemonGenerationFilter,
+  pokemonGenerationFilterInfo,
+  type PokemonGenerationFilter,
   type PokemonQuizRecord,
 } from "../../data/pokemon";
 import { pokemonTypes, type PokemonType } from "../../data/pokemon-types";
 import { selectRandomPokemonQuestion } from "../../utils/pokemon-question-selection";
 
-type GenerationFilter = "all" | AvailablePokemonGeneration;
-
 type QuizSearch = {
-  generation: GenerationFilter;
-  invalidGeneration?: string;
+  generation: PokemonGenerationFilter;
 };
 
 type Question = {
@@ -58,42 +56,26 @@ type QuizAction =
   | { pokemonType: PokemonType; type: "toggleType" };
 
 const getInitialPokemonTypeQuestion = createServerFn({ method: "GET" })
-  .inputValidator((generation: GenerationFilter) => generation)
+  .inputValidator((generation: PokemonGenerationFilter) => generation)
   .handler(async ({ data: generation }) => createQuestion(getQuestionPool(generation)));
 
 export const Route = createFileRoute("/quiz/pokemon-type")({
   component: PokemonTypeQuizPage,
+  pendingComponent: PokemonTypeQuizPendingPage,
   validateSearch: (search: Record<string, unknown>): QuizSearch => {
-    if (typeof search.invalidGeneration === "string") {
-      return { generation: "all", invalidGeneration: search.invalidGeneration };
-    }
-
-    const generation = search.generation;
-
-    if (generation === "all" || generation === undefined) {
-      return { generation: "all" };
-    }
-
-    const parsedGeneration =
-      typeof generation === "number"
-        ? generation
-        : typeof generation === "string"
-          ? Number(generation)
-          : Number.NaN;
-
-    if (isAvailableGenerationFilter(parsedGeneration)) {
-      return { generation: parsedGeneration };
-    }
-
-    return { generation: "all", invalidGeneration: String(generation) };
+    return { generation: parsePokemonGenerationFilter(search.generation) };
   },
   loaderDeps: ({ search }) => ({
     generation: search.generation,
   }),
-  loader: async ({ deps }) => ({
-    initialQuestion: await getInitialPokemonTypeQuestion({ data: deps.generation }),
-  }),
-  staleTime: Infinity,
+  loader: {
+    handler: async ({ deps }) => ({
+      initialQuestion: await getInitialPokemonTypeQuestion({ data: deps.generation }),
+    }),
+    staleReloadMode: "blocking",
+  },
+  pendingMinMs: 160,
+  pendingMs: 160,
 });
 
 function PokemonTypeQuizPage() {
@@ -108,6 +90,45 @@ function PokemonTypeQuizPage() {
       navigate={navigate}
       search={search}
     />
+  );
+}
+
+function PokemonTypeQuizPendingPage() {
+  return (
+    <Container className="page-shell" size="lg">
+      <Stack gap="lg">
+        <Stack gap={4}>
+          <HomeLink />
+          <Text c="candyPink.7" fw={700} size="sm">
+            Pokemon Type Quiz
+          </Text>
+          <Title order={1}>ポケモンタイプ当て</Title>
+          <Text c="dimmed">ポケモンの姿からタイプを当てていきましょう。</Text>
+        </Stack>
+
+        <Card className="glass-panel" p="lg">
+          <Stack gap="md">
+            <Group justify="space-between">
+              <Text fw={700}>出題範囲</Text>
+              <Skeleton height={18} radius="xl" width={76} />
+            </Group>
+            <Skeleton height={36} radius="md" />
+            <Skeleton height={58} radius="md" />
+          </Stack>
+        </Card>
+
+        <Card className="glass-panel pokemon-question-card" p="lg">
+          <Stack align="center" gap="md">
+            <Skeleton height={18} radius="xl" width={72} />
+            <Skeleton className="pokemon-quiz-image" radius="999px" />
+            <Stack align="center" gap={8}>
+              <Skeleton height={32} radius="xl" width={180} />
+              <Skeleton height={18} radius="xl" width={156} />
+            </Stack>
+          </Stack>
+        </Card>
+      </Stack>
+    </Container>
   );
 }
 
@@ -128,6 +149,16 @@ function PokemonTypeQuizContent({
   const isCorrect = state.hasAnswered && areSameTypes(state.selectedTypes, correctTypes);
   const disabledTypes =
     state.selectedTypes.length >= 2 ? pokemonTypesExcept(state.selectedTypes) : undefined;
+  const generationOptions = pokemonGenerationFilterInfo;
+  const selectedGenerationOption =
+    generationOptions.find((option) => option.value === search.generation) ?? generationOptions[0]!;
+
+  const scrollSelectedGenerationIntoView = useCallback((element: HTMLButtonElement | null) => {
+    element?.scrollIntoView({
+      block: "nearest",
+      inline: "center",
+    });
+  }, []);
 
   useEffect(() => {
     if (!state.hasAnswered) {
@@ -137,26 +168,10 @@ function PokemonTypeQuizContent({
     feedbackRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }, [state.hasAnswered]);
 
-  useEffect(() => {
-    if (search.invalidGeneration === undefined) {
-      return;
-    }
-
-    notifications.show({
-      color: "coralError",
-      message: `generation=${search.invalidGeneration} は使えません。全世代に戻しました。`,
-      title: "出題範囲を確認してください",
-    });
-    void navigate({ replace: true, search: { generation: "all" } });
-  }, [navigate, search.invalidGeneration]);
-
   const changeGeneration = useCallback(
-    (generation: string) => {
+    (generation: PokemonGenerationFilter) => {
       void navigate({
-        search: {
-          generation:
-            generation === "all" ? "all" : (Number(generation) as AvailablePokemonGeneration),
-        },
+        search: { generation },
       });
     },
     [navigate],
@@ -171,7 +186,7 @@ function PokemonTypeQuizContent({
             Pokemon Type Quiz
           </Text>
           <Title order={1}>ポケモンタイプ当て</Title>
-          <Text c="dimmed">第1世代151匹のタイプを、1匹ずつ当てていきましょう。</Text>
+          <Text c="dimmed">ポケモンの姿からタイプを当てていきましょう。</Text>
         </Stack>
 
         <Card className="glass-panel" p="lg">
@@ -182,17 +197,52 @@ function PokemonTypeQuizContent({
                 {state.correctCount} / {state.answeredCount} 正解
               </Text>
             </Group>
-            <SegmentedControl
-              data={[
-                { label: "全世代", value: "all" },
-                ...availablePokemonGenerations.map((generation) => ({
-                  label: getPokemonGenerationLabel(generation),
-                  value: `${generation}`,
-                })),
-              ]}
-              onChange={changeGeneration}
-              value={`${search.generation}`}
-            />
+            <ScrollArea
+              className="generation-filter-scroll"
+              offsetScrollbars="x"
+              scrollbarSize={6}
+              scrollbars="x"
+              type="hover"
+            >
+              <Group gap="xs" wrap="nowrap">
+                {generationOptions.map((option) => {
+                  const selected = option.value === search.generation;
+
+                  return (
+                    <HoverCard closeDelay={80} key={String(option.value)} openDelay={240} withArrow>
+                      <HoverCard.Target>
+                        <Button
+                          aria-pressed={selected}
+                          className="generation-filter-option"
+                          color={selected ? "candyPink" : "crystalBlue"}
+                          onClick={() => changeGeneration(option.value)}
+                          ref={selected ? scrollSelectedGenerationIntoView : undefined}
+                          size="sm"
+                          variant={selected ? "filled" : "light"}
+                        >
+                          {option.label}
+                        </Button>
+                      </HoverCard.Target>
+                      <HoverCard.Dropdown className="generation-filter-popover">
+                        <Stack gap={2}>
+                          <Text fw={800} size="xs">
+                            {option.representativeTitles} / {option.region}
+                          </Text>
+                        </Stack>
+                      </HoverCard.Dropdown>
+                    </HoverCard>
+                  );
+                })}
+              </Group>
+            </ScrollArea>
+            <Stack className="generation-filter-summary" gap={2}>
+              <Text fw={800} size="sm">
+                {selectedGenerationOption.label}
+              </Text>
+              <Text c="dimmed" size="sm">
+                {selectedGenerationOption.description}
+              </Text>
+            </Stack>
           </Stack>
         </Card>
 
@@ -399,16 +449,8 @@ function createQuestion(
   };
 }
 
-function getQuestionPool(generation: GenerationFilter) {
-  if (generation === "all") {
-    return pokemonQuizRecords;
-  }
-
-  return pokemonQuizRecords.filter((pokemon) => pokemon.generation === generation);
-}
-
-function isAvailableGenerationFilter(value: number): value is AvailablePokemonGeneration {
-  return availablePokemonGenerations.some((generation) => generation === value);
+function getQuestionPool(generation: PokemonGenerationFilter) {
+  return getPokemonQuizRecordsByGenerationFilter(generation);
 }
 
 function getPokemonTypes(pokemon: PokemonQuizRecord): PokemonType[] {
