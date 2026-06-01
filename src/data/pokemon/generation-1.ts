@@ -12,6 +12,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/1.png",
     type1: "grass",
     type2: "poison",
+    typeMemoryHint:
+      "植物らしさでくさは自然に連想できるので、もう一方は毒をもつ植物のイメージでどくタイプと覚える。",
   },
   {
     generation: 1,
@@ -21,6 +23,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/2.png",
     type1: "grass",
     type2: "poison",
+    typeMemoryHint:
+      "大きく育つつぼみからくさは分かりやすい。毒を含む花や葉のイメージでどくタイプも結びつける。",
   },
   {
     generation: 1,
@@ -30,6 +34,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/3.png",
     type1: "grass",
     type2: "poison",
+    typeMemoryHint:
+      "大きな花でくさは見た目通り。巨大な花の毒々しい雰囲気から、どくタイプもセットで覚える。",
   },
   {
     generation: 1,
@@ -39,6 +45,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/4.png",
     type1: "fire",
     type2: null,
+    typeMemoryHint:
+      "しっぽの炎が一番の手がかり。小さなトカゲ姿でも、まずほのおタイプとして覚える。",
   },
   {
     generation: 1,
@@ -48,6 +56,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/5.png",
     type1: "fire",
     type2: null,
+    typeMemoryHint:
+      "赤い体としっぽの炎がそのままほのおタイプの目印。進化しても炎の印象を引き継ぐ。",
   },
   {
     generation: 1,
@@ -57,6 +67,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/6.png",
     type1: "fire",
     type2: "flying",
+    typeMemoryHint:
+      "ほのおは見た目通り。翼をもつがドラゴンではなく、空を飛ぶ姿からひこうタイプと覚える。",
   },
   {
     generation: 1,
@@ -66,6 +78,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/7.png",
     type1: "water",
     type2: null,
+    typeMemoryHint:
+      "水辺のカメがモチーフなのでみずタイプ。甲羅よりも、泳ぐカメのイメージで覚える。",
   },
   {
     generation: 1,
@@ -75,6 +89,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/8.png",
     type1: "water",
     type2: null,
+    typeMemoryHint:
+      "カメの姿と水色の体からみずタイプ。耳やしっぽの泡っぽい形も水辺の印象を強める。",
   },
   {
     generation: 1,
@@ -84,6 +100,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/9.png",
     type1: "water",
     type2: null,
+    typeMemoryHint:
+      "大砲から水を撃つカメなのでみずタイプ。機械的な大砲はタイプではなく、水を放つための特徴と見る。",
   },
   {
     generation: 1,
@@ -93,6 +111,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/10.png",
     type1: "bug",
     type2: null,
+    typeMemoryHint:
+      "いもむしそのものの姿がむしタイプの手がかり。草むらにいる小さな幼虫として覚える。",
   },
   {
     generation: 1,
@@ -102,6 +122,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/11.png",
     type1: "bug",
     type2: null,
+    typeMemoryHint:
+      "さなぎの姿なのでむしタイプ。動かなそうでも、虫の成長途中と見ると分かりやすい。",
   },
   {
     generation: 1,
@@ -111,6 +133,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/12.png",
     type1: "bug",
     type2: "flying",
+    typeMemoryHint:
+      "チョウの姿でむし、羽で飛ぶのでひこう。名前のバタフリーも蝶の飛行を連想しやすい。",
   },
   {
     generation: 1,
@@ -120,6 +144,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/13.png",
     type1: "bug",
     type2: "poison",
+    typeMemoryHint: "毛虫のような体でむし、頭の毒針でどく。小さくても針がある点を優先して覚える。",
   },
   {
     generation: 1,
@@ -129,6 +154,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/14.png",
     type1: "bug",
     type2: "poison",
+    typeMemoryHint:
+      "さなぎなのでむしは自然。進化前後の毒針の流れを引き継ぐため、どくタイプも残る。",
   },
   {
     generation: 1,
@@ -138,6 +165,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/15.png",
     type1: "bug",
     type2: "poison",
+    typeMemoryHint:
+      "ハチの姿でむし、鋭い針でどく。羽があっても、現在の標準タイプはひこうではない点に注意。",
   },
   {
     generation: 1,
@@ -147,6 +176,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/16.png",
     type1: "normal",
     type2: "flying",
+    typeMemoryHint:
+      "鳥なのでひこうは分かりやすい。特別な属性を持たない身近な鳥としてノーマルも覚える。",
   },
   {
     generation: 1,
@@ -156,6 +187,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/17.png",
     type1: "normal",
     type2: "flying",
+    typeMemoryHint:
+      "大きめの鳥でひこう。特殊な属性よりも、普通の鳥らしさが強いのでノーマルも付く。",
   },
   {
     generation: 1,
@@ -165,6 +198,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/18.png",
     type1: "normal",
     type2: "flying",
+    typeMemoryHint:
+      "鳥としてひこう、身近な鳥の延長としてノーマル。派手な姿でも特別な元素タイプではない。",
   },
   {
     generation: 1,
@@ -174,6 +209,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/19.png",
     type1: "normal",
     type2: null,
+    typeMemoryHint:
+      "小さなネズミで、特別な元素や能力よりも動物らしさが中心なのでノーマルタイプと覚える。",
   },
   {
     generation: 1,
@@ -183,6 +220,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/20.png",
     type1: "normal",
     type2: null,
+    typeMemoryHint:
+      "大きなネズミの姿で、特殊な属性を持たない野生動物らしさからノーマルタイプと覚える。",
   },
   {
     generation: 1,
@@ -192,6 +231,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/21.png",
     type1: "normal",
     type2: "flying",
+    typeMemoryHint:
+      "鳥なのでひこう、身近な小鳥としてノーマル。鋭いくちばしはタイプではなく攻撃的な特徴。",
   },
   {
     generation: 1,
@@ -201,6 +242,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/22.png",
     type1: "normal",
     type2: "flying",
+    typeMemoryHint:
+      "大きな鳥でひこう。鬼のような名前でもあくではなく、普通の鳥らしさでノーマルも付く。",
   },
   {
     generation: 1,
@@ -210,6 +253,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/23.png",
     type1: "poison",
     type2: null,
+    typeMemoryHint:
+      "ヘビの姿に加えて、毒蛇のイメージが強いのでどくタイプ。名前を逆から読む遊びも印象に残る。",
   },
   {
     generation: 1,
@@ -219,6 +264,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/24.png",
     type1: "poison",
     type2: null,
+    typeMemoryHint:
+      "コブラの姿が毒蛇を連想させるのでどくタイプ。お腹の模様は威嚇の特徴として覚える。",
   },
   {
     generation: 1,
@@ -228,6 +275,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/25.png",
     type1: "electric",
     type2: null,
+    typeMemoryHint:
+      "黄色い体と電気をためるほっぺがでんきタイプの手がかり。小動物らしさより電気を優先する。",
   },
   {
     generation: 1,
@@ -237,6 +286,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/26.png",
     type1: "electric",
     type2: null,
+    typeMemoryHint:
+      "ピカチュウから続く電気のほっぺとしっぽが目印。進化してもでんきタイプのまま覚える。",
   },
   {
     generation: 1,
@@ -246,6 +297,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/27.png",
     type1: "ground",
     type2: null,
+    typeMemoryHint:
+      "砂地に潜るネズミなのでじめんタイプ。名前のサンドも地面や砂の印象をそのまま助ける。",
   },
   {
     generation: 1,
@@ -255,6 +308,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/28.png",
     type1: "ground",
     type2: null,
+    typeMemoryHint:
+      "砂地で暮らすイメージと爪で地面を掘る姿からじめんタイプ。トゲより地面との結びつきを見る。",
   },
   {
     generation: 1,
@@ -264,6 +319,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/29.png",
     type1: "poison",
     type2: null,
+    typeMemoryHint:
+      "小さな獣だが、角や毒針をもつ系統なのでどくタイプ。性別違いでも毒の系統として覚える。",
   },
   {
     generation: 1,
@@ -273,6 +330,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/30.png",
     type1: "poison",
     type2: null,
+    typeMemoryHint:
+      "進化前から続く毒針の系統でどくタイプ。見た目の獣らしさより、角の毒を優先して見る。",
   },
   {
     generation: 1,
@@ -282,6 +341,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/31.png",
     type1: "poison",
     type2: "ground",
+    typeMemoryHint:
+      "どくの系統に加えて、重い体で地面にどっしり立つ女王なのでじめんタイプも加わる。",
   },
   {
     generation: 1,
@@ -291,6 +352,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/32.png",
     type1: "poison",
     type2: null,
+    typeMemoryHint: "小さな獣だが、角の毒針が手がかり。ニドラン系はまずどくタイプとして覚える。",
   },
   {
     generation: 1,
@@ -300,6 +362,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/33.png",
     type1: "poison",
     type2: null,
+    typeMemoryHint:
+      "大きな角とトゲが毒針を連想させるのでどくタイプ。紫の体色も毒の印象を補強する。",
   },
   {
     generation: 1,
@@ -309,6 +373,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/34.png",
     type1: "poison",
     type2: "ground",
+    typeMemoryHint:
+      "どくの系統に加え、怪獣のように地面を踏みしめる力強さからじめんタイプも覚える。",
   },
   {
     generation: 1,
@@ -318,6 +384,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/35.png",
     type1: "fairy",
     type2: null,
+    typeMemoryHint:
+      "月や星のイメージと不思議でかわいい雰囲気から、現在はフェアリータイプとして覚える。",
   },
   {
     generation: 1,
@@ -327,6 +395,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/36.png",
     type1: "fairy",
     type2: null,
+    typeMemoryHint: "羽のような耳と月にまつわる不思議な雰囲気が手がかり。現在はフェアリータイプ。",
   },
   {
     generation: 1,
@@ -336,6 +405,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/37.png",
     type1: "fire",
     type2: null,
+    typeMemoryHint:
+      "キツネ姿だけではノーマルに見えるが、赤い体と炎のしっぽからほのおタイプと覚える。",
   },
   {
     generation: 1,
@@ -345,6 +416,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/38.png",
     type1: "fire",
     type2: null,
+    typeMemoryHint:
+      "九尾の狐の神秘的な印象が強いが、燃えるような尾と進化前の流れからほのおタイプ。",
   },
   {
     generation: 1,
@@ -354,6 +427,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/39.png",
     type1: "normal",
     type2: "fairy",
+    typeMemoryHint:
+      "歌う丸いポケモンでノーマル、かわいらしさと現在の分類からフェアリーも付くと覚える。",
   },
   {
     generation: 1,
@@ -363,6 +438,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/40.png",
     type1: "normal",
     type2: "fairy",
+    typeMemoryHint:
+      "風船のような体でノーマル、やわらかくかわいい雰囲気からフェアリーも付くと覚える。",
   },
   {
     generation: 1,
@@ -372,6 +449,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/41.png",
     type1: "poison",
     type2: "flying",
+    typeMemoryHint:
+      "コウモリなのでひこうは分かりやすい。洞窟の毒々しい生き物の印象からどくタイプも覚える。",
   },
   {
     generation: 1,
@@ -381,6 +460,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/42.png",
     type1: "poison",
     type2: "flying",
+    typeMemoryHint:
+      "大きなコウモリでひこう。牙と不気味な体色から、吸血や毒のイメージでどくタイプも付く。",
   },
   {
     generation: 1,
@@ -390,6 +471,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/43.png",
     type1: "grass",
     type2: "poison",
+    typeMemoryHint:
+      "草の芽に見えるのでくさは自然。名前のナゾと毒草のイメージでどくタイプも覚える。",
   },
   {
     generation: 1,
@@ -399,6 +482,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/44.png",
     type1: "grass",
     type2: "poison",
+    typeMemoryHint:
+      "くさい花という名前が大きな手がかり。植物のくさに加えて、悪臭や毒液からどくタイプ。",
   },
   {
     generation: 1,
@@ -408,6 +493,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/45.png",
     type1: "grass",
     type2: "poison",
+    typeMemoryHint:
+      "大きな花でくさは明確。ラフレシアの強いにおいや毒々しい花の印象からどくタイプも覚える。",
   },
   {
     generation: 1,
@@ -417,6 +504,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/46.png",
     type1: "bug",
     type2: "grass",
+    typeMemoryHint:
+      "虫の体にキノコが生えているので、むしとくさ。キノコ部分を植物寄りに見ると覚えやすい。",
   },
   {
     generation: 1,
@@ -426,6 +515,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/47.png",
     type1: "bug",
     type2: "grass",
+    typeMemoryHint:
+      "大きなキノコに支配された虫として、むしとくさ。見た目のキノコをくさタイプの手がかりにする。",
   },
   {
     generation: 1,
@@ -435,6 +526,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/48.png",
     type1: "bug",
     type2: "poison",
+    typeMemoryHint:
+      "毛むくじゃらの虫なのでむし。大きな複眼と毒をもつ虫の印象からどくタイプも覚える。",
   },
   {
     generation: 1,
@@ -444,6 +537,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/49.png",
     type1: "bug",
     type2: "poison",
+    typeMemoryHint: "蛾なのでむし。粉をまく蛾のイメージが毒の粉と結びつくため、どくタイプも付く。",
   },
   {
     generation: 1,
@@ -453,6 +547,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/50.png",
     type1: "ground",
     type2: null,
+    typeMemoryHint:
+      "地面から顔を出すモグラなのでじめんタイプ。小さくても土の中で暮らす点が決め手。",
   },
   {
     generation: 1,
@@ -462,6 +558,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/51.png",
     type1: "ground",
     type2: null,
+    typeMemoryHint:
+      "三匹のモグラが地中から出ている姿がそのままじめんタイプ。数が増えても地面の印象が中心。",
   },
   {
     generation: 1,
@@ -471,6 +569,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/52.png",
     type1: "normal",
     type2: null,
+    typeMemoryHint:
+      "猫の姿で、特別な元素より身近な動物らしさが中心。小判は特徴で、タイプはノーマル。",
   },
   {
     generation: 1,
@@ -480,6 +580,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/53.png",
     type1: "normal",
     type2: null,
+    typeMemoryHint:
+      "しなやかな猫の姿からノーマルタイプ。上品さや爪の鋭さはタイプではなく性格づけとして見る。",
   },
   {
     generation: 1,
@@ -489,6 +591,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/54.png",
     type1: "water",
     type2: null,
+    typeMemoryHint:
+      "アヒルのように水辺にいる姿からみずタイプ。頭痛や念力の印象があっても現在は単みず。",
   },
   {
     generation: 1,
@@ -498,6 +602,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/55.png",
     type1: "water",
     type2: null,
+    typeMemoryHint:
+      "名前にゴルダックとあるが、あくやエスパーではなく水辺のアヒル系としてみずタイプ。",
   },
   {
     generation: 1,
@@ -507,6 +613,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/56.png",
     type1: "fighting",
     type2: null,
+    typeMemoryHint:
+      "怒った猿の姿と殴り合いそうな構えからかくとうタイプ。動物らしさより闘志を優先する。",
   },
   {
     generation: 1,
@@ -516,6 +624,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/57.png",
     type1: "fighting",
     type2: null,
+    typeMemoryHint: "さらに荒々しい猿で、怒りとパンチの印象が強い。格闘する姿からかくとうタイプ。",
   },
   {
     generation: 1,
@@ -525,6 +634,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/58.png",
     type1: "fire",
     type2: null,
+    typeMemoryHint: "子犬の姿でも、炎のような体色と警察犬らしい熱血感からほのおタイプと覚える。",
   },
   {
     generation: 1,
@@ -534,6 +644,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/59.png",
     type1: "fire",
     type2: null,
+    typeMemoryHint:
+      "伝説的な大型犬の姿で、燃えるようなたてがみが手がかり。犬でもノーマルではなくほのお。",
   },
   {
     generation: 1,
@@ -543,6 +655,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/60.png",
     type1: "water",
     type2: null,
+    typeMemoryHint: "お腹の渦巻きより、水辺にいるオタマジャクシの姿を見てみずタイプと覚える。",
   },
   {
     generation: 1,
@@ -552,6 +665,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/61.png",
     type1: "water",
     type2: null,
+    typeMemoryHint:
+      "渦巻き模様が目立つが、カエル系の水辺の生き物としてみずタイプ。進化前の流れも手がかり。",
   },
   {
     generation: 1,
@@ -561,6 +676,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/62.png",
     type1: "water",
     type2: "fighting",
+    typeMemoryHint: "みずのカエル系に、鍛えた体とグローブのような手でかくとうタイプが加わる。",
   },
   {
     generation: 1,
@@ -570,6 +686,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/63.png",
     type1: "psychic",
     type2: null,
+    typeMemoryHint: "眠そうで直接戦わない姿だが、念力で身を守る設定からエスパータイプと覚える。",
   },
   {
     generation: 1,
@@ -579,6 +696,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/64.png",
     type1: "psychic",
     type2: null,
+    typeMemoryHint:
+      "スプーンと超能力者のような姿がエスパータイプの手がかり。動物より念力を優先する。",
   },
   {
     generation: 1,
@@ -588,6 +707,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/65.png",
     type1: "psychic",
     type2: null,
+    typeMemoryHint:
+      "二本のスプーンと魔術師のような雰囲気からエスパータイプ。見た目より超能力が主役。",
   },
   {
     generation: 1,
@@ -597,6 +718,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/66.png",
     type1: "fighting",
     type2: null,
+    typeMemoryHint:
+      "小柄でも筋肉質でトレーニングする姿が手がかり。パンチや力仕事からかくとうタイプ。",
   },
   {
     generation: 1,
@@ -606,6 +729,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/67.png",
     type1: "fighting",
     type2: null,
+    typeMemoryHint: "筋肉とベルトが格闘家らしさを示す。人型でもノーマルではなくかくとうタイプ。",
   },
   {
     generation: 1,
@@ -615,6 +739,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/68.png",
     type1: "fighting",
     type2: null,
+    typeMemoryHint: "四本腕で格闘する姿が強烈な手がかり。腕の多さは、戦うための体として覚える。",
   },
   {
     generation: 1,
@@ -624,6 +749,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/69.png",
     type1: "grass",
     type2: "poison",
+    typeMemoryHint:
+      "植物のつるでくさは分かりやすい。食虫植物の毒液や危険な葉からどくタイプも覚える。",
   },
   {
     generation: 1,
@@ -633,6 +760,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/70.png",
     type1: "grass",
     type2: "poison",
+    typeMemoryHint: "食虫植物らしい姿でくさ、溶かす液や毒々しい口からどくタイプもセットで覚える。",
   },
   {
     generation: 1,
@@ -642,6 +770,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/71.png",
     type1: "grass",
     type2: "poison",
+    typeMemoryHint:
+      "ウツボカズラの食虫植物がモチーフなのでくさ。獲物を溶かす危険さからどくタイプも付く。",
   },
   {
     generation: 1,
@@ -651,6 +781,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/72.png",
     type1: "water",
     type2: "poison",
+    typeMemoryHint: "クラゲなのでみずは自然。触手の毒針を思い出すと、どくタイプも覚えやすい。",
   },
   {
     generation: 1,
@@ -660,6 +791,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/73.png",
     type1: "water",
     type2: "poison",
+    typeMemoryHint: "大きなクラゲでみず。長い触手と毒針のイメージから、どくタイプも外さない。",
   },
   {
     generation: 1,
@@ -669,6 +801,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/74.png",
     type1: "rock",
     type2: "ground",
+    typeMemoryHint:
+      "石の体でいわ、地面から出てくる岩石としてじめん。浮いて見えてもひこうではない。",
   },
   {
     generation: 1,
@@ -678,6 +812,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/75.png",
     type1: "rock",
     type2: "ground",
+    typeMemoryHint:
+      "転がる岩なのでいわは明確。山肌や地面の岩石として、じめんタイプもセットで覚える。",
   },
   {
     generation: 1,
@@ -687,6 +823,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/76.png",
     type1: "rock",
     type2: "ground",
+    typeMemoryHint: "巨大な岩の体でいわ。地面を転がる山の岩石という印象からじめんタイプも付く。",
   },
   {
     generation: 1,
@@ -696,6 +833,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/77.png",
     type1: "fire",
     type2: null,
+    typeMemoryHint:
+      "炎のたてがみとしっぽがそのままほのおタイプの目印。馬の姿でもノーマルではない。",
   },
   {
     generation: 1,
@@ -705,6 +844,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/78.png",
     type1: "fire",
     type2: null,
+    typeMemoryHint:
+      "燃えるたてがみをもつ馬なのでほのおタイプ。走る速さより、体の炎を優先して覚える。",
   },
   {
     generation: 1,
@@ -714,6 +855,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/79.png",
     type1: "water",
     type2: "psychic",
+    typeMemoryHint:
+      "水辺のヤドカリ風の姿でみず、ぼんやりした不思議な知性からエスパータイプも付く。",
   },
   {
     generation: 1,
@@ -723,6 +866,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/80.png",
     type1: "water",
     type2: "psychic",
+    typeMemoryHint:
+      "シェルダーに噛まれている水辺の姿でみず。ぼんやりした念力系の雰囲気からエスパーも覚える。",
   },
   {
     generation: 1,
@@ -732,6 +877,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/81.png",
     type1: "electric",
     type2: "steel",
+    typeMemoryHint: "磁石と電気ででんきは自然。金属の体と磁力のイメージから、現在ははがねも付く。",
   },
   {
     generation: 1,
@@ -741,6 +887,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/82.png",
     type1: "electric",
     type2: "steel",
+    typeMemoryHint: "複数の磁石が集まった機械的な体で、でんきとはがね。金属感を見逃さない。",
   },
   {
     generation: 1,
@@ -750,6 +897,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/83.png",
     type1: "normal",
     type2: "flying",
+    typeMemoryHint:
+      "カモの鳥なのでひこう。ネギを持つ変わった鳥だが、特別な元素ではなくノーマルも付く。",
   },
   {
     generation: 1,
@@ -759,6 +908,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/84.png",
     type1: "normal",
     type2: "flying",
+    typeMemoryHint:
+      "二つの頭をもつ鳥でひこう。飛べる鳥として見つつ、特殊属性なしのノーマルも覚える。",
   },
   {
     generation: 1,
@@ -768,6 +919,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/85.png",
     type1: "normal",
     type2: "flying",
+    typeMemoryHint:
+      "三つの頭の鳥なのでひこう。脚力が強そうでもかくとうではなく、普通の鳥としてノーマルも付く。",
   },
   {
     generation: 1,
@@ -777,6 +930,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/86.png",
     type1: "water",
     type2: null,
+    typeMemoryHint:
+      "アシカのような水辺の生き物なのでみずタイプ。白い体でも、進化前はまだこおりではない。",
   },
   {
     generation: 1,
@@ -786,6 +941,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/87.png",
     type1: "water",
     type2: "ice",
+    typeMemoryHint: "水辺のアシカに、白い体と寒い海の印象が加わってこおりタイプも付く。",
   },
   {
     generation: 1,
@@ -795,6 +951,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/88.png",
     type1: "poison",
     type2: null,
+    typeMemoryHint: "ヘドロそのものの姿なのでどくタイプ。紫の体と汚泥のイメージをそのまま覚える。",
   },
   {
     generation: 1,
@@ -804,6 +961,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/89.png",
     type1: "poison",
     type2: null,
+    typeMemoryHint: "大量のヘドロが固まった姿でどくタイプ。大きくなっても汚泥と毒の印象が中心。",
   },
   {
     generation: 1,
@@ -813,6 +971,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/90.png",
     type1: "water",
     type2: null,
+    typeMemoryHint: "貝なのでみずタイプ。硬い殻は防御の特徴で、進化前はまだこおりタイプではない。",
   },
   {
     generation: 1,
@@ -822,6 +981,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/91.png",
     type1: "water",
     type2: "ice",
+    typeMemoryHint:
+      "貝の水辺イメージでみず、鋭い氷のようなトゲと冷たい殻からこおりタイプも覚える。",
   },
   {
     generation: 1,
@@ -831,6 +992,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/92.png",
     type1: "ghost",
     type2: "poison",
+    typeMemoryHint: "幽霊の名前とガス状の体でゴースト。毒ガスそのものの姿なのでどくタイプも付く。",
   },
   {
     generation: 1,
@@ -840,6 +1002,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/93.png",
     type1: "ghost",
     type2: "poison",
+    typeMemoryHint:
+      "浮かぶ幽霊の姿でゴースト、毒ガスの系統でどく。手だけの不気味さも幽霊の手がかり。",
   },
   {
     generation: 1,
@@ -849,6 +1013,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/94.png",
     type1: "ghost",
     type2: "poison",
+    typeMemoryHint:
+      "影のような幽霊でゴースト。進化前から続く毒ガスの系統としてどくタイプも覚える。",
   },
   {
     generation: 1,
@@ -858,6 +1024,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/95.png",
     type1: "rock",
     type2: "ground",
+    typeMemoryHint:
+      "巨大な岩のヘビなのでいわ。土や地中を進む大蛇としてじめんタイプもセットで覚える。",
   },
   {
     generation: 1,
@@ -867,6 +1035,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/96.png",
     type1: "psychic",
     type2: null,
+    typeMemoryHint:
+      "夢を食べるバクがモチーフなのでエスパータイプ。見た目の動物らしさより催眠を優先する。",
   },
   {
     generation: 1,
@@ -876,6 +1046,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/97.png",
     type1: "psychic",
     type2: null,
+    typeMemoryHint:
+      "催眠術師のように振る道具と夢を操る印象からエスパータイプ。眠りが最大の手がかり。",
   },
   {
     generation: 1,
@@ -885,6 +1057,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/98.png",
     type1: "water",
     type2: null,
+    typeMemoryHint:
+      "カニなのでみずタイプ。大きなハサミは武器だが、タイプとしては水辺の生き物を見る。",
   },
   {
     generation: 1,
@@ -894,6 +1068,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/99.png",
     type1: "water",
     type2: null,
+    typeMemoryHint: "大きなカニでみずタイプ。巨大なハサミより、海辺で暮らす甲殻類として覚える。",
   },
   {
     generation: 1,
@@ -903,6 +1078,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/100.png",
     type1: "electric",
     type2: null,
+    typeMemoryHint:
+      "モンスターボールに見える丸い体だが、正体は電気を帯びた存在なのででんきタイプ。",
   },
   {
     generation: 1,
@@ -912,6 +1089,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/101.png",
     type1: "electric",
     type2: null,
+    typeMemoryHint:
+      "丸いボール姿でも、爆発しそうな電気エネルギーの印象が中心。でんきタイプとして覚える。",
   },
   {
     generation: 1,
@@ -921,6 +1100,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/102.png",
     type1: "grass",
     type2: "psychic",
+    typeMemoryHint:
+      "タマゴのように見えて植物の種子なのでくさ。不思議な集合体の意識からエスパーも付く。",
   },
   {
     generation: 1,
@@ -930,6 +1111,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/103.png",
     type1: "grass",
     type2: "psychic",
+    typeMemoryHint:
+      "ヤシの木でくさは自然。複数の顔が一つの意識をもつ不思議さからエスパーも覚える。",
   },
   {
     generation: 1,
@@ -939,6 +1122,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/104.png",
     type1: "ground",
     type2: null,
+    typeMemoryHint: "骨を持つ姿が目立つが、乾いた地面や孤独に立つ陸のイメージからじめんタイプ。",
   },
   {
     generation: 1,
@@ -948,6 +1132,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/105.png",
     type1: "ground",
     type2: null,
+    typeMemoryHint:
+      "骨の武器が印象的でもゴーストではなく、地上で戦う骨持ちのポケモンとしてじめんタイプ。",
   },
   {
     generation: 1,
@@ -957,6 +1143,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/106.png",
     type1: "fighting",
     type2: null,
+    typeMemoryHint:
+      "キック専門の格闘家の姿がそのままかくとうタイプ。長い脚を一番の手がかりにする。",
   },
   {
     generation: 1,
@@ -966,6 +1154,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/107.png",
     type1: "fighting",
     type2: null,
+    typeMemoryHint:
+      "ボクサーのグローブとパンチが手がかり。エビの名前より、拳で戦う姿からかくとうタイプ。",
   },
   {
     generation: 1,
@@ -975,6 +1165,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/108.png",
     type1: "normal",
     type2: null,
+    typeMemoryHint:
+      "長い舌が目立つが、特殊な元素や念力ではなく、変わった動物としてノーマルタイプ。",
   },
   {
     generation: 1,
@@ -984,6 +1176,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/109.png",
     type1: "poison",
     type2: null,
+    typeMemoryHint:
+      "毒ガスのかたまりなのでどくタイプ。丸い体のドクロ模様も危険さを分かりやすく示す。",
   },
   {
     generation: 1,
@@ -993,6 +1187,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/110.png",
     type1: "poison",
     type2: null,
+    typeMemoryHint:
+      "複数の毒ガス袋が集まった姿でどくタイプ。煙やスモッグのイメージをそのまま覚える。",
   },
   {
     generation: 1,
@@ -1002,6 +1198,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/111.png",
     type1: "ground",
     type2: "rock",
+    typeMemoryHint:
+      "サイのような陸の獣でじめん、岩のように硬い体でいわ。獣らしさより地面と岩を見る。",
   },
   {
     generation: 1,
@@ -1011,6 +1209,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/112.png",
     type1: "ground",
     type2: "rock",
+    typeMemoryHint:
+      "大きなサイの怪獣でじめん、硬い岩肌でいわ。ドリルの角も地面を掘る印象を助ける。",
   },
   {
     generation: 1,
@@ -1020,6 +1220,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/113.png",
     type1: "normal",
     type2: null,
+    typeMemoryHint:
+      "卵を持つ優しいポケモンだが、特別な元素より普通の生き物らしさが中心なのでノーマル。",
   },
   {
     generation: 1,
@@ -1029,6 +1231,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/114.png",
     type1: "grass",
     type2: null,
+    typeMemoryHint:
+      "全身がつる草に覆われているためくさタイプ。正体より、絡まる植物の見た目で覚える。",
   },
   {
     generation: 1,
@@ -1038,6 +1242,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/115.png",
     type1: "normal",
     type2: null,
+    typeMemoryHint:
+      "袋を持つ親子カンガルーで、特殊な元素より動物らしさが中心。ノーマルタイプとして覚える。",
   },
   {
     generation: 1,
@@ -1047,6 +1253,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/116.png",
     type1: "water",
     type2: null,
+    typeMemoryHint:
+      "タツノオトシゴなのでみずタイプ。小さな角や煙幕より、海の生き物である点を見る。",
   },
   {
     generation: 1,
@@ -1056,6 +1264,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/117.png",
     type1: "water",
     type2: null,
+    typeMemoryHint:
+      "タツノオトシゴの進化形でみずタイプ。ドラゴン風でも、第1世代の標準タイプは単みず。",
   },
   {
     generation: 1,
@@ -1065,6 +1275,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/118.png",
     type1: "water",
     type2: null,
+    typeMemoryHint:
+      "金魚の姿なのでみずタイプ。角があっても特別な複合タイプではなく、水の魚として覚える。",
   },
   {
     generation: 1,
@@ -1074,6 +1286,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/119.png",
     type1: "water",
     type2: null,
+    typeMemoryHint:
+      "派手な尾びれの魚なのでみずタイプ。名前のアズマオウも魚らしさを強める手がかり。",
   },
   {
     generation: 1,
@@ -1083,6 +1297,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/120.png",
     type1: "water",
     type2: null,
+    typeMemoryHint:
+      "ヒトデの姿なのでみずタイプ。星形や宝石より、海にいるヒトデである点を優先する。",
   },
   {
     generation: 1,
@@ -1092,6 +1308,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/121.png",
     type1: "water",
     type2: "psychic",
+    typeMemoryHint: "ヒトデでみず、中央の宝石と宇宙的な不思議さからエスパータイプも付くと覚える。",
   },
   {
     generation: 1,
@@ -1101,6 +1318,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/122.png",
     type1: "psychic",
     type2: "fairy",
+    typeMemoryHint:
+      "パントマイムの見えない壁でエスパー。道化師のような不思議さと現在の分類からフェアリーも付く。",
   },
   {
     generation: 1,
@@ -1110,6 +1329,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/123.png",
     type1: "bug",
     type2: "flying",
+    typeMemoryHint:
+      "カマキリなのでむし、羽で飛ぶのでひこう。刃のような腕は、はがねではなく虫の鎌として見る。",
   },
   {
     generation: 1,
@@ -1119,6 +1340,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/124.png",
     type1: "ice",
     type2: "psychic",
+    typeMemoryHint:
+      "氷のような肌と寒い雰囲気でこおり、占いや催眠めいた不思議さからエスパーも覚える。",
   },
   {
     generation: 1,
@@ -1128,6 +1351,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/125.png",
     type1: "electric",
     type2: null,
+    typeMemoryHint:
+      "プラグのような角と電撃を放つ印象からでんきタイプ。黄色と黒の配色も電気の手がかり。",
   },
   {
     generation: 1,
@@ -1137,6 +1362,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/126.png",
     type1: "fire",
     type2: null,
+    typeMemoryHint:
+      "炎のような体色と口から出す火の印象でほのおタイプ。人型でも格闘ではなく炎が主役。",
   },
   {
     generation: 1,
@@ -1146,6 +1373,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/127.png",
     type1: "bug",
     type2: null,
+    typeMemoryHint:
+      "クワガタムシのような角を持つのでむしタイプ。力強くてもかくとうではなく虫として覚える。",
   },
   {
     generation: 1,
@@ -1155,6 +1384,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/128.png",
     type1: "normal",
     type2: null,
+    typeMemoryHint:
+      "牛そのものの姿で、特別な元素より動物らしさが中心。突進するノーマルタイプとして覚える。",
   },
   {
     generation: 1,
@@ -1164,6 +1395,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/129.png",
     type1: "water",
     type2: null,
+    typeMemoryHint:
+      "弱そうでも魚なのでみずタイプ。進化後の激変を知っていても、単体では水の魚として覚える。",
   },
   {
     generation: 1,
@@ -1173,6 +1406,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/130.png",
     type1: "water",
     type2: "flying",
+    typeMemoryHint:
+      "水の大蛇なのでみず、空を舞うような姿からひこう。ドラゴンっぽくてもドラゴンではない点に注意。",
   },
   {
     generation: 1,
@@ -1182,6 +1417,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/131.png",
     type1: "water",
     type2: "ice",
+    typeMemoryHint:
+      "海を渡る大きな乗り物のようなポケモンでみず、寒い海や氷山の印象からこおりも付く。",
   },
   {
     generation: 1,
@@ -1191,6 +1428,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/132.png",
     type1: "normal",
     type2: null,
+    typeMemoryHint:
+      "何にでも変身するが、元の姿は特定の元素を持たないためノーマル。変身能力はタイプではない。",
   },
   {
     generation: 1,
@@ -1200,6 +1439,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/133.png",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "進化先が多いが、進化前は特別な元素を持たない素の姿なのでノーマルタイプ。",
   },
   {
     generation: 1,
@@ -1209,6 +1449,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/134.png",
     type1: "water",
     type2: null,
+    typeMemoryHint: "イーブイの水進化。魚のような尾びれと青い体、水に溶ける印象からみずタイプ。",
   },
   {
     generation: 1,
@@ -1218,6 +1459,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/135.png",
     type1: "electric",
     type2: null,
+    typeMemoryHint: "イーブイの電気進化。逆立つトゲと黄色い体が電気のスパークを連想させる。",
   },
   {
     generation: 1,
@@ -1227,6 +1469,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/136.png",
     type1: "fire",
     type2: null,
+    typeMemoryHint: "イーブイの炎進化。赤い体とふさふさの熱そうな毛並みからほのおタイプと覚える。",
   },
   {
     generation: 1,
@@ -1236,6 +1479,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/137.png",
     type1: "normal",
     type2: null,
+    typeMemoryHint:
+      "人工的なデータ生物だが、元素や超能力より無属性の人工生命としてノーマルタイプ。",
   },
   {
     generation: 1,
@@ -1245,6 +1490,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/138.png",
     type1: "rock",
     type2: "water",
+    typeMemoryHint: "化石のアンモナイトなのでいわ、水中生物なのでみず。化石由来のいわを忘れない。",
   },
   {
     generation: 1,
@@ -1254,6 +1500,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/139.png",
     type1: "rock",
     type2: "water",
+    typeMemoryHint:
+      "化石のアンモナイト進化形でいわ、水中の巻き貝としてみず。鋭い殻より化石と水を見る。",
   },
   {
     generation: 1,
@@ -1263,6 +1511,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/140.png",
     type1: "rock",
     type2: "water",
+    typeMemoryHint:
+      "化石のカブトガニなのでいわ、水辺の古代生物なのでみず。虫っぽくてもむしではない。",
   },
   {
     generation: 1,
@@ -1272,6 +1522,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/141.png",
     type1: "rock",
     type2: "water",
+    typeMemoryHint: "化石の古代生物でいわ、水中で泳ぐ姿からみず。鎌の腕はタイプではなく攻撃特徴。",
   },
   {
     generation: 1,
@@ -1281,6 +1532,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/142.png",
     type1: "rock",
     type2: "flying",
+    typeMemoryHint:
+      "化石から復元された翼竜なのでいわ、空を飛ぶためひこう。ドラゴンではなく化石の翼竜。",
   },
   {
     generation: 1,
@@ -1290,6 +1543,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/143.png",
     type1: "normal",
     type2: null,
+    typeMemoryHint:
+      "大きく眠る動物で、特別な元素より日常的な体の強さが中心。ノーマルタイプとして覚える。",
   },
   {
     generation: 1,
@@ -1299,6 +1554,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/144.png",
     type1: "ice",
     type2: "flying",
+    typeMemoryHint:
+      "氷の鳥なのでこおりとひこう。伝説の鳥でも、名前のフリーザーが氷の手がかりになる。",
   },
   {
     generation: 1,
@@ -1308,6 +1565,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/145.png",
     type1: "electric",
     type2: "flying",
+    typeMemoryHint:
+      "電気をまとう鳥なのででんきとひこう。名前のサンダーを雷のイメージとして覚える。",
   },
   {
     generation: 1,
@@ -1317,6 +1576,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/146.png",
     type1: "fire",
     type2: "flying",
+    typeMemoryHint:
+      "炎をまとった鳥なのでほのおとひこう。燃える翼と名前のファイヤーがそのまま手がかり。",
   },
   {
     generation: 1,
@@ -1326,6 +1587,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/147.png",
     type1: "dragon",
     type2: null,
+    typeMemoryHint:
+      "小さなヘビのようでも、神秘的な竜の幼体としてドラゴンタイプ。水色の体に惑わされない。",
   },
   {
     generation: 1,
@@ -1335,6 +1598,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/148.png",
     type1: "dragon",
     type2: null,
+    typeMemoryHint: "優雅な蛇の姿だが、進化系の竜らしさへつながるためドラゴンタイプとして覚える。",
   },
   {
     generation: 1,
@@ -1344,6 +1608,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/149.png",
     type1: "dragon",
     type2: "flying",
+    typeMemoryHint:
+      "竜の進化系なのでドラゴン、翼を持って空を飛ぶためひこう。見た目のかわいさより竜と翼を見る。",
   },
   {
     generation: 1,
@@ -1353,6 +1619,8 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/150.png",
     type1: "psychic",
     type2: null,
+    typeMemoryHint:
+      "人工的に生まれた最強の超能力ポケモンという設定が手がかり。エスパータイプとして覚える。",
   },
   {
     generation: 1,
@@ -1362,5 +1630,7 @@ export const generation1Pokemon = [
     imagePath: "official-artwork/151.png",
     type1: "psychic",
     type2: null,
+    typeMemoryHint:
+      "幻のポケモンで、あらゆる技を覚える不思議さがあるが、分類上は超能力寄りのエスパータイプ。",
   },
 ] as const satisfies readonly PokemonQuizRecord[];

@@ -10,4 +10,5 @@ export type PokemonQuizRecord = {
   name: string;
   type1: PokemonType;
   type2: PokemonType | null;
+  typeMemoryHint: string;
 };

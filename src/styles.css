@@ -113,6 +113,76 @@ body {
   max-width: min(100%, 360px);
 }
 
+.pokemon-question-detail-link {
+  align-items: center;
+  background: rgba(222, 247, 252, 0.88);
+  border: 1px solid rgba(159, 219, 232, 0.95);
+  border-radius: 4px;
+  color: #216678;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 700;
+  min-height: 28px;
+  padding-inline: 12px;
+  text-decoration: none;
+}
+
+.pokemon-question-detail-link:hover {
+  background: rgba(202, 239, 247, 0.96);
+}
+
+.pokemon-type-memory-hint {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  pointer-events: none;
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  width: min(31vw, 260px);
+  z-index: 2;
+}
+
+.pokemon-type-memory-hint-toggle,
+.pokemon-type-memory-hint-panel {
+  pointer-events: auto;
+}
+
+.pokemon-type-memory-hint-toggle {
+  box-shadow: 0 10px 22px rgba(181, 53, 113, 0.18);
+  font-weight: 900;
+}
+
+.pokemon-type-memory-hint-panel {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(236, 209, 229, 0.95);
+  color: #3f3440;
+  max-height: 164px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.pokemon-type-memory-hint--interactive .pokemon-type-memory-hint-panel {
+  animation: hint-panel-enter 140ms ease-out;
+}
+
+.pokemon-type-memory-hint--static {
+  justify-content: flex-end;
+}
+
+@keyframes hint-panel-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .pokemon-reference-page {
   box-sizing: border-box;
   height: 100dvh;
@@ -184,4 +254,16 @@ body {
 
 .pokemon-detail-nav-link:hover {
   background: rgba(202, 239, 247, 0.96);
+}
+
+@media (max-width: 720px) {
+  .pokemon-type-memory-hint {
+    right: 14px;
+    top: 14px;
+    width: min(72vw, 280px);
+  }
+
+  .pokemon-type-memory-hint-panel {
+    max-height: 124px;
+  }
 }

@@ -12,6 +12,7 @@ export const generation8Pokemon = [
     name: "grookey",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -21,6 +22,7 @@ export const generation8Pokemon = [
     name: "thwackey",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -30,6 +32,7 @@ export const generation8Pokemon = [
     name: "rillaboom",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -39,6 +42,7 @@ export const generation8Pokemon = [
     name: "scorbunny",
     type1: "fire",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -48,6 +52,7 @@ export const generation8Pokemon = [
     name: "raboot",
     type1: "fire",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -57,6 +62,7 @@ export const generation8Pokemon = [
     name: "cinderace",
     type1: "fire",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -66,6 +72,7 @@ export const generation8Pokemon = [
     name: "sobble",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -75,6 +82,7 @@ export const generation8Pokemon = [
     name: "drizzile",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -84,6 +92,7 @@ export const generation8Pokemon = [
     name: "inteleon",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -93,6 +102,7 @@ export const generation8Pokemon = [
     name: "skwovet",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -102,6 +112,7 @@ export const generation8Pokemon = [
     name: "greedent",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -111,6 +122,7 @@ export const generation8Pokemon = [
     name: "rookidee",
     type1: "flying",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -120,6 +132,7 @@ export const generation8Pokemon = [
     name: "corvisquire",
     type1: "flying",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -129,6 +142,7 @@ export const generation8Pokemon = [
     name: "corviknight",
     type1: "flying",
     type2: "steel",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -138,6 +152,7 @@ export const generation8Pokemon = [
     name: "blipbug",
     type1: "bug",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -147,6 +162,7 @@ export const generation8Pokemon = [
     name: "dottler",
     type1: "bug",
     type2: "psychic",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -156,6 +172,7 @@ export const generation8Pokemon = [
     name: "orbeetle",
     type1: "bug",
     type2: "psychic",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -165,6 +182,7 @@ export const generation8Pokemon = [
     name: "nickit",
     type1: "dark",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -174,6 +192,7 @@ export const generation8Pokemon = [
     name: "thievul",
     type1: "dark",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -183,6 +202,7 @@ export const generation8Pokemon = [
     name: "gossifleur",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -192,6 +212,7 @@ export const generation8Pokemon = [
     name: "eldegoss",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -201,6 +222,7 @@ export const generation8Pokemon = [
     name: "wooloo",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -210,6 +232,7 @@ export const generation8Pokemon = [
     name: "dubwool",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -219,6 +242,7 @@ export const generation8Pokemon = [
     name: "chewtle",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -228,6 +252,7 @@ export const generation8Pokemon = [
     name: "drednaw",
     type1: "water",
     type2: "rock",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -237,6 +262,7 @@ export const generation8Pokemon = [
     name: "yamper",
     type1: "electric",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -246,6 +272,7 @@ export const generation8Pokemon = [
     name: "boltund",
     type1: "electric",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -255,6 +282,7 @@ export const generation8Pokemon = [
     name: "rolycoly",
     type1: "rock",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -264,6 +292,7 @@ export const generation8Pokemon = [
     name: "carkol",
     type1: "rock",
     type2: "fire",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -273,6 +302,7 @@ export const generation8Pokemon = [
     name: "coalossal",
     type1: "rock",
     type2: "fire",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -282,6 +312,7 @@ export const generation8Pokemon = [
     name: "applin",
     type1: "grass",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -291,6 +322,7 @@ export const generation8Pokemon = [
     name: "flapple",
     type1: "grass",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -300,6 +332,7 @@ export const generation8Pokemon = [
     name: "appletun",
     type1: "grass",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -309,6 +342,7 @@ export const generation8Pokemon = [
     name: "silicobra",
     type1: "ground",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -318,6 +352,7 @@ export const generation8Pokemon = [
     name: "sandaconda",
     type1: "ground",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -327,6 +362,7 @@ export const generation8Pokemon = [
     name: "cramorant",
     type1: "flying",
     type2: "water",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -336,6 +372,7 @@ export const generation8Pokemon = [
     name: "arrokuda",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -345,6 +382,7 @@ export const generation8Pokemon = [
     name: "barraskewda",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -354,6 +392,7 @@ export const generation8Pokemon = [
     name: "toxel",
     type1: "electric",
     type2: "poison",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -363,6 +402,7 @@ export const generation8Pokemon = [
     name: "toxtricity",
     type1: "electric",
     type2: "poison",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -372,6 +412,7 @@ export const generation8Pokemon = [
     name: "sizzlipede",
     type1: "fire",
     type2: "bug",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -381,6 +422,7 @@ export const generation8Pokemon = [
     name: "centiskorch",
     type1: "fire",
     type2: "bug",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -390,6 +432,7 @@ export const generation8Pokemon = [
     name: "clobbopus",
     type1: "fighting",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -399,6 +442,7 @@ export const generation8Pokemon = [
     name: "grapploct",
     type1: "fighting",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -408,6 +452,7 @@ export const generation8Pokemon = [
     name: "sinistea",
     type1: "ghost",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -417,6 +462,7 @@ export const generation8Pokemon = [
     name: "polteageist",
     type1: "ghost",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -426,6 +472,7 @@ export const generation8Pokemon = [
     name: "hatenna",
     type1: "psychic",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -435,6 +482,7 @@ export const generation8Pokemon = [
     name: "hattrem",
     type1: "psychic",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -444,6 +492,7 @@ export const generation8Pokemon = [
     name: "hatterene",
     type1: "psychic",
     type2: "fairy",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -453,6 +502,7 @@ export const generation8Pokemon = [
     name: "impidimp",
     type1: "dark",
     type2: "fairy",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -462,6 +512,7 @@ export const generation8Pokemon = [
     name: "morgrem",
     type1: "dark",
     type2: "fairy",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -471,6 +522,7 @@ export const generation8Pokemon = [
     name: "grimmsnarl",
     type1: "dark",
     type2: "fairy",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -480,6 +532,7 @@ export const generation8Pokemon = [
     name: "obstagoon",
     type1: "dark",
     type2: "normal",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -489,6 +542,7 @@ export const generation8Pokemon = [
     name: "perrserker",
     type1: "steel",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -498,6 +552,7 @@ export const generation8Pokemon = [
     name: "cursola",
     type1: "ghost",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -507,6 +562,7 @@ export const generation8Pokemon = [
     name: "sirfetchd",
     type1: "fighting",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -516,6 +572,7 @@ export const generation8Pokemon = [
     name: "mr-rime",
     type1: "ice",
     type2: "psychic",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -525,6 +582,7 @@ export const generation8Pokemon = [
     name: "runerigus",
     type1: "ground",
     type2: "ghost",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -534,6 +592,7 @@ export const generation8Pokemon = [
     name: "milcery",
     type1: "fairy",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -543,6 +602,7 @@ export const generation8Pokemon = [
     name: "alcremie",
     type1: "fairy",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -552,6 +612,7 @@ export const generation8Pokemon = [
     name: "falinks",
     type1: "fighting",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -561,6 +622,7 @@ export const generation8Pokemon = [
     name: "pincurchin",
     type1: "electric",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -570,6 +632,7 @@ export const generation8Pokemon = [
     name: "snom",
     type1: "ice",
     type2: "bug",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -579,6 +642,7 @@ export const generation8Pokemon = [
     name: "frosmoth",
     type1: "ice",
     type2: "bug",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -588,6 +652,7 @@ export const generation8Pokemon = [
     name: "stonjourner",
     type1: "rock",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -597,6 +662,7 @@ export const generation8Pokemon = [
     name: "eiscue",
     type1: "ice",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -606,6 +672,7 @@ export const generation8Pokemon = [
     name: "indeedee",
     type1: "psychic",
     type2: "normal",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -615,6 +682,7 @@ export const generation8Pokemon = [
     name: "morpeko",
     type1: "electric",
     type2: "dark",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -624,6 +692,7 @@ export const generation8Pokemon = [
     name: "cufant",
     type1: "steel",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -633,6 +702,7 @@ export const generation8Pokemon = [
     name: "copperajah",
     type1: "steel",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -642,6 +712,7 @@ export const generation8Pokemon = [
     name: "dracozolt",
     type1: "electric",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -651,6 +722,7 @@ export const generation8Pokemon = [
     name: "arctozolt",
     type1: "electric",
     type2: "ice",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -660,6 +732,7 @@ export const generation8Pokemon = [
     name: "dracovish",
     type1: "water",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -669,6 +742,7 @@ export const generation8Pokemon = [
     name: "arctovish",
     type1: "water",
     type2: "ice",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -678,6 +752,7 @@ export const generation8Pokemon = [
     name: "duraludon",
     type1: "steel",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -687,6 +762,7 @@ export const generation8Pokemon = [
     name: "dreepy",
     type1: "dragon",
     type2: "ghost",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -696,6 +772,7 @@ export const generation8Pokemon = [
     name: "drakloak",
     type1: "dragon",
     type2: "ghost",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -705,6 +782,7 @@ export const generation8Pokemon = [
     name: "dragapult",
     type1: "dragon",
     type2: "ghost",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -714,6 +792,7 @@ export const generation8Pokemon = [
     name: "zacian",
     type1: "fairy",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -723,6 +802,7 @@ export const generation8Pokemon = [
     name: "zamazenta",
     type1: "fighting",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -732,6 +812,7 @@ export const generation8Pokemon = [
     name: "eternatus",
     type1: "poison",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -741,6 +822,7 @@ export const generation8Pokemon = [
     name: "kubfu",
     type1: "fighting",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -750,6 +832,7 @@ export const generation8Pokemon = [
     name: "urshifu",
     type1: "fighting",
     type2: "dark",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -759,6 +842,7 @@ export const generation8Pokemon = [
     name: "zarude",
     type1: "dark",
     type2: "grass",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -768,6 +852,7 @@ export const generation8Pokemon = [
     name: "regieleki",
     type1: "electric",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -777,6 +862,7 @@ export const generation8Pokemon = [
     name: "regidrago",
     type1: "dragon",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -786,6 +872,7 @@ export const generation8Pokemon = [
     name: "glastrier",
     type1: "ice",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -795,6 +882,7 @@ export const generation8Pokemon = [
     name: "spectrier",
     type1: "ghost",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -804,6 +892,7 @@ export const generation8Pokemon = [
     name: "calyrex",
     type1: "psychic",
     type2: "grass",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -813,6 +902,7 @@ export const generation8Pokemon = [
     name: "wyrdeer",
     type1: "normal",
     type2: "psychic",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -822,6 +912,7 @@ export const generation8Pokemon = [
     name: "kleavor",
     type1: "bug",
     type2: "rock",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -831,6 +922,7 @@ export const generation8Pokemon = [
     name: "ursaluna",
     type1: "ground",
     type2: "normal",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -840,6 +932,7 @@ export const generation8Pokemon = [
     name: "basculegion",
     type1: "water",
     type2: "ghost",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -849,6 +942,7 @@ export const generation8Pokemon = [
     name: "sneasler",
     type1: "fighting",
     type2: "poison",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -858,6 +952,7 @@ export const generation8Pokemon = [
     name: "overqwil",
     type1: "dark",
     type2: "poison",
+    typeMemoryHint: "",
   },
   {
     generation: 8,
@@ -867,5 +962,6 @@ export const generation8Pokemon = [
     name: "enamorus",
     type1: "fairy",
     type2: "flying",
+    typeMemoryHint: "",
   },
 ] satisfies PokemonQuizRecord[];

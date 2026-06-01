@@ -12,6 +12,7 @@ export const generation9Pokemon = [
     name: "sprigatito",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -21,6 +22,7 @@ export const generation9Pokemon = [
     name: "floragato",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -30,6 +32,7 @@ export const generation9Pokemon = [
     name: "meowscarada",
     type1: "grass",
     type2: "dark",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -39,6 +42,7 @@ export const generation9Pokemon = [
     name: "fuecoco",
     type1: "fire",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -48,6 +52,7 @@ export const generation9Pokemon = [
     name: "crocalor",
     type1: "fire",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -57,6 +62,7 @@ export const generation9Pokemon = [
     name: "skeledirge",
     type1: "fire",
     type2: "ghost",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -66,6 +72,7 @@ export const generation9Pokemon = [
     name: "quaxly",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -75,6 +82,7 @@ export const generation9Pokemon = [
     name: "quaxwell",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -84,6 +92,7 @@ export const generation9Pokemon = [
     name: "quaquaval",
     type1: "water",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -93,6 +102,7 @@ export const generation9Pokemon = [
     name: "lechonk",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -102,6 +112,7 @@ export const generation9Pokemon = [
     name: "oinkologne",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -111,6 +122,7 @@ export const generation9Pokemon = [
     name: "tarountula",
     type1: "bug",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -120,6 +132,7 @@ export const generation9Pokemon = [
     name: "spidops",
     type1: "bug",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -129,6 +142,7 @@ export const generation9Pokemon = [
     name: "nymble",
     type1: "bug",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -138,6 +152,7 @@ export const generation9Pokemon = [
     name: "lokix",
     type1: "bug",
     type2: "dark",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -147,6 +162,7 @@ export const generation9Pokemon = [
     name: "pawmi",
     type1: "electric",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -156,6 +172,7 @@ export const generation9Pokemon = [
     name: "pawmo",
     type1: "electric",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -165,6 +182,7 @@ export const generation9Pokemon = [
     name: "pawmot",
     type1: "electric",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -174,6 +192,7 @@ export const generation9Pokemon = [
     name: "tandemaus",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -183,6 +202,7 @@ export const generation9Pokemon = [
     name: "maushold",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -192,6 +212,7 @@ export const generation9Pokemon = [
     name: "fidough",
     type1: "fairy",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -201,6 +222,7 @@ export const generation9Pokemon = [
     name: "dachsbun",
     type1: "fairy",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -210,6 +232,7 @@ export const generation9Pokemon = [
     name: "smoliv",
     type1: "grass",
     type2: "normal",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -219,6 +242,7 @@ export const generation9Pokemon = [
     name: "dolliv",
     type1: "grass",
     type2: "normal",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -228,6 +252,7 @@ export const generation9Pokemon = [
     name: "arboliva",
     type1: "grass",
     type2: "normal",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -237,6 +262,7 @@ export const generation9Pokemon = [
     name: "squawkabilly",
     type1: "normal",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -246,6 +272,7 @@ export const generation9Pokemon = [
     name: "nacli",
     type1: "rock",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -255,6 +282,7 @@ export const generation9Pokemon = [
     name: "naclstack",
     type1: "rock",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -264,6 +292,7 @@ export const generation9Pokemon = [
     name: "garganacl",
     type1: "rock",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -273,6 +302,7 @@ export const generation9Pokemon = [
     name: "charcadet",
     type1: "fire",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -282,6 +312,7 @@ export const generation9Pokemon = [
     name: "armarouge",
     type1: "fire",
     type2: "psychic",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -291,6 +322,7 @@ export const generation9Pokemon = [
     name: "ceruledge",
     type1: "fire",
     type2: "ghost",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -300,6 +332,7 @@ export const generation9Pokemon = [
     name: "tadbulb",
     type1: "electric",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -309,6 +342,7 @@ export const generation9Pokemon = [
     name: "bellibolt",
     type1: "electric",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -318,6 +352,7 @@ export const generation9Pokemon = [
     name: "wattrel",
     type1: "electric",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -327,6 +362,7 @@ export const generation9Pokemon = [
     name: "kilowattrel",
     type1: "electric",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -336,6 +372,7 @@ export const generation9Pokemon = [
     name: "maschiff",
     type1: "dark",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -345,6 +382,7 @@ export const generation9Pokemon = [
     name: "mabosstiff",
     type1: "dark",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -354,6 +392,7 @@ export const generation9Pokemon = [
     name: "shroodle",
     type1: "poison",
     type2: "normal",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -363,6 +402,7 @@ export const generation9Pokemon = [
     name: "grafaiai",
     type1: "poison",
     type2: "normal",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -372,6 +412,7 @@ export const generation9Pokemon = [
     name: "bramblin",
     type1: "grass",
     type2: "ghost",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -381,6 +422,7 @@ export const generation9Pokemon = [
     name: "brambleghast",
     type1: "grass",
     type2: "ghost",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -390,6 +432,7 @@ export const generation9Pokemon = [
     name: "toedscool",
     type1: "ground",
     type2: "grass",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -399,6 +442,7 @@ export const generation9Pokemon = [
     name: "toedscruel",
     type1: "ground",
     type2: "grass",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -408,6 +452,7 @@ export const generation9Pokemon = [
     name: "klawf",
     type1: "rock",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -417,6 +462,7 @@ export const generation9Pokemon = [
     name: "capsakid",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -426,6 +472,7 @@ export const generation9Pokemon = [
     name: "scovillain",
     type1: "grass",
     type2: "fire",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -435,6 +482,7 @@ export const generation9Pokemon = [
     name: "rellor",
     type1: "bug",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -444,6 +492,7 @@ export const generation9Pokemon = [
     name: "rabsca",
     type1: "bug",
     type2: "psychic",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -453,6 +502,7 @@ export const generation9Pokemon = [
     name: "flittle",
     type1: "psychic",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -462,6 +512,7 @@ export const generation9Pokemon = [
     name: "espathra",
     type1: "psychic",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -471,6 +522,7 @@ export const generation9Pokemon = [
     name: "tinkatink",
     type1: "fairy",
     type2: "steel",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -480,6 +532,7 @@ export const generation9Pokemon = [
     name: "tinkatuff",
     type1: "fairy",
     type2: "steel",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -489,6 +542,7 @@ export const generation9Pokemon = [
     name: "tinkaton",
     type1: "fairy",
     type2: "steel",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -498,6 +552,7 @@ export const generation9Pokemon = [
     name: "wiglett",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -507,6 +562,7 @@ export const generation9Pokemon = [
     name: "wugtrio",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -516,6 +572,7 @@ export const generation9Pokemon = [
     name: "bombirdier",
     type1: "flying",
     type2: "dark",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -525,6 +582,7 @@ export const generation9Pokemon = [
     name: "finizen",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -534,6 +592,7 @@ export const generation9Pokemon = [
     name: "palafin",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -543,6 +602,7 @@ export const generation9Pokemon = [
     name: "varoom",
     type1: "steel",
     type2: "poison",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -552,6 +612,7 @@ export const generation9Pokemon = [
     name: "revavroom",
     type1: "steel",
     type2: "poison",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -561,6 +622,7 @@ export const generation9Pokemon = [
     name: "cyclizar",
     type1: "dragon",
     type2: "normal",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -570,6 +632,7 @@ export const generation9Pokemon = [
     name: "orthworm",
     type1: "steel",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -579,6 +642,7 @@ export const generation9Pokemon = [
     name: "glimmet",
     type1: "rock",
     type2: "poison",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -588,6 +652,7 @@ export const generation9Pokemon = [
     name: "glimmora",
     type1: "rock",
     type2: "poison",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -597,6 +662,7 @@ export const generation9Pokemon = [
     name: "greavard",
     type1: "ghost",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -606,6 +672,7 @@ export const generation9Pokemon = [
     name: "houndstone",
     type1: "ghost",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -615,6 +682,7 @@ export const generation9Pokemon = [
     name: "flamigo",
     type1: "flying",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -624,6 +692,7 @@ export const generation9Pokemon = [
     name: "cetoddle",
     type1: "ice",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -633,6 +702,7 @@ export const generation9Pokemon = [
     name: "cetitan",
     type1: "ice",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -642,6 +712,7 @@ export const generation9Pokemon = [
     name: "veluza",
     type1: "water",
     type2: "psychic",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -651,6 +722,7 @@ export const generation9Pokemon = [
     name: "dondozo",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -660,6 +732,7 @@ export const generation9Pokemon = [
     name: "tatsugiri",
     type1: "dragon",
     type2: "water",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -669,6 +742,7 @@ export const generation9Pokemon = [
     name: "annihilape",
     type1: "fighting",
     type2: "ghost",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -678,6 +752,7 @@ export const generation9Pokemon = [
     name: "clodsire",
     type1: "poison",
     type2: "ground",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -687,6 +762,7 @@ export const generation9Pokemon = [
     name: "farigiraf",
     type1: "normal",
     type2: "psychic",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -696,6 +772,7 @@ export const generation9Pokemon = [
     name: "dudunsparce",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -705,6 +782,7 @@ export const generation9Pokemon = [
     name: "kingambit",
     type1: "dark",
     type2: "steel",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -714,6 +792,7 @@ export const generation9Pokemon = [
     name: "great-tusk",
     type1: "ground",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -723,6 +802,7 @@ export const generation9Pokemon = [
     name: "scream-tail",
     type1: "fairy",
     type2: "psychic",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -732,6 +812,7 @@ export const generation9Pokemon = [
     name: "brute-bonnet",
     type1: "grass",
     type2: "dark",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -741,6 +822,7 @@ export const generation9Pokemon = [
     name: "flutter-mane",
     type1: "ghost",
     type2: "fairy",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -750,6 +832,7 @@ export const generation9Pokemon = [
     name: "slither-wing",
     type1: "bug",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -759,6 +842,7 @@ export const generation9Pokemon = [
     name: "sandy-shocks",
     type1: "electric",
     type2: "ground",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -768,6 +852,7 @@ export const generation9Pokemon = [
     name: "iron-treads",
     type1: "ground",
     type2: "steel",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -777,6 +862,7 @@ export const generation9Pokemon = [
     name: "iron-bundle",
     type1: "ice",
     type2: "water",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -786,6 +872,7 @@ export const generation9Pokemon = [
     name: "iron-hands",
     type1: "fighting",
     type2: "electric",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -795,6 +882,7 @@ export const generation9Pokemon = [
     name: "iron-jugulis",
     type1: "dark",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -804,6 +892,7 @@ export const generation9Pokemon = [
     name: "iron-moth",
     type1: "fire",
     type2: "poison",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -813,6 +902,7 @@ export const generation9Pokemon = [
     name: "iron-thorns",
     type1: "rock",
     type2: "electric",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -822,6 +912,7 @@ export const generation9Pokemon = [
     name: "frigibax",
     type1: "dragon",
     type2: "ice",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -831,6 +922,7 @@ export const generation9Pokemon = [
     name: "arctibax",
     type1: "dragon",
     type2: "ice",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -840,6 +932,7 @@ export const generation9Pokemon = [
     name: "baxcalibur",
     type1: "dragon",
     type2: "ice",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -849,6 +942,7 @@ export const generation9Pokemon = [
     name: "gimmighoul",
     type1: "ghost",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -858,6 +952,7 @@ export const generation9Pokemon = [
     name: "gholdengo",
     type1: "steel",
     type2: "ghost",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -867,6 +962,7 @@ export const generation9Pokemon = [
     name: "wo-chien",
     type1: "dark",
     type2: "grass",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -876,6 +972,7 @@ export const generation9Pokemon = [
     name: "chien-pao",
     type1: "dark",
     type2: "ice",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -885,6 +982,7 @@ export const generation9Pokemon = [
     name: "ting-lu",
     type1: "dark",
     type2: "ground",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -894,6 +992,7 @@ export const generation9Pokemon = [
     name: "chi-yu",
     type1: "dark",
     type2: "fire",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -903,6 +1002,7 @@ export const generation9Pokemon = [
     name: "roaring-moon",
     type1: "dragon",
     type2: "dark",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -912,6 +1012,7 @@ export const generation9Pokemon = [
     name: "iron-valiant",
     type1: "fairy",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -921,6 +1022,7 @@ export const generation9Pokemon = [
     name: "koraidon",
     type1: "fighting",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -930,6 +1032,7 @@ export const generation9Pokemon = [
     name: "miraidon",
     type1: "electric",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -939,6 +1042,7 @@ export const generation9Pokemon = [
     name: "walking-wake",
     type1: "water",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -948,6 +1052,7 @@ export const generation9Pokemon = [
     name: "iron-leaves",
     type1: "grass",
     type2: "psychic",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -957,6 +1062,7 @@ export const generation9Pokemon = [
     name: "dipplin",
     type1: "grass",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -966,6 +1072,7 @@ export const generation9Pokemon = [
     name: "poltchageist",
     type1: "grass",
     type2: "ghost",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -975,6 +1082,7 @@ export const generation9Pokemon = [
     name: "sinistcha",
     type1: "grass",
     type2: "ghost",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -984,6 +1092,7 @@ export const generation9Pokemon = [
     name: "okidogi",
     type1: "poison",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -993,6 +1102,7 @@ export const generation9Pokemon = [
     name: "munkidori",
     type1: "poison",
     type2: "psychic",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -1002,6 +1112,7 @@ export const generation9Pokemon = [
     name: "fezandipiti",
     type1: "poison",
     type2: "fairy",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -1011,6 +1122,7 @@ export const generation9Pokemon = [
     name: "ogerpon",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -1020,6 +1132,7 @@ export const generation9Pokemon = [
     name: "archaludon",
     type1: "steel",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -1029,6 +1142,7 @@ export const generation9Pokemon = [
     name: "hydrapple",
     type1: "grass",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -1038,6 +1152,7 @@ export const generation9Pokemon = [
     name: "gouging-fire",
     type1: "fire",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -1047,6 +1162,7 @@ export const generation9Pokemon = [
     name: "raging-bolt",
     type1: "electric",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -1056,6 +1172,7 @@ export const generation9Pokemon = [
     name: "iron-boulder",
     type1: "rock",
     type2: "psychic",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -1065,6 +1182,7 @@ export const generation9Pokemon = [
     name: "iron-crown",
     type1: "steel",
     type2: "psychic",
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -1074,6 +1192,7 @@ export const generation9Pokemon = [
     name: "terapagos",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 9,
@@ -1083,5 +1202,6 @@ export const generation9Pokemon = [
     name: "pecharunt",
     type1: "poison",
     type2: "ghost",
+    typeMemoryHint: "",
   },
 ] satisfies PokemonQuizRecord[];

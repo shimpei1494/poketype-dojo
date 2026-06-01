@@ -12,6 +12,7 @@ export const generation5Pokemon = [
     name: "victini",
     type1: "psychic",
     type2: "fire",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -21,6 +22,7 @@ export const generation5Pokemon = [
     name: "snivy",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -30,6 +32,7 @@ export const generation5Pokemon = [
     name: "servine",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -39,6 +42,7 @@ export const generation5Pokemon = [
     name: "serperior",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -48,6 +52,7 @@ export const generation5Pokemon = [
     name: "tepig",
     type1: "fire",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -57,6 +62,7 @@ export const generation5Pokemon = [
     name: "pignite",
     type1: "fire",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -66,6 +72,7 @@ export const generation5Pokemon = [
     name: "emboar",
     type1: "fire",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -75,6 +82,7 @@ export const generation5Pokemon = [
     name: "oshawott",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -84,6 +92,7 @@ export const generation5Pokemon = [
     name: "dewott",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -93,6 +102,7 @@ export const generation5Pokemon = [
     name: "samurott",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -102,6 +112,7 @@ export const generation5Pokemon = [
     name: "patrat",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -111,6 +122,7 @@ export const generation5Pokemon = [
     name: "watchog",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -120,6 +132,7 @@ export const generation5Pokemon = [
     name: "lillipup",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -129,6 +142,7 @@ export const generation5Pokemon = [
     name: "herdier",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -138,6 +152,7 @@ export const generation5Pokemon = [
     name: "stoutland",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -147,6 +162,7 @@ export const generation5Pokemon = [
     name: "purrloin",
     type1: "dark",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -156,6 +172,7 @@ export const generation5Pokemon = [
     name: "liepard",
     type1: "dark",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -165,6 +182,7 @@ export const generation5Pokemon = [
     name: "pansage",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -174,6 +192,7 @@ export const generation5Pokemon = [
     name: "simisage",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -183,6 +202,7 @@ export const generation5Pokemon = [
     name: "pansear",
     type1: "fire",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -192,6 +212,7 @@ export const generation5Pokemon = [
     name: "simisear",
     type1: "fire",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -201,6 +222,7 @@ export const generation5Pokemon = [
     name: "panpour",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -210,6 +232,7 @@ export const generation5Pokemon = [
     name: "simipour",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -219,6 +242,7 @@ export const generation5Pokemon = [
     name: "munna",
     type1: "psychic",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -228,6 +252,7 @@ export const generation5Pokemon = [
     name: "musharna",
     type1: "psychic",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -237,6 +262,7 @@ export const generation5Pokemon = [
     name: "pidove",
     type1: "normal",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -246,6 +272,7 @@ export const generation5Pokemon = [
     name: "tranquill",
     type1: "normal",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -255,6 +282,7 @@ export const generation5Pokemon = [
     name: "unfezant",
     type1: "normal",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -264,6 +292,7 @@ export const generation5Pokemon = [
     name: "blitzle",
     type1: "electric",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -273,6 +302,7 @@ export const generation5Pokemon = [
     name: "zebstrika",
     type1: "electric",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -282,6 +312,7 @@ export const generation5Pokemon = [
     name: "roggenrola",
     type1: "rock",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -291,6 +322,7 @@ export const generation5Pokemon = [
     name: "boldore",
     type1: "rock",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -300,6 +332,7 @@ export const generation5Pokemon = [
     name: "gigalith",
     type1: "rock",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -309,6 +342,7 @@ export const generation5Pokemon = [
     name: "woobat",
     type1: "psychic",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -318,6 +352,7 @@ export const generation5Pokemon = [
     name: "swoobat",
     type1: "psychic",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -327,6 +362,7 @@ export const generation5Pokemon = [
     name: "drilbur",
     type1: "ground",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -336,6 +372,7 @@ export const generation5Pokemon = [
     name: "excadrill",
     type1: "ground",
     type2: "steel",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -345,6 +382,7 @@ export const generation5Pokemon = [
     name: "audino",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -354,6 +392,7 @@ export const generation5Pokemon = [
     name: "timburr",
     type1: "fighting",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -363,6 +402,7 @@ export const generation5Pokemon = [
     name: "gurdurr",
     type1: "fighting",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -372,6 +412,7 @@ export const generation5Pokemon = [
     name: "conkeldurr",
     type1: "fighting",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -381,6 +422,7 @@ export const generation5Pokemon = [
     name: "tympole",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -390,6 +432,7 @@ export const generation5Pokemon = [
     name: "palpitoad",
     type1: "water",
     type2: "ground",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -399,6 +442,7 @@ export const generation5Pokemon = [
     name: "seismitoad",
     type1: "water",
     type2: "ground",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -408,6 +452,7 @@ export const generation5Pokemon = [
     name: "throh",
     type1: "fighting",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -417,6 +462,7 @@ export const generation5Pokemon = [
     name: "sawk",
     type1: "fighting",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -426,6 +472,7 @@ export const generation5Pokemon = [
     name: "sewaddle",
     type1: "bug",
     type2: "grass",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -435,6 +482,7 @@ export const generation5Pokemon = [
     name: "swadloon",
     type1: "bug",
     type2: "grass",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -444,6 +492,7 @@ export const generation5Pokemon = [
     name: "leavanny",
     type1: "bug",
     type2: "grass",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -453,6 +502,7 @@ export const generation5Pokemon = [
     name: "venipede",
     type1: "bug",
     type2: "poison",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -462,6 +512,7 @@ export const generation5Pokemon = [
     name: "whirlipede",
     type1: "bug",
     type2: "poison",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -471,6 +522,7 @@ export const generation5Pokemon = [
     name: "scolipede",
     type1: "bug",
     type2: "poison",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -480,6 +532,7 @@ export const generation5Pokemon = [
     name: "cottonee",
     type1: "grass",
     type2: "fairy",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -489,6 +542,7 @@ export const generation5Pokemon = [
     name: "whimsicott",
     type1: "grass",
     type2: "fairy",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -498,6 +552,7 @@ export const generation5Pokemon = [
     name: "petilil",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -507,6 +562,7 @@ export const generation5Pokemon = [
     name: "lilligant",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -516,6 +572,7 @@ export const generation5Pokemon = [
     name: "basculin",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -525,6 +582,7 @@ export const generation5Pokemon = [
     name: "sandile",
     type1: "ground",
     type2: "dark",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -534,6 +592,7 @@ export const generation5Pokemon = [
     name: "krokorok",
     type1: "ground",
     type2: "dark",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -543,6 +602,7 @@ export const generation5Pokemon = [
     name: "krookodile",
     type1: "ground",
     type2: "dark",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -552,6 +612,7 @@ export const generation5Pokemon = [
     name: "darumaka",
     type1: "fire",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -561,6 +622,7 @@ export const generation5Pokemon = [
     name: "darmanitan",
     type1: "fire",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -570,6 +632,7 @@ export const generation5Pokemon = [
     name: "maractus",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -579,6 +642,7 @@ export const generation5Pokemon = [
     name: "dwebble",
     type1: "bug",
     type2: "rock",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -588,6 +652,7 @@ export const generation5Pokemon = [
     name: "crustle",
     type1: "bug",
     type2: "rock",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -597,6 +662,7 @@ export const generation5Pokemon = [
     name: "scraggy",
     type1: "dark",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -606,6 +672,7 @@ export const generation5Pokemon = [
     name: "scrafty",
     type1: "dark",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -615,6 +682,7 @@ export const generation5Pokemon = [
     name: "sigilyph",
     type1: "psychic",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -624,6 +692,7 @@ export const generation5Pokemon = [
     name: "yamask",
     type1: "ghost",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -633,6 +702,7 @@ export const generation5Pokemon = [
     name: "cofagrigus",
     type1: "ghost",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -642,6 +712,7 @@ export const generation5Pokemon = [
     name: "tirtouga",
     type1: "water",
     type2: "rock",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -651,6 +722,7 @@ export const generation5Pokemon = [
     name: "carracosta",
     type1: "water",
     type2: "rock",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -660,6 +732,7 @@ export const generation5Pokemon = [
     name: "archen",
     type1: "rock",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -669,6 +742,7 @@ export const generation5Pokemon = [
     name: "archeops",
     type1: "rock",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -678,6 +752,7 @@ export const generation5Pokemon = [
     name: "trubbish",
     type1: "poison",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -687,6 +762,7 @@ export const generation5Pokemon = [
     name: "garbodor",
     type1: "poison",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -696,6 +772,7 @@ export const generation5Pokemon = [
     name: "zorua",
     type1: "dark",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -705,6 +782,7 @@ export const generation5Pokemon = [
     name: "zoroark",
     type1: "dark",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -714,6 +792,7 @@ export const generation5Pokemon = [
     name: "minccino",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -723,6 +802,7 @@ export const generation5Pokemon = [
     name: "cinccino",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -732,6 +812,7 @@ export const generation5Pokemon = [
     name: "gothita",
     type1: "psychic",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -741,6 +822,7 @@ export const generation5Pokemon = [
     name: "gothorita",
     type1: "psychic",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -750,6 +832,7 @@ export const generation5Pokemon = [
     name: "gothitelle",
     type1: "psychic",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -759,6 +842,7 @@ export const generation5Pokemon = [
     name: "solosis",
     type1: "psychic",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -768,6 +852,7 @@ export const generation5Pokemon = [
     name: "duosion",
     type1: "psychic",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -777,6 +862,7 @@ export const generation5Pokemon = [
     name: "reuniclus",
     type1: "psychic",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -786,6 +872,7 @@ export const generation5Pokemon = [
     name: "ducklett",
     type1: "water",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -795,6 +882,7 @@ export const generation5Pokemon = [
     name: "swanna",
     type1: "water",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -804,6 +892,7 @@ export const generation5Pokemon = [
     name: "vanillite",
     type1: "ice",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -813,6 +902,7 @@ export const generation5Pokemon = [
     name: "vanillish",
     type1: "ice",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -822,6 +912,7 @@ export const generation5Pokemon = [
     name: "vanilluxe",
     type1: "ice",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -831,6 +922,7 @@ export const generation5Pokemon = [
     name: "deerling",
     type1: "normal",
     type2: "grass",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -840,6 +932,7 @@ export const generation5Pokemon = [
     name: "sawsbuck",
     type1: "normal",
     type2: "grass",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -849,6 +942,7 @@ export const generation5Pokemon = [
     name: "emolga",
     type1: "electric",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -858,6 +952,7 @@ export const generation5Pokemon = [
     name: "karrablast",
     type1: "bug",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -867,6 +962,7 @@ export const generation5Pokemon = [
     name: "escavalier",
     type1: "bug",
     type2: "steel",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -876,6 +972,7 @@ export const generation5Pokemon = [
     name: "foongus",
     type1: "grass",
     type2: "poison",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -885,6 +982,7 @@ export const generation5Pokemon = [
     name: "amoonguss",
     type1: "grass",
     type2: "poison",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -894,6 +992,7 @@ export const generation5Pokemon = [
     name: "frillish",
     type1: "water",
     type2: "ghost",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -903,6 +1002,7 @@ export const generation5Pokemon = [
     name: "jellicent",
     type1: "water",
     type2: "ghost",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -912,6 +1012,7 @@ export const generation5Pokemon = [
     name: "alomomola",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -921,6 +1022,7 @@ export const generation5Pokemon = [
     name: "joltik",
     type1: "bug",
     type2: "electric",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -930,6 +1032,7 @@ export const generation5Pokemon = [
     name: "galvantula",
     type1: "bug",
     type2: "electric",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -939,6 +1042,7 @@ export const generation5Pokemon = [
     name: "ferroseed",
     type1: "grass",
     type2: "steel",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -948,6 +1052,7 @@ export const generation5Pokemon = [
     name: "ferrothorn",
     type1: "grass",
     type2: "steel",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -957,6 +1062,7 @@ export const generation5Pokemon = [
     name: "klink",
     type1: "steel",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -966,6 +1072,7 @@ export const generation5Pokemon = [
     name: "klang",
     type1: "steel",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -975,6 +1082,7 @@ export const generation5Pokemon = [
     name: "klinklang",
     type1: "steel",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -984,6 +1092,7 @@ export const generation5Pokemon = [
     name: "tynamo",
     type1: "electric",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -993,6 +1102,7 @@ export const generation5Pokemon = [
     name: "eelektrik",
     type1: "electric",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1002,6 +1112,7 @@ export const generation5Pokemon = [
     name: "eelektross",
     type1: "electric",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1011,6 +1122,7 @@ export const generation5Pokemon = [
     name: "elgyem",
     type1: "psychic",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1020,6 +1132,7 @@ export const generation5Pokemon = [
     name: "beheeyem",
     type1: "psychic",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1029,6 +1142,7 @@ export const generation5Pokemon = [
     name: "litwick",
     type1: "ghost",
     type2: "fire",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1038,6 +1152,7 @@ export const generation5Pokemon = [
     name: "lampent",
     type1: "ghost",
     type2: "fire",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1047,6 +1162,7 @@ export const generation5Pokemon = [
     name: "chandelure",
     type1: "ghost",
     type2: "fire",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1056,6 +1172,7 @@ export const generation5Pokemon = [
     name: "axew",
     type1: "dragon",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1065,6 +1182,7 @@ export const generation5Pokemon = [
     name: "fraxure",
     type1: "dragon",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1074,6 +1192,7 @@ export const generation5Pokemon = [
     name: "haxorus",
     type1: "dragon",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1083,6 +1202,7 @@ export const generation5Pokemon = [
     name: "cubchoo",
     type1: "ice",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1092,6 +1212,7 @@ export const generation5Pokemon = [
     name: "beartic",
     type1: "ice",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1101,6 +1222,7 @@ export const generation5Pokemon = [
     name: "cryogonal",
     type1: "ice",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1110,6 +1232,7 @@ export const generation5Pokemon = [
     name: "shelmet",
     type1: "bug",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1119,6 +1242,7 @@ export const generation5Pokemon = [
     name: "accelgor",
     type1: "bug",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1128,6 +1252,7 @@ export const generation5Pokemon = [
     name: "stunfisk",
     type1: "ground",
     type2: "electric",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1137,6 +1262,7 @@ export const generation5Pokemon = [
     name: "mienfoo",
     type1: "fighting",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1146,6 +1272,7 @@ export const generation5Pokemon = [
     name: "mienshao",
     type1: "fighting",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1155,6 +1282,7 @@ export const generation5Pokemon = [
     name: "druddigon",
     type1: "dragon",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1164,6 +1292,7 @@ export const generation5Pokemon = [
     name: "golett",
     type1: "ground",
     type2: "ghost",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1173,6 +1302,7 @@ export const generation5Pokemon = [
     name: "golurk",
     type1: "ground",
     type2: "ghost",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1182,6 +1312,7 @@ export const generation5Pokemon = [
     name: "pawniard",
     type1: "dark",
     type2: "steel",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1191,6 +1322,7 @@ export const generation5Pokemon = [
     name: "bisharp",
     type1: "dark",
     type2: "steel",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1200,6 +1332,7 @@ export const generation5Pokemon = [
     name: "bouffalant",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1209,6 +1342,7 @@ export const generation5Pokemon = [
     name: "rufflet",
     type1: "normal",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1218,6 +1352,7 @@ export const generation5Pokemon = [
     name: "braviary",
     type1: "normal",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1227,6 +1362,7 @@ export const generation5Pokemon = [
     name: "vullaby",
     type1: "dark",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1236,6 +1372,7 @@ export const generation5Pokemon = [
     name: "mandibuzz",
     type1: "dark",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1245,6 +1382,7 @@ export const generation5Pokemon = [
     name: "heatmor",
     type1: "fire",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1254,6 +1392,7 @@ export const generation5Pokemon = [
     name: "durant",
     type1: "bug",
     type2: "steel",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1263,6 +1402,7 @@ export const generation5Pokemon = [
     name: "deino",
     type1: "dark",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1272,6 +1412,7 @@ export const generation5Pokemon = [
     name: "zweilous",
     type1: "dark",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1281,6 +1422,7 @@ export const generation5Pokemon = [
     name: "hydreigon",
     type1: "dark",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1290,6 +1432,7 @@ export const generation5Pokemon = [
     name: "larvesta",
     type1: "bug",
     type2: "fire",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1299,6 +1442,7 @@ export const generation5Pokemon = [
     name: "volcarona",
     type1: "bug",
     type2: "fire",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1308,6 +1452,7 @@ export const generation5Pokemon = [
     name: "cobalion",
     type1: "steel",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1317,6 +1462,7 @@ export const generation5Pokemon = [
     name: "terrakion",
     type1: "rock",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1326,6 +1472,7 @@ export const generation5Pokemon = [
     name: "virizion",
     type1: "grass",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1335,6 +1482,7 @@ export const generation5Pokemon = [
     name: "tornadus",
     type1: "flying",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1344,6 +1492,7 @@ export const generation5Pokemon = [
     name: "thundurus",
     type1: "electric",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1353,6 +1502,7 @@ export const generation5Pokemon = [
     name: "reshiram",
     type1: "dragon",
     type2: "fire",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1362,6 +1512,7 @@ export const generation5Pokemon = [
     name: "zekrom",
     type1: "dragon",
     type2: "electric",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1371,6 +1522,7 @@ export const generation5Pokemon = [
     name: "landorus",
     type1: "ground",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1380,6 +1532,7 @@ export const generation5Pokemon = [
     name: "kyurem",
     type1: "dragon",
     type2: "ice",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1389,6 +1542,7 @@ export const generation5Pokemon = [
     name: "keldeo",
     type1: "water",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1398,6 +1552,7 @@ export const generation5Pokemon = [
     name: "meloetta",
     type1: "normal",
     type2: "psychic",
+    typeMemoryHint: "",
   },
   {
     generation: 5,
@@ -1407,5 +1562,6 @@ export const generation5Pokemon = [
     name: "genesect",
     type1: "bug",
     type2: "steel",
+    typeMemoryHint: "",
   },
 ] as const satisfies readonly PokemonQuizRecord[];

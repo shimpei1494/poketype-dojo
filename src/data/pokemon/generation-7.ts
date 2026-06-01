@@ -12,6 +12,7 @@ export const generation7Pokemon = [
     name: "rowlet",
     type1: "grass",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -21,6 +22,7 @@ export const generation7Pokemon = [
     name: "dartrix",
     type1: "grass",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -30,6 +32,7 @@ export const generation7Pokemon = [
     name: "decidueye",
     type1: "grass",
     type2: "ghost",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -39,6 +42,7 @@ export const generation7Pokemon = [
     name: "litten",
     type1: "fire",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -48,6 +52,7 @@ export const generation7Pokemon = [
     name: "torracat",
     type1: "fire",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -57,6 +62,7 @@ export const generation7Pokemon = [
     name: "incineroar",
     type1: "fire",
     type2: "dark",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -66,6 +72,7 @@ export const generation7Pokemon = [
     name: "popplio",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -75,6 +82,7 @@ export const generation7Pokemon = [
     name: "brionne",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -84,6 +92,7 @@ export const generation7Pokemon = [
     name: "primarina",
     type1: "water",
     type2: "fairy",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -93,6 +102,7 @@ export const generation7Pokemon = [
     name: "pikipek",
     type1: "normal",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -102,6 +112,7 @@ export const generation7Pokemon = [
     name: "trumbeak",
     type1: "normal",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -111,6 +122,7 @@ export const generation7Pokemon = [
     name: "toucannon",
     type1: "normal",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -120,6 +132,7 @@ export const generation7Pokemon = [
     name: "yungoos",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -129,6 +142,7 @@ export const generation7Pokemon = [
     name: "gumshoos",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -138,6 +152,7 @@ export const generation7Pokemon = [
     name: "grubbin",
     type1: "bug",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -147,6 +162,7 @@ export const generation7Pokemon = [
     name: "charjabug",
     type1: "bug",
     type2: "electric",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -156,6 +172,7 @@ export const generation7Pokemon = [
     name: "vikavolt",
     type1: "bug",
     type2: "electric",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -165,6 +182,7 @@ export const generation7Pokemon = [
     name: "crabrawler",
     type1: "fighting",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -174,6 +192,7 @@ export const generation7Pokemon = [
     name: "crabominable",
     type1: "fighting",
     type2: "ice",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -183,6 +202,7 @@ export const generation7Pokemon = [
     name: "oricorio",
     type1: "fire",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -192,6 +212,7 @@ export const generation7Pokemon = [
     name: "cutiefly",
     type1: "bug",
     type2: "fairy",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -201,6 +222,7 @@ export const generation7Pokemon = [
     name: "ribombee",
     type1: "bug",
     type2: "fairy",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -210,6 +232,7 @@ export const generation7Pokemon = [
     name: "rockruff",
     type1: "rock",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -219,6 +242,7 @@ export const generation7Pokemon = [
     name: "lycanroc",
     type1: "rock",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -228,6 +252,7 @@ export const generation7Pokemon = [
     name: "wishiwashi",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -237,6 +262,7 @@ export const generation7Pokemon = [
     name: "mareanie",
     type1: "poison",
     type2: "water",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -246,6 +272,7 @@ export const generation7Pokemon = [
     name: "toxapex",
     type1: "poison",
     type2: "water",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -255,6 +282,7 @@ export const generation7Pokemon = [
     name: "mudbray",
     type1: "ground",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -264,6 +292,7 @@ export const generation7Pokemon = [
     name: "mudsdale",
     type1: "ground",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -273,6 +302,7 @@ export const generation7Pokemon = [
     name: "dewpider",
     type1: "water",
     type2: "bug",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -282,6 +312,7 @@ export const generation7Pokemon = [
     name: "araquanid",
     type1: "water",
     type2: "bug",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -291,6 +322,7 @@ export const generation7Pokemon = [
     name: "fomantis",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -300,6 +332,7 @@ export const generation7Pokemon = [
     name: "lurantis",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -309,6 +342,7 @@ export const generation7Pokemon = [
     name: "morelull",
     type1: "grass",
     type2: "fairy",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -318,6 +352,7 @@ export const generation7Pokemon = [
     name: "shiinotic",
     type1: "grass",
     type2: "fairy",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -327,6 +362,7 @@ export const generation7Pokemon = [
     name: "salandit",
     type1: "poison",
     type2: "fire",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -336,6 +372,7 @@ export const generation7Pokemon = [
     name: "salazzle",
     type1: "poison",
     type2: "fire",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -345,6 +382,7 @@ export const generation7Pokemon = [
     name: "stufful",
     type1: "normal",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -354,6 +392,7 @@ export const generation7Pokemon = [
     name: "bewear",
     type1: "normal",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -363,6 +402,7 @@ export const generation7Pokemon = [
     name: "bounsweet",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -372,6 +412,7 @@ export const generation7Pokemon = [
     name: "steenee",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -381,6 +422,7 @@ export const generation7Pokemon = [
     name: "tsareena",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -390,6 +432,7 @@ export const generation7Pokemon = [
     name: "comfey",
     type1: "fairy",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -399,6 +442,7 @@ export const generation7Pokemon = [
     name: "oranguru",
     type1: "normal",
     type2: "psychic",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -408,6 +452,7 @@ export const generation7Pokemon = [
     name: "passimian",
     type1: "fighting",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -417,6 +462,7 @@ export const generation7Pokemon = [
     name: "wimpod",
     type1: "bug",
     type2: "water",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -426,6 +472,7 @@ export const generation7Pokemon = [
     name: "golisopod",
     type1: "bug",
     type2: "water",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -435,6 +482,7 @@ export const generation7Pokemon = [
     name: "sandygast",
     type1: "ghost",
     type2: "ground",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -444,6 +492,7 @@ export const generation7Pokemon = [
     name: "palossand",
     type1: "ghost",
     type2: "ground",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -453,6 +502,7 @@ export const generation7Pokemon = [
     name: "pyukumuku",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -462,6 +512,7 @@ export const generation7Pokemon = [
     name: "type-null",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -471,6 +522,7 @@ export const generation7Pokemon = [
     name: "silvally",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -480,6 +532,7 @@ export const generation7Pokemon = [
     name: "minior",
     type1: "rock",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -489,6 +542,7 @@ export const generation7Pokemon = [
     name: "komala",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -498,6 +552,7 @@ export const generation7Pokemon = [
     name: "turtonator",
     type1: "fire",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -507,6 +562,7 @@ export const generation7Pokemon = [
     name: "togedemaru",
     type1: "electric",
     type2: "steel",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -516,6 +572,7 @@ export const generation7Pokemon = [
     name: "mimikyu",
     type1: "ghost",
     type2: "fairy",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -525,6 +582,7 @@ export const generation7Pokemon = [
     name: "bruxish",
     type1: "water",
     type2: "psychic",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -534,6 +592,7 @@ export const generation7Pokemon = [
     name: "drampa",
     type1: "normal",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -543,6 +602,7 @@ export const generation7Pokemon = [
     name: "dhelmise",
     type1: "ghost",
     type2: "grass",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -552,6 +612,7 @@ export const generation7Pokemon = [
     name: "jangmo-o",
     type1: "dragon",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -561,6 +622,7 @@ export const generation7Pokemon = [
     name: "hakamo-o",
     type1: "dragon",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -570,6 +632,7 @@ export const generation7Pokemon = [
     name: "kommo-o",
     type1: "dragon",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -579,6 +642,7 @@ export const generation7Pokemon = [
     name: "tapu-koko",
     type1: "electric",
     type2: "fairy",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -588,6 +652,7 @@ export const generation7Pokemon = [
     name: "tapu-lele",
     type1: "psychic",
     type2: "fairy",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -597,6 +662,7 @@ export const generation7Pokemon = [
     name: "tapu-bulu",
     type1: "grass",
     type2: "fairy",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -606,6 +672,7 @@ export const generation7Pokemon = [
     name: "tapu-fini",
     type1: "water",
     type2: "fairy",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -615,6 +682,7 @@ export const generation7Pokemon = [
     name: "cosmog",
     type1: "psychic",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -624,6 +692,7 @@ export const generation7Pokemon = [
     name: "cosmoem",
     type1: "psychic",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -633,6 +702,7 @@ export const generation7Pokemon = [
     name: "solgaleo",
     type1: "psychic",
     type2: "steel",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -642,6 +712,7 @@ export const generation7Pokemon = [
     name: "lunala",
     type1: "psychic",
     type2: "ghost",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -651,6 +722,7 @@ export const generation7Pokemon = [
     name: "nihilego",
     type1: "rock",
     type2: "poison",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -660,6 +732,7 @@ export const generation7Pokemon = [
     name: "buzzwole",
     type1: "bug",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -669,6 +742,7 @@ export const generation7Pokemon = [
     name: "pheromosa",
     type1: "bug",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -678,6 +752,7 @@ export const generation7Pokemon = [
     name: "xurkitree",
     type1: "electric",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -687,6 +762,7 @@ export const generation7Pokemon = [
     name: "celesteela",
     type1: "steel",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -696,6 +772,7 @@ export const generation7Pokemon = [
     name: "kartana",
     type1: "grass",
     type2: "steel",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -705,6 +782,7 @@ export const generation7Pokemon = [
     name: "guzzlord",
     type1: "dark",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -714,6 +792,7 @@ export const generation7Pokemon = [
     name: "necrozma",
     type1: "psychic",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -723,6 +802,7 @@ export const generation7Pokemon = [
     name: "magearna",
     type1: "steel",
     type2: "fairy",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -732,6 +812,7 @@ export const generation7Pokemon = [
     name: "marshadow",
     type1: "fighting",
     type2: "ghost",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -741,6 +822,7 @@ export const generation7Pokemon = [
     name: "poipole",
     type1: "poison",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -750,6 +832,7 @@ export const generation7Pokemon = [
     name: "naganadel",
     type1: "poison",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -759,6 +842,7 @@ export const generation7Pokemon = [
     name: "stakataka",
     type1: "rock",
     type2: "steel",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -768,6 +852,7 @@ export const generation7Pokemon = [
     name: "blacephalon",
     type1: "fire",
     type2: "ghost",
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -777,6 +862,7 @@ export const generation7Pokemon = [
     name: "zeraora",
     type1: "electric",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -786,6 +872,7 @@ export const generation7Pokemon = [
     name: "meltan",
     type1: "steel",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 7,
@@ -795,5 +882,6 @@ export const generation7Pokemon = [
     name: "melmetal",
     type1: "steel",
     type2: null,
+    typeMemoryHint: "",
   },
 ] satisfies PokemonQuizRecord[];

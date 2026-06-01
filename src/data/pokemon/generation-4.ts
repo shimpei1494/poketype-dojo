@@ -12,6 +12,7 @@ export const generation4Pokemon = [
     name: "turtwig",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -21,6 +22,7 @@ export const generation4Pokemon = [
     name: "grotle",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -30,6 +32,7 @@ export const generation4Pokemon = [
     name: "torterra",
     type1: "grass",
     type2: "ground",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -39,6 +42,7 @@ export const generation4Pokemon = [
     name: "chimchar",
     type1: "fire",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -48,6 +52,7 @@ export const generation4Pokemon = [
     name: "monferno",
     type1: "fire",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -57,6 +62,7 @@ export const generation4Pokemon = [
     name: "infernape",
     type1: "fire",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -66,6 +72,7 @@ export const generation4Pokemon = [
     name: "piplup",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -75,6 +82,7 @@ export const generation4Pokemon = [
     name: "prinplup",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -84,6 +92,7 @@ export const generation4Pokemon = [
     name: "empoleon",
     type1: "water",
     type2: "steel",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -93,6 +102,7 @@ export const generation4Pokemon = [
     name: "starly",
     type1: "normal",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -102,6 +112,7 @@ export const generation4Pokemon = [
     name: "staravia",
     type1: "normal",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -111,6 +122,7 @@ export const generation4Pokemon = [
     name: "staraptor",
     type1: "normal",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -120,6 +132,7 @@ export const generation4Pokemon = [
     name: "bidoof",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -129,6 +142,7 @@ export const generation4Pokemon = [
     name: "bibarel",
     type1: "normal",
     type2: "water",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -138,6 +152,7 @@ export const generation4Pokemon = [
     name: "kricketot",
     type1: "bug",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -147,6 +162,7 @@ export const generation4Pokemon = [
     name: "kricketune",
     type1: "bug",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -156,6 +172,7 @@ export const generation4Pokemon = [
     name: "shinx",
     type1: "electric",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -165,6 +182,7 @@ export const generation4Pokemon = [
     name: "luxio",
     type1: "electric",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -174,6 +192,7 @@ export const generation4Pokemon = [
     name: "luxray",
     type1: "electric",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -183,6 +202,7 @@ export const generation4Pokemon = [
     name: "budew",
     type1: "grass",
     type2: "poison",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -192,6 +212,7 @@ export const generation4Pokemon = [
     name: "roserade",
     type1: "grass",
     type2: "poison",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -201,6 +222,7 @@ export const generation4Pokemon = [
     name: "cranidos",
     type1: "rock",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -210,6 +232,7 @@ export const generation4Pokemon = [
     name: "rampardos",
     type1: "rock",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -219,6 +242,7 @@ export const generation4Pokemon = [
     name: "shieldon",
     type1: "rock",
     type2: "steel",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -228,6 +252,7 @@ export const generation4Pokemon = [
     name: "bastiodon",
     type1: "rock",
     type2: "steel",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -237,6 +262,7 @@ export const generation4Pokemon = [
     name: "burmy",
     type1: "bug",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -246,6 +272,7 @@ export const generation4Pokemon = [
     name: "wormadam",
     type1: "bug",
     type2: "grass",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -255,6 +282,7 @@ export const generation4Pokemon = [
     name: "mothim",
     type1: "bug",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -264,6 +292,7 @@ export const generation4Pokemon = [
     name: "combee",
     type1: "bug",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -273,6 +302,7 @@ export const generation4Pokemon = [
     name: "vespiquen",
     type1: "bug",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -282,6 +312,7 @@ export const generation4Pokemon = [
     name: "pachirisu",
     type1: "electric",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -291,6 +322,7 @@ export const generation4Pokemon = [
     name: "buizel",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -300,6 +332,7 @@ export const generation4Pokemon = [
     name: "floatzel",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -309,6 +342,7 @@ export const generation4Pokemon = [
     name: "cherubi",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -318,6 +352,7 @@ export const generation4Pokemon = [
     name: "cherrim",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -327,6 +362,7 @@ export const generation4Pokemon = [
     name: "shellos",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -336,6 +372,7 @@ export const generation4Pokemon = [
     name: "gastrodon",
     type1: "water",
     type2: "ground",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -345,6 +382,7 @@ export const generation4Pokemon = [
     name: "ambipom",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -354,6 +392,7 @@ export const generation4Pokemon = [
     name: "drifloon",
     type1: "ghost",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -363,6 +402,7 @@ export const generation4Pokemon = [
     name: "drifblim",
     type1: "ghost",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -372,6 +412,7 @@ export const generation4Pokemon = [
     name: "buneary",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -381,6 +422,7 @@ export const generation4Pokemon = [
     name: "lopunny",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -390,6 +432,7 @@ export const generation4Pokemon = [
     name: "mismagius",
     type1: "ghost",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -399,6 +442,7 @@ export const generation4Pokemon = [
     name: "honchkrow",
     type1: "dark",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -408,6 +452,7 @@ export const generation4Pokemon = [
     name: "glameow",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -417,6 +462,7 @@ export const generation4Pokemon = [
     name: "purugly",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -426,6 +472,7 @@ export const generation4Pokemon = [
     name: "chingling",
     type1: "psychic",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -435,6 +482,7 @@ export const generation4Pokemon = [
     name: "stunky",
     type1: "poison",
     type2: "dark",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -444,6 +492,7 @@ export const generation4Pokemon = [
     name: "skuntank",
     type1: "poison",
     type2: "dark",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -453,6 +502,7 @@ export const generation4Pokemon = [
     name: "bronzor",
     type1: "steel",
     type2: "psychic",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -462,6 +512,7 @@ export const generation4Pokemon = [
     name: "bronzong",
     type1: "steel",
     type2: "psychic",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -471,6 +522,7 @@ export const generation4Pokemon = [
     name: "bonsly",
     type1: "rock",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -480,6 +532,7 @@ export const generation4Pokemon = [
     name: "mime-jr",
     type1: "psychic",
     type2: "fairy",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -489,6 +542,7 @@ export const generation4Pokemon = [
     name: "happiny",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -498,6 +552,7 @@ export const generation4Pokemon = [
     name: "chatot",
     type1: "normal",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -507,6 +562,7 @@ export const generation4Pokemon = [
     name: "spiritomb",
     type1: "ghost",
     type2: "dark",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -516,6 +572,7 @@ export const generation4Pokemon = [
     name: "gible",
     type1: "dragon",
     type2: "ground",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -525,6 +582,7 @@ export const generation4Pokemon = [
     name: "gabite",
     type1: "dragon",
     type2: "ground",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -534,6 +592,7 @@ export const generation4Pokemon = [
     name: "garchomp",
     type1: "dragon",
     type2: "ground",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -543,6 +602,7 @@ export const generation4Pokemon = [
     name: "munchlax",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -552,6 +612,7 @@ export const generation4Pokemon = [
     name: "riolu",
     type1: "fighting",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -561,6 +622,7 @@ export const generation4Pokemon = [
     name: "lucario",
     type1: "fighting",
     type2: "steel",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -570,6 +632,7 @@ export const generation4Pokemon = [
     name: "hippopotas",
     type1: "ground",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -579,6 +642,7 @@ export const generation4Pokemon = [
     name: "hippowdon",
     type1: "ground",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -588,6 +652,7 @@ export const generation4Pokemon = [
     name: "skorupi",
     type1: "poison",
     type2: "bug",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -597,6 +662,7 @@ export const generation4Pokemon = [
     name: "drapion",
     type1: "poison",
     type2: "dark",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -606,6 +672,7 @@ export const generation4Pokemon = [
     name: "croagunk",
     type1: "poison",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -615,6 +682,7 @@ export const generation4Pokemon = [
     name: "toxicroak",
     type1: "poison",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -624,6 +692,7 @@ export const generation4Pokemon = [
     name: "carnivine",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -633,6 +702,7 @@ export const generation4Pokemon = [
     name: "finneon",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -642,6 +712,7 @@ export const generation4Pokemon = [
     name: "lumineon",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -651,6 +722,7 @@ export const generation4Pokemon = [
     name: "mantyke",
     type1: "water",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -660,6 +732,7 @@ export const generation4Pokemon = [
     name: "snover",
     type1: "grass",
     type2: "ice",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -669,6 +742,7 @@ export const generation4Pokemon = [
     name: "abomasnow",
     type1: "grass",
     type2: "ice",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -678,6 +752,7 @@ export const generation4Pokemon = [
     name: "weavile",
     type1: "dark",
     type2: "ice",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -687,6 +762,7 @@ export const generation4Pokemon = [
     name: "magnezone",
     type1: "electric",
     type2: "steel",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -696,6 +772,7 @@ export const generation4Pokemon = [
     name: "lickilicky",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -705,6 +782,7 @@ export const generation4Pokemon = [
     name: "rhyperior",
     type1: "ground",
     type2: "rock",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -714,6 +792,7 @@ export const generation4Pokemon = [
     name: "tangrowth",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -723,6 +802,7 @@ export const generation4Pokemon = [
     name: "electivire",
     type1: "electric",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -732,6 +812,7 @@ export const generation4Pokemon = [
     name: "magmortar",
     type1: "fire",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -741,6 +822,7 @@ export const generation4Pokemon = [
     name: "togekiss",
     type1: "fairy",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -750,6 +832,7 @@ export const generation4Pokemon = [
     name: "yanmega",
     type1: "bug",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -759,6 +842,7 @@ export const generation4Pokemon = [
     name: "leafeon",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -768,6 +852,7 @@ export const generation4Pokemon = [
     name: "glaceon",
     type1: "ice",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -777,6 +862,7 @@ export const generation4Pokemon = [
     name: "gliscor",
     type1: "ground",
     type2: "flying",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -786,6 +872,7 @@ export const generation4Pokemon = [
     name: "mamoswine",
     type1: "ice",
     type2: "ground",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -795,6 +882,7 @@ export const generation4Pokemon = [
     name: "porygon-z",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -804,6 +892,7 @@ export const generation4Pokemon = [
     name: "gallade",
     type1: "psychic",
     type2: "fighting",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -813,6 +902,7 @@ export const generation4Pokemon = [
     name: "probopass",
     type1: "rock",
     type2: "steel",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -822,6 +912,7 @@ export const generation4Pokemon = [
     name: "dusknoir",
     type1: "ghost",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -831,6 +922,7 @@ export const generation4Pokemon = [
     name: "froslass",
     type1: "ice",
     type2: "ghost",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -840,6 +932,7 @@ export const generation4Pokemon = [
     name: "rotom",
     type1: "electric",
     type2: "ghost",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -849,6 +942,7 @@ export const generation4Pokemon = [
     name: "uxie",
     type1: "psychic",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -858,6 +952,7 @@ export const generation4Pokemon = [
     name: "mesprit",
     type1: "psychic",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -867,6 +962,7 @@ export const generation4Pokemon = [
     name: "azelf",
     type1: "psychic",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -876,6 +972,7 @@ export const generation4Pokemon = [
     name: "dialga",
     type1: "steel",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -885,6 +982,7 @@ export const generation4Pokemon = [
     name: "palkia",
     type1: "water",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -894,6 +992,7 @@ export const generation4Pokemon = [
     name: "heatran",
     type1: "fire",
     type2: "steel",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -903,6 +1002,7 @@ export const generation4Pokemon = [
     name: "regigigas",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -912,6 +1012,7 @@ export const generation4Pokemon = [
     name: "giratina",
     type1: "ghost",
     type2: "dragon",
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -921,6 +1022,7 @@ export const generation4Pokemon = [
     name: "cresselia",
     type1: "psychic",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -930,6 +1032,7 @@ export const generation4Pokemon = [
     name: "phione",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -939,6 +1042,7 @@ export const generation4Pokemon = [
     name: "manaphy",
     type1: "water",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -948,6 +1052,7 @@ export const generation4Pokemon = [
     name: "darkrai",
     type1: "dark",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -957,6 +1062,7 @@ export const generation4Pokemon = [
     name: "shaymin",
     type1: "grass",
     type2: null,
+    typeMemoryHint: "",
   },
   {
     generation: 4,
@@ -966,5 +1072,6 @@ export const generation4Pokemon = [
     name: "arceus",
     type1: "normal",
     type2: null,
+    typeMemoryHint: "",
   },
 ] as const satisfies readonly PokemonQuizRecord[];
