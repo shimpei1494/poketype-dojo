@@ -112,3 +112,76 @@ body {
   height: clamp(180px, 34vw, 320px);
   max-width: min(100%, 360px);
 }
+
+.pokemon-reference-page {
+  box-sizing: border-box;
+  height: 100dvh;
+  min-height: 100dvh;
+  overflow: hidden;
+}
+
+.pokemon-reference-layout {
+  height: 100%;
+  min-height: 0;
+}
+
+.pokemon-reference-header,
+.pokemon-search-panel {
+  flex: 0 0 auto;
+}
+
+.pokemon-list-scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-bottom: 4px;
+  padding-right: 4px;
+}
+
+.pokemon-list-row {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(236, 209, 229, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 8px 22px rgba(137, 91, 125, 0.08);
+  color: inherit;
+  display: block;
+  min-height: 86px;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease,
+    transform 120ms ease;
+  width: 100%;
+}
+
+.pokemon-list-row:hover {
+  background: rgba(255, 244, 250, 0.96);
+  border-color: rgba(218, 150, 192, 0.95);
+  transform: translateY(-1px);
+}
+
+.pokemon-empty-result {
+  grid-column: 1 / -1;
+}
+
+.pokemon-detail-nav-link {
+  align-items: center;
+  background: rgba(222, 247, 252, 0.88);
+  border: 1px solid rgba(159, 219, 232, 0.95);
+  border-radius: 4px;
+  color: #216678;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 700;
+  height: 36px;
+  justify-content: center;
+  padding-inline: 18px;
+  text-decoration: none;
+  width: 100%;
+}
+
+.pokemon-detail-nav-link:hover {
+  background: rgba(202, 239, 247, 0.96);
+}

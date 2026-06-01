@@ -10,19 +10,32 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TypeCheckerRouteImport } from './routes/type-checker'
+import { Route as PokemonRouteImport } from './routes/pokemon'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PokemonIndexRouteImport } from './routes/pokemon.index'
 import { Route as QuizTypeMatchupRouteImport } from './routes/quiz/type-matchup'
 import { Route as QuizPokemonTypeRouteImport } from './routes/quiz/pokemon-type'
+import { Route as PokemonPokemonIdRouteImport } from './routes/pokemon.$pokemonId'
 
 const TypeCheckerRoute = TypeCheckerRouteImport.update({
   id: '/type-checker',
   path: '/type-checker',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PokemonRoute = PokemonRouteImport.update({
+  id: '/pokemon',
+  path: '/pokemon',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const PokemonIndexRoute = PokemonIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => PokemonRoute,
 } as any)
 const QuizTypeMatchupRoute = QuizTypeMatchupRouteImport.update({
   id: '/quiz/type-matchup',
@@ -34,41 +47,71 @@ const QuizPokemonTypeRoute = QuizPokemonTypeRouteImport.update({
   path: '/quiz/pokemon-type',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PokemonPokemonIdRoute = PokemonPokemonIdRouteImport.update({
+  id: '/$pokemonId',
+  path: '/$pokemonId',
+  getParentRoute: () => PokemonRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/pokemon': typeof PokemonRouteWithChildren
   '/type-checker': typeof TypeCheckerRoute
+  '/pokemon/$pokemonId': typeof PokemonPokemonIdRoute
   '/quiz/pokemon-type': typeof QuizPokemonTypeRoute
   '/quiz/type-matchup': typeof QuizTypeMatchupRoute
+  '/pokemon/': typeof PokemonIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/type-checker': typeof TypeCheckerRoute
+  '/pokemon/$pokemonId': typeof PokemonPokemonIdRoute
   '/quiz/pokemon-type': typeof QuizPokemonTypeRoute
   '/quiz/type-matchup': typeof QuizTypeMatchupRoute
+  '/pokemon': typeof PokemonIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/pokemon': typeof PokemonRouteWithChildren
   '/type-checker': typeof TypeCheckerRoute
+  '/pokemon/$pokemonId': typeof PokemonPokemonIdRoute
   '/quiz/pokemon-type': typeof QuizPokemonTypeRoute
   '/quiz/type-matchup': typeof QuizTypeMatchupRoute
+  '/pokemon/': typeof PokemonIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/type-checker' | '/quiz/pokemon-type' | '/quiz/type-matchup'
+  fullPaths:
+    | '/'
+    | '/pokemon'
+    | '/type-checker'
+    | '/pokemon/$pokemonId'
+    | '/quiz/pokemon-type'
+    | '/quiz/type-matchup'
+    | '/pokemon/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/type-checker' | '/quiz/pokemon-type' | '/quiz/type-matchup'
+  to:
+    | '/'
+    | '/type-checker'
+    | '/pokemon/$pokemonId'
+    | '/quiz/pokemon-type'
+    | '/quiz/type-matchup'
+    | '/pokemon'
   id:
     | '__root__'
     | '/'
+    | '/pokemon'
     | '/type-checker'
+    | '/pokemon/$pokemonId'
     | '/quiz/pokemon-type'
     | '/quiz/type-matchup'
+    | '/pokemon/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PokemonRoute: typeof PokemonRouteWithChildren
   TypeCheckerRoute: typeof TypeCheckerRoute
   QuizPokemonTypeRoute: typeof QuizPokemonTypeRoute
   QuizTypeMatchupRoute: typeof QuizTypeMatchupRoute
@@ -83,12 +126,26 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TypeCheckerRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pokemon': {
+      id: '/pokemon'
+      path: '/pokemon'
+      fullPath: '/pokemon'
+      preLoaderRoute: typeof PokemonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/pokemon/': {
+      id: '/pokemon/'
+      path: '/'
+      fullPath: '/pokemon/'
+      preLoaderRoute: typeof PokemonIndexRouteImport
+      parentRoute: typeof PokemonRoute
     }
     '/quiz/type-matchup': {
       id: '/quiz/type-matchup'
@@ -104,11 +161,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof QuizPokemonTypeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pokemon/$pokemonId': {
+      id: '/pokemon/$pokemonId'
+      path: '/$pokemonId'
+      fullPath: '/pokemon/$pokemonId'
+      preLoaderRoute: typeof PokemonPokemonIdRouteImport
+      parentRoute: typeof PokemonRoute
+    }
   }
 }
 
+interface PokemonRouteChildren {
+  PokemonPokemonIdRoute: typeof PokemonPokemonIdRoute
+  PokemonIndexRoute: typeof PokemonIndexRoute
+}
+
+const PokemonRouteChildren: PokemonRouteChildren = {
+  PokemonPokemonIdRoute: PokemonPokemonIdRoute,
+  PokemonIndexRoute: PokemonIndexRoute,
+}
+
+const PokemonRouteWithChildren =
+  PokemonRoute._addFileChildren(PokemonRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PokemonRoute: PokemonRouteWithChildren,
   TypeCheckerRoute: TypeCheckerRoute,
   QuizPokemonTypeRoute: QuizPokemonTypeRoute,
   QuizTypeMatchupRoute: QuizTypeMatchupRoute,

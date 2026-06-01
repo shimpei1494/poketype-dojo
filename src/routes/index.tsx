@@ -20,7 +20,7 @@ function Home() {
           </Text>
         </Stack>
 
-        <SimpleGrid cols={{ base: 1, md: 3 }} spacing="md">
+        <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
           <ModeCard
             description="技のタイプと攻撃されるポケモンのタイプを選んで、倍率と内訳をすぐ確認。"
             label="今すぐ使う"
@@ -38,6 +38,12 @@ function Home() {
             label="挑戦する"
             title="ポケモンタイプ当て"
             to="/quiz/pokemon-type"
+          />
+          <ModeCard
+            description="名前・タイプ・世代で探して、タイプと防御側の相性を確認。"
+            label="調べる"
+            title="ポケモン図鑑"
+            to="/pokemon"
           />
         </SimpleGrid>
       </Stack>
