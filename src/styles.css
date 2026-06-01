@@ -146,7 +146,8 @@ body {
   box-shadow: 0 8px 22px rgba(137, 91, 125, 0.08);
   color: inherit;
   display: block;
-  padding: 12px 14px;
+  min-height: 86px;
+  padding: 14px 16px;
   text-decoration: none;
   transition:
     background-color 120ms ease,
@@ -159,6 +160,10 @@ body {
   background: rgba(255, 244, 250, 0.96);
   border-color: rgba(218, 150, 192, 0.95);
   transform: translateY(-1px);
+}
+
+.pokemon-empty-result {
+  grid-column: 1 / -1;
 }
 
 .pokemon-detail-nav-link {

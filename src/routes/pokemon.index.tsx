@@ -213,9 +213,14 @@ function PokemonListPage() {
           </Stack>
         </Card>
 
-        <Stack className="pokemon-list-scroll" gap="sm" ref={resultListRef}>
+        <SimpleGrid
+          className="pokemon-list-scroll"
+          cols={{ base: 1, sm: 2, md: 3, xl: 4 }}
+          ref={resultListRef}
+          spacing="sm"
+        >
           {filteredPokemon.length === 0 ? (
-            <Card className="glass-panel" p="lg">
+            <Card className="glass-panel pokemon-empty-result" p="lg">
               <Text fw={700}>条件に一致するポケモンが見つかりませんでした</Text>
             </Card>
           ) : (
@@ -227,16 +232,18 @@ function PokemonListPage() {
                 search={emptyPokemonListSearch}
                 to="/pokemon/$pokemonId"
               >
-                <Group justify="space-between" wrap="nowrap">
-                  <Text c="dimmed" fw={800} size="sm">
+                <Stack gap={4}>
+                  <Text c="dimmed" fw={800} size="xs">
                     No.{pokemon.id.toString().padStart(3, "0")}
                   </Text>
-                  <Text fw={800}>{pokemon.jaName}</Text>
-                </Group>
+                  <Text fw={800} size="lg">
+                    {pokemon.jaName}
+                  </Text>
+                </Stack>
               </Link>
             ))
           )}
-        </Stack>
+        </SimpleGrid>
       </Stack>
     </Container>
   );
