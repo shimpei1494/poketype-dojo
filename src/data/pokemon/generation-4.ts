@@ -1,11 +1,13 @@
-import type { PokemonQuizRecord } from "./types";
+import type { PokemonGeneration, PokemonQuizRecord } from "./types";
 
 // Fourth-generation standard Pokemon quiz data.
 // Types use the current standard-form type assignments. Regional forms,
 // Mega Evolutions, Gigantamax, and other forms are intentionally excluded.
+const generation = 4 satisfies PokemonGeneration;
+
 export const generation4Pokemon = [
   {
-    generation: 4,
+    generation,
     id: 387,
     imagePath: "official-artwork/387.png",
     jaName: "ナエトル",
@@ -15,7 +17,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "小さなカメだが、頭の芽と甲羅の土から植物が育つ印象でくさタイプと覚える。",
   },
   {
-    generation: 4,
+    generation,
     id: 388,
     imagePath: "official-artwork/388.png",
     jaName: "ハヤシガメ",
@@ -25,7 +27,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "背中に茂みが育ったカメなのでくさタイプ。森を背負う途中段階として見る。",
   },
   {
-    generation: 4,
+    generation,
     id: 389,
     imagePath: "official-artwork/389.png",
     jaName: "ドダイトス",
@@ -35,7 +37,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "背中の大樹でくさ、大地を背負う巨大なカメとしてじめんタイプも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 390,
     imagePath: "official-artwork/390.png",
     jaName: "ヒコザル",
@@ -45,7 +47,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "尻尾の炎と赤い子ザルの姿がほのおタイプの手がかり。猿らしさより炎を見る。",
   },
   {
-    generation: 4,
+    generation,
     id: 391,
     imagePath: "official-artwork/391.png",
     jaName: "モウカザル",
@@ -55,7 +57,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "炎の猿に、拳や蹴りで戦う身軽さが加わってかくとうタイプも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 392,
     imagePath: "official-artwork/392.png",
     jaName: "ゴウカザル",
@@ -65,7 +67,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "孫悟空風の炎の格闘家なので、ほのおとかくとう。頭の炎と構えをセットで覚える。",
   },
   {
-    generation: 4,
+    generation,
     id: 393,
     imagePath: "official-artwork/393.png",
     jaName: "ポッチャマ",
@@ -75,7 +77,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "ペンギンの子どもなのでみずタイプ。氷っぽく見えても、標準タイプは単みず。",
   },
   {
-    generation: 4,
+    generation,
     id: 394,
     imagePath: "official-artwork/394.png",
     jaName: "ポッタイシ",
@@ -85,7 +87,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "ペンギンの進化形でみずタイプ。王子風の姿は特徴で、まだはがねではない。",
   },
   {
-    generation: 4,
+    generation,
     id: 395,
     imagePath: "official-artwork/395.png",
     jaName: "エンペルト",
@@ -95,7 +97,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "皇帝ペンギンのみずに、鋼のような翼と冠の硬さからはがねタイプが加わる。",
   },
   {
-    generation: 4,
+    generation,
     id: 396,
     imagePath: "official-artwork/396.png",
     jaName: "ムックル",
@@ -105,7 +107,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "ムクドリのような小鳥でひこう、身近な鳥としてノーマルも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 397,
     imagePath: "official-artwork/397.png",
     jaName: "ムクバード",
@@ -115,7 +117,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "鳥としてひこう、特殊な元素を持たない野鳥らしさからノーマルも覚える。",
   },
   {
-    generation: 4,
+    generation,
     id: 398,
     imagePath: "official-artwork/398.png",
     jaName: "ムクホーク",
@@ -125,7 +127,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "猛禽のような鳥でひこう。強そうでも格闘ではなく、普通の鳥枠でノーマルも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 399,
     imagePath: "official-artwork/399.png",
     jaName: "ビッパ",
@@ -135,7 +137,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "ビーバーのような身近な小動物なのでノーマルタイプ。歯や丸さは特徴として見る。",
   },
   {
-    generation: 4,
+    generation,
     id: 400,
     imagePath: "official-artwork/400.png",
     jaName: "ビーダル",
@@ -145,7 +147,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "ビーバーのノーマルに、水辺でダムを作る暮らしからみずタイプが加わる。",
   },
   {
-    generation: 4,
+    generation,
     id: 401,
     imagePath: "official-artwork/401.png",
     jaName: "コロボーシ",
@@ -155,7 +157,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "コオロギの幼虫のような姿なのでむしタイプ。音楽的な名前でも音タイプはない。",
   },
   {
-    generation: 4,
+    generation,
     id: 402,
     imagePath: "official-artwork/402.png",
     jaName: "コロトック",
@@ -165,7 +167,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "コオロギの演奏家なのでむしタイプ。バイオリンのような腕は鳴き声の特徴。",
   },
   {
-    generation: 4,
+    generation,
     id: 403,
     imagePath: "official-artwork/403.png",
     jaName: "コリンク",
@@ -175,7 +177,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "ライオンの子どものようでも、青黒い体と星形のしっぽからでんきタイプを覚える。",
   },
   {
-    generation: 4,
+    generation,
     id: 404,
     imagePath: "official-artwork/404.png",
     jaName: "ルクシオ",
@@ -185,7 +187,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "鋭い目の電気ライオンででんきタイプ。黒い体に光る黄色を電気の手がかりにする。",
   },
   {
-    generation: 4,
+    generation,
     id: 405,
     imagePath: "official-artwork/405.png",
     jaName: "レントラー",
@@ -196,7 +198,7 @@ export const generation4Pokemon = [
       "まぶしい目と電気を帯びたライオンの姿からでんきタイプ。あくではなく電気が主役。",
   },
   {
-    generation: 4,
+    generation,
     id: 406,
     imagePath: "official-artwork/406.png",
     jaName: "スボミー",
@@ -206,7 +208,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "バラのつぼみでくさ、ロゼリア系の毒トゲの流れからどくタイプも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 407,
     imagePath: "official-artwork/407.png",
     jaName: "ロズレイド",
@@ -216,7 +218,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "両手のバラでくさ、花のトゲや毒の香りからどくタイプも覚える。",
   },
   {
-    generation: 4,
+    generation,
     id: 408,
     imagePath: "official-artwork/408.png",
     jaName: "ズガイドス",
@@ -226,7 +228,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "化石の頭突き恐竜なのでいわタイプ。恐竜らしさより化石由来の岩を忘れない。",
   },
   {
-    generation: 4,
+    generation,
     id: 409,
     imagePath: "official-artwork/409.png",
     jaName: "ラムパルド",
@@ -236,7 +238,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "巨大な頭の化石恐竜なのでいわタイプ。力強くても格闘ではなく化石の岩。",
   },
   {
-    generation: 4,
+    generation,
     id: 410,
     imagePath: "official-artwork/410.png",
     jaName: "タテトプス",
@@ -246,7 +248,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "盾の化石恐竜なのでいわ、金属の盾のような顔からはがねタイプも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 411,
     imagePath: "official-artwork/411.png",
     jaName: "トリデプス",
@@ -256,7 +258,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "城壁のような盾顔でいわとはがね。化石恐竜と金属防御をセットで覚える。",
   },
   {
-    generation: 4,
+    generation,
     id: 412,
     imagePath: "official-artwork/412.png",
     jaName: "ミノムッチ",
@@ -266,7 +268,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "ミノムシなのでむしタイプ。まとっている材料はフォーム差があるが、基本は虫。",
   },
   {
-    generation: 4,
+    generation,
     id: 413,
     imagePath: "official-artwork/413.png",
     jaName: "ミノマダム",
@@ -276,7 +278,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "ミノムシのむしに、植物のミノをまとった標準データとしてくさタイプも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 414,
     imagePath: "official-artwork/414.png",
     jaName: "ガーメイル",
@@ -286,7 +288,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "蛾なのでむし、羽で飛ぶのでひこう。進化先の性別差に注意して覚える。",
   },
   {
-    generation: 4,
+    generation,
     id: 415,
     imagePath: "official-artwork/415.png",
     jaName: "ミツハニー",
@@ -296,7 +298,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "ミツバチなのでむし、羽で飛ぶためひこう。小さな群れでもタイプは虫と飛行。",
   },
   {
-    generation: 4,
+    generation,
     id: 416,
     imagePath: "official-artwork/416.png",
     jaName: "ビークイン",
@@ -306,7 +308,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "女王バチなのでむし、羽で飛ぶためひこう。命令する女王感はタイプではない。",
   },
   {
-    generation: 4,
+    generation,
     id: 417,
     imagePath: "official-artwork/417.png",
     jaName: "パチリス",
@@ -316,7 +318,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "リスのような姿だが、電気袋と白青の配色からでんきタイプとして覚える。",
   },
   {
-    generation: 4,
+    generation,
     id: 418,
     imagePath: "official-artwork/418.png",
     jaName: "ブイゼル",
@@ -326,7 +328,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "水に浮く浮き袋をもつイタチなのでみずタイプ。首の浮き輪が手がかり。",
   },
   {
-    generation: 4,
+    generation,
     id: 419,
     imagePath: "official-artwork/419.png",
     jaName: "フローゼル",
@@ -336,7 +338,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "浮き袋で泳ぐ水辺のイタチなのでみずタイプ。素早さより泳ぎを見る。",
   },
   {
-    generation: 4,
+    generation,
     id: 420,
     imagePath: "official-artwork/420.png",
     jaName: "チェリンボ",
@@ -346,7 +348,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "さくらんぼの実そのものなのでくさタイプ。果物モチーフを植物として覚える。",
   },
   {
-    generation: 4,
+    generation,
     id: 421,
     imagePath: "official-artwork/421.png",
     jaName: "チェリム",
@@ -356,7 +358,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "桜の花が開く植物なのでくさタイプ。天気で姿が変わっても標準タイプは単くさ。",
   },
   {
-    generation: 4,
+    generation,
     id: 422,
     imagePath: "official-artwork/422.png",
     jaName: "カラナクシ",
@@ -366,7 +368,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "海のナメクジなのでみずタイプ。姿の地域差はあっても標準データは単みず。",
   },
   {
-    generation: 4,
+    generation,
     id: 423,
     imagePath: "official-artwork/423.png",
     jaName: "トリトドン",
@@ -376,7 +378,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "海のナメクジのみずに、泥っぽい体と陸にも上がる印象からじめんタイプも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 424,
     imagePath: "official-artwork/424.png",
     jaName: "エテボース",
@@ -387,7 +389,7 @@ export const generation4Pokemon = [
       "二本の手のようなしっぽをもつ猿で、特殊な元素より動物らしさからノーマルタイプ。",
   },
   {
-    generation: 4,
+    generation,
     id: 425,
     imagePath: "official-artwork/425.png",
     jaName: "フワンテ",
@@ -397,7 +399,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "風船のように漂ぶ幽霊なのでゴースト、空に浮かぶためひこうタイプも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 426,
     imagePath: "official-artwork/426.png",
     jaName: "フワライド",
@@ -407,7 +409,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "大きな気球の幽霊なのでゴーストとひこう。風船の浮遊を飛行に結びつける。",
   },
   {
-    generation: 4,
+    generation,
     id: 427,
     imagePath: "official-artwork/427.png",
     jaName: "ミミロル",
@@ -418,7 +420,7 @@ export const generation4Pokemon = [
       "うさぎのような身近な動物なのでノーマルタイプ。かわいくてもフェアリーではない。",
   },
   {
-    generation: 4,
+    generation,
     id: 428,
     imagePath: "official-artwork/428.png",
     jaName: "ミミロップ",
@@ -428,7 +430,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "優雅なうさぎの姿でノーマルタイプ。耳の飾りは特徴で、標準は単ノーマル。",
   },
   {
-    generation: 4,
+    generation,
     id: 429,
     imagePath: "official-artwork/429.png",
     jaName: "ムウマージ",
@@ -439,7 +441,7 @@ export const generation4Pokemon = [
       "魔女のようなムウマの進化形でゴーストタイプ。呪文めいた鳴き声を幽霊に結びつける。",
   },
   {
-    generation: 4,
+    generation,
     id: 430,
     imagePath: "official-artwork/430.png",
     jaName: "ドンカラス",
@@ -449,7 +451,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "黒いカラスでひこう、マフィアのボス風の悪役感からあくタイプも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 431,
     imagePath: "official-artwork/431.png",
     jaName: "ニャルマー",
@@ -459,7 +461,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "気まぐれな猫で、特別な元素より普通の動物らしさが中心なのでノーマルタイプ。",
   },
   {
-    generation: 4,
+    generation,
     id: 432,
     imagePath: "official-artwork/432.png",
     jaName: "ブニャット",
@@ -469,7 +471,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "太った猫の姿でノーマルタイプ。ふてぶてしさは性格で、あくタイプではない。",
   },
   {
-    generation: 4,
+    generation,
     id: 433,
     imagePath: "official-artwork/433.png",
     jaName: "リーシャン",
@@ -479,7 +481,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "鈴の音を鳴らす不思議な赤ちゃんで、チリーン系の精神的な力からエスパータイプ。",
   },
   {
-    generation: 4,
+    generation,
     id: 434,
     imagePath: "official-artwork/434.png",
     jaName: "スカンプー",
@@ -489,7 +491,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "スカンクなので毒のにおいでどく、悪戯っぽく黒い雰囲気からあくタイプも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 435,
     imagePath: "official-artwork/435.png",
     jaName: "スカタンク",
@@ -499,7 +501,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "スカンクの強い悪臭でどく、黒い悪役のような姿からあくタイプも覚える。",
   },
   {
-    generation: 4,
+    generation,
     id: 436,
     imagePath: "official-artwork/436.png",
     jaName: "ドーミラー",
@@ -509,7 +511,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "青銅の鏡なので金属のはがね、古代の鏡の神秘からエスパータイプも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 437,
     imagePath: "official-artwork/437.png",
     jaName: "ドータクン",
@@ -519,7 +521,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "青銅の鐘で金属のはがね、祈りや念力のような神秘性からエスパータイプも覚える。",
   },
   {
-    generation: 4,
+    generation,
     id: 438,
     imagePath: "official-artwork/438.png",
     jaName: "ウソハチ",
@@ -529,7 +531,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "木に見せかけるウソッキー系だが、赤ちゃんでも本体は石なのでいわタイプ。",
   },
   {
-    generation: 4,
+    generation,
     id: 439,
     imagePath: "official-artwork/439.png",
     jaName: "マネネ",
@@ -540,7 +542,7 @@ export const generation4Pokemon = [
       "バリヤード系の赤ちゃんで、見えない壁のエスパーと道化師の妖精感からフェアリー。",
   },
   {
-    generation: 4,
+    generation,
     id: 440,
     imagePath: "official-artwork/440.png",
     jaName: "ピンプク",
@@ -550,7 +552,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "ラッキー系の赤ちゃんで、特別な元素より普通の生き物としてノーマルタイプ。",
   },
   {
-    generation: 4,
+    generation,
     id: 441,
     imagePath: "official-artwork/441.png",
     jaName: "ペラップ",
@@ -560,7 +562,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "おしゃべりする鳥なのでひこう、特別な元素を持たない鳥としてノーマルも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 442,
     imagePath: "official-artwork/442.png",
     jaName: "ミカルゲ",
@@ -570,7 +572,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "封印された魂の集合なのでゴースト、暗い怨念の雰囲気からあくタイプも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 443,
     imagePath: "official-artwork/443.png",
     jaName: "フカマル",
@@ -580,7 +582,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "小さな陸ザメの竜なのでドラゴン、砂地を走る地上性からじめんタイプも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 444,
     imagePath: "official-artwork/444.png",
     jaName: "ガバイト",
@@ -590,7 +592,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "砂地の竜ザメでドラゴンとじめん。翼のようなヒレがあってもひこうではない。",
   },
   {
-    generation: 4,
+    generation,
     id: 445,
     imagePath: "official-artwork/445.png",
     jaName: "ガブリアス",
@@ -600,7 +602,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "高速で地上を駆ける陸ザメ竜なのでドラゴンとじめん。空より砂地を意識する。",
   },
   {
-    generation: 4,
+    generation,
     id: 446,
     imagePath: "official-artwork/446.png",
     jaName: "ゴンベ",
@@ -610,7 +612,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "カビゴンの赤ちゃんで、食いしん坊な普通の生き物としてノーマルタイプ。",
   },
   {
-    generation: 4,
+    generation,
     id: 447,
     imagePath: "official-artwork/447.png",
     jaName: "リオル",
@@ -620,7 +622,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "波導を感じる力はあるが、幼体は格闘修行のポケモンとしてかくとうタイプ。",
   },
   {
-    generation: 4,
+    generation,
     id: 448,
     imagePath: "official-artwork/448.png",
     jaName: "ルカリオ",
@@ -630,7 +632,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "格闘家の構えでかくとう、金属のトゲや鋼の精神からはがねタイプも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 449,
     imagePath: "official-artwork/449.png",
     jaName: "ヒポポタス",
@@ -640,7 +642,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "砂をまとうカバなのでじめんタイプ。水辺のカバではなく砂地のカバとして覚える。",
   },
   {
-    generation: 4,
+    generation,
     id: 450,
     imagePath: "official-artwork/450.png",
     jaName: "カバルドン",
@@ -650,7 +652,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "砂を吹き出す巨大なカバなのでじめんタイプ。砂嵐のイメージを地面に結びつける。",
   },
   {
-    generation: 4,
+    generation,
     id: 451,
     imagePath: "official-artwork/451.png",
     jaName: "スコルピ",
@@ -661,7 +663,7 @@ export const generation4Pokemon = [
       "サソリなのでどく、虫の節足動物としてむしタイプも付く。進化でむしが消える点に注意。",
   },
   {
-    generation: 4,
+    generation,
     id: 452,
     imagePath: "official-artwork/452.png",
     jaName: "ドラピオン",
@@ -671,7 +673,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "毒サソリのどくに、悪役のような暗い色と凶暴さからあくタイプが加わる。",
   },
   {
-    generation: 4,
+    generation,
     id: 453,
     imagePath: "official-artwork/453.png",
     jaName: "グレッグル",
@@ -681,7 +683,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "毒をもつカエルなのでどく、パンチで戦う構えからかくとうタイプも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 454,
     imagePath: "official-artwork/454.png",
     jaName: "ドクロッグ",
@@ -691,7 +693,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "毒ガエルのどくに、格闘家のような拳と構えからかくとうタイプも覚える。",
   },
   {
-    generation: 4,
+    generation,
     id: 455,
     imagePath: "official-artwork/455.png",
     jaName: "マスキッパ",
@@ -701,7 +703,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "食虫植物なのでくさタイプ。大きな口や罠の怖さは特徴で、あくではない。",
   },
   {
-    generation: 4,
+    generation,
     id: 456,
     imagePath: "official-artwork/456.png",
     jaName: "ケイコウオ",
@@ -712,7 +714,7 @@ export const generation4Pokemon = [
       "ネオンテトラのような魚なのでみずタイプ。光る模様は電気ではなく水中の魚の特徴。",
   },
   {
-    generation: 4,
+    generation,
     id: 457,
     imagePath: "official-artwork/457.png",
     jaName: "ネオラント",
@@ -722,7 +724,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "優雅に泳ぐ魚なのでみずタイプ。光るひれは特徴で、標準タイプは単みず。",
   },
   {
-    generation: 4,
+    generation,
     id: 458,
     imagePath: "official-artwork/458.png",
     jaName: "タマンタ",
@@ -732,7 +734,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "マンタインの幼体でみず、ひれで空を滑るように飛ぶためひこうタイプも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 459,
     imagePath: "official-artwork/459.png",
     jaName: "ユキカブリ",
@@ -742,7 +744,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "雪の木なのでくさとこおり。植物なのに寒冷地の雪をまとっている点が重要。",
   },
   {
-    generation: 4,
+    generation,
     id: 460,
     imagePath: "official-artwork/460.png",
     jaName: "ユキノオー",
@@ -752,7 +754,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "雪山の樹木の怪物なのでくさとこおり。白い雪と針葉樹をセットで覚える。",
   },
   {
-    generation: 4,
+    generation,
     id: 461,
     imagePath: "official-artwork/461.png",
     jaName: "マニューラ",
@@ -762,7 +764,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "ニューラの進化であく、鋭い氷の爪と寒冷地の印象からこおりタイプも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 462,
     imagePath: "official-artwork/462.png",
     jaName: "ジバコイル",
@@ -772,7 +774,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "コイル系の電気磁石ででんき、金属の体からはがねタイプも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 463,
     imagePath: "official-artwork/463.png",
     jaName: "ベロベルト",
@@ -782,7 +784,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "長い舌が目立つが、特殊な元素ではなく変わった生き物としてノーマルタイプ。",
   },
   {
-    generation: 4,
+    generation,
     id: 464,
     imagePath: "official-artwork/464.png",
     jaName: "ドサイドン",
@@ -792,7 +794,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "サイ型怪獣のじめんに、岩の装甲と砲台のような硬さからいわタイプも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 465,
     imagePath: "official-artwork/465.png",
     jaName: "モジャンボ",
@@ -802,7 +804,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "全身がつる草に覆われた進化形なのでくさタイプ。正体より植物の絡まりを見る。",
   },
   {
-    generation: 4,
+    generation,
     id: 466,
     imagePath: "official-artwork/466.png",
     jaName: "エレキブル",
@@ -812,7 +814,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "エレブーの進化形で、発電する腕とプラグ状の尾からでんきタイプ。",
   },
   {
-    generation: 4,
+    generation,
     id: 467,
     imagePath: "official-artwork/467.png",
     jaName: "ブーバーン",
@@ -822,7 +824,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "ブーバーの進化形で、砲台のような腕から炎を撃つためほのおタイプ。",
   },
   {
-    generation: 4,
+    generation,
     id: 468,
     imagePath: "official-artwork/468.png",
     jaName: "トゲキッス",
@@ -832,7 +834,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "トゲピー系の現在タイプでフェアリー、翼で空を飛ぶためひこうも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 469,
     imagePath: "official-artwork/469.png",
     jaName: "メガヤンマ",
@@ -843,7 +845,7 @@ export const generation4Pokemon = [
       "巨大なトンボなのでむし、羽で飛ぶためひこう。ドラゴンっぽい名前でもドラゴンではない。",
   },
   {
-    generation: 4,
+    generation,
     id: 470,
     imagePath: "official-artwork/470.png",
     jaName: "リーフィア",
@@ -853,7 +855,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "イーブイのくさ進化。葉っぱの耳としっぽが植物化している点が手がかり。",
   },
   {
-    generation: 4,
+    generation,
     id: 471,
     imagePath: "official-artwork/471.png",
     jaName: "グレイシア",
@@ -863,7 +865,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "イーブイのこおり進化。氷のような耳飾りと水色の体からこおりタイプ。",
   },
   {
-    generation: 4,
+    generation,
     id: 472,
     imagePath: "official-artwork/472.png",
     jaName: "グライオン",
@@ -874,7 +876,7 @@ export const generation4Pokemon = [
       "グライガー系のじめんに、膜の翼で滑空するひこうタイプが残る。サソリでもどくではない。",
   },
   {
-    generation: 4,
+    generation,
     id: 473,
     imagePath: "official-artwork/473.png",
     jaName: "マンムー",
@@ -884,7 +886,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "マンモスの寒冷地イメージでこおり、地面を踏みしめる巨大な体からじめんも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 474,
     imagePath: "official-artwork/474.png",
     jaName: "ポリゴンＺ",
@@ -895,7 +897,7 @@ export const generation4Pokemon = [
       "人工データ生物の進化形だが、特定の元素ではなく不安定なノーマルタイプとして覚える。",
   },
   {
-    generation: 4,
+    generation,
     id: 475,
     imagePath: "official-artwork/475.png",
     jaName: "エルレイド",
@@ -905,7 +907,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "ラルトス系のエスパーに、剣士のような格闘姿勢が加わってかくとうタイプも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 476,
     imagePath: "official-artwork/476.png",
     jaName: "ダイノーズ",
@@ -915,7 +917,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "岩の磁石像なのでいわ、金属のひげや磁力の印象からはがねタイプも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 477,
     imagePath: "official-artwork/477.png",
     jaName: "ヨノワール",
@@ -926,7 +928,7 @@ export const generation4Pokemon = [
       "死者を導くような大型の霊なのでゴーストタイプ。黒い体と一つ目を手がかりにする。",
   },
   {
-    generation: 4,
+    generation,
     id: 478,
     imagePath: "official-artwork/478.png",
     jaName: "ユキメノコ",
@@ -937,7 +939,7 @@ export const generation4Pokemon = [
       "雪女がモチーフなのでこおり、幽霊のように漂う不気味さからゴーストタイプも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 479,
     imagePath: "official-artwork/479.png",
     jaName: "ロトム",
@@ -948,7 +950,7 @@ export const generation4Pokemon = [
       "電化製品に入るプラズマなのででんき、幽霊のように機械へ宿るためゴーストも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 480,
     imagePath: "official-artwork/480.png",
     jaName: "ユクシー",
@@ -958,7 +960,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "知識を司る湖の神で、精神や記憶に関わる力からエスパータイプ。",
   },
   {
-    generation: 4,
+    generation,
     id: 481,
     imagePath: "official-artwork/481.png",
     jaName: "エムリット",
@@ -968,7 +970,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "感情を司る湖の神で、心に関わる不思議な力からエスパータイプ。",
   },
   {
-    generation: 4,
+    generation,
     id: 482,
     imagePath: "official-artwork/482.png",
     jaName: "アグノム",
@@ -978,7 +980,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "意思を司る湖の神で、精神を動かす存在としてエスパータイプと覚える。",
   },
   {
-    generation: 4,
+    generation,
     id: 483,
     imagePath: "official-artwork/483.png",
     jaName: "ディアルガ",
@@ -988,7 +990,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "時間を司る竜でドラゴン、金属の体と時計のような硬質感からはがねタイプも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 484,
     imagePath: "official-artwork/484.png",
     jaName: "パルキア",
@@ -998,7 +1000,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "空間を司る竜でドラゴン、真珠や水流のような姿からみずタイプも付く。",
   },
   {
-    generation: 4,
+    generation,
     id: 485,
     imagePath: "official-artwork/485.png",
     jaName: "ヒードラン",
@@ -1008,7 +1010,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "溶岩の中にいる金属生命なのでほのおとはがね。赤熱した鋼として覚える。",
   },
   {
-    generation: 4,
+    generation,
     id: 486,
     imagePath: "official-artwork/486.png",
     jaName: "レジギガス",
@@ -1018,7 +1020,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "レジ系を束ねる巨人だが、特定の元素ではなく標準タイプはノーマル。",
   },
   {
-    generation: 4,
+    generation,
     id: 487,
     imagePath: "official-artwork/487.png",
     jaName: "ギラティナ",
@@ -1028,7 +1030,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "反転世界の幽霊竜なのでゴーストとドラゴン。影と竜の体をセットで見る。",
   },
   {
-    generation: 4,
+    generation,
     id: 488,
     imagePath: "official-artwork/488.png",
     jaName: "クレセリア",
@@ -1038,7 +1040,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "三日月と夢を司る神秘的な存在なのでエスパータイプ。月の光はタイプではない。",
   },
   {
-    generation: 4,
+    generation,
     id: 489,
     imagePath: "official-artwork/489.png",
     jaName: "フィオネ",
@@ -1049,7 +1051,7 @@ export const generation4Pokemon = [
       "海から生まれる小さな幻なのでみずタイプ。かわいくてもフェアリーではなく水の子。",
   },
   {
-    generation: 4,
+    generation,
     id: 490,
     imagePath: "official-artwork/490.png",
     jaName: "マナフィ",
@@ -1059,7 +1061,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "海の王子と呼ばれる幻なのでみずタイプ。青い体と海との結びつきが手がかり。",
   },
   {
-    generation: 4,
+    generation,
     id: 491,
     imagePath: "official-artwork/491.png",
     jaName: "ダークライ",
@@ -1069,7 +1071,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "悪夢を見せる幻なのであくタイプ。黒い体と夢の闇をセットで覚える。",
   },
   {
-    generation: 4,
+    generation,
     id: 492,
     imagePath: "official-artwork/492.png",
     jaName: "シェイミ",
@@ -1079,7 +1081,7 @@ export const generation4Pokemon = [
     typeMemoryHint: "花畑に関わる幻なのでくさタイプ。フォルム違いはあるが標準データは単くさ。",
   },
   {
-    generation: 4,
+    generation,
     id: 493,
     imagePath: "official-artwork/493.png",
     jaName: "アルセウス",

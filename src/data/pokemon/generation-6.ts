@@ -1,11 +1,13 @@
-import type { PokemonQuizRecord } from "./types";
+import type { PokemonGeneration, PokemonQuizRecord } from "./types";
 
 // Sixth-generation standard Pokemon quiz data.
 // Types use the current standard-form type assignments. Regional forms,
 // Mega Evolutions, Gigantamax, and other forms are intentionally excluded.
+const generation = 6 satisfies PokemonGeneration;
+
 export const generation6Pokemon = [
   {
-    generation: 6,
+    generation,
     id: 650,
     imagePath: "official-artwork/650.png",
     jaName: "ハリマロン",
@@ -16,7 +18,7 @@ export const generation6Pokemon = [
       "栗のような頭と緑の体からくさタイプ。ハリネズミ風でも植物の実を手がかりにする。",
   },
   {
-    generation: 6,
+    generation,
     id: 651,
     imagePath: "official-artwork/651.png",
     jaName: "ハリボーグ",
@@ -27,7 +29,7 @@ export const generation6Pokemon = [
       "栗の殻のような丸い体でくさタイプ。硬そうでもいわではなく、植物の実として覚える。",
   },
   {
-    generation: 6,
+    generation,
     id: 652,
     imagePath: "official-artwork/652.png",
     jaName: "ブリガロン",
@@ -37,7 +39,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "栗の鎧でくさ、盾を構えた騎士のように戦うためかくとうタイプも付く。",
   },
   {
-    generation: 6,
+    generation,
     id: 653,
     imagePath: "official-artwork/653.png",
     jaName: "フォッコ",
@@ -47,7 +49,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "フェネック狐だが、耳から出る熱と木の枝の火でほのおタイプと覚える。",
   },
   {
-    generation: 6,
+    generation,
     id: 654,
     imagePath: "official-artwork/654.png",
     jaName: "テールナー",
@@ -57,7 +59,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "狐の魔法使い見習いだが、枝の杖から炎を出すためほのおタイプ。まだ単ほのお。",
   },
   {
-    generation: 6,
+    generation,
     id: 655,
     imagePath: "official-artwork/655.png",
     jaName: "マフォクシー",
@@ -67,7 +69,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "炎の魔法使い狐なのでほのお、占いや魔術の精神性からエスパータイプも付く。",
   },
   {
-    generation: 6,
+    generation,
     id: 656,
     imagePath: "official-artwork/656.png",
     jaName: "ケロマツ",
@@ -77,7 +79,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "泡をまとったカエルなのでみずタイプ。忍者っぽさは進化後に強まる特徴。",
   },
   {
-    generation: 6,
+    generation,
     id: 657,
     imagePath: "official-artwork/657.png",
     jaName: "ゲコガシラ",
@@ -88,7 +90,7 @@ export const generation6Pokemon = [
       "泡のマフラーをまとったカエルでみずタイプ。素早い忍者感より水辺のカエルを見る。",
   },
   {
-    generation: 6,
+    generation,
     id: 658,
     imagePath: "official-artwork/658.png",
     jaName: "ゲッコウガ",
@@ -98,7 +100,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "水の忍者なのでみず、影から動く忍者らしさであくタイプも付く。",
   },
   {
-    generation: 6,
+    generation,
     id: 659,
     imagePath: "official-artwork/659.png",
     jaName: "ホルビー",
@@ -108,7 +110,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "ウサギのような小動物で、特別な元素より普通の動物としてノーマルタイプ。",
   },
   {
-    generation: 6,
+    generation,
     id: 660,
     imagePath: "official-artwork/660.png",
     jaName: "ホルード",
@@ -118,7 +120,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "ウサギのノーマルに、大きな耳で土を掘る工事役としてじめんタイプが加わる。",
   },
   {
-    generation: 6,
+    generation,
     id: 661,
     imagePath: "official-artwork/661.png",
     jaName: "ヤヤコマ",
@@ -128,7 +130,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "小鳥なのでひこう、特別な元素を持たない身近な鳥としてノーマルも付く。",
   },
   {
-    generation: 6,
+    generation,
     id: 662,
     imagePath: "official-artwork/662.png",
     jaName: "ヒノヤコマ",
@@ -138,7 +140,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "小鳥の進化でひこう、胸や体に炎が宿るためほのおタイプが加わる。",
   },
   {
-    generation: 6,
+    generation,
     id: 663,
     imagePath: "official-artwork/663.png",
     jaName: "ファイアロー",
@@ -148,7 +150,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "炎をまとったハヤブサなのでほのおとひこう。高速で飛ぶ火の鳥として覚える。",
   },
   {
-    generation: 6,
+    generation,
     id: 664,
     imagePath: "official-artwork/664.png",
     jaName: "コフキムシ",
@@ -158,7 +160,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "小さな粉をまく虫なのでむしタイプ。模様の変化は進化後の特徴として見る。",
   },
   {
-    generation: 6,
+    generation,
     id: 665,
     imagePath: "official-artwork/665.png",
     jaName: "コフーライ",
@@ -168,7 +170,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "さなぎの姿なのでむしタイプ。粉をまとう虫の成長途中として覚える。",
   },
   {
-    generation: 6,
+    generation,
     id: 666,
     imagePath: "official-artwork/666.png",
     jaName: "ビビヨン",
@@ -178,7 +180,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "蝶なのでむし、羽で飛ぶためひこう。模様の地域差があってもタイプは共通。",
   },
   {
-    generation: 6,
+    generation,
     id: 667,
     imagePath: "official-artwork/667.png",
     jaName: "シシコ",
@@ -188,7 +190,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "子ライオンで、炎のたてがみがほのお。普通の獣らしさからノーマルも付く。",
   },
   {
-    generation: 6,
+    generation,
     id: 668,
     imagePath: "official-artwork/668.png",
     jaName: "カエンジシ",
@@ -198,7 +200,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "燃えるたてがみのライオンでほのお、獣としての普通さからノーマルも覚える。",
   },
   {
-    generation: 6,
+    generation,
     id: 669,
     imagePath: "official-artwork/669.png",
     jaName: "フラベベ",
@@ -209,7 +211,7 @@ export const generation6Pokemon = [
       "小さな花に住む妖精なのでフェアリータイプ。花を持っていてもくさではない点に注意。",
   },
   {
-    generation: 6,
+    generation,
     id: 670,
     imagePath: "official-artwork/670.png",
     jaName: "フラエッテ",
@@ -220,7 +222,7 @@ export const generation6Pokemon = [
       "花を抱く妖精なのでフェアリータイプ。植物そのものではなく、花と暮らす妖精として見る。",
   },
   {
-    generation: 6,
+    generation,
     id: 671,
     imagePath: "official-artwork/671.png",
     jaName: "フラージェス",
@@ -231,7 +233,7 @@ export const generation6Pokemon = [
       "花園の女王のようでも、標準タイプはフェアリー。花を操る妖精であり、くさではない。",
   },
   {
-    generation: 6,
+    generation,
     id: 672,
     imagePath: "official-artwork/672.png",
     jaName: "メェークル",
@@ -241,7 +243,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "草を食べるヤギで、背中の葉や植物との共生からくさタイプとして覚える。",
   },
   {
-    generation: 6,
+    generation,
     id: 673,
     imagePath: "official-artwork/673.png",
     jaName: "ゴーゴート",
@@ -251,7 +253,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "大きなヤギだが、背中の草木と草原を走る印象からくさタイプ。",
   },
   {
-    generation: 6,
+    generation,
     id: 674,
     imagePath: "official-artwork/674.png",
     jaName: "ヤンチャム",
@@ -261,7 +263,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "やんちゃなパンダで、格闘家の見習いとしてかくとうタイプ。葉っぱは特徴。",
   },
   {
-    generation: 6,
+    generation,
     id: 675,
     imagePath: "official-artwork/675.png",
     jaName: "ゴロンダ",
@@ -271,7 +273,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "番長風のパンダでかくとう、荒っぽい不良感からあくタイプも付く。",
   },
   {
-    generation: 6,
+    generation,
     id: 676,
     imagePath: "official-artwork/676.png",
     jaName: "トリミアン",
@@ -281,7 +283,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "トリミングされる犬で、特別な元素より普通の犬としてノーマルタイプ。",
   },
   {
-    generation: 6,
+    generation,
     id: 677,
     imagePath: "official-artwork/677.png",
     jaName: "ニャスパー",
@@ -291,7 +293,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "強い視線と超能力を秘めた子猫なのでエスパータイプ。猫でもノーマルではない。",
   },
   {
-    generation: 6,
+    generation,
     id: 678,
     imagePath: "official-artwork/678.png",
     jaName: "ニャオニクス",
@@ -301,7 +303,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "精神を操る猫でエスパータイプ。性別で姿が違っても標準タイプは同じ。",
   },
   {
-    generation: 6,
+    generation,
     id: 679,
     imagePath: "official-artwork/679.png",
     jaName: "ヒトツキ",
@@ -311,7 +313,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "古い剣に魂が宿った姿なので、金属のはがねと幽霊のゴーストをセットで覚える。",
   },
   {
-    generation: 6,
+    generation,
     id: 680,
     imagePath: "official-artwork/680.png",
     jaName: "ニダンギル",
@@ -321,7 +323,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "二本の剣に宿る霊なので、はがねとゴースト。剣の金属と魂を両方見る。",
   },
   {
-    generation: 6,
+    generation,
     id: 681,
     imagePath: "official-artwork/681.png",
     jaName: "ギルガルド",
@@ -331,7 +333,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "王の剣と盾に宿る霊なので、はがねとゴースト。武器そのものが金属の幽霊。",
   },
   {
-    generation: 6,
+    generation,
     id: 682,
     imagePath: "official-artwork/682.png",
     jaName: "シュシュプ",
@@ -341,7 +343,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "香りをまとう妖精なのでフェアリータイプ。鳥のような顔でもひこうではない。",
   },
   {
-    generation: 6,
+    generation,
     id: 683,
     imagePath: "official-artwork/683.png",
     jaName: "フレフワン",
@@ -351,7 +353,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "香水や舞踏会の妖精らしさからフェアリータイプ。香りはタイプではなく手がかり。",
   },
   {
-    generation: 6,
+    generation,
     id: 684,
     imagePath: "official-artwork/684.png",
     jaName: "ペロッパフ",
@@ -361,7 +363,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "綿あめのような甘い妖精なのでフェアリータイプ。食べ物風でもくさではない。",
   },
   {
-    generation: 6,
+    generation,
     id: 685,
     imagePath: "official-artwork/685.png",
     jaName: "ペロリーム",
@@ -372,7 +374,7 @@ export const generation6Pokemon = [
       "ケーキ職人のような甘い妖精なのでフェアリータイプ。白いクリームを妖精感に結びつける。",
   },
   {
-    generation: 6,
+    generation,
     id: 686,
     imagePath: "official-artwork/686.png",
     jaName: "マーイーカ",
@@ -382,7 +384,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "イカの姿だが、相手を惑わす逆さまの性質でエスパー、暗い策略感であくも付く。",
   },
   {
-    generation: 6,
+    generation,
     id: 687,
     imagePath: "official-artwork/687.png",
     jaName: "カラマネロ",
@@ -392,7 +394,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "催眠で操るイカなのでエスパー、悪役のような支配感からあくタイプも覚える。",
   },
   {
-    generation: 6,
+    generation,
     id: 688,
     imagePath: "official-artwork/688.png",
     jaName: "カメテテ",
@@ -402,7 +404,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "岩にくっつくカメノテなのでいわ、水辺の磯の生き物としてみずタイプも付く。",
   },
   {
-    generation: 6,
+    generation,
     id: 689,
     imagePath: "official-artwork/689.png",
     jaName: "ガメノデス",
@@ -413,7 +415,7 @@ export const generation6Pokemon = [
       "複数のカメノテが集まった岩場の生物なのでいわとみず。手のようでも格闘ではない。",
   },
   {
-    generation: 6,
+    generation,
     id: 690,
     imagePath: "official-artwork/690.png",
     jaName: "クズモー",
@@ -423,7 +425,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "海藻にまぎれる毒の海生生物なのでどくとみず。茶色い姿を海の毒に結びつける。",
   },
   {
-    generation: 6,
+    generation,
     id: 691,
     imagePath: "official-artwork/691.png",
     jaName: "ドラミドロ",
@@ -433,7 +435,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "海藻竜の姿でドラゴン、毒をもつ海の生物としてどくタイプも残る。",
   },
   {
-    generation: 6,
+    generation,
     id: 692,
     imagePath: "official-artwork/692.png",
     jaName: "ウデッポウ",
@@ -443,7 +445,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "水鉄砲を撃つエビなのでみずタイプ。ハサミの砲台は水を撃つための特徴。",
   },
   {
-    generation: 6,
+    generation,
     id: 693,
     imagePath: "official-artwork/693.png",
     jaName: "ブロスター",
@@ -453,7 +455,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "大砲のようなハサミで水を撃つエビなのでみずタイプ。機械風でもはがねではない。",
   },
   {
-    generation: 6,
+    generation,
     id: 694,
     imagePath: "official-artwork/694.png",
     jaName: "エリキテル",
@@ -463,7 +465,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "太陽で発電するトカゲなのででんき、普通の爬虫類らしさからノーマルも付く。",
   },
   {
-    generation: 6,
+    generation,
     id: 695,
     imagePath: "official-artwork/695.png",
     jaName: "エレザード",
@@ -473,7 +475,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "エリマキトカゲの発電能力ででんき、身近な動物枠としてノーマルも覚える。",
   },
   {
-    generation: 6,
+    generation,
     id: 696,
     imagePath: "official-artwork/696.png",
     jaName: "チゴラス",
@@ -483,7 +485,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "化石の小さな恐竜なのでいわ、恐竜の王者感からドラゴンタイプも付く。",
   },
   {
-    generation: 6,
+    generation,
     id: 697,
     imagePath: "official-artwork/697.png",
     jaName: "ガチゴラス",
@@ -493,7 +495,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "化石のティラノサウルスでいわとドラゴン。古代の岩と竜の迫力をセットで見る。",
   },
   {
-    generation: 6,
+    generation,
     id: 698,
     imagePath: "official-artwork/698.png",
     jaName: "アマルス",
@@ -503,7 +505,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "化石の首長竜なのでいわ、寒冷地の氷をまとうためこおりタイプも付く。",
   },
   {
-    generation: 6,
+    generation,
     id: 699,
     imagePath: "official-artwork/699.png",
     jaName: "アマルルガ",
@@ -513,7 +515,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "オーロラをまとった化石恐竜なのでいわとこおり。美しさより化石と氷を見る。",
   },
   {
-    generation: 6,
+    generation,
     id: 700,
     imagePath: "official-artwork/700.png",
     jaName: "ニンフィア",
@@ -523,7 +525,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "イーブイのフェアリー進化。リボンのような触角と優しい妖精感が手がかり。",
   },
   {
-    generation: 6,
+    generation,
     id: 701,
     imagePath: "official-artwork/701.png",
     jaName: "ルチャブル",
@@ -533,7 +535,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "ルチャリブレの格闘家でかくとう、鳥のような翼で飛ぶためひこうタイプも付く。",
   },
   {
-    generation: 6,
+    generation,
     id: 702,
     imagePath: "official-artwork/702.png",
     jaName: "デデンネ",
@@ -543,7 +545,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "小さな電気ネズミででんき、丸くかわいい妖精的な雰囲気からフェアリーも付く。",
   },
   {
-    generation: 6,
+    generation,
     id: 703,
     imagePath: "official-artwork/703.png",
     jaName: "メレシー",
@@ -553,7 +555,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "宝石のような岩でいわ、かわいい鉱石の妖精としてフェアリータイプも付く。",
   },
   {
-    generation: 6,
+    generation,
     id: 704,
     imagePath: "official-artwork/704.png",
     jaName: "ヌメラ",
@@ -563,7 +565,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "ぬめった小さな竜の幼体なのでドラゴンタイプ。弱そうでも竜の系統として覚える。",
   },
   {
-    generation: 6,
+    generation,
     id: 705,
     imagePath: "official-artwork/705.png",
     jaName: "ヌメイル",
@@ -573,7 +575,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "ぬめった貝のようでも、成長中の竜なのでドラゴンタイプ。水ではない点に注意。",
   },
   {
-    generation: 6,
+    generation,
     id: 706,
     imagePath: "official-artwork/706.png",
     jaName: "ヌメルゴン",
@@ -584,7 +586,7 @@ export const generation6Pokemon = [
       "ぬめった優しい竜なのでドラゴンタイプ。柔らかい見た目でも標準タイプは単ドラゴン。",
   },
   {
-    generation: 6,
+    generation,
     id: 707,
     imagePath: "official-artwork/707.png",
     jaName: "クレッフィ",
@@ -594,7 +596,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "鍵束の金属ではがね、いたずら好きな妖精のような存在でフェアリーも付く。",
   },
   {
-    generation: 6,
+    generation,
     id: 708,
     imagePath: "official-artwork/708.png",
     jaName: "ボクレー",
@@ -604,7 +606,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "切り株に宿った子どもの霊なのでゴースト、木の体からくさタイプも付く。",
   },
   {
-    generation: 6,
+    generation,
     id: 709,
     imagePath: "official-artwork/709.png",
     jaName: "オーロット",
@@ -614,7 +616,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "呪われた大木なのでゴーストとくさ。森の木と幽霊をそのまま結びつける。",
   },
   {
-    generation: 6,
+    generation,
     id: 710,
     imagePath: "official-artwork/710.png",
     jaName: "バケッチャ",
@@ -624,7 +626,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "かぼちゃのランタンに宿る霊なのでゴースト、植物のかぼちゃでくさタイプも付く。",
   },
   {
-    generation: 6,
+    generation,
     id: 711,
     imagePath: "official-artwork/711.png",
     jaName: "パンプジン",
@@ -634,7 +636,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "大きなかぼちゃの霊なのでゴーストとくさ。ハロウィンの植物幽霊として覚える。",
   },
   {
-    generation: 6,
+    generation,
     id: 712,
     imagePath: "official-artwork/712.png",
     jaName: "カチコール",
@@ -644,7 +646,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "氷の塊のような体なのでこおりタイプ。岩っぽく見えても氷山のかけらとして見る。",
   },
   {
-    generation: 6,
+    generation,
     id: 713,
     imagePath: "official-artwork/713.png",
     jaName: "クレベース",
@@ -654,7 +656,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "巨大な氷山のような体なのでこおりタイプ。硬さは氷の硬さで、いわではない。",
   },
   {
-    generation: 6,
+    generation,
     id: 714,
     imagePath: "official-artwork/714.png",
     jaName: "オンバット",
@@ -664,7 +666,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "コウモリなのでひこう、音波を使う竜の幼体としてドラゴンタイプも付く。",
   },
   {
-    generation: 6,
+    generation,
     id: 715,
     imagePath: "official-artwork/715.png",
     jaName: "オンバーン",
@@ -674,7 +676,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "音波を操る大きなコウモリでひこうとドラゴン。耳と翼を竜の力に結びつける。",
   },
   {
-    generation: 6,
+    generation,
     id: 716,
     imagePath: "official-artwork/716.png",
     jaName: "ゼルネアス",
@@ -684,7 +686,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "生命を司る鹿の伝説で、角の神秘的な輝きからフェアリータイプとして覚える。",
   },
   {
-    generation: 6,
+    generation,
     id: 717,
     imagePath: "official-artwork/717.png",
     jaName: "イベルタル",
@@ -694,7 +696,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "破壊を司る黒赤の大鳥であく、翼で飛ぶためひこうタイプも付く。",
   },
   {
-    generation: 6,
+    generation,
     id: 718,
     imagePath: "official-artwork/718.png",
     jaName: "ジガルデ",
@@ -704,7 +706,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "秩序を保つ蛇竜なのでドラゴン、地中や大地の力からじめんタイプも付く。",
   },
   {
-    generation: 6,
+    generation,
     id: 719,
     imagePath: "official-artwork/719.png",
     jaName: "ディアンシー",
@@ -714,7 +716,7 @@ export const generation6Pokemon = [
     typeMemoryHint: "宝石から生まれた幻なのでいわ、姫のような妖精感からフェアリータイプも付く。",
   },
   {
-    generation: 6,
+    generation,
     id: 720,
     imagePath: "official-artwork/720.png",
     jaName: "フーパ",
@@ -725,7 +727,7 @@ export const generation6Pokemon = [
       "異空間から物を取り出す幻でエスパー、輪っかに宿る霊的な不思議さからゴーストも付く。",
   },
   {
-    generation: 6,
+    generation,
     id: 721,
     imagePath: "official-artwork/721.png",
     jaName: "ボルケニオン",

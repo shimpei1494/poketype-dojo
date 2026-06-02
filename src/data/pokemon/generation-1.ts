@@ -1,11 +1,13 @@
-import type { PokemonQuizRecord } from "./types";
+import type { PokemonGeneration, PokemonQuizRecord } from "./types";
 
 // First-generation standard Pokemon quiz data.
 // Types use the current standard-form type assignments. Regional forms,
 // Mega Evolutions, Gigantamax, and other forms are intentionally excluded.
+const generation = 1 satisfies PokemonGeneration;
+
 export const generation1Pokemon = [
   {
-    generation: 1,
+    generation,
     id: 1,
     jaName: "フシギダネ",
     name: "bulbasaur",
@@ -16,7 +18,7 @@ export const generation1Pokemon = [
       "植物らしさでくさは自然に連想できるので、もう一方は毒をもつ植物のイメージでどくタイプと覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 2,
     jaName: "フシギソウ",
     name: "ivysaur",
@@ -27,7 +29,7 @@ export const generation1Pokemon = [
       "大きく育つつぼみからくさは分かりやすい。毒を含む花や葉のイメージでどくタイプも結びつける。",
   },
   {
-    generation: 1,
+    generation,
     id: 3,
     jaName: "フシギバナ",
     name: "venusaur",
@@ -38,7 +40,7 @@ export const generation1Pokemon = [
       "大きな花でくさは見た目通り。巨大な花の毒々しい雰囲気から、どくタイプもセットで覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 4,
     jaName: "ヒトカゲ",
     name: "charmander",
@@ -49,7 +51,7 @@ export const generation1Pokemon = [
       "しっぽの炎が一番の手がかり。小さなトカゲ姿でも、まずほのおタイプとして覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 5,
     jaName: "リザード",
     name: "charmeleon",
@@ -60,7 +62,7 @@ export const generation1Pokemon = [
       "赤い体としっぽの炎がそのままほのおタイプの目印。進化しても炎の印象を引き継ぐ。",
   },
   {
-    generation: 1,
+    generation,
     id: 6,
     jaName: "リザードン",
     name: "charizard",
@@ -71,7 +73,7 @@ export const generation1Pokemon = [
       "ほのおは見た目通り。翼をもつがドラゴンではなく、空を飛ぶ姿からひこうタイプと覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 7,
     jaName: "ゼニガメ",
     name: "squirtle",
@@ -82,7 +84,7 @@ export const generation1Pokemon = [
       "水辺のカメがモチーフなのでみずタイプ。甲羅よりも、泳ぐカメのイメージで覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 8,
     jaName: "カメール",
     name: "wartortle",
@@ -93,7 +95,7 @@ export const generation1Pokemon = [
       "カメの姿と水色の体からみずタイプ。耳やしっぽの泡っぽい形も水辺の印象を強める。",
   },
   {
-    generation: 1,
+    generation,
     id: 9,
     jaName: "カメックス",
     name: "blastoise",
@@ -104,7 +106,7 @@ export const generation1Pokemon = [
       "大砲から水を撃つカメなのでみずタイプ。機械的な大砲はタイプではなく、水を放つための特徴と見る。",
   },
   {
-    generation: 1,
+    generation,
     id: 10,
     jaName: "キャタピー",
     name: "caterpie",
@@ -115,7 +117,7 @@ export const generation1Pokemon = [
       "いもむしそのものの姿がむしタイプの手がかり。草むらにいる小さな幼虫として覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 11,
     jaName: "トランセル",
     name: "metapod",
@@ -126,7 +128,7 @@ export const generation1Pokemon = [
       "さなぎの姿なのでむしタイプ。動かなそうでも、虫の成長途中と見ると分かりやすい。",
   },
   {
-    generation: 1,
+    generation,
     id: 12,
     jaName: "バタフリー",
     name: "butterfree",
@@ -137,7 +139,7 @@ export const generation1Pokemon = [
       "チョウの姿でむし、羽で飛ぶのでひこう。名前のバタフリーも蝶の飛行を連想しやすい。",
   },
   {
-    generation: 1,
+    generation,
     id: 13,
     jaName: "ビードル",
     name: "weedle",
@@ -147,7 +149,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "毛虫のような体でむし、頭の毒針でどく。小さくても針がある点を優先して覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 14,
     jaName: "コクーン",
     name: "kakuna",
@@ -158,7 +160,7 @@ export const generation1Pokemon = [
       "さなぎなのでむしは自然。進化前後の毒針の流れを引き継ぐため、どくタイプも残る。",
   },
   {
-    generation: 1,
+    generation,
     id: 15,
     jaName: "スピアー",
     name: "beedrill",
@@ -169,7 +171,7 @@ export const generation1Pokemon = [
       "ハチの姿でむし、鋭い針でどく。羽があっても、現在の標準タイプはひこうではない点に注意。",
   },
   {
-    generation: 1,
+    generation,
     id: 16,
     jaName: "ポッポ",
     name: "pidgey",
@@ -180,7 +182,7 @@ export const generation1Pokemon = [
       "鳥なのでひこうは分かりやすい。特別な属性を持たない身近な鳥としてノーマルも覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 17,
     jaName: "ピジョン",
     name: "pidgeotto",
@@ -191,7 +193,7 @@ export const generation1Pokemon = [
       "大きめの鳥でひこう。特殊な属性よりも、普通の鳥らしさが強いのでノーマルも付く。",
   },
   {
-    generation: 1,
+    generation,
     id: 18,
     jaName: "ピジョット",
     name: "pidgeot",
@@ -202,7 +204,7 @@ export const generation1Pokemon = [
       "鳥としてひこう、身近な鳥の延長としてノーマル。派手な姿でも特別な元素タイプではない。",
   },
   {
-    generation: 1,
+    generation,
     id: 19,
     jaName: "コラッタ",
     name: "rattata",
@@ -213,7 +215,7 @@ export const generation1Pokemon = [
       "小さなネズミで、特別な元素や能力よりも動物らしさが中心なのでノーマルタイプと覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 20,
     jaName: "ラッタ",
     name: "raticate",
@@ -224,7 +226,7 @@ export const generation1Pokemon = [
       "大きなネズミの姿で、特殊な属性を持たない野生動物らしさからノーマルタイプと覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 21,
     jaName: "オニスズメ",
     name: "spearow",
@@ -235,7 +237,7 @@ export const generation1Pokemon = [
       "鳥なのでひこう、身近な小鳥としてノーマル。鋭いくちばしはタイプではなく攻撃的な特徴。",
   },
   {
-    generation: 1,
+    generation,
     id: 22,
     jaName: "オニドリル",
     name: "fearow",
@@ -246,7 +248,7 @@ export const generation1Pokemon = [
       "大きな鳥でひこう。鬼のような名前でもあくではなく、普通の鳥らしさでノーマルも付く。",
   },
   {
-    generation: 1,
+    generation,
     id: 23,
     jaName: "アーボ",
     name: "ekans",
@@ -257,7 +259,7 @@ export const generation1Pokemon = [
       "ヘビの姿に加えて、毒蛇のイメージが強いのでどくタイプ。名前を逆から読む遊びも印象に残る。",
   },
   {
-    generation: 1,
+    generation,
     id: 24,
     jaName: "アーボック",
     name: "arbok",
@@ -268,7 +270,7 @@ export const generation1Pokemon = [
       "コブラの姿が毒蛇を連想させるのでどくタイプ。お腹の模様は威嚇の特徴として覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 25,
     jaName: "ピカチュウ",
     name: "pikachu",
@@ -279,7 +281,7 @@ export const generation1Pokemon = [
       "黄色い体と電気をためるほっぺがでんきタイプの手がかり。小動物らしさより電気を優先する。",
   },
   {
-    generation: 1,
+    generation,
     id: 26,
     jaName: "ライチュウ",
     name: "raichu",
@@ -290,7 +292,7 @@ export const generation1Pokemon = [
       "ピカチュウから続く電気のほっぺとしっぽが目印。進化してもでんきタイプのまま覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 27,
     jaName: "サンド",
     name: "sandshrew",
@@ -301,7 +303,7 @@ export const generation1Pokemon = [
       "砂地に潜るネズミなのでじめんタイプ。名前のサンドも地面や砂の印象をそのまま助ける。",
   },
   {
-    generation: 1,
+    generation,
     id: 28,
     jaName: "サンドパン",
     name: "sandslash",
@@ -312,7 +314,7 @@ export const generation1Pokemon = [
       "砂地で暮らすイメージと爪で地面を掘る姿からじめんタイプ。トゲより地面との結びつきを見る。",
   },
   {
-    generation: 1,
+    generation,
     id: 29,
     jaName: "ニドラン♀",
     name: "nidoran-f",
@@ -323,7 +325,7 @@ export const generation1Pokemon = [
       "小さな獣だが、角や毒針をもつ系統なのでどくタイプ。性別違いでも毒の系統として覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 30,
     jaName: "ニドリーナ",
     name: "nidorina",
@@ -334,7 +336,7 @@ export const generation1Pokemon = [
       "進化前から続く毒針の系統でどくタイプ。見た目の獣らしさより、角の毒を優先して見る。",
   },
   {
-    generation: 1,
+    generation,
     id: 31,
     jaName: "ニドクイン",
     name: "nidoqueen",
@@ -345,7 +347,7 @@ export const generation1Pokemon = [
       "どくの系統に加えて、重い体で地面にどっしり立つ女王なのでじめんタイプも加わる。",
   },
   {
-    generation: 1,
+    generation,
     id: 32,
     jaName: "ニドラン♂",
     name: "nidoran-m",
@@ -355,7 +357,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "小さな獣だが、角の毒針が手がかり。ニドラン系はまずどくタイプとして覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 33,
     jaName: "ニドリーノ",
     name: "nidorino",
@@ -366,7 +368,7 @@ export const generation1Pokemon = [
       "大きな角とトゲが毒針を連想させるのでどくタイプ。紫の体色も毒の印象を補強する。",
   },
   {
-    generation: 1,
+    generation,
     id: 34,
     jaName: "ニドキング",
     name: "nidoking",
@@ -377,7 +379,7 @@ export const generation1Pokemon = [
       "どくの系統に加え、怪獣のように地面を踏みしめる力強さからじめんタイプも覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 35,
     jaName: "ピッピ",
     name: "clefairy",
@@ -388,7 +390,7 @@ export const generation1Pokemon = [
       "月や星のイメージと不思議でかわいい雰囲気から、現在はフェアリータイプとして覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 36,
     jaName: "ピクシー",
     name: "clefable",
@@ -398,7 +400,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "羽のような耳と月にまつわる不思議な雰囲気が手がかり。現在はフェアリータイプ。",
   },
   {
-    generation: 1,
+    generation,
     id: 37,
     jaName: "ロコン",
     name: "vulpix",
@@ -409,7 +411,7 @@ export const generation1Pokemon = [
       "キツネ姿だけではノーマルに見えるが、赤い体と炎のしっぽからほのおタイプと覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 38,
     jaName: "キュウコン",
     name: "ninetales",
@@ -420,7 +422,7 @@ export const generation1Pokemon = [
       "九尾の狐の神秘的な印象が強いが、燃えるような尾と進化前の流れからほのおタイプ。",
   },
   {
-    generation: 1,
+    generation,
     id: 39,
     jaName: "プリン",
     name: "jigglypuff",
@@ -431,7 +433,7 @@ export const generation1Pokemon = [
       "歌う丸いポケモンでノーマル、かわいらしさと現在の分類からフェアリーも付くと覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 40,
     jaName: "プクリン",
     name: "wigglytuff",
@@ -442,7 +444,7 @@ export const generation1Pokemon = [
       "風船のような体でノーマル、やわらかくかわいい雰囲気からフェアリーも付くと覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 41,
     jaName: "ズバット",
     name: "zubat",
@@ -453,7 +455,7 @@ export const generation1Pokemon = [
       "コウモリなのでひこうは分かりやすい。洞窟の毒々しい生き物の印象からどくタイプも覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 42,
     jaName: "ゴルバット",
     name: "golbat",
@@ -464,7 +466,7 @@ export const generation1Pokemon = [
       "大きなコウモリでひこう。牙と不気味な体色から、吸血や毒のイメージでどくタイプも付く。",
   },
   {
-    generation: 1,
+    generation,
     id: 43,
     jaName: "ナゾノクサ",
     name: "oddish",
@@ -475,7 +477,7 @@ export const generation1Pokemon = [
       "草の芽に見えるのでくさは自然。名前のナゾと毒草のイメージでどくタイプも覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 44,
     jaName: "クサイハナ",
     name: "gloom",
@@ -486,7 +488,7 @@ export const generation1Pokemon = [
       "くさい花という名前が大きな手がかり。植物のくさに加えて、悪臭や毒液からどくタイプ。",
   },
   {
-    generation: 1,
+    generation,
     id: 45,
     jaName: "ラフレシア",
     name: "vileplume",
@@ -497,7 +499,7 @@ export const generation1Pokemon = [
       "大きな花でくさは明確。ラフレシアの強いにおいや毒々しい花の印象からどくタイプも覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 46,
     jaName: "パラス",
     name: "paras",
@@ -508,7 +510,7 @@ export const generation1Pokemon = [
       "虫の体にキノコが生えているので、むしとくさ。キノコ部分を植物寄りに見ると覚えやすい。",
   },
   {
-    generation: 1,
+    generation,
     id: 47,
     jaName: "パラセクト",
     name: "parasect",
@@ -519,7 +521,7 @@ export const generation1Pokemon = [
       "大きなキノコに支配された虫として、むしとくさ。見た目のキノコをくさタイプの手がかりにする。",
   },
   {
-    generation: 1,
+    generation,
     id: 48,
     jaName: "コンパン",
     name: "venonat",
@@ -530,7 +532,7 @@ export const generation1Pokemon = [
       "毛むくじゃらの虫なのでむし。大きな複眼と毒をもつ虫の印象からどくタイプも覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 49,
     jaName: "モルフォン",
     name: "venomoth",
@@ -540,7 +542,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "蛾なのでむし。粉をまく蛾のイメージが毒の粉と結びつくため、どくタイプも付く。",
   },
   {
-    generation: 1,
+    generation,
     id: 50,
     jaName: "ディグダ",
     name: "diglett",
@@ -551,7 +553,7 @@ export const generation1Pokemon = [
       "地面から顔を出すモグラなのでじめんタイプ。小さくても土の中で暮らす点が決め手。",
   },
   {
-    generation: 1,
+    generation,
     id: 51,
     jaName: "ダグトリオ",
     name: "dugtrio",
@@ -562,7 +564,7 @@ export const generation1Pokemon = [
       "三匹のモグラが地中から出ている姿がそのままじめんタイプ。数が増えても地面の印象が中心。",
   },
   {
-    generation: 1,
+    generation,
     id: 52,
     jaName: "ニャース",
     name: "meowth",
@@ -573,7 +575,7 @@ export const generation1Pokemon = [
       "猫の姿で、特別な元素より身近な動物らしさが中心。小判は特徴で、タイプはノーマル。",
   },
   {
-    generation: 1,
+    generation,
     id: 53,
     jaName: "ペルシアン",
     name: "persian",
@@ -584,7 +586,7 @@ export const generation1Pokemon = [
       "しなやかな猫の姿からノーマルタイプ。上品さや爪の鋭さはタイプではなく性格づけとして見る。",
   },
   {
-    generation: 1,
+    generation,
     id: 54,
     jaName: "コダック",
     name: "psyduck",
@@ -595,7 +597,7 @@ export const generation1Pokemon = [
       "アヒルのように水辺にいる姿からみずタイプ。頭痛や念力の印象があっても現在は単みず。",
   },
   {
-    generation: 1,
+    generation,
     id: 55,
     jaName: "ゴルダック",
     name: "golduck",
@@ -606,7 +608,7 @@ export const generation1Pokemon = [
       "名前にゴルダックとあるが、あくやエスパーではなく水辺のアヒル系としてみずタイプ。",
   },
   {
-    generation: 1,
+    generation,
     id: 56,
     jaName: "マンキー",
     name: "mankey",
@@ -617,7 +619,7 @@ export const generation1Pokemon = [
       "怒った猿の姿と殴り合いそうな構えからかくとうタイプ。動物らしさより闘志を優先する。",
   },
   {
-    generation: 1,
+    generation,
     id: 57,
     jaName: "オコリザル",
     name: "primeape",
@@ -627,7 +629,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "さらに荒々しい猿で、怒りとパンチの印象が強い。格闘する姿からかくとうタイプ。",
   },
   {
-    generation: 1,
+    generation,
     id: 58,
     jaName: "ガーディ",
     name: "growlithe",
@@ -637,7 +639,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "子犬の姿でも、炎のような体色と警察犬らしい熱血感からほのおタイプと覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 59,
     jaName: "ウインディ",
     name: "arcanine",
@@ -648,7 +650,7 @@ export const generation1Pokemon = [
       "伝説的な大型犬の姿で、燃えるようなたてがみが手がかり。犬でもノーマルではなくほのお。",
   },
   {
-    generation: 1,
+    generation,
     id: 60,
     jaName: "ニョロモ",
     name: "poliwag",
@@ -658,7 +660,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "お腹の渦巻きより、水辺にいるオタマジャクシの姿を見てみずタイプと覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 61,
     jaName: "ニョロゾ",
     name: "poliwhirl",
@@ -669,7 +671,7 @@ export const generation1Pokemon = [
       "渦巻き模様が目立つが、カエル系の水辺の生き物としてみずタイプ。進化前の流れも手がかり。",
   },
   {
-    generation: 1,
+    generation,
     id: 62,
     jaName: "ニョロボン",
     name: "poliwrath",
@@ -679,7 +681,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "みずのカエル系に、鍛えた体とグローブのような手でかくとうタイプが加わる。",
   },
   {
-    generation: 1,
+    generation,
     id: 63,
     jaName: "ケーシィ",
     name: "abra",
@@ -689,7 +691,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "眠そうで直接戦わない姿だが、念力で身を守る設定からエスパータイプと覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 64,
     jaName: "ユンゲラー",
     name: "kadabra",
@@ -700,7 +702,7 @@ export const generation1Pokemon = [
       "スプーンと超能力者のような姿がエスパータイプの手がかり。動物より念力を優先する。",
   },
   {
-    generation: 1,
+    generation,
     id: 65,
     jaName: "フーディン",
     name: "alakazam",
@@ -711,7 +713,7 @@ export const generation1Pokemon = [
       "二本のスプーンと魔術師のような雰囲気からエスパータイプ。見た目より超能力が主役。",
   },
   {
-    generation: 1,
+    generation,
     id: 66,
     jaName: "ワンリキー",
     name: "machop",
@@ -722,7 +724,7 @@ export const generation1Pokemon = [
       "小柄でも筋肉質でトレーニングする姿が手がかり。パンチや力仕事からかくとうタイプ。",
   },
   {
-    generation: 1,
+    generation,
     id: 67,
     jaName: "ゴーリキー",
     name: "machoke",
@@ -732,7 +734,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "筋肉とベルトが格闘家らしさを示す。人型でもノーマルではなくかくとうタイプ。",
   },
   {
-    generation: 1,
+    generation,
     id: 68,
     jaName: "カイリキー",
     name: "machamp",
@@ -742,7 +744,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "四本腕で格闘する姿が強烈な手がかり。腕の多さは、戦うための体として覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 69,
     jaName: "マダツボミ",
     name: "bellsprout",
@@ -753,7 +755,7 @@ export const generation1Pokemon = [
       "植物のつるでくさは分かりやすい。食虫植物の毒液や危険な葉からどくタイプも覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 70,
     jaName: "ウツドン",
     name: "weepinbell",
@@ -763,7 +765,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "食虫植物らしい姿でくさ、溶かす液や毒々しい口からどくタイプもセットで覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 71,
     jaName: "ウツボット",
     name: "victreebel",
@@ -774,7 +776,7 @@ export const generation1Pokemon = [
       "ウツボカズラの食虫植物がモチーフなのでくさ。獲物を溶かす危険さからどくタイプも付く。",
   },
   {
-    generation: 1,
+    generation,
     id: 72,
     jaName: "メノクラゲ",
     name: "tentacool",
@@ -784,7 +786,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "クラゲなのでみずは自然。触手の毒針を思い出すと、どくタイプも覚えやすい。",
   },
   {
-    generation: 1,
+    generation,
     id: 73,
     jaName: "ドククラゲ",
     name: "tentacruel",
@@ -794,7 +796,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "大きなクラゲでみず。長い触手と毒針のイメージから、どくタイプも外さない。",
   },
   {
-    generation: 1,
+    generation,
     id: 74,
     jaName: "イシツブテ",
     name: "geodude",
@@ -805,7 +807,7 @@ export const generation1Pokemon = [
       "石の体でいわ、地面から出てくる岩石としてじめん。浮いて見えてもひこうではない。",
   },
   {
-    generation: 1,
+    generation,
     id: 75,
     jaName: "ゴローン",
     name: "graveler",
@@ -816,7 +818,7 @@ export const generation1Pokemon = [
       "転がる岩なのでいわは明確。山肌や地面の岩石として、じめんタイプもセットで覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 76,
     jaName: "ゴローニャ",
     name: "golem",
@@ -826,7 +828,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "巨大な岩の体でいわ。地面を転がる山の岩石という印象からじめんタイプも付く。",
   },
   {
-    generation: 1,
+    generation,
     id: 77,
     jaName: "ポニータ",
     name: "ponyta",
@@ -837,7 +839,7 @@ export const generation1Pokemon = [
       "炎のたてがみとしっぽがそのままほのおタイプの目印。馬の姿でもノーマルではない。",
   },
   {
-    generation: 1,
+    generation,
     id: 78,
     jaName: "ギャロップ",
     name: "rapidash",
@@ -848,7 +850,7 @@ export const generation1Pokemon = [
       "燃えるたてがみをもつ馬なのでほのおタイプ。走る速さより、体の炎を優先して覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 79,
     jaName: "ヤドン",
     name: "slowpoke",
@@ -859,7 +861,7 @@ export const generation1Pokemon = [
       "水辺のヤドカリ風の姿でみず、ぼんやりした不思議な知性からエスパータイプも付く。",
   },
   {
-    generation: 1,
+    generation,
     id: 80,
     jaName: "ヤドラン",
     name: "slowbro",
@@ -870,7 +872,7 @@ export const generation1Pokemon = [
       "シェルダーに噛まれている水辺の姿でみず。ぼんやりした念力系の雰囲気からエスパーも覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 81,
     jaName: "コイル",
     name: "magnemite",
@@ -880,7 +882,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "磁石と電気ででんきは自然。金属の体と磁力のイメージから、現在ははがねも付く。",
   },
   {
-    generation: 1,
+    generation,
     id: 82,
     jaName: "レアコイル",
     name: "magneton",
@@ -890,7 +892,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "複数の磁石が集まった機械的な体で、でんきとはがね。金属感を見逃さない。",
   },
   {
-    generation: 1,
+    generation,
     id: 83,
     jaName: "カモネギ",
     name: "farfetchd",
@@ -901,7 +903,7 @@ export const generation1Pokemon = [
       "カモの鳥なのでひこう。ネギを持つ変わった鳥だが、特別な元素ではなくノーマルも付く。",
   },
   {
-    generation: 1,
+    generation,
     id: 84,
     jaName: "ドードー",
     name: "doduo",
@@ -912,7 +914,7 @@ export const generation1Pokemon = [
       "二つの頭をもつ鳥でひこう。飛べる鳥として見つつ、特殊属性なしのノーマルも覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 85,
     jaName: "ドードリオ",
     name: "dodrio",
@@ -923,7 +925,7 @@ export const generation1Pokemon = [
       "三つの頭の鳥なのでひこう。脚力が強そうでもかくとうではなく、普通の鳥としてノーマルも付く。",
   },
   {
-    generation: 1,
+    generation,
     id: 86,
     jaName: "パウワウ",
     name: "seel",
@@ -934,7 +936,7 @@ export const generation1Pokemon = [
       "アシカのような水辺の生き物なのでみずタイプ。白い体でも、進化前はまだこおりではない。",
   },
   {
-    generation: 1,
+    generation,
     id: 87,
     jaName: "ジュゴン",
     name: "dewgong",
@@ -944,7 +946,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "水辺のアシカに、白い体と寒い海の印象が加わってこおりタイプも付く。",
   },
   {
-    generation: 1,
+    generation,
     id: 88,
     jaName: "ベトベター",
     name: "grimer",
@@ -954,7 +956,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "ヘドロそのものの姿なのでどくタイプ。紫の体と汚泥のイメージをそのまま覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 89,
     jaName: "ベトベトン",
     name: "muk",
@@ -964,7 +966,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "大量のヘドロが固まった姿でどくタイプ。大きくなっても汚泥と毒の印象が中心。",
   },
   {
-    generation: 1,
+    generation,
     id: 90,
     jaName: "シェルダー",
     name: "shellder",
@@ -974,7 +976,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "貝なのでみずタイプ。硬い殻は防御の特徴で、進化前はまだこおりタイプではない。",
   },
   {
-    generation: 1,
+    generation,
     id: 91,
     jaName: "パルシェン",
     name: "cloyster",
@@ -985,7 +987,7 @@ export const generation1Pokemon = [
       "貝の水辺イメージでみず、鋭い氷のようなトゲと冷たい殻からこおりタイプも覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 92,
     jaName: "ゴース",
     name: "gastly",
@@ -995,7 +997,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "幽霊の名前とガス状の体でゴースト。毒ガスそのものの姿なのでどくタイプも付く。",
   },
   {
-    generation: 1,
+    generation,
     id: 93,
     jaName: "ゴースト",
     name: "haunter",
@@ -1006,7 +1008,7 @@ export const generation1Pokemon = [
       "浮かぶ幽霊の姿でゴースト、毒ガスの系統でどく。手だけの不気味さも幽霊の手がかり。",
   },
   {
-    generation: 1,
+    generation,
     id: 94,
     jaName: "ゲンガー",
     name: "gengar",
@@ -1017,7 +1019,7 @@ export const generation1Pokemon = [
       "影のような幽霊でゴースト。進化前から続く毒ガスの系統としてどくタイプも覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 95,
     jaName: "イワーク",
     name: "onix",
@@ -1028,7 +1030,7 @@ export const generation1Pokemon = [
       "巨大な岩のヘビなのでいわ。土や地中を進む大蛇としてじめんタイプもセットで覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 96,
     jaName: "スリープ",
     name: "drowzee",
@@ -1039,7 +1041,7 @@ export const generation1Pokemon = [
       "夢を食べるバクがモチーフなのでエスパータイプ。見た目の動物らしさより催眠を優先する。",
   },
   {
-    generation: 1,
+    generation,
     id: 97,
     jaName: "スリーパー",
     name: "hypno",
@@ -1050,7 +1052,7 @@ export const generation1Pokemon = [
       "催眠術師のように振る道具と夢を操る印象からエスパータイプ。眠りが最大の手がかり。",
   },
   {
-    generation: 1,
+    generation,
     id: 98,
     jaName: "クラブ",
     name: "krabby",
@@ -1061,7 +1063,7 @@ export const generation1Pokemon = [
       "カニなのでみずタイプ。大きなハサミは武器だが、タイプとしては水辺の生き物を見る。",
   },
   {
-    generation: 1,
+    generation,
     id: 99,
     jaName: "キングラー",
     name: "kingler",
@@ -1071,7 +1073,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "大きなカニでみずタイプ。巨大なハサミより、海辺で暮らす甲殻類として覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 100,
     jaName: "ビリリダマ",
     name: "voltorb",
@@ -1082,7 +1084,7 @@ export const generation1Pokemon = [
       "モンスターボールに見える丸い体だが、正体は電気を帯びた存在なのででんきタイプ。",
   },
   {
-    generation: 1,
+    generation,
     id: 101,
     jaName: "マルマイン",
     name: "electrode",
@@ -1093,7 +1095,7 @@ export const generation1Pokemon = [
       "丸いボール姿でも、爆発しそうな電気エネルギーの印象が中心。でんきタイプとして覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 102,
     jaName: "タマタマ",
     name: "exeggcute",
@@ -1104,7 +1106,7 @@ export const generation1Pokemon = [
       "タマゴのように見えて植物の種子なのでくさ。不思議な集合体の意識からエスパーも付く。",
   },
   {
-    generation: 1,
+    generation,
     id: 103,
     jaName: "ナッシー",
     name: "exeggutor",
@@ -1115,7 +1117,7 @@ export const generation1Pokemon = [
       "ヤシの木でくさは自然。複数の顔が一つの意識をもつ不思議さからエスパーも覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 104,
     jaName: "カラカラ",
     name: "cubone",
@@ -1125,7 +1127,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "骨を持つ姿が目立つが、乾いた地面や孤独に立つ陸のイメージからじめんタイプ。",
   },
   {
-    generation: 1,
+    generation,
     id: 105,
     jaName: "ガラガラ",
     name: "marowak",
@@ -1136,7 +1138,7 @@ export const generation1Pokemon = [
       "骨の武器が印象的でもゴーストではなく、地上で戦う骨持ちのポケモンとしてじめんタイプ。",
   },
   {
-    generation: 1,
+    generation,
     id: 106,
     jaName: "サワムラー",
     name: "hitmonlee",
@@ -1147,7 +1149,7 @@ export const generation1Pokemon = [
       "キック専門の格闘家の姿がそのままかくとうタイプ。長い脚を一番の手がかりにする。",
   },
   {
-    generation: 1,
+    generation,
     id: 107,
     jaName: "エビワラー",
     name: "hitmonchan",
@@ -1158,7 +1160,7 @@ export const generation1Pokemon = [
       "ボクサーのグローブとパンチが手がかり。エビの名前より、拳で戦う姿からかくとうタイプ。",
   },
   {
-    generation: 1,
+    generation,
     id: 108,
     jaName: "ベロリンガ",
     name: "lickitung",
@@ -1169,7 +1171,7 @@ export const generation1Pokemon = [
       "長い舌が目立つが、特殊な元素や念力ではなく、変わった動物としてノーマルタイプ。",
   },
   {
-    generation: 1,
+    generation,
     id: 109,
     jaName: "ドガース",
     name: "koffing",
@@ -1180,7 +1182,7 @@ export const generation1Pokemon = [
       "毒ガスのかたまりなのでどくタイプ。丸い体のドクロ模様も危険さを分かりやすく示す。",
   },
   {
-    generation: 1,
+    generation,
     id: 110,
     jaName: "マタドガス",
     name: "weezing",
@@ -1191,7 +1193,7 @@ export const generation1Pokemon = [
       "複数の毒ガス袋が集まった姿でどくタイプ。煙やスモッグのイメージをそのまま覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 111,
     jaName: "サイホーン",
     name: "rhyhorn",
@@ -1202,7 +1204,7 @@ export const generation1Pokemon = [
       "サイのような陸の獣でじめん、岩のように硬い体でいわ。獣らしさより地面と岩を見る。",
   },
   {
-    generation: 1,
+    generation,
     id: 112,
     jaName: "サイドン",
     name: "rhydon",
@@ -1213,7 +1215,7 @@ export const generation1Pokemon = [
       "大きなサイの怪獣でじめん、硬い岩肌でいわ。ドリルの角も地面を掘る印象を助ける。",
   },
   {
-    generation: 1,
+    generation,
     id: 113,
     jaName: "ラッキー",
     name: "chansey",
@@ -1224,7 +1226,7 @@ export const generation1Pokemon = [
       "卵を持つ優しいポケモンだが、特別な元素より普通の生き物らしさが中心なのでノーマル。",
   },
   {
-    generation: 1,
+    generation,
     id: 114,
     jaName: "モンジャラ",
     name: "tangela",
@@ -1235,7 +1237,7 @@ export const generation1Pokemon = [
       "全身がつる草に覆われているためくさタイプ。正体より、絡まる植物の見た目で覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 115,
     jaName: "ガルーラ",
     name: "kangaskhan",
@@ -1246,7 +1248,7 @@ export const generation1Pokemon = [
       "袋を持つ親子カンガルーで、特殊な元素より動物らしさが中心。ノーマルタイプとして覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 116,
     jaName: "タッツー",
     name: "horsea",
@@ -1257,7 +1259,7 @@ export const generation1Pokemon = [
       "タツノオトシゴなのでみずタイプ。小さな角や煙幕より、海の生き物である点を見る。",
   },
   {
-    generation: 1,
+    generation,
     id: 117,
     jaName: "シードラ",
     name: "seadra",
@@ -1268,7 +1270,7 @@ export const generation1Pokemon = [
       "タツノオトシゴの進化形でみずタイプ。ドラゴン風でも、第1世代の標準タイプは単みず。",
   },
   {
-    generation: 1,
+    generation,
     id: 118,
     jaName: "トサキント",
     name: "goldeen",
@@ -1279,7 +1281,7 @@ export const generation1Pokemon = [
       "金魚の姿なのでみずタイプ。角があっても特別な複合タイプではなく、水の魚として覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 119,
     jaName: "アズマオウ",
     name: "seaking",
@@ -1290,7 +1292,7 @@ export const generation1Pokemon = [
       "派手な尾びれの魚なのでみずタイプ。名前のアズマオウも魚らしさを強める手がかり。",
   },
   {
-    generation: 1,
+    generation,
     id: 120,
     jaName: "ヒトデマン",
     name: "staryu",
@@ -1301,7 +1303,7 @@ export const generation1Pokemon = [
       "ヒトデの姿なのでみずタイプ。星形や宝石より、海にいるヒトデである点を優先する。",
   },
   {
-    generation: 1,
+    generation,
     id: 121,
     jaName: "スターミー",
     name: "starmie",
@@ -1311,7 +1313,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "ヒトデでみず、中央の宝石と宇宙的な不思議さからエスパータイプも付くと覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 122,
     jaName: "バリヤード",
     name: "mr-mime",
@@ -1322,7 +1324,7 @@ export const generation1Pokemon = [
       "パントマイムの見えない壁でエスパー。道化師のような不思議さと現在の分類からフェアリーも付く。",
   },
   {
-    generation: 1,
+    generation,
     id: 123,
     jaName: "ストライク",
     name: "scyther",
@@ -1333,7 +1335,7 @@ export const generation1Pokemon = [
       "カマキリなのでむし、羽で飛ぶのでひこう。刃のような腕は、はがねではなく虫の鎌として見る。",
   },
   {
-    generation: 1,
+    generation,
     id: 124,
     jaName: "ルージュラ",
     name: "jynx",
@@ -1344,7 +1346,7 @@ export const generation1Pokemon = [
       "氷のような肌と寒い雰囲気でこおり、占いや催眠めいた不思議さからエスパーも覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 125,
     jaName: "エレブー",
     name: "electabuzz",
@@ -1355,7 +1357,7 @@ export const generation1Pokemon = [
       "プラグのような角と電撃を放つ印象からでんきタイプ。黄色と黒の配色も電気の手がかり。",
   },
   {
-    generation: 1,
+    generation,
     id: 126,
     jaName: "ブーバー",
     name: "magmar",
@@ -1366,7 +1368,7 @@ export const generation1Pokemon = [
       "炎のような体色と口から出す火の印象でほのおタイプ。人型でも格闘ではなく炎が主役。",
   },
   {
-    generation: 1,
+    generation,
     id: 127,
     jaName: "カイロス",
     name: "pinsir",
@@ -1377,7 +1379,7 @@ export const generation1Pokemon = [
       "クワガタムシのような角を持つのでむしタイプ。力強くてもかくとうではなく虫として覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 128,
     jaName: "ケンタロス",
     name: "tauros",
@@ -1388,7 +1390,7 @@ export const generation1Pokemon = [
       "牛そのものの姿で、特別な元素より動物らしさが中心。突進するノーマルタイプとして覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 129,
     jaName: "コイキング",
     name: "magikarp",
@@ -1399,7 +1401,7 @@ export const generation1Pokemon = [
       "弱そうでも魚なのでみずタイプ。進化後の激変を知っていても、単体では水の魚として覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 130,
     jaName: "ギャラドス",
     name: "gyarados",
@@ -1410,7 +1412,7 @@ export const generation1Pokemon = [
       "水の大蛇なのでみず、空を舞うような姿からひこう。ドラゴンっぽくてもドラゴンではない点に注意。",
   },
   {
-    generation: 1,
+    generation,
     id: 131,
     jaName: "ラプラス",
     name: "lapras",
@@ -1421,7 +1423,7 @@ export const generation1Pokemon = [
       "海を渡る大きな乗り物のようなポケモンでみず、寒い海や氷山の印象からこおりも付く。",
   },
   {
-    generation: 1,
+    generation,
     id: 132,
     jaName: "メタモン",
     name: "ditto",
@@ -1432,7 +1434,7 @@ export const generation1Pokemon = [
       "何にでも変身するが、元の姿は特定の元素を持たないためノーマル。変身能力はタイプではない。",
   },
   {
-    generation: 1,
+    generation,
     id: 133,
     jaName: "イーブイ",
     name: "eevee",
@@ -1442,7 +1444,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "進化先が多いが、進化前は特別な元素を持たない素の姿なのでノーマルタイプ。",
   },
   {
-    generation: 1,
+    generation,
     id: 134,
     jaName: "シャワーズ",
     name: "vaporeon",
@@ -1452,7 +1454,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "イーブイの水進化。魚のような尾びれと青い体、水に溶ける印象からみずタイプ。",
   },
   {
-    generation: 1,
+    generation,
     id: 135,
     jaName: "サンダース",
     name: "jolteon",
@@ -1462,7 +1464,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "イーブイの電気進化。逆立つトゲと黄色い体が電気のスパークを連想させる。",
   },
   {
-    generation: 1,
+    generation,
     id: 136,
     jaName: "ブースター",
     name: "flareon",
@@ -1472,7 +1474,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "イーブイの炎進化。赤い体とふさふさの熱そうな毛並みからほのおタイプと覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 137,
     jaName: "ポリゴン",
     name: "porygon",
@@ -1483,7 +1485,7 @@ export const generation1Pokemon = [
       "人工的なデータ生物だが、元素や超能力より無属性の人工生命としてノーマルタイプ。",
   },
   {
-    generation: 1,
+    generation,
     id: 138,
     jaName: "オムナイト",
     name: "omanyte",
@@ -1493,7 +1495,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "化石のアンモナイトなのでいわ、水中生物なのでみず。化石由来のいわを忘れない。",
   },
   {
-    generation: 1,
+    generation,
     id: 139,
     jaName: "オムスター",
     name: "omastar",
@@ -1504,7 +1506,7 @@ export const generation1Pokemon = [
       "化石のアンモナイト進化形でいわ、水中の巻き貝としてみず。鋭い殻より化石と水を見る。",
   },
   {
-    generation: 1,
+    generation,
     id: 140,
     jaName: "カブト",
     name: "kabuto",
@@ -1515,7 +1517,7 @@ export const generation1Pokemon = [
       "化石のカブトガニなのでいわ、水辺の古代生物なのでみず。虫っぽくてもむしではない。",
   },
   {
-    generation: 1,
+    generation,
     id: 141,
     jaName: "カブトプス",
     name: "kabutops",
@@ -1525,7 +1527,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "化石の古代生物でいわ、水中で泳ぐ姿からみず。鎌の腕はタイプではなく攻撃特徴。",
   },
   {
-    generation: 1,
+    generation,
     id: 142,
     jaName: "プテラ",
     name: "aerodactyl",
@@ -1536,7 +1538,7 @@ export const generation1Pokemon = [
       "化石から復元された翼竜なのでいわ、空を飛ぶためひこう。ドラゴンではなく化石の翼竜。",
   },
   {
-    generation: 1,
+    generation,
     id: 143,
     jaName: "カビゴン",
     name: "snorlax",
@@ -1547,7 +1549,7 @@ export const generation1Pokemon = [
       "大きく眠る動物で、特別な元素より日常的な体の強さが中心。ノーマルタイプとして覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 144,
     jaName: "フリーザー",
     name: "articuno",
@@ -1558,7 +1560,7 @@ export const generation1Pokemon = [
       "氷の鳥なのでこおりとひこう。伝説の鳥でも、名前のフリーザーが氷の手がかりになる。",
   },
   {
-    generation: 1,
+    generation,
     id: 145,
     jaName: "サンダー",
     name: "zapdos",
@@ -1569,7 +1571,7 @@ export const generation1Pokemon = [
       "電気をまとう鳥なのででんきとひこう。名前のサンダーを雷のイメージとして覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 146,
     jaName: "ファイヤー",
     name: "moltres",
@@ -1580,7 +1582,7 @@ export const generation1Pokemon = [
       "炎をまとった鳥なのでほのおとひこう。燃える翼と名前のファイヤーがそのまま手がかり。",
   },
   {
-    generation: 1,
+    generation,
     id: 147,
     jaName: "ミニリュウ",
     name: "dratini",
@@ -1591,7 +1593,7 @@ export const generation1Pokemon = [
       "小さなヘビのようでも、神秘的な竜の幼体としてドラゴンタイプ。水色の体に惑わされない。",
   },
   {
-    generation: 1,
+    generation,
     id: 148,
     jaName: "ハクリュー",
     name: "dragonair",
@@ -1601,7 +1603,7 @@ export const generation1Pokemon = [
     typeMemoryHint: "優雅な蛇の姿だが、進化系の竜らしさへつながるためドラゴンタイプとして覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 149,
     jaName: "カイリュー",
     name: "dragonite",
@@ -1612,7 +1614,7 @@ export const generation1Pokemon = [
       "竜の進化系なのでドラゴン、翼を持って空を飛ぶためひこう。見た目のかわいさより竜と翼を見る。",
   },
   {
-    generation: 1,
+    generation,
     id: 150,
     jaName: "ミュウツー",
     name: "mewtwo",
@@ -1623,7 +1625,7 @@ export const generation1Pokemon = [
       "人工的に生まれた最強の超能力ポケモンという設定が手がかり。エスパータイプとして覚える。",
   },
   {
-    generation: 1,
+    generation,
     id: 151,
     jaName: "ミュウ",
     name: "mew",
