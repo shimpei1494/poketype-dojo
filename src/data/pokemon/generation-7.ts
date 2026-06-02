@@ -12,7 +12,7 @@ export const generation7Pokemon = [
     name: "rowlet",
     type1: "grass",
     type2: "flying",
-    typeMemoryHint: "",
+    typeMemoryHint: "フクロウなのでひこう、葉っぱの蝶ネクタイと草木の雰囲気からくさタイプも付く。",
   },
   {
     generation: 7,
@@ -22,7 +22,7 @@ export const generation7Pokemon = [
     name: "dartrix",
     type1: "grass",
     type2: "flying",
-    typeMemoryHint: "",
+    typeMemoryHint: "おしゃれなフクロウでひこう、羽や飾りの葉っぱからくさタイプも覚える。",
   },
   {
     generation: 7,
@@ -32,7 +32,7 @@ export const generation7Pokemon = [
     name: "decidueye",
     type1: "grass",
     type2: "ghost",
-    typeMemoryHint: "",
+    typeMemoryHint: "森の弓使いでくさ、姿を消して矢を放つ霊的な狩人感からゴーストタイプも付く。",
   },
   {
     generation: 7,
@@ -42,7 +42,7 @@ export const generation7Pokemon = [
     name: "litten",
     type1: "fire",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "黒赤の子猫で、毛玉に火を含む印象からほのおタイプ。猫でもノーマルではない。",
   },
   {
     generation: 7,
@@ -52,7 +52,7 @@ export const generation7Pokemon = [
     name: "torracat",
     type1: "fire",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "首の炎の鈴と赤黒い体からほのおタイプ。荒っぽさは進化後のあくにつながる。",
   },
   {
     generation: 7,
@@ -62,7 +62,7 @@ export const generation7Pokemon = [
     name: "incineroar",
     type1: "fire",
     type2: "dark",
-    typeMemoryHint: "",
+    typeMemoryHint: "炎のレスラー猫でほのお、ヒール役の悪役感からあくタイプも付く。",
   },
   {
     generation: 7,
@@ -72,7 +72,7 @@ export const generation7Pokemon = [
     name: "popplio",
     type1: "water",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "アシカの子どもでみずタイプ。泡を使う芸の印象も水の手がかり。",
   },
   {
     generation: 7,
@@ -82,7 +82,8 @@ export const generation7Pokemon = [
     name: "brionne",
     type1: "water",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "海のアイドルのようなアシカでみずタイプ。歌や踊りは特徴で、まだフェアリーではない。",
   },
   {
     generation: 7,
@@ -92,7 +93,7 @@ export const generation7Pokemon = [
     name: "primarina",
     type1: "water",
     type2: "fairy",
-    typeMemoryHint: "",
+    typeMemoryHint: "歌う人魚のようなアシカでみず、優雅な妖精感からフェアリータイプも付く。",
   },
   {
     generation: 7,
@@ -102,7 +103,7 @@ export const generation7Pokemon = [
     name: "pikipek",
     type1: "normal",
     type2: "flying",
-    typeMemoryHint: "",
+    typeMemoryHint: "キツツキなのでひこう、身近な鳥としてノーマルも付く。くちばしの強さは特徴。",
   },
   {
     generation: 7,
@@ -112,7 +113,7 @@ export const generation7Pokemon = [
     name: "trumbeak",
     type1: "normal",
     type2: "flying",
-    typeMemoryHint: "",
+    typeMemoryHint: "ラッパのようなくちばしの鳥でひこう、普通の鳥枠としてノーマルも覚える。",
   },
   {
     generation: 7,
@@ -122,7 +123,7 @@ export const generation7Pokemon = [
     name: "toucannon",
     type1: "normal",
     type2: "flying",
-    typeMemoryHint: "",
+    typeMemoryHint: "大きなくちばしのオオハシでひこう、特殊な元素ではなくノーマルも付く。",
   },
   {
     generation: 7,
@@ -132,7 +133,8 @@ export const generation7Pokemon = [
     name: "yungoos",
     type1: "normal",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "マングースのような小動物でノーマルタイプ。見張りの鋭さは特徴で、あくではない。",
   },
   {
     generation: 7,
@@ -142,7 +144,7 @@ export const generation7Pokemon = [
     name: "gumshoos",
     type1: "normal",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "刑事のような顔つきでも、普通のマングース系としてノーマルタイプと覚える。",
   },
   {
     generation: 7,
@@ -152,7 +154,7 @@ export const generation7Pokemon = [
     name: "grubbin",
     type1: "bug",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "クワガタの幼虫なのでむしタイプ。電気要素は進化後に強くなる。",
   },
   {
     generation: 7,
@@ -162,7 +164,7 @@ export const generation7Pokemon = [
     name: "charjabug",
     type1: "bug",
     type2: "electric",
-    typeMemoryHint: "",
+    typeMemoryHint: "虫の体に電池のような形が加わり、むしとでんきをセットで覚える。",
   },
   {
     generation: 7,
@@ -172,7 +174,7 @@ export const generation7Pokemon = [
     name: "vikavolt",
     type1: "bug",
     type2: "electric",
-    typeMemoryHint: "",
+    typeMemoryHint: "クワガタムシでむし、電気を放つ大きなあごからでんきタイプも付く。",
   },
   {
     generation: 7,
@@ -182,7 +184,7 @@ export const generation7Pokemon = [
     name: "crabrawler",
     type1: "fighting",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "カニだが、拳で戦うボクサーのような姿からかくとうタイプ。水ではない点に注意。",
   },
   {
     generation: 7,
@@ -192,7 +194,7 @@ export const generation7Pokemon = [
     name: "crabominable",
     type1: "fighting",
     type2: "ice",
-    typeMemoryHint: "",
+    typeMemoryHint: "格闘するカニに、雪山で暮らす白い毛と冷気からこおりタイプが加わる。",
   },
   {
     generation: 7,
@@ -202,7 +204,7 @@ export const generation7Pokemon = [
     name: "oricorio",
     type1: "fire",
     type2: "flying",
-    typeMemoryHint: "",
+    typeMemoryHint: "踊る鳥なのでひこう、標準データは炎の舞の姿としてほのおタイプも付く。",
   },
   {
     generation: 7,
@@ -212,7 +214,7 @@ export const generation7Pokemon = [
     name: "cutiefly",
     type1: "bug",
     type2: "fairy",
-    typeMemoryHint: "",
+    typeMemoryHint: "小さな虫でむし、花粉を集める妖精のようなかわいさからフェアリーも付く。",
   },
   {
     generation: 7,
@@ -222,7 +224,7 @@ export const generation7Pokemon = [
     name: "ribombee",
     type1: "bug",
     type2: "fairy",
-    typeMemoryHint: "",
+    typeMemoryHint: "花粉団子を作る小さな虫なのでむし、妖精のような軽さからフェアリーも覚える。",
   },
   {
     generation: 7,
@@ -232,7 +234,8 @@ export const generation7Pokemon = [
     name: "rockruff",
     type1: "rock",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "岩場に暮らす子犬でいわタイプ。犬でもノーマルではなく、岩の名前を手がかりにする。",
   },
   {
     generation: 7,
@@ -242,7 +245,7 @@ export const generation7Pokemon = [
     name: "lycanroc",
     type1: "rock",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "岩場のオオカミなのでいわタイプ。姿違いがあっても標準タイプは単いわ。",
   },
   {
     generation: 7,
@@ -252,7 +255,7 @@ export const generation7Pokemon = [
     name: "wishiwashi",
     type1: "water",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "群れで大きく見える魚なのでみずタイプ。姿が変わっても魚の水タイプ。",
   },
   {
     generation: 7,
@@ -262,7 +265,7 @@ export const generation7Pokemon = [
     name: "mareanie",
     type1: "poison",
     type2: "water",
-    typeMemoryHint: "",
+    typeMemoryHint: "毒のあるヒトデのような海生生物なのでどくとみず。トゲの毒を忘れない。",
   },
   {
     generation: 7,
@@ -272,7 +275,7 @@ export const generation7Pokemon = [
     name: "toxapex",
     type1: "poison",
     type2: "water",
-    typeMemoryHint: "",
+    typeMemoryHint: "毒トゲだらけの海の要塞なのでどくとみず。水辺より毒の防御を強く意識する。",
   },
   {
     generation: 7,
@@ -282,7 +285,7 @@ export const generation7Pokemon = [
     name: "mudbray",
     type1: "ground",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "泥をかぶった子馬なのでじめんタイプ。馬でもノーマルではなく、泥が手がかり。",
   },
   {
     generation: 7,
@@ -292,7 +295,7 @@ export const generation7Pokemon = [
     name: "mudsdale",
     type1: "ground",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "泥を踏み固める重い馬なのでじめんタイプ。力強さより泥と地面を見る。",
   },
   {
     generation: 7,
@@ -302,7 +305,7 @@ export const generation7Pokemon = [
     name: "dewpider",
     type1: "water",
     type2: "bug",
-    typeMemoryHint: "",
+    typeMemoryHint: "水滴をまとった蜘蛛なのでみずとむし。水泡の中で暮らす虫として覚える。",
   },
   {
     generation: 7,
@@ -312,7 +315,7 @@ export const generation7Pokemon = [
     name: "araquanid",
     type1: "water",
     type2: "bug",
-    typeMemoryHint: "",
+    typeMemoryHint: "水泡をかぶる巨大な蜘蛛なのでみずとむし。泡を水タイプの手がかりにする。",
   },
   {
     generation: 7,
@@ -322,7 +325,7 @@ export const generation7Pokemon = [
     name: "fomantis",
     type1: "grass",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "カマキリ風でも植物の葉の姿が中心なのでくさタイプ。むしではない点に注意。",
   },
   {
     generation: 7,
@@ -332,7 +335,7 @@ export const generation7Pokemon = [
     name: "lurantis",
     type1: "grass",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "花のように擬態するカマキリだが、標準タイプはくさ。虫ではなく植物として見る。",
   },
   {
     generation: 7,
@@ -342,7 +345,7 @@ export const generation7Pokemon = [
     name: "morelull",
     type1: "grass",
     type2: "fairy",
-    typeMemoryHint: "",
+    typeMemoryHint: "光るキノコなのでくさ、妖精のような幻想的な光からフェアリーも付く。",
   },
   {
     generation: 7,
@@ -352,7 +355,7 @@ export const generation7Pokemon = [
     name: "shiinotic",
     type1: "grass",
     type2: "fairy",
-    typeMemoryHint: "",
+    typeMemoryHint: "人を誘う光るキノコでくさとフェアリー。かわいい光とキノコをセットで覚える。",
   },
   {
     generation: 7,
@@ -362,7 +365,7 @@ export const generation7Pokemon = [
     name: "salandit",
     type1: "poison",
     type2: "fire",
-    typeMemoryHint: "",
+    typeMemoryHint: "毒をもつトカゲでどく、火山地帯の熱と炎の息からほのおタイプも付く。",
   },
   {
     generation: 7,
@@ -372,7 +375,7 @@ export const generation7Pokemon = [
     name: "salazzle",
     type1: "poison",
     type2: "fire",
-    typeMemoryHint: "",
+    typeMemoryHint: "妖艶な毒トカゲでどく、熱い炎を操るためほのおタイプも覚える。",
   },
   {
     generation: 7,
@@ -382,7 +385,7 @@ export const generation7Pokemon = [
     name: "stufful",
     type1: "normal",
     type2: "fighting",
-    typeMemoryHint: "",
+    typeMemoryHint: "ぬいぐるみのような熊でノーマル、抱きついて戦う力からかくとうタイプも付く。",
   },
   {
     generation: 7,
@@ -392,7 +395,7 @@ export const generation7Pokemon = [
     name: "bewear",
     type1: "normal",
     type2: "fighting",
-    typeMemoryHint: "",
+    typeMemoryHint: "大きな熊の普通さでノーマル、強烈な抱きしめ技からかくとうタイプも覚える。",
   },
   {
     generation: 7,
@@ -402,7 +405,7 @@ export const generation7Pokemon = [
     name: "bounsweet",
     type1: "grass",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "甘い果実のような植物なのでくさタイプ。食べ物風でも植物を見る。",
   },
   {
     generation: 7,
@@ -412,7 +415,7 @@ export const generation7Pokemon = [
     name: "steenee",
     type1: "grass",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "果実の少女のような姿でくさタイプ。人型でもフェアリーではなく植物の実。",
   },
   {
     generation: 7,
@@ -422,7 +425,7 @@ export const generation7Pokemon = [
     name: "tsareena",
     type1: "grass",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "女王のような果実植物なのでくさタイプ。蹴り技が強くても格闘ではない。",
   },
   {
     generation: 7,
@@ -432,7 +435,7 @@ export const generation7Pokemon = [
     name: "comfey",
     type1: "fairy",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "花輪を作る妖精なのでフェアリータイプ。花を持っていてもくさではない点に注意。",
   },
   {
     generation: 7,
@@ -442,7 +445,7 @@ export const generation7Pokemon = [
     name: "oranguru",
     type1: "normal",
     type2: "psychic",
-    typeMemoryHint: "",
+    typeMemoryHint: "賢いオランウータンでノーマル、知恵と精神力の印象からエスパータイプも付く。",
   },
   {
     generation: 7,
@@ -452,7 +455,7 @@ export const generation7Pokemon = [
     name: "passimian",
     type1: "fighting",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "チームで戦う猿のスポーツ選手なのでかくとうタイプ。投げる実は武器。",
   },
   {
     generation: 7,
@@ -462,7 +465,7 @@ export const generation7Pokemon = [
     name: "wimpod",
     type1: "bug",
     type2: "water",
-    typeMemoryHint: "",
+    typeMemoryHint: "逃げ足の速い虫でむし、水辺で暮らすためみずタイプも付く。",
   },
   {
     generation: 7,
@@ -472,7 +475,7 @@ export const generation7Pokemon = [
     name: "golisopod",
     type1: "bug",
     type2: "water",
-    typeMemoryHint: "",
+    typeMemoryHint: "鎧武者のような虫でむし、海辺の甲殻類としてみずタイプも残る。",
   },
   {
     generation: 7,
@@ -482,7 +485,7 @@ export const generation7Pokemon = [
     name: "sandygast",
     type1: "ghost",
     type2: "ground",
-    typeMemoryHint: "",
+    typeMemoryHint: "砂の城に宿った霊なのでゴースト、砂浜の地面からじめんタイプも付く。",
   },
   {
     generation: 7,
@@ -492,7 +495,7 @@ export const generation7Pokemon = [
     name: "palossand",
     type1: "ghost",
     type2: "ground",
-    typeMemoryHint: "",
+    typeMemoryHint: "呪われた砂の城なのでゴーストとじめん。砂と霊をそのまま結びつける。",
   },
   {
     generation: 7,
@@ -502,7 +505,7 @@ export const generation7Pokemon = [
     name: "pyukumuku",
     type1: "water",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "ナマコのような海の生き物なのでみずタイプ。中身を飛ばす特徴はタイプではない。",
   },
   {
     generation: 7,
@@ -512,7 +515,7 @@ export const generation7Pokemon = [
     name: "type-null",
     type1: "normal",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "人工的に作られた素体なので、特定の属性を持たないノーマルタイプとして覚える。",
   },
   {
     generation: 7,
@@ -522,7 +525,8 @@ export const generation7Pokemon = [
     name: "silvally",
     type1: "normal",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "タイプを変えられる設定があるが、標準データでは基本形のノーマルタイプとして扱う。",
   },
   {
     generation: 7,
@@ -532,7 +536,7 @@ export const generation7Pokemon = [
     name: "minior",
     type1: "rock",
     type2: "flying",
-    typeMemoryHint: "",
+    typeMemoryHint: "隕石の殻でいわ、空から落ちてくる流星のような姿からひこうタイプも付く。",
   },
   {
     generation: 7,
@@ -542,7 +546,7 @@ export const generation7Pokemon = [
     name: "komala",
     type1: "normal",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "眠り続けるコアラで、特別な元素より普通の動物としてノーマルタイプ。",
   },
   {
     generation: 7,
@@ -552,7 +556,7 @@ export const generation7Pokemon = [
     name: "turtonator",
     type1: "fire",
     type2: "dragon",
-    typeMemoryHint: "",
+    typeMemoryHint: "火山の甲羅をもつ亀でほのお、爆発する竜亀の姿からドラゴンタイプも付く。",
   },
   {
     generation: 7,
@@ -562,7 +566,7 @@ export const generation7Pokemon = [
     name: "togedemaru",
     type1: "electric",
     type2: "steel",
-    typeMemoryHint: "",
+    typeMemoryHint: "丸いハリネズミででんき、金属のトゲと銀色の体からはがねタイプも付く。",
   },
   {
     generation: 7,
@@ -572,7 +576,8 @@ export const generation7Pokemon = [
     name: "mimikyu",
     type1: "ghost",
     type2: "fairy",
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "布をかぶった幽霊なのでゴースト、ピカチュウに憧れるかわいさからフェアリーも付く。",
   },
   {
     generation: 7,
@@ -582,7 +587,7 @@ export const generation7Pokemon = [
     name: "bruxish",
     type1: "water",
     type2: "psychic",
-    typeMemoryHint: "",
+    typeMemoryHint: "派手な魚なのでみず、歯ぎしりで精神を刺激する不思議さからエスパーも付く。",
   },
   {
     generation: 7,
@@ -592,7 +597,7 @@ export const generation7Pokemon = [
     name: "drampa",
     type1: "normal",
     type2: "dragon",
-    typeMemoryHint: "",
+    typeMemoryHint: "穏やかな老人竜でドラゴン、日常的な獣らしさからノーマルタイプも付く。",
   },
   {
     generation: 7,
@@ -602,7 +607,7 @@ export const generation7Pokemon = [
     name: "dhelmise",
     type1: "ghost",
     type2: "grass",
-    typeMemoryHint: "",
+    typeMemoryHint: "沈んだ錨に宿る霊なのでゴースト、海藻をまとった姿からくさタイプも付く。",
   },
   {
     generation: 7,
@@ -612,7 +617,7 @@ export const generation7Pokemon = [
     name: "jangmo-o",
     type1: "dragon",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "鱗を鳴らす小さな竜なのでドラゴンタイプ。黄色い鎧でもはがねではない。",
   },
   {
     generation: 7,
@@ -622,7 +627,8 @@ export const generation7Pokemon = [
     name: "hakamo-o",
     type1: "dragon",
     type2: "fighting",
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "竜の戦士として成長し、ドラゴンにかくとうタイプが加わる。鱗の鎧と構えが手がかり。",
   },
   {
     generation: 7,
@@ -632,7 +638,7 @@ export const generation7Pokemon = [
     name: "kommo-o",
     type1: "dragon",
     type2: "fighting",
-    typeMemoryHint: "",
+    typeMemoryHint: "鱗の鎧を鳴らして戦う竜なのでドラゴンとかくとう。音は特徴でタイプではない。",
   },
   {
     generation: 7,
@@ -642,7 +648,7 @@ export const generation7Pokemon = [
     name: "tapu-koko",
     type1: "electric",
     type2: "fairy",
-    typeMemoryHint: "",
+    typeMemoryHint: "守り神の妖精でフェアリー、雷をまとった姿からでんきタイプも付く。",
   },
   {
     generation: 7,
@@ -652,7 +658,7 @@ export const generation7Pokemon = [
     name: "tapu-lele",
     type1: "psychic",
     type2: "fairy",
-    typeMemoryHint: "",
+    typeMemoryHint: "守り神の妖精でフェアリー、精神を揺さぶる神秘性からエスパータイプも付く。",
   },
   {
     generation: 7,
@@ -662,7 +668,7 @@ export const generation7Pokemon = [
     name: "tapu-bulu",
     type1: "grass",
     type2: "fairy",
-    typeMemoryHint: "",
+    typeMemoryHint: "守り神の妖精でフェアリー、牛のような姿と草木の力からくさタイプも付く。",
   },
   {
     generation: 7,
@@ -672,7 +678,7 @@ export const generation7Pokemon = [
     name: "tapu-fini",
     type1: "water",
     type2: "fairy",
-    typeMemoryHint: "",
+    typeMemoryHint: "守り神の妖精でフェアリー、海を司る印象からみずタイプも付く。",
   },
   {
     generation: 7,
@@ -682,7 +688,7 @@ export const generation7Pokemon = [
     name: "cosmog",
     type1: "psychic",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "宇宙の雲のような幼体で、星の神秘からエスパータイプとして覚える。",
   },
   {
     generation: 7,
@@ -692,7 +698,7 @@ export const generation7Pokemon = [
     name: "cosmoem",
     type1: "psychic",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "宇宙の繭のような姿でエスパータイプ。金属っぽく見えても標準は単エスパー。",
   },
   {
     generation: 7,
@@ -702,7 +708,7 @@ export const generation7Pokemon = [
     name: "solgaleo",
     type1: "psychic",
     type2: "steel",
-    typeMemoryHint: "",
+    typeMemoryHint: "太陽の獅子でエスパー、金属のように輝く体からはがねタイプも付く。",
   },
   {
     generation: 7,
@@ -712,7 +718,7 @@ export const generation7Pokemon = [
     name: "lunala",
     type1: "psychic",
     type2: "ghost",
-    typeMemoryHint: "",
+    typeMemoryHint: "月のコウモリでエスパー、夜に広がる霊的な翼からゴーストタイプも付く。",
   },
   {
     generation: 7,
@@ -722,7 +728,7 @@ export const generation7Pokemon = [
     name: "nihilego",
     type1: "rock",
     type2: "poison",
-    typeMemoryHint: "",
+    typeMemoryHint: "クラゲのようなウルトラビーストで、鉱物感のある体からいわ、毒々しさからどく。",
   },
   {
     generation: 7,
@@ -732,7 +738,7 @@ export const generation7Pokemon = [
     name: "buzzwole",
     type1: "bug",
     type2: "fighting",
-    typeMemoryHint: "",
+    typeMemoryHint: "蚊のような虫でむし、極端な筋肉と格闘姿勢からかくとうタイプも付く。",
   },
   {
     generation: 7,
@@ -742,7 +748,7 @@ export const generation7Pokemon = [
     name: "pheromosa",
     type1: "bug",
     type2: "fighting",
-    typeMemoryHint: "",
+    typeMemoryHint: "細い虫のウルトラビーストでむし、しなやかな蹴り技からかくとうタイプも付く。",
   },
   {
     generation: 7,
@@ -752,7 +758,8 @@ export const generation7Pokemon = [
     name: "xurkitree",
     type1: "electric",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "電線そのもののようなウルトラビーストなのででんきタイプ。木ではなく電気配線を見る。",
   },
   {
     generation: 7,
@@ -762,7 +769,7 @@ export const generation7Pokemon = [
     name: "celesteela",
     type1: "steel",
     type2: "flying",
-    typeMemoryHint: "",
+    typeMemoryHint: "竹やロケットのような金属体ではがね、空へ飛ぶ印象からひこうタイプも付く。",
   },
   {
     generation: 7,
@@ -772,7 +779,7 @@ export const generation7Pokemon = [
     name: "kartana",
     type1: "grass",
     type2: "steel",
-    typeMemoryHint: "",
+    typeMemoryHint: "紙のように薄い植物でくさ、刃物のような鋭い体からはがねタイプも付く。",
   },
   {
     generation: 7,
@@ -782,7 +789,7 @@ export const generation7Pokemon = [
     name: "guzzlord",
     type1: "dark",
     type2: "dragon",
-    typeMemoryHint: "",
+    typeMemoryHint: "何でも食べる暗黒の怪物であく、巨大な竜のような体からドラゴンタイプも付く。",
   },
   {
     generation: 7,
@@ -792,7 +799,7 @@ export const generation7Pokemon = [
     name: "necrozma",
     type1: "psychic",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "光を吸収する結晶生命で、精神的な異質さからエスパータイプとして覚える。",
   },
   {
     generation: 7,
@@ -802,7 +809,7 @@ export const generation7Pokemon = [
     name: "magearna",
     type1: "steel",
     type2: "fairy",
-    typeMemoryHint: "",
+    typeMemoryHint: "歯車をもつ人工の人形ではがね、かわいらしい幻の雰囲気からフェアリーも付く。",
   },
   {
     generation: 7,
@@ -812,7 +819,7 @@ export const generation7Pokemon = [
     name: "marshadow",
     type1: "fighting",
     type2: "ghost",
-    typeMemoryHint: "",
+    typeMemoryHint: "影に潜む格闘家なのでかくとう、影そのものの霊的な姿からゴーストも付く。",
   },
   {
     generation: 7,
@@ -822,7 +829,7 @@ export const generation7Pokemon = [
     name: "poipole",
     type1: "poison",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "毒液をもつ小さなウルトラビーストなのでどくタイプ。かわいくても毒針を見る。",
   },
   {
     generation: 7,
@@ -832,7 +839,7 @@ export const generation7Pokemon = [
     name: "naganadel",
     type1: "poison",
     type2: "dragon",
-    typeMemoryHint: "",
+    typeMemoryHint: "毒針をもつ竜のような姿なのでどくとドラゴン。細い体を異世界の竜として覚える。",
   },
   {
     generation: 7,
@@ -842,7 +849,7 @@ export const generation7Pokemon = [
     name: "stakataka",
     type1: "rock",
     type2: "steel",
-    typeMemoryHint: "",
+    typeMemoryHint: "積み上がった石垣なのでいわ、ブロックのような金属感からはがねタイプも付く。",
   },
   {
     generation: 7,
@@ -852,7 +859,7 @@ export const generation7Pokemon = [
     name: "blacephalon",
     type1: "fire",
     type2: "ghost",
-    typeMemoryHint: "",
+    typeMemoryHint: "爆発する火の頭でほのお、ピエロのような霊的な異質さからゴーストも付く。",
   },
   {
     generation: 7,
@@ -862,7 +869,7 @@ export const generation7Pokemon = [
     name: "zeraora",
     type1: "electric",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "雷のように素早い幻の獣なのででんきタイプ。黄色い爪と電撃を手がかりにする。",
   },
   {
     generation: 7,
@@ -872,7 +879,8 @@ export const generation7Pokemon = [
     name: "meltan",
     type1: "steel",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "ナットのような金属生命なので、はがねタイプ。小さくても金属そのものとして覚える。",
   },
   {
     generation: 7,
@@ -882,6 +890,6 @@ export const generation7Pokemon = [
     name: "melmetal",
     type1: "steel",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "液体金属の巨人なので、はがねタイプ。筋肉質でも格闘ではなく金属の体を見る。",
   },
 ] satisfies PokemonQuizRecord[];

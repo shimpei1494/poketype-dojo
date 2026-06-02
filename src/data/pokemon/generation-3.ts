@@ -12,7 +12,8 @@ export const generation3Pokemon = [
     name: "treecko",
     type1: "grass",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "ヤモリのような姿でも、しっぽの葉と緑の体がくさタイプの手がかり。単タイプとして覚える。",
   },
   {
     generation: 3,
@@ -22,7 +23,8 @@ export const generation3Pokemon = [
     name: "grovyle",
     type1: "grass",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "腕の葉っぱと森を走るトカゲの印象からくさタイプ。素早さより植物の刃を主役に見る。",
   },
   {
     generation: 3,
@@ -32,7 +34,8 @@ export const generation3Pokemon = [
     name: "sceptile",
     type1: "grass",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "大きな葉のしっぽと森の爬虫類モチーフからくさタイプ。ドラゴン風でも標準タイプは単くさ。",
   },
   {
     generation: 3,
@@ -42,7 +45,8 @@ export const generation3Pokemon = [
     name: "torchic",
     type1: "fire",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "ひよこの姿でも、名前のアチャと炎色の体からほのおタイプ。鳥らしさより火の雛を見る。",
   },
   {
     generation: 3,
@@ -52,7 +56,7 @@ export const generation3Pokemon = [
     name: "combusken",
     type1: "fire",
     type2: "fighting",
-    typeMemoryHint: "",
+    typeMemoryHint: "ほのおの鳥系に、蹴り技を使う格闘家らしさが加わってかくとうタイプも付く。",
   },
   {
     generation: 3,
@@ -62,7 +66,8 @@ export const generation3Pokemon = [
     name: "blaziken",
     type1: "fire",
     type2: "fighting",
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "燃えるような腕と脚技でほのお・かくとう。鳥の姿でも、戦う炎の格闘家として覚える。",
   },
   {
     generation: 3,
@@ -72,7 +77,7 @@ export const generation3Pokemon = [
     name: "mudkip",
     type1: "water",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "水辺の両生類で青い体がみずタイプの目印。頭のひれも水中生活を連想させる。",
   },
   {
     generation: 3,
@@ -82,7 +87,7 @@ export const generation3Pokemon = [
     name: "marshtomp",
     type1: "water",
     type2: "ground",
-    typeMemoryHint: "",
+    typeMemoryHint: "みずの両生類に、泥沼で暮らす印象が加わってじめんタイプも付く。",
   },
   {
     generation: 3,
@@ -92,7 +97,7 @@ export const generation3Pokemon = [
     name: "swampert",
     type1: "water",
     type2: "ground",
-    typeMemoryHint: "",
+    typeMemoryHint: "大きな水辺の両生類でみず、泥や沼地に強い体からじめんタイプもセットで覚える。",
   },
   {
     generation: 3,
@@ -102,7 +107,8 @@ export const generation3Pokemon = [
     name: "poochyena",
     type1: "dark",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "黒い犬のような姿と噛みつく荒々しさからあくタイプ。普通の犬ではなく夜の悪役感を見る。",
   },
   {
     generation: 3,
@@ -112,7 +118,7 @@ export const generation3Pokemon = [
     name: "mightyena",
     type1: "dark",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "威圧的な黒い狼であくタイプ。牙やたてがみの怖さを、暗い性質の手がかりにする。",
   },
   {
     generation: 3,
@@ -122,7 +128,8 @@ export const generation3Pokemon = [
     name: "zigzagoon",
     type1: "normal",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "ジグザグに走る小動物で、特別な元素より身近な獣らしさが中心なのでノーマルタイプ。",
   },
   {
     generation: 3,
@@ -132,7 +139,8 @@ export const generation3Pokemon = [
     name: "linoone",
     type1: "normal",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "まっすぐ走るイタチのような獣でノーマル。素早さは特徴で、タイプは普通の動物枠。",
   },
   {
     generation: 3,
@@ -142,7 +150,7 @@ export const generation3Pokemon = [
     name: "wurmple",
     type1: "bug",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "小さないもむしの姿なのでむしタイプ。進化先が分かれても、幼虫として覚える。",
   },
   {
     generation: 3,
@@ -152,7 +160,7 @@ export const generation3Pokemon = [
     name: "silcoon",
     type1: "bug",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "まゆの姿なのでむしタイプ。中でアゲハントへ育つ、虫の成長途中として見る。",
   },
   {
     generation: 3,
@@ -162,7 +170,7 @@ export const generation3Pokemon = [
     name: "beautifly",
     type1: "bug",
     type2: "flying",
-    typeMemoryHint: "",
+    typeMemoryHint: "チョウの姿でむし、羽で飛ぶのでひこう。美しさより虫と飛行をセットで覚える。",
   },
   {
     generation: 3,
@@ -172,7 +180,8 @@ export const generation3Pokemon = [
     name: "cascoon",
     type1: "bug",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "まゆの姿なのでむしタイプ。暗い色でも毒ではなく、ドクケイルへ育つ前段階として覚える。",
   },
   {
     generation: 3,
@@ -182,7 +191,8 @@ export const generation3Pokemon = [
     name: "dustox",
     type1: "bug",
     type2: "poison",
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "蛾なのでむし、毒の粉をまく印象からどくタイプも付く。羽の模様より粉を意識する。",
   },
   {
     generation: 3,
@@ -192,7 +202,8 @@ export const generation3Pokemon = [
     name: "lotad",
     type1: "water",
     type2: "grass",
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "ハスの葉なのでくさ、水面に浮かぶ植物なのでみずも付く。葉っぱだけでなく池を思い出す。",
   },
   {
     generation: 3,
@@ -202,7 +213,7 @@ export const generation3Pokemon = [
     name: "lombre",
     type1: "water",
     type2: "grass",
-    typeMemoryHint: "",
+    typeMemoryHint: "水辺のハスの葉とカッパ風の姿からみず・くさ。ぬめった池の植物として覚える。",
   },
   {
     generation: 3,
@@ -212,7 +223,8 @@ export const generation3Pokemon = [
     name: "ludicolo",
     type1: "water",
     type2: "grass",
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "水草とカッパの踊り手なのでみず・くさ。陽気さより、ハスと水辺の組み合わせを見る。",
   },
   {
     generation: 3,
@@ -222,7 +234,7 @@ export const generation3Pokemon = [
     name: "seedot",
     type1: "grass",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "どんぐりや種の姿なのでくさタイプ。硬そうでも、岩ではなく木の実として覚える。",
   },
   {
     generation: 3,
@@ -232,7 +244,7 @@ export const generation3Pokemon = [
     name: "nuzleaf",
     type1: "grass",
     type2: "dark",
-    typeMemoryHint: "",
+    typeMemoryHint: "葉っぱの体でくさ、天狗のような怪しさや悪戯っぽさからあくタイプも付く。",
   },
   {
     generation: 3,
@@ -242,7 +254,7 @@ export const generation3Pokemon = [
     name: "shiftry",
     type1: "grass",
     type2: "dark",
-    typeMemoryHint: "",
+    typeMemoryHint: "天狗の団扇のような葉でくさ、山の怪異のような怖さからあくタイプも覚える。",
   },
   {
     generation: 3,
@@ -252,7 +264,7 @@ export const generation3Pokemon = [
     name: "taillow",
     type1: "normal",
     type2: "flying",
-    typeMemoryHint: "",
+    typeMemoryHint: "小鳥なのでひこう、特別な属性を持たない身近な鳥としてノーマルも付く。",
   },
   {
     generation: 3,
@@ -262,7 +274,8 @@ export const generation3Pokemon = [
     name: "swellow",
     type1: "normal",
     type2: "flying",
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "ツバメのような鳥でひこう。高速で飛んでも特殊属性ではなく、ノーマルもセットで覚える。",
   },
   {
     generation: 3,
@@ -272,7 +285,8 @@ export const generation3Pokemon = [
     name: "wingull",
     type1: "water",
     type2: "flying",
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "海鳥なのでみずとひこう。鳥だからノーマルではなく、海辺で魚を取る姿を水に結びつける。",
   },
   {
     generation: 3,
@@ -282,7 +296,7 @@ export const generation3Pokemon = [
     name: "pelipper",
     type1: "water",
     type2: "flying",
-    typeMemoryHint: "",
+    typeMemoryHint: "ペリカンのような海鳥でみず・ひこう。大きなくちばしは、水辺の鳥の目印。",
   },
   {
     generation: 3,
@@ -292,7 +306,8 @@ export const generation3Pokemon = [
     name: "ralts",
     type1: "psychic",
     type2: "fairy",
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "人の感情を感じる不思議な力でエスパー、現在は妖精的な雰囲気からフェアリーも付く。",
   },
   {
     generation: 3,
@@ -302,7 +317,7 @@ export const generation3Pokemon = [
     name: "kirlia",
     type1: "psychic",
     type2: "fairy",
-    typeMemoryHint: "",
+    typeMemoryHint: "踊るような人型でエスパー、優雅で妖精的な雰囲気からフェアリーも覚える。",
   },
   {
     generation: 3,
@@ -312,7 +327,7 @@ export const generation3Pokemon = [
     name: "gardevoir",
     type1: "psychic",
     type2: "fairy",
-    typeMemoryHint: "",
+    typeMemoryHint: "人を守る超能力でエスパー、神秘的で優美な守護者らしさからフェアリーも付く。",
   },
   {
     generation: 3,
@@ -322,7 +337,8 @@ export const generation3Pokemon = [
     name: "surskit",
     type1: "bug",
     type2: "water",
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "アメンボなのでむし、水面をすべる暮らしからみずタイプも付く。虫と水面をセットで見る。",
   },
   {
     generation: 3,
@@ -332,7 +348,7 @@ export const generation3Pokemon = [
     name: "masquerain",
     type1: "bug",
     type2: "flying",
-    typeMemoryHint: "",
+    typeMemoryHint: "虫の進化系でむし、羽で舞うためひこう。水タイプは進化で消える点に注意。",
   },
   {
     generation: 3,
@@ -342,7 +358,7 @@ export const generation3Pokemon = [
     name: "shroomish",
     type1: "grass",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "キノコそのものなのでくさタイプ。毒っぽく見えても、標準タイプは単くさ。",
   },
   {
     generation: 3,
@@ -352,7 +368,7 @@ export const generation3Pokemon = [
     name: "breloom",
     type1: "grass",
     type2: "fighting",
-    typeMemoryHint: "",
+    typeMemoryHint: "キノコのくさに、パンチや蹴りで戦う姿が加わってかくとうタイプも付く。",
   },
   {
     generation: 3,
@@ -362,7 +378,7 @@ export const generation3Pokemon = [
     name: "slakoth",
     type1: "normal",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "ナマケモノの姿で、特別な元素より動物らしさが中心なのでノーマルタイプ。",
   },
   {
     generation: 3,
@@ -372,7 +388,7 @@ export const generation3Pokemon = [
     name: "vigoroth",
     type1: "normal",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "やる気に満ちた獣でも、特殊な属性ではなく普通の動物枠なのでノーマルタイプ。",
   },
   {
     generation: 3,
@@ -382,7 +398,7 @@ export const generation3Pokemon = [
     name: "slaking",
     type1: "normal",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "圧倒的な力の大型獣だが、元素や格闘ではなく普通の生き物としてノーマルタイプ。",
   },
   {
     generation: 3,
@@ -392,7 +408,7 @@ export const generation3Pokemon = [
     name: "nincada",
     type1: "bug",
     type2: "ground",
-    typeMemoryHint: "",
+    typeMemoryHint: "セミの幼虫なのでむし、土の中で暮らすためじめんタイプも付く。",
   },
   {
     generation: 3,
@@ -402,7 +418,7 @@ export const generation3Pokemon = [
     name: "ninjask",
     type1: "bug",
     type2: "flying",
-    typeMemoryHint: "",
+    typeMemoryHint: "セミ忍者のような虫でむし、薄い羽で高速飛行するためひこうタイプも付く。",
   },
   {
     generation: 3,
@@ -412,7 +428,7 @@ export const generation3Pokemon = [
     name: "shedinja",
     type1: "bug",
     type2: "ghost",
-    typeMemoryHint: "",
+    typeMemoryHint: "抜け殻の虫なのでむし、魂だけが残ったような不思議さからゴーストタイプも付く。",
   },
   {
     generation: 3,
@@ -422,7 +438,7 @@ export const generation3Pokemon = [
     name: "whismur",
     type1: "normal",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "大きな声を出す小動物で、音は特徴だがタイプは普通の生き物寄りのノーマル。",
   },
   {
     generation: 3,
@@ -432,7 +448,7 @@ export const generation3Pokemon = [
     name: "loudred",
     type1: "normal",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "スピーカーのような耳で音を出すが、音タイプはないためノーマルとして覚える。",
   },
   {
     generation: 3,
@@ -442,7 +458,7 @@ export const generation3Pokemon = [
     name: "exploud",
     type1: "normal",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "爆音を出す怪獣のようでも、音の力はタイプではなく特徴。標準タイプはノーマル。",
   },
   {
     generation: 3,
@@ -452,7 +468,7 @@ export const generation3Pokemon = [
     name: "makuhita",
     type1: "fighting",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "相撲取りのような構えと張り手からかくとうタイプ。丸い体より戦う姿を優先する。",
   },
   {
     generation: 3,
@@ -462,7 +478,7 @@ export const generation3Pokemon = [
     name: "hariyama",
     type1: "fighting",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "大きな相撲取りの姿なのでかくとうタイプ。手のひらの張り手が一番の手がかり。",
   },
   {
     generation: 3,
@@ -472,7 +488,8 @@ export const generation3Pokemon = [
     name: "azurill",
     type1: "normal",
     type2: "fairy",
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "マリル系の赤ちゃんでフェアリー、まだ水辺らしさより普通の赤ちゃん枠でノーマルも付く。",
   },
   {
     generation: 3,
@@ -482,7 +499,8 @@ export const generation3Pokemon = [
     name: "nosepass",
     type1: "rock",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "磁石の鼻が目立つが、硬い石像のような体からいわタイプ。でんきではない点に注意。",
   },
   {
     generation: 3,
@@ -492,7 +510,7 @@ export const generation3Pokemon = [
     name: "skitty",
     type1: "normal",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "子猫の姿で、特別な元素よりペットらしい普通の動物としてノーマルタイプ。",
   },
   {
     generation: 3,
@@ -502,7 +520,7 @@ export const generation3Pokemon = [
     name: "delcatty",
     type1: "normal",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "上品な猫の姿でノーマルタイプ。かわいさや優雅さは特徴で、フェアリーではない。",
   },
   {
     generation: 3,
@@ -512,7 +530,7 @@ export const generation3Pokemon = [
     name: "sableye",
     type1: "dark",
     type2: "ghost",
-    typeMemoryHint: "",
+    typeMemoryHint: "宝石の目をもつ闇の小鬼であく、影に潜む不気味さからゴーストタイプも付く。",
   },
   {
     generation: 3,
@@ -522,7 +540,8 @@ export const generation3Pokemon = [
     name: "mawile",
     type1: "steel",
     type2: "fairy",
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "大きな鋼のあごではがね、かわいい妖怪のような雰囲気から現在はフェアリーも付く。",
   },
   {
     generation: 3,
@@ -532,7 +551,7 @@ export const generation3Pokemon = [
     name: "aron",
     type1: "steel",
     type2: "rock",
-    typeMemoryHint: "",
+    typeMemoryHint: "小さな恐竜のようでも、金属の体ではがね、岩を食べる印象からいわタイプも付く。",
   },
   {
     generation: 3,
@@ -542,7 +561,7 @@ export const generation3Pokemon = [
     name: "lairon",
     type1: "steel",
     type2: "rock",
-    typeMemoryHint: "",
+    typeMemoryHint: "鉄の装甲ではがね、岩山に住む怪獣らしさからいわタイプも覚える。",
   },
   {
     generation: 3,
@@ -552,7 +571,7 @@ export const generation3Pokemon = [
     name: "aggron",
     type1: "steel",
     type2: "rock",
-    typeMemoryHint: "",
+    typeMemoryHint: "重い鋼の鎧ではがね、山の怪獣の岩っぽさからいわタイプも付く。",
   },
   {
     generation: 3,
@@ -562,7 +581,7 @@ export const generation3Pokemon = [
     name: "meditite",
     type1: "fighting",
     type2: "psychic",
-    typeMemoryHint: "",
+    typeMemoryHint: "修行する格闘家なのでかくとう、瞑想や精神修行のイメージからエスパーも付く。",
   },
   {
     generation: 3,
@@ -572,7 +591,8 @@ export const generation3Pokemon = [
     name: "medicham",
     type1: "fighting",
     type2: "psychic",
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "ヨガや瞑想で精神を研ぎ澄ます格闘家なので、かくとうとエスパーをセットで覚える。",
   },
   {
     generation: 3,
@@ -582,7 +602,7 @@ export const generation3Pokemon = [
     name: "electrike",
     type1: "electric",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "黄色い犬のような姿と稲妻のたてがみからでんきタイプ。走る電気として見る。",
   },
   {
     generation: 3,
@@ -592,7 +612,7 @@ export const generation3Pokemon = [
     name: "manectric",
     type1: "electric",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "青い雷犬のような姿ででんきタイプ。鋭い体のラインを稲妻に結びつける。",
   },
   {
     generation: 3,
@@ -602,7 +622,7 @@ export const generation3Pokemon = [
     name: "plusle",
     type1: "electric",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "プラス記号のほっぺと応援する電気ネズミの印象からでんきタイプ。",
   },
   {
     generation: 3,
@@ -612,7 +632,7 @@ export const generation3Pokemon = [
     name: "minun",
     type1: "electric",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "マイナス記号のほっぺが手がかり。プラスルと対になるでんきタイプとして覚える。",
   },
   {
     generation: 3,
@@ -622,7 +642,8 @@ export const generation3Pokemon = [
     name: "volbeat",
     type1: "bug",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "ホタルの虫なのでむしタイプ。光る尾は電気ではなく、発光する虫の特徴として見る。",
   },
   {
     generation: 3,
@@ -632,7 +653,7 @@ export const generation3Pokemon = [
     name: "illumise",
     type1: "bug",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "ホタルや蛍光の虫モチーフなのでむしタイプ。優雅でもフェアリーではない。",
   },
   {
     generation: 3,
@@ -642,7 +663,7 @@ export const generation3Pokemon = [
     name: "roselia",
     type1: "grass",
     type2: "poison",
-    typeMemoryHint: "",
+    typeMemoryHint: "バラの花でくさ、トゲや毒をもつ花のイメージからどくタイプも付く。",
   },
   {
     generation: 3,
@@ -652,7 +673,7 @@ export const generation3Pokemon = [
     name: "gulpin",
     type1: "poison",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "胃袋のような体で何でも飲み込む毒のスライムなのでどくタイプ。紫色も手がかり。",
   },
   {
     generation: 3,
@@ -662,7 +683,7 @@ export const generation3Pokemon = [
     name: "swalot",
     type1: "poison",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "大きな胃袋のような姿でどくタイプ。飲み込んで溶かす危険さを毒に結びつける。",
   },
   {
     generation: 3,
@@ -672,7 +693,7 @@ export const generation3Pokemon = [
     name: "carvanha",
     type1: "water",
     type2: "dark",
-    typeMemoryHint: "",
+    typeMemoryHint: "ピラニアの魚でみず、噛みつく凶暴さからあくタイプも付く。",
   },
   {
     generation: 3,
@@ -682,7 +703,7 @@ export const generation3Pokemon = [
     name: "sharpedo",
     type1: "water",
     type2: "dark",
-    typeMemoryHint: "",
+    typeMemoryHint: "サメなのでみず、荒々しく獰猛なイメージからあくタイプも覚える。",
   },
   {
     generation: 3,
@@ -692,7 +713,7 @@ export const generation3Pokemon = [
     name: "wailmer",
     type1: "water",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "小さなクジラなのでみずタイプ。丸い体でも海の哺乳類として覚える。",
   },
   {
     generation: 3,
@@ -702,7 +723,7 @@ export const generation3Pokemon = [
     name: "wailord",
     type1: "water",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "巨大なクジラなのでみずタイプ。大きさは特徴で、複合ではなく単みず。",
   },
   {
     generation: 3,
@@ -712,7 +733,8 @@ export const generation3Pokemon = [
     name: "numel",
     type1: "fire",
     type2: "ground",
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "背中のこぶにマグマをためるラクダなのでほのお、火山地帯を歩くためじめんも付く。",
   },
   {
     generation: 3,
@@ -722,7 +744,7 @@ export const generation3Pokemon = [
     name: "camerupt",
     type1: "fire",
     type2: "ground",
-    typeMemoryHint: "",
+    typeMemoryHint: "火山のようなこぶでほのお、地面を揺らすラクダの重さからじめんタイプも覚える。",
   },
   {
     generation: 3,
@@ -732,7 +754,8 @@ export const generation3Pokemon = [
     name: "torkoal",
     type1: "fire",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "甲羅の穴から煙を出す亀なのでほのおタイプ。火山ガスのような熱を手がかりにする。",
   },
   {
     generation: 3,
@@ -742,7 +765,7 @@ export const generation3Pokemon = [
     name: "spoink",
     type1: "psychic",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "真珠をバネで跳ねさせる不思議なブタで、念力のような力からエスパータイプ。",
   },
   {
     generation: 3,
@@ -752,7 +775,7 @@ export const generation3Pokemon = [
     name: "grumpig",
     type1: "psychic",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "真珠で精神力を操るブタとしてエスパータイプ。踊るような模様も催眠的に見る。",
   },
   {
     generation: 3,
@@ -762,7 +785,7 @@ export const generation3Pokemon = [
     name: "spinda",
     type1: "normal",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "パンダのような姿だが、ぶち模様の揺れは特徴でタイプは普通の動物枠のノーマル。",
   },
   {
     generation: 3,
@@ -772,7 +795,7 @@ export const generation3Pokemon = [
     name: "trapinch",
     type1: "ground",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "砂地のアリジゴク幼虫なのでじめんタイプ。大きなあごより砂の穴を思い出す。",
   },
   {
     generation: 3,
@@ -782,7 +805,7 @@ export const generation3Pokemon = [
     name: "vibrava",
     type1: "ground",
     type2: "dragon",
-    typeMemoryHint: "",
+    typeMemoryHint: "地面の幼虫から進化し、砂漠の竜の姿になるためじめんとドラゴンを覚える。",
   },
   {
     generation: 3,
@@ -792,7 +815,8 @@ export const generation3Pokemon = [
     name: "flygon",
     type1: "ground",
     type2: "dragon",
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "砂漠のトンボ竜なのでじめんとドラゴン。羽があっても標準タイプはひこうではない点に注意。",
   },
   {
     generation: 3,
@@ -802,7 +826,7 @@ export const generation3Pokemon = [
     name: "cacnea",
     type1: "grass",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "サボテンなのでくさタイプ。砂漠の植物として覚え、トゲはタイプではなく特徴。",
   },
   {
     generation: 3,
@@ -812,7 +836,7 @@ export const generation3Pokemon = [
     name: "cacturne",
     type1: "grass",
     type2: "dark",
-    typeMemoryHint: "",
+    typeMemoryHint: "サボテンのくさに、夜に人を待ち伏せる不気味さからあくタイプも付く。",
   },
   {
     generation: 3,
@@ -822,7 +846,8 @@ export const generation3Pokemon = [
     name: "swablu",
     type1: "normal",
     type2: "flying",
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "綿雲の翼で飛ぶ小鳥なのでひこう、進化前は竜ではなく普通の鳥としてノーマルも付く。",
   },
   {
     generation: 3,
@@ -832,7 +857,7 @@ export const generation3Pokemon = [
     name: "altaria",
     type1: "dragon",
     type2: "flying",
-    typeMemoryHint: "",
+    typeMemoryHint: "雲の翼をもつ竜鳥なのでドラゴンとひこう。ふわふわでもフェアリーではない。",
   },
   {
     generation: 3,
@@ -842,7 +867,8 @@ export const generation3Pokemon = [
     name: "zangoose",
     type1: "normal",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "白いマングースのような姿でノーマルタイプ。ハブネークとの因縁は特徴で、タイプではない。",
   },
   {
     generation: 3,
@@ -852,7 +878,8 @@ export const generation3Pokemon = [
     name: "seviper",
     type1: "poison",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "毒蛇の姿と紫の模様からどくタイプ。ザングースとの因縁より、蛇の毒を手がかりにする。",
   },
   {
     generation: 3,
@@ -862,7 +889,7 @@ export const generation3Pokemon = [
     name: "lunatone",
     type1: "rock",
     type2: "psychic",
-    typeMemoryHint: "",
+    typeMemoryHint: "月の石のような体でいわ、月や宇宙の神秘からエスパータイプも付く。",
   },
   {
     generation: 3,
@@ -872,7 +899,7 @@ export const generation3Pokemon = [
     name: "solrock",
     type1: "rock",
     type2: "psychic",
-    typeMemoryHint: "",
+    typeMemoryHint: "太陽の石のような体でいわ、宇宙的な念力の印象からエスパータイプも覚える。",
   },
   {
     generation: 3,
@@ -882,7 +909,7 @@ export const generation3Pokemon = [
     name: "barboach",
     type1: "water",
     type2: "ground",
-    typeMemoryHint: "",
+    typeMemoryHint: "ドジョウなのでみず、泥の底にいる魚としてじめんタイプも付く。",
   },
   {
     generation: 3,
@@ -892,7 +919,7 @@ export const generation3Pokemon = [
     name: "whiscash",
     type1: "water",
     type2: "ground",
-    typeMemoryHint: "",
+    typeMemoryHint: "ナマズなのでみず、泥や地震のイメージからじめんタイプも覚える。",
   },
   {
     generation: 3,
@@ -902,7 +929,7 @@ export const generation3Pokemon = [
     name: "corphish",
     type1: "water",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "ザリガニなのでみずタイプ。赤いハサミは強そうでも、進化前はまだあくではない。",
   },
   {
     generation: 3,
@@ -912,7 +939,7 @@ export const generation3Pokemon = [
     name: "crawdaunt",
     type1: "water",
     type2: "dark",
-    typeMemoryHint: "",
+    typeMemoryHint: "ザリガニのみずに、荒っぽい悪役のような顔つきからあくタイプが加わる。",
   },
   {
     generation: 3,
@@ -922,7 +949,7 @@ export const generation3Pokemon = [
     name: "baltoy",
     type1: "ground",
     type2: "psychic",
-    typeMemoryHint: "",
+    typeMemoryHint: "古代の土偶のような体でじめん、念力で浮く不思議さからエスパータイプも付く。",
   },
   {
     generation: 3,
@@ -932,7 +959,7 @@ export const generation3Pokemon = [
     name: "claydol",
     type1: "ground",
     type2: "psychic",
-    typeMemoryHint: "",
+    typeMemoryHint: "粘土人形の地面モチーフでじめん、古代遺跡の神秘からエスパータイプも覚える。",
   },
   {
     generation: 3,
@@ -942,7 +969,7 @@ export const generation3Pokemon = [
     name: "lileep",
     type1: "rock",
     type2: "grass",
-    typeMemoryHint: "",
+    typeMemoryHint: "化石の古代植物なのでいわとくさ。ユリのようでも、化石由来のいわを忘れない。",
   },
   {
     generation: 3,
@@ -952,7 +979,7 @@ export const generation3Pokemon = [
     name: "cradily",
     type1: "rock",
     type2: "grass",
-    typeMemoryHint: "",
+    typeMemoryHint: "化石から復元された海の植物でいわとくさ。触手より古代植物と化石を見る。",
   },
   {
     generation: 3,
@@ -962,7 +989,7 @@ export const generation3Pokemon = [
     name: "anorith",
     type1: "rock",
     type2: "bug",
-    typeMemoryHint: "",
+    typeMemoryHint: "化石の古代節足動物なのでいわ、虫のような体からむしタイプも付く。",
   },
   {
     generation: 3,
@@ -972,7 +999,7 @@ export const generation3Pokemon = [
     name: "armaldo",
     type1: "rock",
     type2: "bug",
-    typeMemoryHint: "",
+    typeMemoryHint: "化石の古代生物でいわ、鎧をまとった虫の進化形としてむしタイプも覚える。",
   },
   {
     generation: 3,
@@ -982,7 +1009,8 @@ export const generation3Pokemon = [
     name: "feebas",
     type1: "water",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "みすぼらしい魚でも、魚であることがみずタイプの手がかり。進化後の美しさに惑わされない。",
   },
   {
     generation: 3,
@@ -992,7 +1020,7 @@ export const generation3Pokemon = [
     name: "milotic",
     type1: "water",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "美しい水蛇や魚のような姿なのでみずタイプ。優雅でもフェアリーではなく単みず。",
   },
   {
     generation: 3,
@@ -1002,7 +1030,7 @@ export const generation3Pokemon = [
     name: "castform",
     type1: "normal",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "天気で姿を変えるが、基本形は特定の元素を持たないためノーマルタイプと覚える。",
   },
   {
     generation: 3,
@@ -1012,7 +1040,8 @@ export const generation3Pokemon = [
     name: "kecleon",
     type1: "normal",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "色を変えるカメレオンだが、変色能力はタイプではなく特徴。標準タイプはノーマル。",
   },
   {
     generation: 3,
@@ -1022,7 +1051,7 @@ export const generation3Pokemon = [
     name: "shuppet",
     type1: "ghost",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "捨てられた人形の怨念のような姿からゴーストタイプ。布の体を幽霊に結びつける。",
   },
   {
     generation: 3,
@@ -1032,7 +1061,7 @@ export const generation3Pokemon = [
     name: "banette",
     type1: "ghost",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "呪いの人形のような姿でゴーストタイプ。口のファスナーや影っぽさが手がかり。",
   },
   {
     generation: 3,
@@ -1042,7 +1071,7 @@ export const generation3Pokemon = [
     name: "duskull",
     type1: "ghost",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "一つ目の死神のような姿でゴーストタイプ。骨の模様と夜のイメージを覚える。",
   },
   {
     generation: 3,
@@ -1052,7 +1081,7 @@ export const generation3Pokemon = [
     name: "dusclops",
     type1: "ghost",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "包帯やミイラのような不気味な体でゴーストタイプ。単眼の怪しさも手がかり。",
   },
   {
     generation: 3,
@@ -1062,7 +1091,7 @@ export const generation3Pokemon = [
     name: "tropius",
     type1: "grass",
     type2: "flying",
-    typeMemoryHint: "",
+    typeMemoryHint: "首の葉やバナナの実でくさ、大きな翼で飛ぶためひこうタイプも付く。",
   },
   {
     generation: 3,
@@ -1072,7 +1101,8 @@ export const generation3Pokemon = [
     name: "chimecho",
     type1: "psychic",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "風鈴のような不思議な音色と念力の雰囲気からエスパータイプ。音そのものはタイプではない。",
   },
   {
     generation: 3,
@@ -1082,7 +1112,8 @@ export const generation3Pokemon = [
     name: "absol",
     type1: "dark",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "災いを知らせる黒白の獣なのであくタイプ。白い体でも、不吉な予兆の印象を優先する。",
   },
   {
     generation: 3,
@@ -1092,7 +1123,7 @@ export const generation3Pokemon = [
     name: "wynaut",
     type1: "psychic",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "ソーナンスの赤ちゃんで、影を返す不思議な力からエスパータイプとして覚える。",
   },
   {
     generation: 3,
@@ -1102,7 +1133,7 @@ export const generation3Pokemon = [
     name: "snorunt",
     type1: "ice",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "雪ん子のような姿と寒冷地の三角頭巾からこおりタイプ。幽霊ではなく雪の子。",
   },
   {
     generation: 3,
@@ -1112,7 +1143,7 @@ export const generation3Pokemon = [
     name: "glalie",
     type1: "ice",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "氷の鬼の顔そのものなのでこおりタイプ。鬼の怖さより凍った顔を手がかりにする。",
   },
   {
     generation: 3,
@@ -1122,7 +1153,7 @@ export const generation3Pokemon = [
     name: "spheal",
     type1: "ice",
     type2: "water",
-    typeMemoryHint: "",
+    typeMemoryHint: "氷の海にいる丸いアザラシなのでこおりとみず。かわいい見た目でも寒い海を見る。",
   },
   {
     generation: 3,
@@ -1132,7 +1163,7 @@ export const generation3Pokemon = [
     name: "sealeo",
     type1: "ice",
     type2: "water",
-    typeMemoryHint: "",
+    typeMemoryHint: "寒い海のアザラシでこおりとみず。牙やひげより、氷海の生き物として覚える。",
   },
   {
     generation: 3,
@@ -1142,7 +1173,7 @@ export const generation3Pokemon = [
     name: "walrein",
     type1: "ice",
     type2: "water",
-    typeMemoryHint: "",
+    typeMemoryHint: "巨大なトドでこおりとみず。白いひげと氷の海の王者らしさを手がかりにする。",
   },
   {
     generation: 3,
@@ -1152,7 +1183,7 @@ export const generation3Pokemon = [
     name: "clamperl",
     type1: "water",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "真珠を持つ貝なのでみずタイプ。硬い殻は特徴で、いわではない。",
   },
   {
     generation: 3,
@@ -1162,7 +1193,8 @@ export const generation3Pokemon = [
     name: "huntail",
     type1: "water",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "深海魚のような姿でみずタイプ。牙が怖くてもあくではなく、深海の魚として覚える。",
   },
   {
     generation: 3,
@@ -1172,7 +1204,7 @@ export const generation3Pokemon = [
     name: "gorebyss",
     type1: "water",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "細長い深海魚でみずタイプ。美しい色やサクラの名前は特徴で、単みず。",
   },
   {
     generation: 3,
@@ -1182,7 +1214,7 @@ export const generation3Pokemon = [
     name: "relicanth",
     type1: "water",
     type2: "rock",
-    typeMemoryHint: "",
+    typeMemoryHint: "古代魚なのでみず、硬い岩のようなうろこと化石魚の印象からいわタイプも付く。",
   },
   {
     generation: 3,
@@ -1192,7 +1224,7 @@ export const generation3Pokemon = [
     name: "luvdisc",
     type1: "water",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "ハート形の魚なのでみずタイプ。愛のモチーフは特徴で、フェアリーではない。",
   },
   {
     generation: 3,
@@ -1202,7 +1234,8 @@ export const generation3Pokemon = [
     name: "bagon",
     type1: "dragon",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "いつか空を飛びたい小さな竜なのでドラゴンタイプ。青い体でも水ではなく竜の幼体。",
   },
   {
     generation: 3,
@@ -1212,7 +1245,8 @@ export const generation3Pokemon = [
     name: "shelgon",
     type1: "dragon",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "硬い殻にこもって成長する竜の中間形なのでドラゴンタイプ。さなぎでもむしではない。",
   },
   {
     generation: 3,
@@ -1222,7 +1256,7 @@ export const generation3Pokemon = [
     name: "salamence",
     type1: "dragon",
     type2: "flying",
-    typeMemoryHint: "",
+    typeMemoryHint: "念願の翼を得た竜なのでドラゴンとひこう。飛べることが進化の大きな手がかり。",
   },
   {
     generation: 3,
@@ -1232,7 +1266,8 @@ export const generation3Pokemon = [
     name: "beldum",
     type1: "steel",
     type2: "psychic",
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "磁力で動く金属生命なので、はがねとエスパー。単なる機械ではなく念力系の金属と見る。",
   },
   {
     generation: 3,
@@ -1242,7 +1277,7 @@ export const generation3Pokemon = [
     name: "metang",
     type1: "steel",
     type2: "psychic",
-    typeMemoryHint: "",
+    typeMemoryHint: "金属の体ではがね、磁力や念力で浮く不思議さからエスパータイプも付く。",
   },
   {
     generation: 3,
@@ -1252,7 +1287,7 @@ export const generation3Pokemon = [
     name: "metagross",
     type1: "steel",
     type2: "psychic",
-    typeMemoryHint: "",
+    typeMemoryHint: "四つの脳をもつ金属生命なので、はがねとエスパー。重い体でも精神力を忘れない。",
   },
   {
     generation: 3,
@@ -1262,7 +1297,7 @@ export const generation3Pokemon = [
     name: "regirock",
     type1: "rock",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "岩でできた伝説のゴーレムなのでいわタイプ。名前のロックがそのまま手がかり。",
   },
   {
     generation: 3,
@@ -1272,7 +1307,8 @@ export const generation3Pokemon = [
     name: "regice",
     type1: "ice",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "氷でできた伝説のゴーレムなのでこおりタイプ。結晶のような体を見れば覚えやすい。",
   },
   {
     generation: 3,
@@ -1282,7 +1318,7 @@ export const generation3Pokemon = [
     name: "registeel",
     type1: "steel",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "金属でできた伝説のゴーレムなので、はがねタイプ。無機質な銀色の体が手がかり。",
   },
   {
     generation: 3,
@@ -1292,7 +1328,7 @@ export const generation3Pokemon = [
     name: "latias",
     type1: "dragon",
     type2: "psychic",
-    typeMemoryHint: "",
+    typeMemoryHint: "赤い翼の竜でドラゴン、心を通わせる神秘的な力からエスパータイプも付く。",
   },
   {
     generation: 3,
@@ -1302,7 +1338,7 @@ export const generation3Pokemon = [
     name: "latios",
     type1: "dragon",
     type2: "psychic",
-    typeMemoryHint: "",
+    typeMemoryHint: "青い竜でドラゴン、知性や精神感応の印象からエスパータイプも覚える。",
   },
   {
     generation: 3,
@@ -1312,7 +1348,7 @@ export const generation3Pokemon = [
     name: "kyogre",
     type1: "water",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "海を司る伝説なのでみずタイプ。シャチのような姿と大雨の印象が手がかり。",
   },
   {
     generation: 3,
@@ -1322,7 +1358,7 @@ export const generation3Pokemon = [
     name: "groudon",
     type1: "ground",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint: "大地を作る伝説なのでじめんタイプ。赤い怪獣でもほのおではなく陸地を司る存在。",
   },
   {
     generation: 3,
@@ -1332,7 +1368,8 @@ export const generation3Pokemon = [
     name: "rayquaza",
     type1: "dragon",
     type2: "flying",
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "天空を飛ぶ竜なのでドラゴンとひこう。緑の蛇のようでも、空の守護者として覚える。",
   },
   {
     generation: 3,
@@ -1342,7 +1379,7 @@ export const generation3Pokemon = [
     name: "jirachi",
     type1: "steel",
     type2: "psychic",
-    typeMemoryHint: "",
+    typeMemoryHint: "星に願いをかなえる幻でエスパー、金属の短冊や星形の体からはがねも付く。",
   },
   {
     generation: 3,
@@ -1352,6 +1389,7 @@ export const generation3Pokemon = [
     name: "deoxys",
     type1: "psychic",
     type2: null,
-    typeMemoryHint: "",
+    typeMemoryHint:
+      "宇宙ウイルス由来の超能力生命なのでエスパータイプ。形態が変わっても標準タイプは単エスパー。",
   },
 ] as const satisfies readonly PokemonQuizRecord[];
