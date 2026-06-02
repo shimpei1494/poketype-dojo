@@ -49,6 +49,17 @@ vp dev
 - `vp run knip` — 未使用ファイル・依存関係・エクスポートの検出（`knip.config.ts`）
 - `vp run doctor` — React ヘルスチェック（`react-doctor`、`--no-lint` 付き）
 
+## Netlify へのデプロイ
+
+このプロジェクトは TanStack Start 用の Netlify Vite plugin を使う構成です。Netlify では `netlify.toml` の設定が使われます。
+
+| 設定              | 値            |
+| ----------------- | ------------- |
+| Build command     | `vp build`    |
+| Publish directory | `dist/client` |
+
+Netlify の管理画面で GitHub リポジトリを import し、Free plan のサイトとして作成してください。push 後のビルドで SSR と Server Functions は Netlify Functions として生成されます。
+
 ## ライセンス
 
 [MIT](LICENSE.md)
