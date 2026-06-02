@@ -13,5 +13,6 @@
       "Bash(vp run knip*)",
       "Bash(vp run fix*)"
     ]
-  }
+  },
+  "enabledMcpjsonServers": ["mantine"]
 }

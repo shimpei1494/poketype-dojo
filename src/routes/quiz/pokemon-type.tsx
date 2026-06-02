@@ -11,11 +11,12 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import { createFileRoute } from "@tanstack/react-router";
+import { Link, createFileRoute } from "@tanstack/react-router";
 import { createServerFn } from "@tanstack/react-start";
 import { useCallback, useEffect, useMemo, useReducer, useRef } from "react";
 
 import { HomeLink } from "../../components/HomeLink";
+import { PokemonTypeMemoryHint } from "../../components/PokemonTypeMemoryHint";
 import { TypeBadge } from "../../components/TypeBadge";
 import { TypeGrid } from "../../components/TypeGrid";
 import {
@@ -41,6 +42,7 @@ type QuizState = {
   answeredCount: number;
   correctCount: number;
   hasAnswered: boolean;
+  isHintOpen: boolean;
   question: Question;
   selectedTypes: PokemonType[];
 };
@@ -53,6 +55,7 @@ type QuizAction =
   | { type: "answer" }
   | { type: "clearSelectedTypes" }
   | { questionPool: readonly PokemonQuizRecord[]; type: "nextQuestion" }
+  | { type: "toggleHint" }
   | { pokemonType: PokemonType; type: "toggleType" };
 
 const getInitialPokemonTypeQuestion = createServerFn({ method: "GET" })
@@ -263,8 +266,21 @@ function PokemonTypeQuizContent({
                 <Text c="dimmed" size="sm">
                   このポケモンのタイプは？
                 </Text>
+                <Link
+                  className="pokemon-question-detail-link"
+                  params={{ pokemonId: String(state.question.pokemon.id) }}
+                  to="/pokemon/$pokemonId"
+                >
+                  詳細を見る
+                </Link>
               </Stack>
             </Stack>
+            <PokemonTypeMemoryHint
+              hint={state.question.pokemon.typeMemoryHint}
+              isOpen={state.isHintOpen}
+              mode="interactive"
+              onToggle={() => dispatch({ type: "toggleHint" })}
+            />
           </Card>
 
           <Card className="glass-panel" p="lg">
@@ -344,6 +360,7 @@ function createInitialState(initialQuizData: InitialQuizData): QuizState {
     answeredCount: 0,
     correctCount: 0,
     hasAnswered: false,
+    isHintOpen: false,
     question: initialQuizData.initialQuestion,
     selectedTypes: [],
   };
@@ -376,9 +393,12 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
       return {
         ...state,
         hasAnswered: false,
+        isHintOpen: false,
         question: createQuestion(action.questionPool, state.question.pokemon.id),
         selectedTypes: [],
       };
+    case "toggleHint":
+      return { ...state, isHintOpen: !state.isHintOpen };
     case "toggleType": {
       if (state.hasAnswered) {
         return state;

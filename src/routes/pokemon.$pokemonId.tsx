@@ -2,6 +2,7 @@ import { Button, Card, Container, Group, Image, Stack, Text, Title } from "@mant
 import { Link, createFileRoute } from "@tanstack/react-router";
 
 import { HomeLink } from "../components/HomeLink";
+import { PokemonTypeMemoryHint } from "../components/PokemonTypeMemoryHint";
 import { TypeBadge } from "../components/TypeBadge";
 import { getPokemonImageUrl, pokemonQuizRecords } from "../data/pokemon";
 import {
@@ -85,6 +86,7 @@ function PokemonDetailPage() {
               </Group>
             </Stack>
           </Stack>
+          <PokemonTypeMemoryHint hint={pokemon.typeMemoryHint} mode="static" />
         </Card>
 
         <Group grow>

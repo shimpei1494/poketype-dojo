@@ -49,5 +49,6 @@ function createPokemonRecord(id: number, name: string): PokemonQuizRecord {
     name,
     type1: "grass",
     type2: null,
+    typeMemoryHint: "テスト用のタイプの覚え方。",
   };
 }
