@@ -1,3 +1,4 @@
+import netlify from "@netlify/vite-plugin-tanstack-start";
 import babel from "@rolldown/plugin-babel";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import react, { reactCompilerPreset } from "@vitejs/plugin-react";
@@ -53,6 +54,7 @@ export default defineConfig({
   },
   plugins: [
     tanstackStart(),
+    netlify(),
     // react's vite plugin must come after start's vite plugin
     react(),
     babel({ presets: [reactCompilerPreset()] }),
