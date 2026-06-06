@@ -1,65 +1,86 @@
-# TanStack Start スターターテンプレート
+# PokéType Dojo
 
-> [lightsound/tanstack-start-start](https://github.com/lightsound/tanstack-start-start) をベースに、Tailwind CSS を [Mantine](https://mantine.dev/) に置き換えた自分用テンプレートです。
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fbc674fc-e7c8-4301-9520-fd824674062b/deploy-status)](https://app.netlify.com/projects/poketype-dojo/deploys)
 
-[TanStack Start](https://tanstack.com/start) と [TanStack Router](https://tanstack.com/router) を使った最小構成のアプリケーションテンプレート。開発・ビルド・フォーマット・リント・テストは [Vite+](https://viteplus.dev/) で統一管理。
+PokéType Dojo は、ポケモンのタイプ相性とポケモンごとのタイプを覚え直すための学習アプリです。
 
-## 含まれるもの
+公開 URL: https://poketype-dojo.netlify.app/
+
+## 主な機能
+
+- タイプ相性チェッカー
+- タイプ相性クイズ
+- ポケモンタイプクイズ
+- ポケモン一覧とタイプ確認
+
+## 技術スタック
 
 - **TanStack Start** — `src/routes/` 配下のファイルベースルーティング
 - **React 19** + **TypeScript**
-- **Mantine** — UIコンポーネントライブラリ
-- **Vite+** 管理ツール：Oxlint、Oxfmt、`vite-plus/test` によるテスト（ワークフローや注意点は [AGENTS.md](AGENTS.md) を参照）
+- **Mantine** — UI コンポーネントライブラリ
+- **Vite+** — 開発、ビルド、フォーマット、Lint、テスト、パッケージ管理
+- **Netlify** — 本番デプロイ
 
-## 必要な環境
-
-[Vite+](https://viteplus.dev/guide/) をインストールして `vp` コマンドを PATH に追加してください。
-
-パッケージマネージャーは **`pnpm@10.32.1`** を使用。依存関係の管理は `vp install` などの Vite+ コマンドで行い、`pnpm` / `npm` / `yarn` を直接呼ぶのは避けてください。
+Vite+ の詳しい運用ルールは [AGENTS.md](AGENTS.md) を参照してください。アプリの用語やドメイン知識は [CONTEXT.md](CONTEXT.md) にまとめています。
 
 ## セットアップ
 
-\`\`\`bash
+Vite+ をインストールして `vp` コマンドを PATH に追加してください。
+
+```bash
 git clone <このリポジトリのURL>
-cd tanstack-start-start-mantine
+cd poketype-dojo
 vp install
 vp config
 vp dev
-\`\`\`
+```
 
-`vp config` を実行すると git の `core.hookspath` が `.vite-hooks/_` に設定され、コミット前に `vp staged`（ステージ済みファイルのチェック）が自動実行されるようになります。
-
-ターミナルに表示された URL（デフォルトは `http://localhost:5173`）をブラウザで開く。
+`vp config` を実行すると git の `core.hookspath` が `.vite-hooks/_` に設定され、コミット前に `vp staged` が実行されます。
 
 ## よく使うコマンド
 
-| コマンド     | 内容                                                   |
-| ------------ | ------------------------------------------------------ |
-| `vp dev`     | HMR付きの開発サーバー起動                              |
-| `vp build`   | プロダクションビルド                                   |
-| `vp preview` | プロダクションビルドのローカルプレビュー               |
-| `vp check`   | フォーマット・リント・型チェック（`--fix` で自動修正） |
-| `vp test`    | テスト実行                                             |
-| `vp help`    | コマンド一覧の表示                                     |
+| コマンド            | 内容                                                    |
+| ------------------- | ------------------------------------------------------- |
+| `vp dev`            | HMR 付きの開発サーバー起動                              |
+| `vp build`          | プロダクションビルド                                    |
+| `vp preview`        | プロダクションビルドのローカルプレビュー                |
+| `vp check`          | フォーマット・Lint・型チェック（`--fix` で自動修正）    |
+| `vp test`           | テスト実行                                              |
+| `vp run release-pr` | `develop` から `main` へのリリース PR を作成            |
+| `vp run knip`       | 未使用ファイル・依存関係・エクスポートの検出            |
+| `vp run doctor`     | React ヘルスチェック（通常の Lint は `vp lint` を使う） |
 
-`package.json` のスクリプト（`dev`、`build`、`check`、`test` など）は同じ `vp` コマンドに委譲しています。
+リリース PR の内容だけ確認したい場合:
 
-任意のメンテナンスツール（`vp check` には含まれない）：
+```bash
+vp run release-pr -- --dry-run
+```
 
-- `vp run knip` — 未使用ファイル・依存関係・エクスポートの検出（`knip.config.ts`）
-- `vp run doctor` — React ヘルスチェック（`react-doctor`、`--no-lint` 付き）
+## ブランチ運用
 
-## Netlify へのデプロイ
+このリポジトリでは `develop` を通常開発のデフォルトブランチ、`main` を本番リリース用ブランチとして扱います。
 
-このプロジェクトは TanStack Start 用の Netlify Vite plugin を使う構成です。Netlify では `netlify.toml` の設定が使われます。
+```txt
+feature/* -> develop -> main -> Netlify production
+```
+
+- 通常の機能開発や修正は `feature/*` ブランチで行い、`develop` に PR を作成します。
+- `develop` への PR では GitHub Actions が `vp install`、`vp check`、`vp test` を実行します。
+- `develop` へのマージは GitHub の branch ruleset により、必須チェックが通るまでブロックされます。
+- リリース時は `vp run release-pr` で `develop` から `main` への PR を作成します。
+- `main` にマージすると Netlify の production deploy が実行され、本番環境に反映されます。
+
+`main` はリリース先として扱うため、品質チェックの責務は `develop` 側に寄せています。
+
+## デプロイ
+
+本番環境は Netlify Free plan で運用しています。Netlify の Production branch は `main` です。
+
+`netlify.toml` では以下を設定しています。
 
 | 設定              | 値            |
 | ----------------- | ------------- |
 | Build command     | `vp build`    |
 | Publish directory | `dist/client` |
 
-Netlify の管理画面で GitHub リポジトリを import し、Free plan のサイトとして作成してください。push 後のビルドで SSR と Server Functions は Netlify Functions として生成されます。
-
-## ライセンス
-
-[MIT](LICENSE.md)
+TanStack Start 用の Netlify Vite plugin により、SSR と Server Functions は Netlify Functions として生成されます。
