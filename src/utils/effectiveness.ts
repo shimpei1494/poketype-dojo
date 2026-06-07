@@ -6,7 +6,7 @@ import {
 import type { PokemonType } from "../data/pokemon-types";
 import type { Effectiveness } from "../data/type-effectiveness";
 
-export type EffectivenessDetail = {
+type EffectivenessDetail = {
   attackType: PokemonType;
   defenseType: PokemonType;
   multiplier: SingleMultiplier;
@@ -17,7 +17,7 @@ export type FinalEffectiveness = {
   finalMultiplier: FinalMultiplier;
 };
 
-export function getSingleMultiplier(
+function getSingleMultiplier(
   effectiveness: readonly Effectiveness[],
   attackType: PokemonType,
   defenseType: PokemonType,

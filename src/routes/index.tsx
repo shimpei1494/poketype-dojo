@@ -2,6 +2,7 @@ import { Container, SimpleGrid, Stack, Text, Title } from "@mantine/core";
 import { createFileRoute } from "@tanstack/react-router";
 
 import { ModeCard } from "../components/ModeCard";
+import { preloadPokemonData } from "../data/load-pokemon-data";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -36,12 +37,14 @@ function Home() {
           <ModeCard
             description="第1世代151匹の現在タイプを当てるクイズ。データは準備済み。"
             label="挑戦する"
+            onPreload={preloadPokemonData}
             title="ポケモンタイプ当て"
             to="/quiz/pokemon-type"
           />
           <ModeCard
-            description="名前・タイプ・世代で探して、タイプと防御側の相性を確認。"
+            description="名前・タイプ・世代で探して、このポケモンへの攻撃相性を確認。"
             label="調べる"
+            onPreload={preloadPokemonData}
             title="ポケモン図鑑"
             to="/pokemon"
           />

@@ -1,8 +1,8 @@
 import type { FinalMultiplier } from "../data/effectiveness-labels";
-import type { PokemonQuizRecord } from "../data/pokemon";
 import type { PokemonType } from "../data/pokemon-types";
 import { pokemonTypes } from "../data/pokemon-types";
 import type { PokemonGenerationFilter } from "../data/pokemon/generation-info";
+import type { PokemonQuizRecord } from "../data/pokemon/types";
 import { typeEffectiveness } from "../data/type-effectiveness";
 import { getFinalMultiplier } from "./effectiveness";
 
@@ -17,7 +17,7 @@ export type EffectivenessGroup = {
   multiplier: Exclude<FinalMultiplier, 1>;
 };
 
-export const pokemonReferenceEffectivenessOrder = [4, 2, 0.5, 0.25, 0] as const;
+const pokemonReferenceEffectivenessOrder = [4, 2, 0.5, 0.25, 0] as const;
 
 export const pokemonReferenceEffectivenessLabels = new Map<Exclude<FinalMultiplier, 1>, string>([
   [4, "4倍"],

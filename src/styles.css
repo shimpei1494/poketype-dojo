@@ -113,6 +113,28 @@ body {
   max-width: min(100%, 360px);
 }
 
+.pokemon-quiz-image-frame {
+  height: clamp(180px, 34vw, 320px);
+  max-width: min(100%, 360px);
+  position: relative;
+  width: 100%;
+}
+
+.pokemon-quiz-image-frame .pokemon-quiz-image {
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+}
+
+.pokemon-quiz-image-placeholder {
+  inset: 0;
+  position: absolute;
+}
+
+.pokemon-quiz-image--loading {
+  opacity: 0;
+}
+
 .pokemon-question-detail-link {
   align-items: center;
   background: rgba(222, 247, 252, 0.88);
@@ -201,6 +223,7 @@ body {
 }
 
 .pokemon-list-scroll {
+  align-content: start;
   flex: 1 1 auto;
   min-height: 0;
   overflow-y: auto;
