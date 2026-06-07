@@ -134,7 +134,7 @@ function PokemonDetailPage() {
         <Card className="glass-panel" p="lg">
           <Stack gap="md">
             <Title order={2} size="h3">
-              防御側の相性
+              このポケモンへの攻撃相性
             </Title>
             {effectivenessGroups.map((group) => (
               <Stack gap="xs" key={group.multiplier}>

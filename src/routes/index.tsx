@@ -42,7 +42,7 @@ function Home() {
             to="/quiz/pokemon-type"
           />
           <ModeCard
-            description="名前・タイプ・世代で探して、タイプと防御側の相性を確認。"
+            description="名前・タイプ・世代で探して、このポケモンへの攻撃相性を確認。"
             label="調べる"
             onPreload={preloadPokemonData}
             title="ポケモン図鑑"
