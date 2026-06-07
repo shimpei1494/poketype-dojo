@@ -271,7 +271,7 @@ function PokemonTypeQuizContent({
                   params={{ pokemonId: String(state.question.pokemon.id) }}
                   to="/pokemon/$pokemonId"
                 >
-                  詳細を見る
+                  図鑑ページで詳細を見る
                 </Link>
               </Stack>
             </Stack>
