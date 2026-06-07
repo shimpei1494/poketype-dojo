@@ -1,5 +1,14 @@
 import { spawnSync } from "node:child_process";
 
+const body = [
+  "Release develop changes to production.",
+  "",
+  "## Release check",
+  "",
+  "- [ ] Confirm the Netlify Deploy Preview attached to this PR.",
+  "- [ ] Merge this PR to deploy to production.",
+].join("\n");
+
 const passthroughArgs = process.argv.slice(2);
 
 if (passthroughArgs[0] === "--") {
@@ -16,7 +25,7 @@ const args = [
   "--title",
   "Release: develop to main",
   "--body",
-  "Release develop changes to production.",
+  body,
   ...passthroughArgs,
 ];
 

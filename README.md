@@ -68,6 +68,7 @@ feature/* -> develop -> main -> Netlify production
 - `develop` への PR では GitHub Actions が `vp install`、`vp check`、`vp test` を実行します。
 - `develop` へのマージは GitHub の branch ruleset により、必須チェックが通るまでブロックされます。
 - リリース時は `vp run release-pr` で `develop` から `main` への PR を作成します。
+- `develop` から `main` への PR では Netlify Deploy Preview が作成されるため、PR 上の preview URL で本番反映前の挙動を確認します。
 - `main` にマージすると Netlify の production deploy が実行され、本番環境に反映されます。
 
 `main` はリリース先として扱うため、品質チェックの責務は `develop` 側に寄せています。
@@ -84,3 +85,11 @@ feature/* -> develop -> main -> Netlify production
 | Publish directory | `dist/client` |
 
 TanStack Start 用の Netlify Vite plugin により、SSR と Server Functions は Netlify Functions として生成されます。
+
+Netlify の deploy 設定は次の前提です。
+
+- Production branch: `main`
+- Branch deploys: production branch のみ
+- Deploy previews: production branch への Pull Request
+
+そのため `feature/*` や `develop` に push しただけでは Netlify deploy は作成されません。`develop` から `main` への PR を作成したときに Deploy Preview が作成され、`main` にマージしたときに production deploy が実行されます。
