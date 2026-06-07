@@ -1,4 +1,4 @@
-export const effectivenessMultipliers = [0, 0.25, 0.5, 1, 2, 4] as const;
+const effectivenessMultipliers = [0, 0.25, 0.5, 1, 2, 4] as const;
 
 export type FinalMultiplier = (typeof effectivenessMultipliers)[number];
 

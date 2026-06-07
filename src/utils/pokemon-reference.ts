@@ -17,7 +17,7 @@ export type EffectivenessGroup = {
   multiplier: Exclude<FinalMultiplier, 1>;
 };
 
-export const pokemonReferenceEffectivenessOrder = [4, 2, 0.5, 0.25, 0] as const;
+const pokemonReferenceEffectivenessOrder = [4, 2, 0.5, 0.25, 0] as const;
 
 export const pokemonReferenceEffectivenessLabels = new Map<Exclude<FinalMultiplier, 1>, string>([
   [4, "4倍"],
