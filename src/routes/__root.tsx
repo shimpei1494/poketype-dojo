@@ -10,11 +10,20 @@ import appCss from "../styles.css?url";
 import mantineCss from "@mantine/core/styles.css?url";
 import notificationsCss from "@mantine/notifications/styles.css?url";
 
+const appTitle = "PokéType Dojo";
+const appDescription =
+  "ポケモンのタイプ相性とポケモンごとのタイプを、クイズとチェッカーで覚え直す学習アプリ。";
+const appUrl = "https://poketype-dojo.netlify.app/";
+const ogImageUrl = `${appUrl}og-image.png`;
+
 export const Route = createRootRoute({
   component: RootComponent,
   errorComponent: ErrorComponent,
   head: () => ({
     links: [
+      { href: appUrl, rel: "canonical" },
+      { href: "/favicon.svg", rel: "icon", type: "image/svg+xml" },
+      { href: "/apple-touch-icon.png", rel: "apple-touch-icon", sizes: "180x180" },
       { href: mantineCss, rel: "stylesheet" },
       { href: notificationsCss, rel: "stylesheet" },
       { href: appCss, rel: "stylesheet" },
@@ -22,7 +31,20 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf8" },
       { content: "width=device-width, initial-scale=1", name: "viewport" },
-      { title: "TanStack Start Start" },
+      { title: appTitle },
+      { content: appDescription, name: "description" },
+      { content: "#fff0f6", name: "theme-color" },
+      { content: appTitle, property: "og:title" },
+      { content: appDescription, property: "og:description" },
+      { content: appUrl, property: "og:url" },
+      { content: "website", property: "og:type" },
+      { content: ogImageUrl, property: "og:image" },
+      { content: "1200", property: "og:image:width" },
+      { content: "630", property: "og:image:height" },
+      { content: "summary_large_image", name: "twitter:card" },
+      { content: appTitle, name: "twitter:title" },
+      { content: appDescription, name: "twitter:description" },
+      { content: ogImageUrl, name: "twitter:image" },
     ],
   }),
   notFoundComponent: NotFoundComponent,
