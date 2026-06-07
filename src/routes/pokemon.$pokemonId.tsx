@@ -1,10 +1,12 @@
-import { Button, Card, Container, Group, Image, Stack, Text, Title } from "@mantine/core";
+import { Button, Card, Container, Group, Image, Skeleton, Stack, Text, Title } from "@mantine/core";
 import { Link, createFileRoute } from "@tanstack/react-router";
+import { useMemo } from "react";
 
 import { HomeLink } from "../components/HomeLink";
 import { PokemonTypeMemoryHint } from "../components/PokemonTypeMemoryHint";
 import { TypeBadge } from "../components/TypeBadge";
-import { getPokemonImageUrl, pokemonQuizRecords } from "../data/pokemon";
+import { getPokemonImageUrl } from "../data/pokemon-image";
+import { usePokemonData } from "../hooks/usePokemonData";
 import {
   getFirstPokemonId,
   getLastPokemonId,
@@ -17,14 +19,21 @@ export const Route = createFileRoute("/pokemon/$pokemonId")({
   component: PokemonDetailPage,
 });
 
-const firstPokemonId = getFirstPokemonId(pokemonQuizRecords);
-const lastPokemonId = getLastPokemonId(pokemonQuizRecords);
 const emptyPokemonListSearch = {};
 
 function PokemonDetailPage() {
   const params = Route.useParams();
   const pokemonId = Number(params.pokemonId);
-  const pokemon = pokemonQuizRecords.find((record) => record.id === pokemonId);
+  const pokemonRecords = usePokemonData();
+
+  const pokemon = useMemo(
+    () => pokemonRecords?.find((record) => record.id === pokemonId),
+    [pokemonId, pokemonRecords],
+  );
+
+  if (pokemonRecords === null) {
+    return <PokemonDetailSkeletonPage />;
+  }
 
   if (!pokemon) {
     return (
@@ -47,6 +56,8 @@ function PokemonDetailPage() {
 
   const types = getPokemonTypes(pokemon);
   const effectivenessGroups = getPokemonDefensiveEffectivenessGroups(pokemon);
+  const firstPokemonId = getFirstPokemonId(pokemonRecords);
+  const lastPokemonId = getLastPokemonId(pokemonRecords);
   const previousPokemonId = pokemon.id - 1;
   const nextPokemonId = pokemon.id + 1;
   const hasPreviousPokemon = firstPokemonId !== undefined && pokemon.id > firstPokemonId;
@@ -123,7 +134,7 @@ function PokemonDetailPage() {
         <Card className="glass-panel" p="lg">
           <Stack gap="md">
             <Title order={2} size="h3">
-              防御側の相性
+              このポケモンへの攻撃相性
             </Title>
             {effectivenessGroups.map((group) => (
               <Stack gap="xs" key={group.multiplier}>
@@ -135,6 +146,36 @@ function PokemonDetailPage() {
                 </Group>
               </Stack>
             ))}
+          </Stack>
+        </Card>
+      </Stack>
+    </Container>
+  );
+}
+
+function PokemonDetailSkeletonPage() {
+  return (
+    <Container className="page-shell" size="lg">
+      <Stack gap="lg">
+        <Stack gap={4}>
+          <HomeLink />
+          <Text c="candyPink.7" fw={700} size="sm">
+            Pokemon Reference
+          </Text>
+          <Title order={1}>ポケモン図鑑</Title>
+          <Button color="crystalBlue" component={Link} size="xs" to="/pokemon" variant="light">
+            一覧に戻る
+          </Button>
+        </Stack>
+
+        <Card className="glass-panel pokemon-question-card" p="lg">
+          <Stack align="center" gap="md">
+            <Skeleton height={18} radius="xl" width={72} />
+            <Skeleton className="pokemon-quiz-image" radius="999px" />
+            <Stack align="center" gap={8}>
+              <Skeleton height={32} radius="xl" width={180} />
+              <Skeleton height={18} radius="xl" width={156} />
+            </Stack>
           </Stack>
         </Card>
       </Stack>
