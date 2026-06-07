@@ -29,7 +29,7 @@ export const Route = createRootRoute({
       { href: appCss, rel: "stylesheet" },
     ],
     meta: [
-      { charSet: "utf8" },
+      { charSet: "utf-8" },
       { content: "width=device-width, initial-scale=1", name: "viewport" },
       { title: appTitle },
       { content: appDescription, name: "description" },
