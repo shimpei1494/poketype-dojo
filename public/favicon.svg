@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="PokéType Dojo">
+  <rect width="64" height="64" rx="16" fill="#fff0f6" />
+  <circle cx="17" cy="17" r="9" fill="#ff67a5" />
+  <circle cx="47" cy="17" r="8" fill="#52cee7" />
+  <circle cx="17" cy="47" r="8" fill="#5fddad" />
+  <circle cx="47" cy="47" r="9" fill="#ffcd41" />
+  <rect x="14" y="22" width="36" height="20" rx="6" fill="#1b2031" />
+  <path
+    d="M22 37V27h9.1c3.1 0 5.1 1.8 5.1 4.5s-2 4.5-5.1 4.5h-4.7v1H22Zm4.4-4.5h4.1c.8 0 1.3-.4 1.3-1s-.5-1-1.3-1h-4.1v2Zm12.4 4.5v-6.5h-4v-3.5h12.8v3.5h-4V37h-4.8Z"
+    fill="#fff"
+  />
+</svg>
