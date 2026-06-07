@@ -1,8 +1,8 @@
 import type { FinalMultiplier } from "../data/effectiveness-labels";
-import type { PokemonQuizRecord } from "../data/pokemon";
 import type { PokemonType } from "../data/pokemon-types";
 import { pokemonTypes } from "../data/pokemon-types";
 import type { PokemonGenerationFilter } from "../data/pokemon/generation-info";
+import type { PokemonQuizRecord } from "../data/pokemon/types";
 import { typeEffectiveness } from "../data/type-effectiveness";
 import { getFinalMultiplier } from "./effectiveness";
 

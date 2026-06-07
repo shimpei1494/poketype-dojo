@@ -14,6 +14,7 @@ import {
 } from "./generation-info";
 import type { PokemonGenerationFilter } from "./generation-info";
 import type { PokemonGeneration } from "./types";
+export { getPokemonImageUrl } from "../pokemon-image";
 
 export {
   allPokemonGenerationsFilter,
@@ -42,13 +43,6 @@ export const pokemonQuizRecords = [
 export const availablePokemonGenerations = pokemonGenerationInfo.map((info) => info.generation);
 
 export type AvailablePokemonGeneration = PokemonGeneration;
-
-const pokemonImageBaseUrl =
-  "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other";
-
-export function getPokemonImageUrl(pokemon: { imagePath: string }) {
-  return `${pokemonImageBaseUrl}/${pokemon.imagePath}`;
-}
 
 export function getPokemonGenerationLabel(generation: AvailablePokemonGeneration) {
   return getPokemonGenerationInfo(generation)?.label ?? `第${generation}世代`;

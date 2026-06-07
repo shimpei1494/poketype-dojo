@@ -7,6 +7,7 @@ import {
   MultiSelect,
   Select,
   SimpleGrid,
+  Skeleton,
   Stack,
   Text,
   TextInput,
@@ -16,14 +17,14 @@ import { Link, createFileRoute } from "@tanstack/react-router";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { HomeLink } from "../components/HomeLink";
+import { pokemonTypeInfo, pokemonTypes, type PokemonType } from "../data/pokemon-types";
 import {
   allPokemonGenerationsFilter,
   parsePokemonGenerationFilter,
   pokemonGenerationFilterInfo,
-  pokemonQuizRecords,
   type PokemonGenerationFilter,
-} from "../data/pokemon";
-import { pokemonTypeInfo, pokemonTypes, type PokemonType } from "../data/pokemon-types";
+} from "../data/pokemon/generation-info";
+import { usePokemonData } from "../hooks/usePokemonData";
 import { filterPokemonReferenceRecords } from "../utils/pokemon-reference";
 
 type PokemonListSearch = {
@@ -40,6 +41,16 @@ type PokemonListSearchState = {
 
 const pokemonTypeSet = new Set<string>(pokemonTypes);
 const emptyPokemonListSearch = {} satisfies PokemonListSearch;
+const pokemonListSkeletonIds = [
+  "skeleton-1",
+  "skeleton-2",
+  "skeleton-3",
+  "skeleton-4",
+  "skeleton-5",
+  "skeleton-6",
+  "skeleton-7",
+  "skeleton-8",
+];
 
 export const Route = createFileRoute("/pokemon/")({
   component: PokemonListPage,
@@ -59,6 +70,7 @@ function PokemonListPage() {
   const hasMountedRef = useRef(false);
   const currentSearch = getSearchState(search);
   const typesKey = currentSearch.types.join(",");
+  const pokemonRecords = usePokemonData();
   const [draftQuery, setDraftQuery] = useState(currentSearch.q);
   const [filtersOpened, setFiltersOpened] = useState(
     currentSearch.generation !== allPokemonGenerationsFilter || currentSearch.types.length > 0,
@@ -66,13 +78,16 @@ function PokemonListPage() {
 
   const filteredPokemon = useMemo(
     () =>
-      filterPokemonReferenceRecords(pokemonQuizRecords, {
-        generation: currentSearch.generation,
-        query: currentSearch.q,
-        types: currentSearch.types,
-      }),
-    [currentSearch.generation, currentSearch.q, currentSearch.types],
+      pokemonRecords === null
+        ? []
+        : filterPokemonReferenceRecords(pokemonRecords, {
+            generation: currentSearch.generation,
+            query: currentSearch.q,
+            types: currentSearch.types,
+          }),
+    [currentSearch.generation, currentSearch.q, currentSearch.types, pokemonRecords],
   );
+  const totalPokemonCount = pokemonRecords?.length ?? null;
 
   useEffect(() => {
     if (!hasMountedRef.current) {
@@ -151,7 +166,9 @@ function PokemonListPage() {
               <Group align="end" justify="space-between" wrap="nowrap">
                 <Stack gap={2}>
                   <Text c="dimmed" fw={700} size="sm">
-                    {pokemonQuizRecords.length}件中 {filteredPokemon.length}件
+                    {totalPokemonCount === null
+                      ? "読み込み中"
+                      : `${totalPokemonCount}件中 ${filteredPokemon.length}件`}
                   </Text>
                   <Text c="dimmed" size="xs">
                     {getFilterSummary(currentSearch)}
@@ -219,7 +236,9 @@ function PokemonListPage() {
           ref={resultListRef}
           spacing="sm"
         >
-          {filteredPokemon.length === 0 ? (
+          {pokemonRecords === null ? (
+            <PokemonListSkeleton />
+          ) : filteredPokemon.length === 0 ? (
             <Card className="glass-panel pokemon-empty-result" p="lg">
               <Text fw={700}>条件に一致するポケモンが見つかりませんでした</Text>
             </Card>
@@ -247,6 +266,17 @@ function PokemonListPage() {
       </Stack>
     </Container>
   );
+}
+
+function PokemonListSkeleton() {
+  return pokemonListSkeletonIds.map((id) => (
+    <Card className="glass-panel pokemon-list-row-skeleton" key={id} p="md">
+      <Stack gap={8}>
+        <Skeleton height={14} radius="xl" width={72} />
+        <Skeleton height={24} radius="xl" width="58%" />
+      </Stack>
+    </Card>
+  ));
 }
 
 function getFilterSummary(search: PokemonListSearchState) {

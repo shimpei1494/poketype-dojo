@@ -18,15 +18,15 @@ import { HomeLink } from "../../components/HomeLink";
 import { PokemonTypeMemoryHint } from "../../components/PokemonTypeMemoryHint";
 import { TypeBadge } from "../../components/TypeBadge";
 import { TypeGrid } from "../../components/TypeGrid";
+import { getPokemonImageUrl } from "../../data/pokemon-image";
+import { pokemonTypes, type PokemonType } from "../../data/pokemon-types";
 import {
-  getPokemonImageUrl,
-  getPokemonQuizRecordsByGenerationFilter,
   parsePokemonGenerationFilter,
   pokemonGenerationFilterInfo,
   type PokemonGenerationFilter,
-  type PokemonQuizRecord,
-} from "../../data/pokemon";
-import { pokemonTypes, type PokemonType } from "../../data/pokemon-types";
+} from "../../data/pokemon/generation-info";
+import type { PokemonQuizRecord } from "../../data/pokemon/types";
+import { usePokemonData } from "../../hooks/usePokemonData";
 import { selectRandomPokemonQuestion } from "../../utils/pokemon-question-selection";
 
 type QuizSearch = {
@@ -80,7 +80,11 @@ function PokemonTypeQuizContent({
   navigate: ReturnType<typeof Route.useNavigate>;
   search: QuizSearch;
 }) {
-  const questionPool = useMemo(() => getQuestionPool(search.generation), [search.generation]);
+  const pokemonRecords = usePokemonData();
+  const questionPool = useMemo(
+    () => (pokemonRecords === null ? [] : getQuestionPool(pokemonRecords, search.generation)),
+    [pokemonRecords, search.generation],
+  );
   const [state, dispatch] = useReducer(quizReducer, search.generation, createInitialState);
   const [loadedImagePokemonId, setLoadedImagePokemonId] = useState<number | null>(null);
   const feedbackRef = useRef<HTMLDivElement>(null);
@@ -103,12 +107,16 @@ function PokemonTypeQuizContent({
   }, []);
 
   useEffect(() => {
+    if (pokemonRecords === null) {
+      return;
+    }
+
     if (state.generation === search.generation && state.question !== null) {
       return;
     }
 
     dispatch({ generation: search.generation, questionPool, type: "changeGeneration" });
-  }, [questionPool, search.generation, state.generation, state.question]);
+  }, [pokemonRecords, questionPool, search.generation, state.generation, state.question]);
 
   useEffect(() => {
     if (!state.hasAnswered) {
@@ -312,7 +320,11 @@ function PokemonTypeQuizContent({
               isCorrect={isCorrect}
               selectedTypes={state.selectedTypes}
             />
-            <Button onClick={() => dispatch({ questionPool, type: "nextQuestion" })} size="md">
+            <Button
+              disabled={questionPool.length === 0}
+              onClick={() => dispatch({ questionPool, type: "nextQuestion" })}
+              size="md"
+            >
               次の問題
             </Button>
           </Stack>
@@ -373,6 +385,17 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
       return { ...state, selectedTypes: [] };
     }
     case "changeGeneration":
+      if (action.questionPool.length === 0) {
+        return {
+          ...state,
+          generation: action.generation,
+          hasAnswered: false,
+          isHintOpen: false,
+          question: null,
+          selectedTypes: [],
+        };
+      }
+
       return {
         answeredCount: 0,
         correctCount: 0,
@@ -383,6 +406,10 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
         selectedTypes: [],
       };
     case "nextQuestion":
+      if (action.questionPool.length === 0) {
+        return state;
+      }
+
       return {
         ...state,
         hasAnswered: false,
@@ -462,8 +489,15 @@ function createQuestion(
   };
 }
 
-function getQuestionPool(generation: PokemonGenerationFilter) {
-  return getPokemonQuizRecordsByGenerationFilter(generation);
+function getQuestionPool(
+  pokemonRecords: readonly PokemonQuizRecord[],
+  generation: PokemonGenerationFilter,
+) {
+  if (generation === "all") {
+    return pokemonRecords;
+  }
+
+  return pokemonRecords.filter((pokemon) => pokemon.generation === generation);
 }
 
 function getPokemonTypes(pokemon: PokemonQuizRecord): PokemonType[] {

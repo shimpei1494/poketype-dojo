@@ -1,4 +1,4 @@
-import type { PokemonQuizRecord } from "../data/pokemon";
+import type { PokemonQuizRecord } from "../data/pokemon/types";
 
 type SelectRandomPokemonQuestionParams = {
   previousPokemonId?: number;
