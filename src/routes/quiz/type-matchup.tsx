@@ -43,7 +43,7 @@ type QuizState = {
 
 type QuizAction =
   | { multiplier: FinalMultiplier; type: "answer" }
-  | { mode: QuizMode; type: "nextQuestion" }
+  | { type: "nextQuestion" }
   | { mode: QuizMode; type: "start" };
 
 const quizModes = new Set<QuizMode>(["mixed", "single", "dual"]);
@@ -75,7 +75,8 @@ function TypeMatchupQuizContent({
   const [state, dispatch] = useReducer(quizReducer, initialMode, createInitialState);
   const feedbackRef = useRef<HTMLDivElement>(null);
 
-  const hasQuestion = state.question !== null;
+  const activeQuestion = state.question;
+  const hasQuestion = activeQuestion !== null;
   const hasAnswered = state.selectedAnswer !== null;
 
   useEffect(() => {
@@ -106,7 +107,7 @@ function TypeMatchupQuizContent({
   }
 
   function nextQuestion() {
-    dispatch({ mode: state.mode, type: "nextQuestion" });
+    dispatch({ type: "nextQuestion" });
   }
 
   return (
@@ -141,18 +142,18 @@ function TypeMatchupQuizContent({
           </Stack>
         </Card>
 
-        {state.question === null ? (
+        {activeQuestion === null ? (
           <TypeMatchupQuestionSkeletonCard />
         ) : (
           <Card className="glass-panel" p="lg">
             <Stack gap="md">
               <Text fw={700} size="lg">
-                {getQuestionText(state.question)}
+                {getQuestionText(activeQuestion)}
               </Text>
               <Group>
-                <TypeBadge selected type={state.question.moveType} />
+                <TypeBadge selected type={activeQuestion.moveType} />
                 <Text fw={700}>→</Text>
-                {state.question.defenseTypes.map((type) => (
+                {activeQuestion.defenseTypes.map((type) => (
                   <TypeBadge key={type} selected type={type} />
                 ))}
               </Group>
@@ -162,7 +163,7 @@ function TypeMatchupQuizContent({
                   <Button
                     color={getAnswerColor({
                       answer: label.multiplier,
-                      correctAnswer: state.question?.result.finalMultiplier,
+                      correctAnswer: activeQuestion.result.finalMultiplier,
                       selectedAnswer: state.selectedAnswer,
                     })}
                     disabled={hasAnswered}
@@ -170,7 +171,7 @@ function TypeMatchupQuizContent({
                     onClick={() => answer(label.multiplier)}
                     variant={getAnswerVariant({
                       answer: label.multiplier,
-                      correctAnswer: state.question?.result.finalMultiplier,
+                      correctAnswer: activeQuestion.result.finalMultiplier,
                       selectedAnswer: state.selectedAnswer,
                     })}
                   >
@@ -182,13 +183,13 @@ function TypeMatchupQuizContent({
           </Card>
         )}
 
-        {state.question !== null && state.selectedAnswer !== null ? (
+        {activeQuestion !== null && state.selectedAnswer !== null ? (
           <Stack gap="md" ref={feedbackRef}>
             <AnswerFeedback
-              correctAnswer={state.question.result.finalMultiplier}
+              correctAnswer={activeQuestion.result.finalMultiplier}
               selectedAnswer={state.selectedAnswer}
             />
-            <MultiplierResult result={state.question.result} />
+            <MultiplierResult result={activeQuestion.result} />
             <Button onClick={nextQuestion} size="md">
               次の問題
             </Button>
@@ -252,7 +253,7 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
     case "nextQuestion":
       return {
         ...state,
-        question: createQuestion(action.mode),
+        question: createQuestion(state.mode),
         selectedAnswer: null,
       };
     case "start":
@@ -336,13 +337,9 @@ function getQuestionText(question: Question) {
 
 function getAnswerColor(params: {
   answer: FinalMultiplier;
-  correctAnswer: FinalMultiplier | undefined;
+  correctAnswer: FinalMultiplier;
   selectedAnswer: FinalMultiplier | null;
 }) {
-  if (params.correctAnswer === undefined) {
-    return "candyPink";
-  }
-
   if (params.selectedAnswer === null) {
     return "candyPink";
   }
@@ -360,7 +357,7 @@ function getAnswerColor(params: {
 
 function getAnswerVariant(params: {
   answer: FinalMultiplier;
-  correctAnswer: FinalMultiplier | undefined;
+  correctAnswer: FinalMultiplier;
   selectedAnswer: FinalMultiplier | null;
 }) {
   if (params.selectedAnswer === null) {
