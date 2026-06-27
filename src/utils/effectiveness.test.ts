@@ -3,6 +3,8 @@ import { describe, expect, it } from "vite-plus/test";
 import { typeEffectiveness } from "../data/type-effectiveness";
 import { formatMultiplier, getEffectivenessMessage, getFinalMultiplier } from "./effectiveness";
 
+// 全タイプ相性の網羅検証ではなく、代表ケースで最終倍率の計算規則を固定する。
+// 静的データの形は件数で確認し、このsuiteでは掛け算・0倍・単タイプ・表示ラベルを守る。
 describe("getFinalMultiplier", () => {
   it("でんき → みず / ひこう = 4倍", () => {
     const result = getFinalMultiplier({

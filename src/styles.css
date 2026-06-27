@@ -4,7 +4,11 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
   background:
     radial-gradient(circle at 12% 8%, rgba(255, 218, 235, 0.8), transparent 28rem),
     radial-gradient(circle at 88% 0%, rgba(202, 239, 247, 0.72), transparent 26rem),
@@ -20,8 +24,16 @@ body {
 }
 
 .page-shell {
-  min-height: 100vh;
+  box-sizing: border-box;
+  flex: 1 0 auto;
   padding: clamp(24px, 5vw, 56px);
+  width: 100%;
+}
+
+.app-footer {
+  border-top: 1px solid rgba(236, 209, 229, 0.62);
+  flex: 0 0 auto;
+  padding: 14px 20px 16px;
 }
 
 .home-link {
@@ -207,8 +219,8 @@ body {
 
 .pokemon-reference-page {
   box-sizing: border-box;
-  height: 100dvh;
-  min-height: 100dvh;
+  flex: 1 1 0;
+  min-height: 0;
   overflow: hidden;
 }
 
