@@ -11,7 +11,6 @@ import {
   Title,
 } from "@mantine/core";
 import { createFileRoute } from "@tanstack/react-router";
-import { createServerFn } from "@tanstack/react-start";
 import { useCallback, useEffect, useReducer, useRef } from "react";
 
 import { HomeLink } from "../../components/HomeLink";
@@ -37,117 +36,56 @@ type Question = {
 type QuizState = {
   answeredCount: number;
   correctCount: number;
-  question: Question;
+  mode: QuizMode;
+  question: Question | null;
   selectedAnswer: FinalMultiplier | null;
 };
 
 type QuizAction =
   | { multiplier: FinalMultiplier; type: "answer" }
-  | { mode: QuizMode; type: "nextQuestion" };
+  | { type: "nextQuestion" }
+  | { mode: QuizMode; type: "start" };
 
 const quizModes = new Set<QuizMode>(["mixed", "single", "dual"]);
 
-const getInitialTypeMatchupQuestion = createServerFn({ method: "GET" })
-  .inputValidator((mode: QuizMode) => mode)
-  .handler(async ({ data: mode }) => createQuestion(mode));
-
 export const Route = createFileRoute("/quiz/type-matchup")({
   component: TypeMatchupQuizPage,
-  pendingComponent: TypeMatchupQuizPendingPage,
   validateSearch: (search: Record<string, unknown>): QuizSearch => ({
     mode:
       typeof search.mode === "string" && quizModes.has(search.mode as QuizMode)
         ? (search.mode as QuizMode)
         : "mixed",
   }),
-  loaderDeps: ({ search }) => ({
-    mode: search.mode,
-  }),
-  loader: {
-    handler: async ({ deps }) => ({
-      initialQuestion: await getInitialTypeMatchupQuestion({ data: deps.mode }),
-    }),
-    staleReloadMode: "blocking",
-  },
-  pendingMinMs: 160,
-  pendingMs: 160,
 });
 
 function TypeMatchupQuizPage() {
   const search = Route.useSearch();
   const navigate = Route.useNavigate();
-  const { initialQuestion } = Route.useLoaderData();
 
-  return (
-    <TypeMatchupQuizContent
-      initialQuestion={initialQuestion}
-      key={`${search.mode}-${initialQuestion.moveType}-${initialQuestion.defenseTypes.join("-")}`}
-      navigate={navigate}
-      search={search}
-    />
-  );
-}
-
-function TypeMatchupQuizPendingPage() {
-  return (
-    <Container className="page-shell" size="lg">
-      <Stack gap="lg">
-        <Stack gap={4}>
-          <HomeLink />
-          <Text c="candyPink.7" fw={700} size="sm">
-            Type Matchup Quiz
-          </Text>
-          <Title order={1}>タイプ相性クイズ</Title>
-          <Text c="dimmed">倍率と効果文を選んで、タイプ相性を練習しましょう。</Text>
-        </Stack>
-
-        <Card className="glass-panel" p="lg">
-          <Stack gap="md">
-            <Group justify="space-between">
-              <Text fw={700}>出題範囲</Text>
-              <Skeleton height={18} radius="xl" width={76} />
-            </Group>
-            <Skeleton height={36} radius="md" />
-          </Stack>
-        </Card>
-
-        <Card className="glass-panel" p="lg">
-          <Stack gap="md">
-            <Skeleton height={28} radius="xl" width="42%" />
-            <Group>
-              <Skeleton height={40} radius="md" width={92} />
-              <Text fw={700}>→</Text>
-              <Skeleton height={40} radius="md" width={92} />
-              <Skeleton height={40} radius="md" width={92} />
-            </Group>
-            <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="sm">
-              <Skeleton height={42} radius="md" />
-              <Skeleton height={42} radius="md" />
-              <Skeleton height={42} radius="md" />
-              <Skeleton height={42} radius="md" />
-              <Skeleton height={42} radius="md" />
-              <Skeleton height={42} radius="md" />
-            </SimpleGrid>
-          </Stack>
-        </Card>
-      </Stack>
-    </Container>
-  );
+  return <TypeMatchupQuizContent initialMode={search.mode} key={search.mode} navigate={navigate} />;
 }
 
 function TypeMatchupQuizContent({
-  initialQuestion,
+  initialMode,
   navigate,
-  search,
 }: {
-  initialQuestion: Question;
+  initialMode: QuizMode;
   navigate: ReturnType<typeof Route.useNavigate>;
-  search: QuizSearch;
 }) {
-  const [state, dispatch] = useReducer(quizReducer, initialQuestion, createInitialState);
+  const [state, dispatch] = useReducer(quizReducer, initialMode, createInitialState);
   const feedbackRef = useRef<HTMLDivElement>(null);
 
+  const activeQuestion = state.question;
+  const hasQuestion = activeQuestion !== null;
   const hasAnswered = state.selectedAnswer !== null;
+
+  useEffect(() => {
+    if (hasQuestion) {
+      return;
+    }
+
+    dispatch({ mode: state.mode, type: "start" });
+  }, [hasQuestion, state.mode]);
 
   useEffect(() => {
     if (!hasAnswered) {
@@ -169,7 +107,7 @@ function TypeMatchupQuizContent({
   }
 
   function nextQuestion() {
-    dispatch({ mode: search.mode, type: "nextQuestion" });
+    dispatch({ type: "nextQuestion" });
   }
 
   return (
@@ -199,55 +137,59 @@ function TypeMatchupQuizContent({
                 { label: "2タイプのみ", value: "dual" },
               ]}
               onChange={changeMode}
-              value={search.mode}
+              value={state.mode}
             />
           </Stack>
         </Card>
 
-        <Card className="glass-panel" p="lg">
-          <Stack gap="md">
-            <Text fw={700} size="lg">
-              {getQuestionText(state.question)}
-            </Text>
-            <Group>
-              <TypeBadge selected type={state.question.moveType} />
-              <Text fw={700}>→</Text>
-              {state.question.defenseTypes.map((type) => (
-                <TypeBadge key={type} selected type={type} />
-              ))}
-            </Group>
+        {activeQuestion === null ? (
+          <TypeMatchupQuestionSkeletonCard />
+        ) : (
+          <Card className="glass-panel" p="lg">
+            <Stack gap="md">
+              <Text fw={700} size="lg">
+                {getQuestionText(activeQuestion)}
+              </Text>
+              <Group>
+                <TypeBadge selected type={activeQuestion.moveType} />
+                <Text fw={700}>→</Text>
+                {activeQuestion.defenseTypes.map((type) => (
+                  <TypeBadge key={type} selected type={type} />
+                ))}
+              </Group>
 
-            <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="sm">
-              {effectivenessLabels.map((label) => (
-                <Button
-                  color={getAnswerColor({
-                    answer: label.multiplier,
-                    correctAnswer: state.question.result.finalMultiplier,
-                    selectedAnswer: state.selectedAnswer,
-                  })}
-                  disabled={hasAnswered}
-                  key={label.multiplier}
-                  onClick={() => answer(label.multiplier)}
-                  variant={getAnswerVariant({
-                    answer: label.multiplier,
-                    correctAnswer: state.question.result.finalMultiplier,
-                    selectedAnswer: state.selectedAnswer,
-                  })}
-                >
-                  {label.text}（{label.message}）
-                </Button>
-              ))}
-            </SimpleGrid>
-          </Stack>
-        </Card>
+              <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="sm">
+                {effectivenessLabels.map((label) => (
+                  <Button
+                    color={getAnswerColor({
+                      answer: label.multiplier,
+                      correctAnswer: activeQuestion.result.finalMultiplier,
+                      selectedAnswer: state.selectedAnswer,
+                    })}
+                    disabled={hasAnswered}
+                    key={label.multiplier}
+                    onClick={() => answer(label.multiplier)}
+                    variant={getAnswerVariant({
+                      answer: label.multiplier,
+                      correctAnswer: activeQuestion.result.finalMultiplier,
+                      selectedAnswer: state.selectedAnswer,
+                    })}
+                  >
+                    {label.text}（{label.message}）
+                  </Button>
+                ))}
+              </SimpleGrid>
+            </Stack>
+          </Card>
+        )}
 
-        {state.selectedAnswer !== null ? (
+        {activeQuestion !== null && state.selectedAnswer !== null ? (
           <Stack gap="md" ref={feedbackRef}>
             <AnswerFeedback
-              correctAnswer={state.question.result.finalMultiplier}
+              correctAnswer={activeQuestion.result.finalMultiplier}
               selectedAnswer={state.selectedAnswer}
             />
-            <MultiplierResult result={state.question.result} />
+            <MultiplierResult result={activeQuestion.result} />
             <Button onClick={nextQuestion} size="md">
               次の問題
             </Button>
@@ -258,11 +200,36 @@ function TypeMatchupQuizContent({
   );
 }
 
-function createInitialState(initialQuestion: Question): QuizState {
+function TypeMatchupQuestionSkeletonCard() {
+  return (
+    <Card className="glass-panel" p="lg">
+      <Stack gap="md">
+        <Skeleton height={28} radius="xl" width="42%" />
+        <Group>
+          <Skeleton height={40} radius="md" width={92} />
+          <Text fw={700}>→</Text>
+          <Skeleton height={40} radius="md" width={92} />
+          <Skeleton height={40} radius="md" width={92} />
+        </Group>
+        <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="sm">
+          <Skeleton height={42} radius="md" />
+          <Skeleton height={42} radius="md" />
+          <Skeleton height={42} radius="md" />
+          <Skeleton height={42} radius="md" />
+          <Skeleton height={42} radius="md" />
+          <Skeleton height={42} radius="md" />
+        </SimpleGrid>
+      </Stack>
+    </Card>
+  );
+}
+
+function createInitialState(mode: QuizMode): QuizState {
   return {
     answeredCount: 0,
     correctCount: 0,
-    question: initialQuestion,
+    mode,
+    question: null,
     selectedAnswer: null,
   };
 }
@@ -270,7 +237,7 @@ function createInitialState(initialQuestion: Question): QuizState {
 function quizReducer(state: QuizState, action: QuizAction): QuizState {
   switch (action.type) {
     case "answer": {
-      if (state.selectedAnswer !== null) {
+      if (state.question === null || state.selectedAnswer !== null) {
         return state;
       }
 
@@ -286,6 +253,13 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
     case "nextQuestion":
       return {
         ...state,
+        question: createQuestion(state.mode),
+        selectedAnswer: null,
+      };
+    case "start":
+      return {
+        ...state,
+        mode: action.mode,
         question: createQuestion(action.mode),
         selectedAnswer: null,
       };

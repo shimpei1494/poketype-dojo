@@ -35,7 +35,7 @@ function Home() {
             to="/quiz/type-matchup"
           />
           <ModeCard
-            description="第1世代151匹の現在タイプを当てるクイズ。データは準備済み。"
+            description="第1〜第9世代1025匹の現在タイプを当てるクイズ。"
             label="挑戦する"
             onPreload={preloadPokemonData}
             title="ポケモンタイプ当て"
