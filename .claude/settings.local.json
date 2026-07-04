@@ -11,7 +11,21 @@
       "Bash(vp test*)",
       "Bash(vp run doctor*)",
       "Bash(vp run knip*)",
-      "Bash(vp run fix*)"
+      "Bash(vp run fix*)",
+      "WebFetch(domain:www.openui.com)",
+      "Bash(vp add *)",
+      "Bash(rtk ls *)",
+      "Bash(rtk read *)",
+      "Bash(rtk grep *)",
+      "Bash(rtk wc *)",
+      "Bash(rtk find *)",
+      "Bash(rtk curl *)",
+      "Bash(rtk npx *)",
+      "Bash(vp exec *)",
+      "mcp__plugin_ecc_playwright__browser_run_code",
+      "Skill(claude-in-chrome)",
+      "Bash(echo \"knip exit: $?\")",
+      "Bash(rtk git *)"
     ]
   },
   "enabledMcpjsonServers": ["mantine"]
