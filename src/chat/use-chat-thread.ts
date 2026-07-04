@@ -1,4 +1,11 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type Dispatch,
+  type SetStateAction,
+} from "react";
 
 import { maxUserMessageLength, takeRecentChatMessages, type ChatMessage } from "./chat-request";
 
@@ -99,7 +106,7 @@ export function useChatThread() {
 }
 
 function updateMessageContent(
-  setMessages: React.Dispatch<React.SetStateAction<ChatThreadMessage[]>>,
+  setMessages: Dispatch<SetStateAction<ChatThreadMessage[]>>,
   messageId: string,
   content: string,
 ) {
