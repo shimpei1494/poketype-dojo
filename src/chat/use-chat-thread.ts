@@ -102,7 +102,15 @@ export function useChatThread() {
     [isStreaming, messages],
   );
 
-  return { error, isStreaming, messages, sendMessage };
+  const resetThread = useCallback(() => {
+    abortControllerRef.current?.abort();
+    abortControllerRef.current = null;
+    setMessages([]);
+    setError(null);
+    setIsStreaming(false);
+  }, []);
+
+  return { error, isStreaming, messages, resetThread, sendMessage };
 }
 
 function updateMessageContent(

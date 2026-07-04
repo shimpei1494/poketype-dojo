@@ -35,7 +35,7 @@ const exampleQuestions = [
 ];
 
 function ChatPage() {
-  const { error, isStreaming, messages, sendMessage } = useChatThread();
+  const { error, isStreaming, messages, resetThread, sendMessage } = useChatThread();
   const [draft, setDraft] = useState("");
   const messageListRef = useRef<HTMLDivElement>(null);
 
@@ -73,6 +73,13 @@ function ChatPage() {
 
         <Card className="glass-panel" p="md">
           <Stack gap="md">
+            {messages.length === 0 ? null : (
+              <Group justify="flex-end">
+                <Button color="gray" onClick={resetThread} size="xs" variant="subtle">
+                  最初からやり直す
+                </Button>
+              </Group>
+            )}
             <Stack gap="md" mah="55vh" ref={messageListRef} style={{ overflowY: "auto" }}>
               {messages.length === 0 ? (
                 <Stack gap="sm" py="md">
