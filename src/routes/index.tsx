@@ -48,6 +48,13 @@ function Home() {
             title="ポケモン図鑑"
             to="/pokemon"
           />
+          <ModeCard
+            description="「黄色くて電気を出すネズミ」みたいな曖昧な説明から、AIが候補を推測して図鑑につなげる。"
+            label="AIに聞く"
+            onPreload={preloadPokemonData}
+            title="AIポケモン相談"
+            to="/chat"
+          />
         </SimpleGrid>
       </Stack>
     </Container>

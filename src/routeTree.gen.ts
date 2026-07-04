@@ -11,12 +11,15 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TypeCheckerRouteImport } from './routes/type-checker'
 import { Route as PokemonRouteImport } from './routes/pokemon'
+import { Route as ChatRouteImport } from './routes/chat'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PokemonIndexRouteImport } from './routes/pokemon.index'
 import { Route as QuizTypeMatchupRouteImport } from './routes/quiz/type-matchup'
 import { Route as QuizPokemonTypeRouteImport } from './routes/quiz/pokemon-type'
 import { Route as PokemonPokemonIdRouteImport } from './routes/pokemon.$pokemonId'
+import { Route as DevUiPreviewRouteImport } from './routes/dev/ui-preview'
+import { Route as ApiChatRouteImport } from './routes/api/chat'
 
 const TypeCheckerRoute = TypeCheckerRouteImport.update({
   id: '/type-checker',
@@ -26,6 +29,11 @@ const TypeCheckerRoute = TypeCheckerRouteImport.update({
 const PokemonRoute = PokemonRouteImport.update({
   id: '/pokemon',
   path: '/pokemon',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChatRoute = ChatRouteImport.update({
+  id: '/chat',
+  path: '/chat',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -58,12 +66,25 @@ const PokemonPokemonIdRoute = PokemonPokemonIdRouteImport.update({
   path: '/$pokemonId',
   getParentRoute: () => PokemonRoute,
 } as any)
+const DevUiPreviewRoute = DevUiPreviewRouteImport.update({
+  id: '/dev/ui-preview',
+  path: '/dev/ui-preview',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiChatRoute = ApiChatRouteImport.update({
+  id: '/api/chat',
+  path: '/api/chat',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/chat': typeof ChatRoute
   '/pokemon': typeof PokemonRouteWithChildren
   '/type-checker': typeof TypeCheckerRoute
+  '/api/chat': typeof ApiChatRoute
+  '/dev/ui-preview': typeof DevUiPreviewRoute
   '/pokemon/$pokemonId': typeof PokemonPokemonIdRoute
   '/quiz/pokemon-type': typeof QuizPokemonTypeRoute
   '/quiz/type-matchup': typeof QuizTypeMatchupRoute
@@ -72,7 +93,10 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/chat': typeof ChatRoute
   '/type-checker': typeof TypeCheckerRoute
+  '/api/chat': typeof ApiChatRoute
+  '/dev/ui-preview': typeof DevUiPreviewRoute
   '/pokemon/$pokemonId': typeof PokemonPokemonIdRoute
   '/quiz/pokemon-type': typeof QuizPokemonTypeRoute
   '/quiz/type-matchup': typeof QuizTypeMatchupRoute
@@ -82,8 +106,11 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/chat': typeof ChatRoute
   '/pokemon': typeof PokemonRouteWithChildren
   '/type-checker': typeof TypeCheckerRoute
+  '/api/chat': typeof ApiChatRoute
+  '/dev/ui-preview': typeof DevUiPreviewRoute
   '/pokemon/$pokemonId': typeof PokemonPokemonIdRoute
   '/quiz/pokemon-type': typeof QuizPokemonTypeRoute
   '/quiz/type-matchup': typeof QuizTypeMatchupRoute
@@ -94,8 +121,11 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/chat'
     | '/pokemon'
     | '/type-checker'
+    | '/api/chat'
+    | '/dev/ui-preview'
     | '/pokemon/$pokemonId'
     | '/quiz/pokemon-type'
     | '/quiz/type-matchup'
@@ -104,7 +134,10 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/chat'
     | '/type-checker'
+    | '/api/chat'
+    | '/dev/ui-preview'
     | '/pokemon/$pokemonId'
     | '/quiz/pokemon-type'
     | '/quiz/type-matchup'
@@ -113,8 +146,11 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/chat'
     | '/pokemon'
     | '/type-checker'
+    | '/api/chat'
+    | '/dev/ui-preview'
     | '/pokemon/$pokemonId'
     | '/quiz/pokemon-type'
     | '/quiz/type-matchup'
@@ -124,8 +160,11 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  ChatRoute: typeof ChatRoute
   PokemonRoute: typeof PokemonRouteWithChildren
   TypeCheckerRoute: typeof TypeCheckerRoute
+  ApiChatRoute: typeof ApiChatRoute
+  DevUiPreviewRoute: typeof DevUiPreviewRoute
   QuizPokemonTypeRoute: typeof QuizPokemonTypeRoute
   QuizTypeMatchupRoute: typeof QuizTypeMatchupRoute
 }
@@ -144,6 +183,13 @@ declare module '@tanstack/react-router' {
       path: '/pokemon'
       fullPath: '/pokemon'
       preLoaderRoute: typeof PokemonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/chat': {
+      id: '/chat'
+      path: '/chat'
+      fullPath: '/chat'
+      preLoaderRoute: typeof ChatRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -188,6 +234,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PokemonPokemonIdRouteImport
       parentRoute: typeof PokemonRoute
     }
+    '/dev/ui-preview': {
+      id: '/dev/ui-preview'
+      path: '/dev/ui-preview'
+      fullPath: '/dev/ui-preview'
+      preLoaderRoute: typeof DevUiPreviewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/chat': {
+      id: '/api/chat'
+      path: '/api/chat'
+      fullPath: '/api/chat'
+      preLoaderRoute: typeof ApiChatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -207,8 +267,11 @@ const PokemonRouteWithChildren =
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  ChatRoute: ChatRoute,
   PokemonRoute: PokemonRouteWithChildren,
   TypeCheckerRoute: TypeCheckerRoute,
+  ApiChatRoute: ApiChatRoute,
+  DevUiPreviewRoute: DevUiPreviewRoute,
   QuizPokemonTypeRoute: QuizPokemonTypeRoute,
   QuizTypeMatchupRoute: QuizTypeMatchupRoute,
 }
