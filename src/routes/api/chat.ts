@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import OpenAI from "openai";
 
 import { chatRequestSchema, takeRecentChatMessages } from "../../chat/chat-request";
+import { createMockChatStream } from "../../chat/mock-chat-response";
 import { buildChatSystemPrompt } from "../../chat/system-prompt";
 
 const chatModel = "gpt-5.4-mini";
@@ -15,15 +16,12 @@ export const Route = createFileRoute("/api/chat")({
   },
 });
 
+const streamResponseHeaders = {
+  "cache-control": "no-store",
+  "content-type": "text/plain; charset=utf-8",
+} as const;
+
 async function handleChatRequest(request: Request): Promise<Response> {
-  const apiKey = process.env.OPENAI_API_KEY;
-
-  if (!apiKey) {
-    console.error("OPENAI_API_KEY is not configured");
-
-    return jsonError(500, "サーバーの設定に問題があります。時間をおいてお試しください。");
-  }
-
   let body: unknown;
 
   try {
@@ -36,6 +34,23 @@ async function handleChatRequest(request: Request): Promise<Response> {
 
   if (!parsed.success) {
     return jsonError(400, "リクエストの内容が正しくありません。");
+  }
+
+  // 開発用モックモード: OpenAIを呼ばずfixtureをストリーミング返却(APIキー不要)
+  if (process.env.CHAT_USE_MOCK === "1") {
+    const lastUserContent = parsed.data.messages.at(-1)?.content ?? "";
+
+    return new Response(createMockChatStream(lastUserContent), {
+      headers: streamResponseHeaders,
+    });
+  }
+
+  const apiKey = process.env.OPENAI_API_KEY;
+
+  if (!apiKey) {
+    console.error("OPENAI_API_KEY is not configured");
+
+    return jsonError(500, "サーバーの設定に問題があります。時間をおいてお試しください。");
   }
 
   const client = new OpenAI({ apiKey });
@@ -56,10 +71,7 @@ async function handleChatRequest(request: Request): Promise<Response> {
     );
 
     return new Response(createTextStream(completion), {
-      headers: {
-        "cache-control": "no-store",
-        "content-type": "text/plain; charset=utf-8",
-      },
+      headers: streamResponseHeaders,
     });
   } catch (error: unknown) {
     console.error("OpenAI chat completion failed", error);
